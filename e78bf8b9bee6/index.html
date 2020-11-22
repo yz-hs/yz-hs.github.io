@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <title>
+  	
+  		新版骗分导论 | Yz-hs&#39;s Blog
+  	
+  </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+  <script src="https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Yz-hs's Blog" type="application/atom+xml">
+</head>
+	<body>
+		<a name="back-to-top"></a>
+		<div id="siteLoading" class="siteloading siteLoading-active">
+			<div class="loader-inner">
+			<div class="loader-line-wrap"><div class="loader-line"></div></div>
+			<div class="loader-line-wrap"><div class="loader-line"></div></div>
+			<div class="loader-line-wrap"><div class="loader-line"></div></div>
+			<div class="loader-line-wrap"><div class="loader-line"></div></div>
+			<div class="loader-line-wrap"><div class="loader-line"></div></div>
+			</div>
+		</div>
+		<div class="main">
+			<a target="_blank" rel="noopener" href="https://github.com/yz-hs" class="github-corner" aria-label="View source on GitHub">
+	<svg width="80" height="80" viewBox="0 0 250 250" style="fill:#ffb6c1; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+		<path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+		<path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+		<path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+	</svg>
+</a>
+<style>
+.github-corner:hover 
+.octo-arm {animation:octocat-wave 560ms ease-in-out}
+@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}
+@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}
+</style>
+
+<div class="topbar">
+	<a href="/" class="topbar-title">
+		<i class="fa fa-home" aria-hidden="true"></i> Yz-hs&#39;s Blog
+	</a>
+	<div class="topbar-url">
+	  
+            <a href="/archives/index.html"><i class="fa fa-archive" aria-hidden="true"></i></a>
+      
+            <a href="/tags/index.html"><i class="fa fa-tags" aria-hidden="true"></i></a>
+      
+            <a href="/categories/index.html"><i class="fa fa-navicon" aria-hidden="true"></i></a>
+      
+            <a href="/somepage/about/index.html"><i class="fa fa-user" aria-hidden="true"></i></a>
+      
+            <a href="/somepage/projects/index.html"><i class="fa fa-cog" aria-hidden="true"></i></a>
+      
+      <a href="/somepage/%E5%90%90%E6%A7%BD/index.html"><i class="fa fa-bell-o" aria-hidden="true"></i></a>
+    </div>
+	<a href="/somepage/%E5%90%90%E6%A7%BD/index.html" class="topbar-comments">
+		<i class="fa fa-bell-o" aria-hidden="true"></i>
+	</a>
+	<div class="topbar-full-url">
+		<a href="/"><i class="fa fa-home" aria-hidden="true"></i></a>
+		
+            <a href="/archives/index.html"><i class="fa fa-archive" aria-hidden="true"></i></a>
+        
+            <a href="/tags/index.html"><i class="fa fa-tags" aria-hidden="true"></i></a>
+        
+            <a href="/categories/index.html"><i class="fa fa-navicon" aria-hidden="true"></i></a>
+        
+            <a href="/somepage/about/index.html"><i class="fa fa-user" aria-hidden="true"></i></a>
+        
+            <a href="/somepage/projects/index.html"><i class="fa fa-cog" aria-hidden="true"></i></a>
+        
+        <a href="/somepage/%E5%90%90%E6%A7%BD/index.html"><i class="fa fa-bell-o" aria-hidden="true"></i></a>
+	</div>
+</div>
+			<div class="sidebar">
+
+  <div class="sidebar-avatar-container">
+  	<img src="/img/avatar.jpg" class="sidebar-avatar bounce" />
+  </div>
+
+  <div class="sidebar-author">
+    yz-hs<br />
+    <div class="mini-text">A cute OIer</div>
+  </div>
+
+  <br /><br />
+
+  <div class="sidebar-list-container">
+  
+  <div class="mini-text">导航</div>
+
+  <br />
+
+  <div class="list-group">
+  	
+  	 
+  	   <a class="list-group-item" href="/archives/index.html"><i class="fa fa-archive fa-fw" aria-hidden="true"></i>&nbsp; 归档
+  	 
+  	    
+  	    	<div class="badge">70</div>
+  	    
+      </a>
+    
+  	 
+  	   <a class="list-group-item" href="/tags/index.html"><i class="fa fa-tags fa-fw" aria-hidden="true"></i>&nbsp; 标签
+  	 
+  	    
+  	    	<div class="badge">22</div>
+  	    
+      </a>
+    
+  	 
+  	   <a class="list-group-item" href="/categories/index.html"><i class="fa fa-navicon fa-fw" aria-hidden="true"></i>&nbsp; 分类
+  	 
+  	    
+  	    	<div class="badge">10</div>
+  	    
+      </a>
+    
+  	 
+  	   <a class="list-group-item" href="/somepage/about/index.html"><i class="fa fa-user fa-fw" aria-hidden="true"></i>&nbsp; 关于
+  	 
+  	    
+      </a>
+    
+  	 
+  	   <a class="list-group-item" href="/somepage/projects/index.html"><i class="fa fa-cog fa-fw" aria-hidden="true"></i>&nbsp; 项目
+  	 
+  	    
+      </a>
+    
+  </div>
+
+  </div>
+
+  <div class="sidebar-footer">
+  	<div class="item">
+  		<a href="#back-to-top"><i class="fa fa-hand-o-up" aria-hidden="true"></i><div class="mini-text">顶部</div></a>
+  	</div>
+  	<div class="item">
+  		<a href="/atom.xml"><i class="fa fa-feed" aria-hidden="true"></i><div class="mini-text">RSS</div></a>
+  	</div>
+  	<div class="item">
+  		<a href="javascript:(function(){window.open(&quot;http://yz-hs.tk&quot;)})()" onclick="swal('提示','请把图标拖动到书签栏','warning');return false;"><i class="fa fa-bookmark" aria-hidden="true"></i><div class="mini-text">收藏</div></a>
+  	</div>
+  </div>
+</div>
+			<div class="article">
+    			<div class="article-cell-body"><div class="post">
+  <div class="header">
+    <div class="title">新版骗分导论</div>
+    <div class="meta">
+	  <span><i class="fa fa-user" aria-hidden="true"></i> yz-hs</span>
+	  <span><i class="fa fa-clock-o" aria-hidden="true"></i>  2020 年 02 月 22 日</span>
+      <span><i class="fa fa-font" aria-hidden="true"></i> 5.3k</span>
+      <span><i class="fa fa-eye fa-fw" aria-hidden="true"></i> <span id="busuanzi_value_page_pv"></span></span>
+      
+      
+    </div>
+  </div>
+
+  <div class="breadcrumb">
+    <div class="url">
+      <a href="/"><i class="fa fa-home" aria-hidden="true"></i> 主页</a> / 新版骗分导论
+    </div>
+    <div class="share">
+      分享到：<a target="_blank" rel="noopener" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yz-hs.tk/e78bf8b9bee6/&title=新版骗分导论&site=http://yz-hs.tk"><i class="fa fa-qq" aria-hidden="true"></i></a>
+    </div>
+  </div>
+
+  <div class="post-text">
+    <p>$\Huge\texttt{新 版 骗 分 导 论}$</p>
+<p>$\texttt{THE NEW GUIDE OF CHEATING IN INFORMATICS OLYMPIAD}$</p>
+<p>————蒟 蒻 的 宝 书    </p>
+<a id="more"></a>
+
+<hr>
+<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><ul>
+<li><p>第1章 绪论</p>
+</li>
+<li><p>第2章 从无解出发</p>
+<ul>
+<li>2.1 无解情况</li>
+<li>2.2 样例——白送的分数</li>
+</ul>
+</li>
+<li><p>第3章 “艰苦朴素永不忘”</p>
+<ul>
+<li>3.1 模拟</li>
+<li>3.2 万能钥匙——DFS</li>
+</ul>
+</li>
+<li><p>第4章 骗分的关键——猜想</p>
+<ul>
+<li>4.1 听天由命</li>
+<li>4.2 猜测答案</li>
+<li>4.3 寻找规律</li>
+<li>4.4 小数据杀手——打表</li>
+</ul>
+</li>
+<li><p>第5章 做贪心的人</p>
+<ul>
+<li>5.1 贪心的算法</li>
+<li>5.2 贪心地得分</li>
+</ul>
+</li>
+<li><p>第6章 C++的福利</p>
+<ul>
+<li>6.1 快速排序</li>
+<li>6.2 “如意金箍棒”</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>第7章 “宁为玉碎，不为瓦全”</p>
+</li>
+<li><p>第8章 结语</p>
+</li>
+</ul>
+<h1 id="第1章-绪论"><a href="#第1章-绪论" class="headerlink" title="第1章 绪论"></a>第1章 绪论</h1><p>在 OIer 中，有一句话广为流传：</p>
+<blockquote>
+<p>任何蒟蒻必须经过大量的刷题练习才能成为大牛乃至于神牛。</p>
+</blockquote>
+<p>然而，我们这些蒟蒻们，没有经过那么多历练，却要和大牛们同场竞技，我们该怎么以弱胜强呢？答案就是：<br> 骗分<br> 那么，骗分是什么呢？骗分就是用简单的程序（比标准算法简单很多，保证蒟蒻能轻松搞定的程序），尽可能多得骗取分数。让我们走进这本《新版骗分导论》，来学习骗分的技巧，来挑战神牛吧！</p>
+<h1 id="第2章-从无解出发"><a href="#第2章-从无解出发" class="headerlink" title="第2章 从无解出发"></a>第2章 从无解出发</h1><h2 id="2-1-无解情况"><a href="#2-1-无解情况" class="headerlink" title="2.1 无解情况"></a>2.1 无解情况</h2><p>在很多题目中都有这句话：</p>
+<blockquote>
+<p>若无解，请输出$-1$。 </p>
+</blockquote>
+<p>看到这句话时，骗分的蒟蒻们就欣喜若狂，因为——数据中必定会有无解的情况！那么，只要打出下面这个程序：<br> <code>printf(“-1”);  </code>就能得到10分，甚至20分，30分！</p>
+<p>举个例子：</p>
+<h3 id="NOIP2012第4题-文化之旅"><a href="#NOIP2012第4题-文化之旅" class="headerlink" title="NOIP2012第4题 文化之旅"></a>NOIP2012第4题 文化之旅</h3><h4 id="题目描述-Description"><a href="#题目描述-Description" class="headerlink" title="题目描述 Description"></a>题目描述 Description</h4><p>有一位使者要游历各国，他每到一个国家，都能学到一种文化，但他不愿意学习任何一种文化超过一次（即如果他学习了某种文化，则他就不能到达其他有这种文化的国家）。不同的国家可能有相同的文化。不同文化的国家对其他文化的看法不同，有些文化会排斥外来文化（即如果他学习了某种文化，则他不能到达排斥这种文化的其他国家）。<br> 现给定各个国家间的地理关系，各个国家的文化，每种文化对其他文化的看法，以及这位使者游历的起点和终点（在起点和终点也会学习当地的文化），国家间的道路距离，试求从起点到终点最少需走多少路。</p>
+<h4 id="输入描述-Input-Description"><a href="#输入描述-Input-Description" class="headerlink" title="输入描述 Input Description"></a>输入描述 Input Description</h4><p>第一行为五个整数$N，K，M，S，T$，每两个整数之间用一个空格隔开，依次代表国家个数（国家编号为$1$到$N$），文化种数（文化编号为$1$到$K$），道路的条数，以及起点和终点的编号（保证$S$不等于$T$）；</p>
+<p>第二行为$N$个整数，每两个整数之间用一个空格隔开，其中第$i$个数$C_i$，表示国家$i$的文化为$C_i$。</p>
+<p>接下来的$K$行，每行$K$个整数，每两个整数之间用一个空格隔开，记第$i$行的第$j$个数为$a_{i,j}$，$a_{i,j}=1$表示文化$i$排斥外来文化$j$（$i$等于$j$时表示排斥相同文化的外来人），$a_{i,j}=0$表示不排斥（注意$i$排斥$j$并不保证$j$一定也排斥$i$）。</p>
+<p>接下来的$M$行，每行三个整数$u，v，d$，每两个整数之间用一个空格隔开，表示国家$u$与国家$v$有一条距离为$d$的可双向通行的道路（保证$u$不等于$v$，两个国家之间可能有多条道路）。</p>
+<h4 id="输出描述-Output-Description"><a href="#输出描述-Output-Description" class="headerlink" title="输出描述 Output Description"></a>输出描述 Output Description</h4><p>输出只有一行，一个整数，表示使者从起点国家到达终点国家最少需要走的距离数（如果无解则输出$-1$）。</p>
+<h4 id="样例输入-Sample-Input"><a href="#样例输入-Sample-Input" class="headerlink" title="样例输入 Sample Input"></a>样例输入 Sample Input</h4><h5 id="输入样例1"><a href="#输入样例1" class="headerlink" title="输入样例1"></a>输入样例1</h5><pre><code>2 2 1 1 2
+1 2
+0 1
+1 0
+1 2 10</code></pre>
+<h5 id="输入样例2"><a href="#输入样例2" class="headerlink" title="输入样例2"></a>输入样例2</h5><pre><code>2 2 1 1 2
+1 2
+0 1
+0 0
+1 2 10</code></pre>
+<h4 id="样例输出-Sample-Output"><a href="#样例输出-Sample-Output" class="headerlink" title="样例输出 Sample Output"></a>样例输出 Sample Output</h4><h5 id="输出样例1"><a href="#输出样例1" class="headerlink" title="输出样例1"></a>输出样例1</h5><pre><code>-1</code></pre>
+<h5 id="输出样例2"><a href="#输出样例2" class="headerlink" title="输出样例2"></a>输出样例2</h5><pre><code>10</code></pre>
+<h4 id="数据范围及提示-Data-Size-amp-Hint"><a href="#数据范围及提示-Data-Size-amp-Hint" class="headerlink" title="数据范围及提示 Data Size &amp; Hint"></a>数据范围及提示 Data Size &amp; Hint</h4><p>【输入输出样例1说明】</p>
+<p> 由于到国家$2$必须要经过国家$1$，而国家$2$的文明却排斥国家$1$的文明，所以不可能到达国家$2$。</p>
+<p>【输入输出样例2说明】</p>
+<p>路线为$1 -&gt; 2$。</p>
+<p>【数据范围】</p>
+<p>对于$20%$的数据，有$2≤N≤8$，$K≤5$；</p>
+<p> 对于$30%$的数据，有$2≤N≤10$，$K≤5$；</p>
+<p> 对于$50%$的数据，有$2≤N≤20$，$K≤8$；</p>
+<p> 对于$70%$的数据，有$2≤N≤100$，$K≤10$；</p>
+<p> 对于$100%$的数据，有$2≤N≤100$，$1≤K≤100$，$1≤M≤N$，$1≤k_i≤K$，$1≤u,v≤N$，$1≤d≤1000$，$S≠T$，$1 ≤S, T≤N$。</p>
+<hr>
+<p>这道题看起来很复杂，但其中有振奋人心的一句话“输出$-1$”，某人考试时就高兴坏了（当时她才初一，水平太烂），随手打了个<code>printf(“-1”);</code>,得$10$分。</p>
+<h2 id="2-2-样例——白送的分数"><a href="#2-2-样例——白送的分数" class="headerlink" title="2.2 样例——白送的分数"></a>2.2 样例——白送的分数</h2><p>每道题目的后面，都有一组“样例输入”和“样例输出”。它们的价值极大，不仅能初步帮你检验程序的对错（特别坑的样例除外），而且，如果你不会做这道题（这种情况蒟蒻们已经司空见惯了），你就可以直接输出样例！<br> 例如美国的USACO，它的题目有一个规则，就是第一组数据必须是样例。那么，只要你输出所有的样例，你就能得到100分（满分1000）！这是相当可观的分数了。</p>
+<p>现在，你已经掌握了最基础的骗分技巧。只要你会基本的输入输出语句，你就能实现这些骗分方法。那么，如果你有一定的基础，请看下一章——我将教你怎样用简单方法骗取部分分数。</p>
+<h1 id="第3章-“艰苦朴素永不忘”"><a href="#第3章-“艰苦朴素永不忘”" class="headerlink" title="第3章 “艰苦朴素永不忘”"></a>第3章 “艰苦朴素永不忘”</h1><p>本章的标题来源于《学习雷锋好榜样》的一句歌词，但我不是想教导你们学习雷锋精神，而是学习骗分！<br> 看到“朴素”两个字了吗？它们代表了一类算法，主要有模拟和 DFS。下面我就来介绍它们在骗分中的应用。</p>
+<h2 id="3-1-模拟"><a href="#3-1-模拟" class="headerlink" title="3.1 模拟"></a>3.1 模拟</h2><p>所谓模拟，就是用计算机程序来模拟实际的事件。例如NOIP2012的“寻宝”，就是写一个程序来模拟小明上藏宝塔的动作。<br> 较繁的模拟就不叫骗分了，我这里也不讨论这个问题。<br> 模拟主要可以应用在骗高级数据结构题上的分，例如线段树。下面举一个例子来说明一下。</p>
+<h3 id="排队-USACO-2007-January-Silver"><a href="#排队-USACO-2007-January-Silver" class="headerlink" title="排队(USACO 2007 January Silver)"></a>排队(USACO 2007 January Silver)</h3><p>【问题描述】</p>
+<p>每天，农夫约翰的$N（1≤N≤50000）$头奶牛总是按同一顺序排好队，有一天，约翰决定让一些牛玩一场飞盘游戏（Ultimate Frisbee），他决定在队列里选择一群位置连续的奶牛进行比赛，为了避免比赛结果过于悬殊，要求挑出的奶牛身高不要相差太大。<br> 约翰准备了$Q（1≤Q≤200000）$组奶牛选择，并告诉你所有奶牛的身高$Hi（1≤ Hi ≤106）$。他想知道每组里最高的奶牛和最矮的奶牛身高差是多少。<br> 注意：在最大的数据上，输入输出将占据大部分时间。</p>
+<p>【输入】</p>
+<p>第一行，两个用空格隔开的整数$N$和$Q$。<br> 第2到第N+1行，每行一个整数，第i+1行表示第i头奶牛的身高Hi<br> 第N+2到第N+Q+1行，每行两个用空格隔开的整数A和B，表示选择从A到B的所有牛$（1 ≤ A ≤ B ≤ N）$</p>
+<p>【输出】</p>
+<p>共Q行，每行一个整数，代表每个询问的答案。</p>
+<p>输入样例 </p>
+<pre><code>6 3
+1
+7
+3
+4
+2
+5
+1 5
+4 6
+2 2</code></pre>
+<p>输出样例</p>
+<pre><code>6
+3
+0</code></pre>
+<hr>
+<p>对于这个例子，大牛们可以写个线段树，而我们蒟蒻，就模拟吧。</p>
+<p>附模拟程序：</p>
+<pre><code class="c++">for(int i=1;i&lt;=q;i++)
+&#123;
+    scanf(“%d%d”,&amp;a,&amp;b);
+    int min=INT_MAX,max=INT_MIN;
+    for(int i=a;i&lt;=b;i++)
+    &#123;
+        if(h[i]&lt;min) min=h[i];
+        if(h[i]&gt;max) max=h[i];
+    &#125;
+    printf(“%d\n”,max-min);
+&#125;</code></pre>
+<p>程序简洁明了，并且能高效骗分。本程序得50分。</p>
+<h2 id="3-2-万能钥匙——DFS"><a href="#3-2-万能钥匙——DFS" class="headerlink" title="3.2 万能钥匙——DFS"></a>3.2 万能钥匙——DFS</h2><p>DFS是图论中的重要算法，但我们看来，图论神马的都是浮云，关键就是如何骗分。下面引出本书的第2条定理：<br> DFS是万能的。<br> 这对于你的骗分是至关重要的。比如说，一些动态规划题，可以DFS；数学题，可以DFS；剪枝的题，更能DFS。下面以一道题为例，解释一下DFS骗分。<br> 例题：</p>
+<h3 id="采药"><a href="#采药" class="headerlink" title="采药"></a>采药</h3><h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>辰辰是个天资聪颖的孩子，他的梦想是成为世界上最伟大的医师。为此，他想拜附近最有威望的医师为师。医师为了判断他的资质，给他出了一个难题。医师把他带到一个到处都是草药的山洞里对他说：“孩子，这个山洞里有一些不同的草药，采每一株都需要一些时间，每一株也有它自身的价值。我会给你一段时间，在这段时间里，你可以采到一些草药。如果你是一个聪明的孩子，你应该可以让采到的草药的总价值最大。”</p>
+<p>如果你是辰辰，你能完成这个任务吗？</p>
+<h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p>第一行有22个整数T(1 \le T \le 1000)<em>T</em>(1≤<em>T</em>≤1000)和M(1 \le M \le 100)<em>M</em>(1≤<em>M</em>≤100)，用一个空格隔开，T<em>T</em>代表总共能够用来采药的时间，M<em>M</em>代表山洞里的草药的数目。<br>接下来的M<em>M</em>行每行包括两个在11到100100之间（包括11和100100）的整数，分别表示采摘某株草药的时间和这株草药的价值。</p>
+<h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>11个整数，表示在规定的时间内可以采到的草药的最大总价值。</p>
+<h4 id="输入输出样例"><a href="#输入输出样例" class="headerlink" title="输入输出样例"></a>输入输出样例</h4><p><strong>输入 #1</strong></p>
+<pre><code>70 3
+71 100
+69 1
+1 2</code></pre>
+<p><strong>输出 #1</strong></p>
+<pre><code>3</code></pre>
+<h4 id="说明-提示"><a href="#说明-提示" class="headerlink" title="说明/提示"></a>说明/提示</h4><p>对于$30%$的数据，$M \le 10$；</p>
+<p>对于全部的数据，$M \le 100$。</p>
+<hr>
+<p>这题的方法很简单。我们瞄准$30%$的数据来做，可以用DFS枚举方案，然后模拟计算出最优解。</p>
+<p>附一个大致的代码：</p>
+<pre><code class="cpp"> void DFS(int d,int c)
+ &#123;
+     if(d==n)
+    &#123;
+        if(c&gt;ans)ans=c;
+        return;
+    &#125;
+     DFS(d+1,c+w[i]);
+     DFS(d+1,c);
+ &#125;</code></pre>
+<h1 id="第4章-骗分的关键——猜想"><a href="#第4章-骗分的关键——猜想" class="headerlink" title="第4章 骗分的关键——猜想"></a>第4章 骗分的关键——猜想</h1><h2 id="4-1-听天由命"><a href="#4-1-听天由命" class="headerlink" title="4.1 听天由命"></a>4.1 听天由命</h2><p> 如果你觉得你的人品很好，可以试试这一招——输出随机数。</p>
+<p>先看一下代码：</p>
+<pre><code class="cpp">#include&lt;stdlib.h&gt;
+#include&lt;time.h&gt;
+//以上两个头文件必须加
+srand(time(NULL));
+//输出随机数前执行此语句
+printf(“%d”,rand()%X);
+//输出一个0~X-1的随机整数。</code></pre>
+<p> 这种方法适用于输出一个整数（或判断是否）的题目中，答案的范围越小越好。让老天决定你的得分吧。<br> 据说，在NOIP2013中，有人最后一题不会，愤然打了个随机数，结果得了70分啊!!</p>
+<h2 id="4-2-猜测答案"><a href="#4-2-猜测答案" class="headerlink" title="4.2 猜测答案"></a>4.2 猜测答案</h2><p>有些时候，问题的答案可能很有特点：对于大多数情况，答案是一样的。这时，骗分就该出手了。你需要做的，就是发掘出这个答案，然后直接输出。<br> 有时，你需要运用第3章中学到的知识，先写出朴素算法，然后造一些数据，可能就会发现规律。<br> 例如，有一道题：</p>
+<h3 id="炸毁计划"><a href="#炸毁计划" class="headerlink" title="炸毁计划"></a>炸毁计划</h3><p>【问题描述】</p>
+<p>皇军侵占了通往招远的黄金要道。为了保护渤海通道的安全，使得黄金能够顺利地运送到敌后战略总指挥地延安，从而购买战需武器，所以我们要通过你的程序确定这条战略走廊是否安全。 </p>
+<p>已知我们有N座小岛，只有使得每一个小岛都能与其他任意一个小岛联通才能保证走廊的安全。每个小岛之间只能通过若干双向联通的桥保持联系，已知有M座桥(Ai,Bi)表示第i座桥连接了Ai与Bi这两座城市。</p>
+<p> 现在，敌人的炸药只能炸毁其中一座桥，请问在仅仅炸毁这一座桥的情况下，能否保证所有岛屿安全，都能联通起来。</p>
+<p>现在给出Q个询问Ci，其中Ci表示桥梁编号，桥梁的编号按照输入顺序编号。每个询问表示在仅仅炸毁第Ci座桥的情况下能否保证所有岛屿安全。如果可以，在输出文件当中，对应输入顺序输出<code>yes</code>，否则输出<code>no</code>（输出为半角英文单词，区分大小写，默认为小写，不含任何小写符号，每行输出一个空格，忽略文末空格）。</p>
+<p>【输入格式】 </p>
+<p> 第一行 三个整数N，M，Q，分别表示岛屿的个数，桥梁的个数和询问的个数。</p>
+<p>第二行到第M+1行 每行两个整数。第i+1行有两个整数Ai Bi表示这个桥梁的属性。</p>
+<p>第M+2行 有Q个整数Ci表示查询。</p>
+<p>【输出格式】</p>
+<p> Q行，表示查询结果。</p>
+<p>【输入样例】 </p>
+<pre><code class="cpp">2 1 1
+1 2
+1 </code></pre>
+<p>【输出样例】</p>
+<pre><code>no</code></pre>
+<p>【样例范围】</p>
+<p>对于$80%$的数据，$N≤100$。</p>
+<p>对于$100%$的数据，$N≤1000$，$N,Q≤M≤2000$ 。</p>
+<hr>
+<p>你发现问题了吗？那么多座桥，炸一座就破坏岛屿的联系，可能性微乎其微（除非特别设计数据）。那么，我们的骗分策略就出来了：对于所有询问，输出<code>yes</code>。果然，此算法效果不错，得80分。<br> 现在知道猜测答案的厉害了吧？</p>
+<h2 id="4-3-寻找规律"><a href="#4-3-寻找规律" class="headerlink" title="4.3 寻找规律"></a>4.3 寻找规律</h2><p>首先声明：本节讲的规律不是正当的算法规律，而是数据的特点。<br> 某些题目会给你很多样例，你就可以观察他们的特点了。有时，数据中的某一个（或几个）数，能通过简单的关系直接算出答案。<br> 只要你找到了规律，在很多情况下你都能得到可观的分数。<br> 这样的题目大多出现在NOI或更高等级的比赛中，本人蒟蒻一个，就不举例了。传说某人去省选时专门琢磨数据的规律，结果有一题得了30分。</p>
+<h2 id="4-4-小数据杀手——打表"><a href="#4-4-小数据杀手——打表" class="headerlink" title="4.4 小数据杀手——打表"></a>4.4 小数据杀手——打表</h2><p> 一个人在某老师家上C语言家教，老师每讲一题，他都喊一句：“打表行吗？”<br> 他真的是打表的忠实粉丝。表虽然不能乱打，但还是很有用的。<br> 先看一个例子：</p>
+<h3 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h3><h4 id="题目背景"><a href="#题目背景" class="headerlink" title="题目背景"></a>题目背景</h4><p>栈是计算机中经典的数据结构，简单的说，栈就是限制在一端进行插入删除操作的线性表。</p>
+<p>栈有两种最重要的操作，即pop（从栈顶弹出一个元素）和push（将一个元素进栈）。</p>
+<p>栈的重要性不言自明，任何一门数据结构的课程都会介绍栈。宁宁同学在复习栈的基本概念时，想到了一个书上没有讲过的问题，而他自己无法给出答案，所以需要你的帮忙。</p>
+<h4 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h4><p>宁宁考虑的是这样一个问题：一个操作数序列，1,2,…,n，栈A的深度大于n。</p>
+<p>现在可以进行两种操作，</p>
+<ol>
+<li>将一个数，从操作数序列的头端移到栈的头端（对应数据结构栈的push操作）</li>
+<li>将一个数，从栈的头端移到输出序列的尾端（对应数据结构栈的pop操作）</li>
+</ol>
+<p>使用这两种操作，由一个操作数序列就可以得到一系列的输出序列。</p>
+<p>你的程序将对给定的n，计算并输出由操作数序列1,2,…,n经过操作可能得到的输出序列的总数。</p>
+<h4 id="输入格式-1"><a href="#输入格式-1" class="headerlink" title="输入格式"></a>输入格式</h4><p>输入文件只含一个整数$n(1≤n≤18)$</p>
+<h4 id="输出格式-1"><a href="#输出格式-1" class="headerlink" title="输出格式"></a>输出格式</h4><p>输出文件只有1行，即可能输出序列的总数目</p>
+<h4 id="输入输出样例-1"><a href="#输入输出样例-1" class="headerlink" title="输入输出样例"></a>输入输出样例</h4><p><strong>输入 #1</strong></p>
+<pre><code>3</code></pre>
+<p><strong>输出 #1</strong></p>
+<pre><code>5</code></pre>
+<hr>
+<p>这题看似复杂，但数据范围太小，$N\le18$。所以，骗分程序就好写了：</p>
+<pre><code class="cpp">int a[18]=&#123;1,2,5,14,42,132,429,1430,4862,16796,58786,208012,742900,2674440,9694845,35357670,129644790,477638700&#125;;
+scanf(“%d”,&amp;n):
+printf(“%d”,ans[n-1]);</code></pre>
+<p>测试结果不言而喻，AC了。</p>
+<p>学完这一章，你已基本掌握了骗分技巧。下面的内容涉及一点算法知识，难度有所增加。蒟蒻中的蒟蒻可以止步于此了。</p>
+<h1 id="第5章-做贪心的人"><a href="#第5章-做贪心的人" class="headerlink" title="第5章 做贪心的人"></a>第5章 做贪心的人</h1><h2 id="5-1-贪心的算法"><a href="#5-1-贪心的算法" class="headerlink" title="5.1 贪心的算法"></a>5.1 贪心的算法</h2><p> 给你一堆纸币，让你挑一张，相信你一定会挑面值最大的。其实，这就是贪心算法。<br> 贪心算法是个复杂的问题，但你不用管那么多。我们只关心骗分。给你一个问题，让你从一些东西中选出一些，你就可以使用贪心的方法，尽量挑好的。</p>
+<h2 id="5-2-贪心地得分"><a href="#5-2-贪心地得分" class="headerlink" title="5.2 贪心地得分"></a>5.2 贪心地得分</h2><p>我们已经学了很多骗分方法，但他们中的大多效率并不高，一般能骗10~20分。这不能满足我们的贪心。<br> 然而，我们可以合成骗分的程序。举个最简单的例子，有些含有无解情况的题目，它们同样有样例。</p>
+<p>我们可以写这个程序：</p>
+<pre><code class="cpp"> if(是样例)
+     printf(样例);
+ else
+     printf(“-1”);</code></pre>
+<p>这样也许能变10分为20分，甚至更多。<br> 当然，合并骗分方法时要注意，不要重复骗同一种情况，或漏考虑一些情况。<br> 大量能骗分的问题都能用此法，大家可以试试用新方法骗2.1中的例子“文化之旅”。</p>
+<h1 id="第6章-C-的福利"><a href="#第6章-C-的福利" class="headerlink" title="第6章 C++的福利"></a>第6章 C++的福利</h1><p> （请P党们跳过本章，这不是你们的福利）</p>
+<p>在C++中，有一个好东西，名唤STL，被万千OIer们所崇拜，所喜爱。下面让我们走进STL。</p>
+<h2 id="6-1-快速排序"><a href="#6-1-快速排序" class="headerlink" title="6.1 快速排序"></a>6.1 快速排序</h2><p> 快速排序是一个经典算法，也是C++党的经典福利。他们有这样的代码：</p>
+<pre><code class="cpp">#include&lt;algorithm&gt;
+//这是必须的
+sort(A,A+n);
+//对一个下标从0开始存储，长度为n的数组升序排序</code></pre>
+<p>就这么简单，完成了P党一大堆代码干的事情。</p>
+<p>STL 还有很多模板，自己探索吧</p>
+<h2 id="6-2-“如意金箍棒”"><a href="#6-2-“如意金箍棒”" class="headerlink" title="6.2 “如意金箍棒”"></a>6.2 “如意金箍棒”</h2><p> C++里有一种东西，叫vector容器。它好比如意金箍棒，可以随着元素的数量而改变大小。它其实就是数组，却比数组强得多。<br> 下面看看它的几种操作：</p>
+<pre><code class="cpp"> vector&lt;int&gt; V;//定义
+ V.push_back(x);//末尾增加一个元素x
+ V.pop_back();//末尾删除一个元素
+ V.size();//返回容器中的元素个数</code></pre>
+<p>它同样可以使用下标访问。（从0开始）</p>
+<h1 id="第7章-“宁为玉碎，不为瓦全”"><a href="#第7章-“宁为玉碎，不为瓦全”" class="headerlink" title="第7章 “宁为玉碎，不为瓦全”"></a>第7章 “宁为玉碎，不为瓦全”</h1><p>至此，我已介绍完了我所知的骗分方法。如果上面的方法都不奏效，我也无能为力。</p>
+<p>但是，我还有最后一招——<br> 有句古话说：“宁为玉碎，不为瓦全”。我们蒟蒻也应有这样的精神。骗不到分，就报复一下，卡评测以泄愤吧！</p>
+<p>卡评测主要有两种方法：一是死循环，故意超时；二是进入终端，卡住编译器。</p>
+<p> 先介绍下第一种。代码很简单，请看：<br> <code>while(1);</code>  就是这短短一句话，就能卡住评测机长达10s，20s，甚至更多！对于测试点多、时限长的题目，这是个不错的方法。</p>
+<p> 第二种方法也很简单，但危害性较大，建议不要在重要比赛中使用，否则可能让你追悔莫及。它就是：<br><code>#include&lt;con&gt; </code>（windows系统中使用）<br> 或 <code>#include&lt;/dev/console&gt;</code> （Linux系统中使用）<br> 它非常强大，可以卡住评测系统，使其永远停止不了编译你的程序。唯一的解除方法是，工作人员强行关机，重启，重测。当然，我不保证他们不会气愤地把你的成绩变成0分。请慎用此方法。</p>
+<h1 id="第8章-结语"><a href="#第8章-结语" class="headerlink" title="第8章 结语"></a>第8章 结语</h1><p>建议：分析一下NOIP2013普及组的试题：</p>
+<pre><code>第1题，太弱了，不用骗，得100分。
+第2题，数据很大，但是可以直接输入一个数，输出它mod 10000的值。得10分。
+第3题，是一道非常基础的DP，但对于不知DP为何物的蒟蒻来说，就使用暴力算法（即DFS）。得20分。
+第4题，我们可以寻找一下数据的规律，你会发现，在所有样例中，M值即为答案。所以直接输出M，得10分。</code></pre>
+<p>这样下来，一共得140分，比一等分数线还高20分！你的信心一定会得到鼓舞的。这就是骗分的神奇。</p>
+<hr>
+<p>骗分是蒟蒻的有力武器，可以在比赛中骗得大量分数。相信大家在这本书中收获了很多，希望本书能帮助你多得一些分。<br> 但是，最后我还是要说一句：</p>
+<p>不骗分，是骗分的最高境界。</p>
+<p>——本文转载</p>
+<p>——排版 by yz-hs</p>
+
+
+    
+
+
+<br /><hr />
+<img src="/img/end-heart.gif">
+<br />
+<blockquote>
+	<br />
+	本文作者： yz-hs
+	<br /><br />
+    本文链接： http://yz-hs.tk/e78bf8b9bee6/
+    <br /><br />
+    版权声明： 本博客所有文章除特别声明外，均允许规范转载。转载请注明出处！当然也可对文章出处进行考证，在下方评论区评论！
+    <br /><br />
+</blockquote>
+<br />
+<div class="end-post-meta">
+	<i class="fa fa-refresh" aria-hidden="true"></i> 最后更新：  2020 年 02 月 22 日
+</div>
+
+
+
+  </div>
+
+  
+    <div class="prevnext">
+  	  
+  	  	  <a class="prev" href="/dfc5f9f2632e/">上一篇</a>
+  	  
+  		  <a class="next" href="/a36446b2c935/">下一篇</a>
+  	  
+    </div>
+  
+
+  <div class="comments">
+  <div class="inner">
+
+	
+
+        <div id="gitalk-container"></div>
+        <script>
+          var gitalk = new Gitalk({
+                         clientID: 'eee39c8ef2391d17d829',
+                         clientSecret: 'c9e42cc511159cc40a9afae6755952c55f098df5',
+                         repo: 'no-code',
+                         owner: 'yz-hs',
+                         admin: ['yz-hs']
+                      })
+
+          gitalk.render('gitalk-container')
+        </script>
+
+    
+
+  </div>
+</div>
+
+</div></div>
+    			<div class="toolbar">
+  <div class="toolbar-tab-page">
+    <div class="tb-tabTitle">
+     <ul>
+       <li class="tb-current"><i class="fa fa-random" aria-hidden="true"></i></li>
+       <li><i class="fa fa-refresh" aria-hidden="true"></i></li>
+       <li><i class="fa fa-briefcase" aria-hidden="true"></i></li>
+     </ul>
+    </div>
+    <div class="tb-tabContent">
+      <div>
+      	
+<!--  1-tab  -->
+<span class="title">随机文章</span><span class="sidetitle">回味旧文</span>
+<div class="item"><a class="post-link" href="/7df258aa190a/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 初赛知识</a><hr class="separator" /><a class="post-link" href="/32caf6cc933e/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 2020新年贺词</a><hr class="separator" /><a class="post-link" href="/5edc4ae0f30b/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-J1游记</a><hr class="separator" /><a class="post-link" href="/7a4ad76933ea/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-J2游记</a><hr class="separator" /><a class="post-link" href="/c7e8518fa892/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> O1759 最长上升子序列 等</a><hr class="separator" /><a class="post-link" href="/9492bebde047/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> P1038 神经网络</a></div>
+<!--  END 1-tab  -->
+
+      </div>
+      <div class="tb-hide">
+      	
+<!--  2-tab  -->
+
+<span class="title">最新更新</span><span class="sidetitle">旧文章的更新</span>
+<div class="item"><a class="post-link" href="/6a67f065c1cd/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> yzpheme使用文档</a><hr class="separator" /><a class="post-link" href="/fa77bf2711ec/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> Hello World</a><hr class="separator" /><a class="post-link" href="/aef345d5653d/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-S1&2游记</a><hr class="separator" /><a class="post-link" href="/b8f3e9b3c3ad/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 《幽默报5》</a><hr class="separator" /><a class="post-link" href="/2881a8ac419a/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 《幽默报2》</a><hr class="separator" /><a class="post-link" href="/7a4ad76933ea/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-J2游记</a></div>
+
+<!--  END 2-tab  -->
+
+      </div>
+      <div class="tb-hide">
+
+<!--  3-tab  -->
+
+  <span class="title">其他</span><span class="sidetitle">杂物</span>
+  
+  <div class="item">
+    <div class="text" id="displaytime"><script type="text/javascript" src="/js/displaytime.js"></script></div>
+    <div id="timeprogress"></div>
+	<script>
+		var myDate = new Date();
+		var hours=myDate.getHours();
+		var minutes=myDate.getMinutes();
+		minutes=hours*60+minutes;
+		var pro=minutes/14.4;
+		var innerhtml="<div class=\"progress-con\"><div class=\"progress\" title=\"时间已过去了"+pro.toFixed(2)+"%\"style=\"width: "+pro+"%; background-color: #4caf50; color: #4caf50;\">|</div></div>"
+		document.getElementById("timeprogress").innerHTML = innerhtml;
+	</script>
+  </div>
+
+  <div class="item">
+    <div id="hitokoto" class="text">yz-hs说，除了她以外的人都很强！嘤嘤嘤~~</div>
+    <script>
+    fetch('https://v1.hitokoto.cn')
+      .then(function (res){
+        return res.json();
+      })
+      .then(function (data) {
+        var hitokoto = document.getElementById('hitokoto');
+        hitokoto.innerText = '\t' + data.hitokoto + '\n' +'\n' +'from ' + data.from ;
+      })
+      .catch(function (err) {
+        console.error(err);
+      })
+    </script>
+  </div>
+
+<!--  END 3-tab  -->
+
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="item">
+  	<div class="title">博客信息</div>
+    <div class="text list-group">
+  	  <div class="list-group-item"><i class="fa fa-file fa-fw" aria-hidden="true"></i>&nbsp;文章数目<div class="badge">70</div></div>
+  	  <div class="list-group-item"><i class="fa fa-users fa-fw" aria-hidden="true"></i>&nbsp;访客数目<div class="badge"><span id="busuanzi_value_site_uv"></span></div></div>
+  	  <div class="list-group-item"><i class="fa fa-eye fa-fw" aria-hidden="true"></i>&nbsp;总访问量<div class="badge"><span id="busuanzi_value_site_pv"></span></div></div>
+  	  <div class="list-group-item"><i class="fa fa-font fa-fw" aria-hidden="true"></i>&nbsp;本站字数<div class="badge">157.8k<!-- npm i hexo-wordcount --save --></span></div></div>
+    </div>
+  </div>
+
+  <!-- 标签可能太多，影响目录 -->
+    <div class="post-toc">
+      <div class="title">文章目录</div>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95"><span class="toc-text">目录</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC1%E7%AB%A0-%E7%BB%AA%E8%AE%BA"><span class="toc-text">第1章 绪论</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC2%E7%AB%A0-%E4%BB%8E%E6%97%A0%E8%A7%A3%E5%87%BA%E5%8F%91"><span class="toc-text">第2章 从无解出发</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E6%97%A0%E8%A7%A3%E6%83%85%E5%86%B5"><span class="toc-text">2.1 无解情况</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#NOIP2012%E7%AC%AC4%E9%A2%98-%E6%96%87%E5%8C%96%E4%B9%8B%E6%97%85"><span class="toc-text">NOIP2012第4题 文化之旅</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-%E6%A0%B7%E4%BE%8B%E2%80%94%E2%80%94%E7%99%BD%E9%80%81%E7%9A%84%E5%88%86%E6%95%B0"><span class="toc-text">2.2 样例——白送的分数</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC3%E7%AB%A0-%E2%80%9C%E8%89%B0%E8%8B%A6%E6%9C%B4%E7%B4%A0%E6%B0%B8%E4%B8%8D%E5%BF%98%E2%80%9D"><span class="toc-text">第3章 “艰苦朴素永不忘”</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-%E6%A8%A1%E6%8B%9F"><span class="toc-text">3.1 模拟</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%92%E9%98%9F-USACO-2007-January-Silver"><span class="toc-text">排队(USACO 2007 January Silver)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-%E4%B8%87%E8%83%BD%E9%92%A5%E5%8C%99%E2%80%94%E2%80%94DFS"><span class="toc-text">3.2 万能钥匙——DFS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%87%E8%8D%AF"><span class="toc-text">采药</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC4%E7%AB%A0-%E9%AA%97%E5%88%86%E7%9A%84%E5%85%B3%E9%94%AE%E2%80%94%E2%80%94%E7%8C%9C%E6%83%B3"><span class="toc-text">第4章 骗分的关键——猜想</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-%E5%90%AC%E5%A4%A9%E7%94%B1%E5%91%BD"><span class="toc-text">4.1 听天由命</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-%E7%8C%9C%E6%B5%8B%E7%AD%94%E6%A1%88"><span class="toc-text">4.2 猜测答案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%82%B8%E6%AF%81%E8%AE%A1%E5%88%92"><span class="toc-text">炸毁计划</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-%E5%AF%BB%E6%89%BE%E8%A7%84%E5%BE%8B"><span class="toc-text">4.3 寻找规律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-%E5%B0%8F%E6%95%B0%E6%8D%AE%E6%9D%80%E6%89%8B%E2%80%94%E2%80%94%E6%89%93%E8%A1%A8"><span class="toc-text">4.4 小数据杀手——打表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%88"><span class="toc-text">栈</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC5%E7%AB%A0-%E5%81%9A%E8%B4%AA%E5%BF%83%E7%9A%84%E4%BA%BA"><span class="toc-text">第5章 做贪心的人</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-%E8%B4%AA%E5%BF%83%E7%9A%84%E7%AE%97%E6%B3%95"><span class="toc-text">5.1 贪心的算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-%E8%B4%AA%E5%BF%83%E5%9C%B0%E5%BE%97%E5%88%86"><span class="toc-text">5.2 贪心地得分</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC6%E7%AB%A0-C-%E7%9A%84%E7%A6%8F%E5%88%A9"><span class="toc-text">第6章 C++的福利</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F"><span class="toc-text">6.1 快速排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-%E2%80%9C%E5%A6%82%E6%84%8F%E9%87%91%E7%AE%8D%E6%A3%92%E2%80%9D"><span class="toc-text">6.2 “如意金箍棒”</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC7%E7%AB%A0-%E2%80%9C%E5%AE%81%E4%B8%BA%E7%8E%89%E7%A2%8E%EF%BC%8C%E4%B8%8D%E4%B8%BA%E7%93%A6%E5%85%A8%E2%80%9D"><span class="toc-text">第7章 “宁为玉碎，不为瓦全”</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC8%E7%AB%A0-%E7%BB%93%E8%AF%AD"><span class="toc-text">第8章 结语</span></a></li></ol>
+    </div>
+   
+
+  <script>
+    $(function(){
+      var ali = $('.tb-tabTitle>ul>li');
+      var aDiv = $('.tb-tabContent>div');
+      var timeId = null;
+      ali.click(function(){
+        var _this = $(this);
+        timeId = setTimeout(function(){
+          _this.addClass('tb-current').siblings().removeClass('tb-current');
+          var index = _this.index();
+          aDiv.eq(index).show().siblings().hide();
+        });
+      });
+  });
+  </script>
+
+</div>
+    		</div>
+    		<div class="footer">
+  <p class="text-left">Copyright ©2018-2020 yz-hs. All rights reserved.</p>
+  <p class="text-right">Theme is <a target="_blank" rel="noopener" href="https://github.com/yz-hs/yzpheme">yzpheme</a>,by yz-hs.</p>
+</div>
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script type="text/javascript" src="/js/ctitle.js"></script>
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<script type="text/javascript" src="/js/colored-egg.js"></script>
+<script type="text/javascript" src="/js/SmoothScroll.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<!--
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="/js/firework.js"></script>
+-->
+
+<!--<script type="text/javascript" src="/js/values.js"></script>-->
+
+<!--<script type="text/javascript" src="/js/particle.js"></script>-->
+<!--<script type="text/javascript" src="/js/snow.js"></script>-->
+
+<script src="/js/activate-power-mode.js"></script>
+<script>
+ POWERMODE.colorful = true; // 控制开启/开启礼花特效  
+ POWERMODE.shake = true; // 控制开启/关闭屏幕震动特效  
+ document.body.addEventListener('input', POWERMODE);
+</script>
+
+<script type="text/javascript" src="/js/chaffle.min.js"></script>  
+<link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  
+<script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {$('.chaffle').chaffle();});   //文字变幻
+    hljs.initHighlightingOnLoad();  //高亮
+    setTimeout(function(){siteLoading.classList.remove('siteLoading-active')},0);  //加载动画
+</script>
+
+<!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": { 
+        preferredFont: "TeX", 
+        availableFonts: ["STIX","TeX"], 
+        linebreaks: { automatic:true }, 
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) 
+    },
+    tex2jax: { 
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ], 
+        processEscapes: true, 
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {  
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, 
+        Macros: { href: "{}" } 
+    },
+    messageStyle: "none"
+    }); 
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += 'has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<script>  
+if (!Readdata("fool")) {
+    document.body.classList.add('reverse-coloregg');
+    window.setTimeout(function () {
+        Savedata("fool", "fool");
+        swal("你可以正常访问 Blog 啦！你还可以通过删除 Cookie 再体验一次！呵呵^_^");
+        document.body.classList.remove('reverse-coloregg');  
+    }, 10000);
+}  
+   
+function Savedata(key, data) {  
+    key = 'yz_' + key;  
+    data = JSON.stringify(data);  
+    if (window.localStorage) {  
+        localStorage.setItem(key, data);  
+    }  
+}  
+  
+function Readdata(key) {  
+    if (!window.localStorage) return '';  
+    key = 'yz_' + key;  
+    return JSON.parse(localStorage.getItem(key));  
+}  
+</script>  
+  
+<style>  
+	
+.reverse-coloregg {  
+    -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);  
+    -moz-transform: matrix(-1, 0, 0, 1, 0, 0);  
+    transform: matrix(-1, 0, 0, 1, 0, 0);  
+    -o-transform: skew(0deg, 180deg) scale(-1, 1);  
+    filter:progid: DXImageTransform.Microsoft.BasicImage(mirror=1); 
+}  
+
+/*from https://mkblog.cn/1469/*/
+</style>  
+
+<script>
+//	$(document).ready(function(){
+//    	$("div.post-text>p>a").append(" <i class=\"fa fa-external-link\" aria-hidden=\"true\"></i>");
+//	});
+//链接后加图标
+//不好看，弃置
+</script>
+
+<a class="santa-container" onclick="santacoloredegg()">
+  <div class="santa" id="santa-colored-egg">
+    <div class="santa-body">
+        <div class="santa-head">
+            <div class="santa-ear"></div>
+            <div class="santa-ear"></div>
+            <div class="santa-hat"></div>
+            <div class="santa-eye"></div>
+            <div class="santa-eye"></div>
+            <div class="santa-nose"></div>
+            <div class="santa-mouth"></div>
+        </div>
+    </div>
+  </div>
+</a>
+
+<script type="text/javascript">
+	function santacoloredegg() {
+		document.getElementById("santa-colored-egg").innerHTML = 
+		"<div class=\"santa-body\" style=\"font-size: 500px;\">"+
+		"<div class=\"santa-head\">"+
+		"<div class=\"santa-ear\"></div>"+
+		"<div class=\"santa-ear\"></div>"+
+		"<div class=\"santa-hat\"></div>"+
+		"<div class=\"santa-eye\"></div>"+
+		"<div class=\"santa-eye\"></div>"+
+		"<div class=\"santa-nose\"></div>"+
+		"<div class=\"santa-mouth\"></div>"+
+		"</div></div>";
+		swal("由于你触碰了圣诞老人，他快气炸了！快快刷新让他平静下来！");
+	}
+</script>
+		</div>
+  	</body>
+</html>

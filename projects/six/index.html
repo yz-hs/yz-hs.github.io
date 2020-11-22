@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="screen-orientation" content="portrait">
+    <title>Six</title>
+    <link rel="stylesheet" type="text/css" href="lib/clear-sans.css">
+    <link rel="stylesheet" type="text/css" href="lib/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="six.css">
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/Box2D.min.js"></script>
+    <script type="text/javascript" src="base.js"></script>
+    <script type="text/javascript" src="transition.js"></script>
+</head>
+<body>
+    <div class="ui-page ui-container">
+        <div class="ui-title">Six!</div>
+        <div id="btn-play" class="six-btn">Start</div>
+    </div>
+    <div class="ui-page ui-mode" style="display: none;">
+        <div class="ui-mode-title">Select Mode</div>
+        <div class="ui-mode-btns">
+            <div class="six-btn six-btn-mode" data-mode="endless">Exploring Mode</div>
+            <div class="six-btn six-btn-mode" data-mode="endless,rolling">Rolling Mode</div>
+        </div>
+        <div id="btn-m-back" class="six-btn">Back</div>
+    </div>
+    <div class="ui-page game-container" style="display: none;">
+        <div id="game-btns">
+            <i id="btn-g-pause" class="fa fa-2x fa-pause"></i>
+            <i id="btn-g-play" class="fa fa-2x fa-play"></i>
+            <i id="btn-g-retry" class="fa fa-2x fa-rotate-right"></i>
+            <i id="btn-g-home" class="fa fa-2x fa-home"></i>
+        </div>
+        <canvas id="canvas"></canvas>
+        <div id="game-mask">
+            <i class="fa fa-5x fa-pause"></i>
+        </div>
+    </div>
+    <script type="text/javascript" src="simulator.js"></script>
+    <script type="text/javascript" src="ui.js"></script>
+    <script type="text/javascript" src="game.js"></script>
+    <script type="text/javascript" src="renderer.js"></script>
+    <script type="text/javascript" src="six.js"></script>
+</body>
+</html>

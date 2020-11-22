@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <title>
+  	
+  		P2671 求和 | Yz-hs&#39;s Blog
+  	
+  </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+  <script src="https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Yz-hs's Blog" type="application/atom+xml">
+</head>
+	<body>
+		<a name="back-to-top"></a>
+		<div id="siteLoading" class="siteloading siteLoading-active">
+			<div class="loader-inner">
+			<div class="loader-line-wrap"><div class="loader-line"></div></div>
+			<div class="loader-line-wrap"><div class="loader-line"></div></div>
+			<div class="loader-line-wrap"><div class="loader-line"></div></div>
+			<div class="loader-line-wrap"><div class="loader-line"></div></div>
+			<div class="loader-line-wrap"><div class="loader-line"></div></div>
+			</div>
+		</div>
+		<div class="main">
+			<a target="_blank" rel="noopener" href="https://github.com/yz-hs" class="github-corner" aria-label="View source on GitHub">
+	<svg width="80" height="80" viewBox="0 0 250 250" style="fill:#ffb6c1; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+		<path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+		<path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+		<path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+	</svg>
+</a>
+<style>
+.github-corner:hover 
+.octo-arm {animation:octocat-wave 560ms ease-in-out}
+@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}
+@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}
+</style>
+
+<div class="topbar">
+	<a href="/" class="topbar-title">
+		<i class="fa fa-home" aria-hidden="true"></i> Yz-hs&#39;s Blog
+	</a>
+	<div class="topbar-url">
+	  
+            <a href="/archives/index.html"><i class="fa fa-archive" aria-hidden="true"></i></a>
+      
+            <a href="/tags/index.html"><i class="fa fa-tags" aria-hidden="true"></i></a>
+      
+            <a href="/categories/index.html"><i class="fa fa-navicon" aria-hidden="true"></i></a>
+      
+            <a href="/somepage/about/index.html"><i class="fa fa-user" aria-hidden="true"></i></a>
+      
+            <a href="/somepage/projects/index.html"><i class="fa fa-cog" aria-hidden="true"></i></a>
+      
+      <a href="/somepage/%E5%90%90%E6%A7%BD/index.html"><i class="fa fa-bell-o" aria-hidden="true"></i></a>
+    </div>
+	<a href="/somepage/%E5%90%90%E6%A7%BD/index.html" class="topbar-comments">
+		<i class="fa fa-bell-o" aria-hidden="true"></i>
+	</a>
+	<div class="topbar-full-url">
+		<a href="/"><i class="fa fa-home" aria-hidden="true"></i></a>
+		
+            <a href="/archives/index.html"><i class="fa fa-archive" aria-hidden="true"></i></a>
+        
+            <a href="/tags/index.html"><i class="fa fa-tags" aria-hidden="true"></i></a>
+        
+            <a href="/categories/index.html"><i class="fa fa-navicon" aria-hidden="true"></i></a>
+        
+            <a href="/somepage/about/index.html"><i class="fa fa-user" aria-hidden="true"></i></a>
+        
+            <a href="/somepage/projects/index.html"><i class="fa fa-cog" aria-hidden="true"></i></a>
+        
+        <a href="/somepage/%E5%90%90%E6%A7%BD/index.html"><i class="fa fa-bell-o" aria-hidden="true"></i></a>
+	</div>
+</div>
+			<div class="sidebar">
+
+  <div class="sidebar-avatar-container">
+  	<img src="/img/avatar.jpg" class="sidebar-avatar bounce" />
+  </div>
+
+  <div class="sidebar-author">
+    yz-hs<br />
+    <div class="mini-text">A cute OIer</div>
+  </div>
+
+  <br /><br />
+
+  <div class="sidebar-list-container">
+  
+  <div class="mini-text">导航</div>
+
+  <br />
+
+  <div class="list-group">
+  	
+  	 
+  	   <a class="list-group-item" href="/archives/index.html"><i class="fa fa-archive fa-fw" aria-hidden="true"></i>&nbsp; 归档
+  	 
+  	    
+  	    	<div class="badge">70</div>
+  	    
+      </a>
+    
+  	 
+  	   <a class="list-group-item" href="/tags/index.html"><i class="fa fa-tags fa-fw" aria-hidden="true"></i>&nbsp; 标签
+  	 
+  	    
+  	    	<div class="badge">22</div>
+  	    
+      </a>
+    
+  	 
+  	   <a class="list-group-item" href="/categories/index.html"><i class="fa fa-navicon fa-fw" aria-hidden="true"></i>&nbsp; 分类
+  	 
+  	    
+  	    	<div class="badge">10</div>
+  	    
+      </a>
+    
+  	 
+  	   <a class="list-group-item" href="/somepage/about/index.html"><i class="fa fa-user fa-fw" aria-hidden="true"></i>&nbsp; 关于
+  	 
+  	    
+      </a>
+    
+  	 
+  	   <a class="list-group-item" href="/somepage/projects/index.html"><i class="fa fa-cog fa-fw" aria-hidden="true"></i>&nbsp; 项目
+  	 
+  	    
+      </a>
+    
+  </div>
+
+  </div>
+
+  <div class="sidebar-footer">
+  	<div class="item">
+  		<a href="#back-to-top"><i class="fa fa-hand-o-up" aria-hidden="true"></i><div class="mini-text">顶部</div></a>
+  	</div>
+  	<div class="item">
+  		<a href="/atom.xml"><i class="fa fa-feed" aria-hidden="true"></i><div class="mini-text">RSS</div></a>
+  	</div>
+  	<div class="item">
+  		<a href="javascript:(function(){window.open(&quot;http://yz-hs.tk&quot;)})()" onclick="swal('提示','请把图标拖动到书签栏','warning');return false;"><i class="fa fa-bookmark" aria-hidden="true"></i><div class="mini-text">收藏</div></a>
+  	</div>
+  </div>
+</div>
+			<div class="article">
+    			<div class="article-cell-body"><div class="post">
+  <div class="header">
+    <div class="title">P2671 求和</div>
+    <div class="meta">
+	  <span><i class="fa fa-user" aria-hidden="true"></i> yz-hs</span>
+	  <span><i class="fa fa-clock-o" aria-hidden="true"></i>  2019 年 08 月 22 日</span>
+      <span><i class="fa fa-font" aria-hidden="true"></i> 2.2k</span>
+      <span><i class="fa fa-eye fa-fw" aria-hidden="true"></i> <span id="busuanzi_value_page_pv"></span></span>
+      
+      
+    </div>
+  </div>
+
+  <div class="breadcrumb">
+    <div class="url">
+      <a href="/"><i class="fa fa-home" aria-hidden="true"></i> 主页</a> / P2671 求和
+    </div>
+    <div class="share">
+      分享到：<a target="_blank" rel="noopener" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yz-hs.tk/6602a5cf26f4/&title=P2671 求和&site=http://yz-hs.tk"><i class="fa fa-qq" aria-hidden="true"></i></a>
+    </div>
+  </div>
+
+  <div class="post-text">
+    <blockquote>
+<p>人要是行，干一行行一行，一行行行行行。人要不行，干一行不行一行，一行不行行行不行。你干这行行不行？</p>
+</blockquote>
+<a id="more"></a>
+
+<h1 id="题干"><a href="#题干" class="headerlink" title="题干"></a>题干</h1><p>我们先<a target="_blank" rel="noopener" href="https://www.luogu.org/problem/P2671">看题</a></p>
+<p>题目描述:<br>一条狭长的纸带被均匀划分出了n个格子，格子编号从1到n。每个格子上都染了一种颜色$color_i$(用$[1,m]$当中的一个整数表示)，并且写了一个数字$number_i$。<br><img src="https://i.loli.net/2019/08/23/moRVJdvUgrbOxPG.png" alt="1.png"><br>定义一种特殊的三元组：$(x,y,z)$，其中$x,y,z$都代表纸带上格子的编号，这里的三元组要求满足以下两个条件：</p>
+<blockquote>
+<p>1.$x,y,z$是整数,且$x&lt;y&lt;z,y-x=z-y$<br>2.$colorx=colorz$</p>
+</blockquote>
+<p>满足上述条件的三元组的分数规定为$(x+z) \times (number_x+number_z)$。整个纸带的分数规定为所有满足条件的三元组的分数的和。这个分数可能会很大，你只要输出整个纸带的分数除以10007所得的余数即可。</p>
+<p>输入格式:<br>第一行是用一个空格隔开的两个正整数n和m,n表纸带上格子的个数，m表纸带上颜色的种类数。<br>第二行有n用空格隔开的正整数，第i数字number表纸带上编号为i格子上面写的数字。<br>第三行有n用空格隔开的正整数，第i数字color表纸带上编号为i格子染的颜色。</p>
+<p>输出格式:<br>一个整数，表示所求的纸带分数除以10007所得的余数。</p>
+<p>数据范围：</p>
+<p>对于第 1 组至第 2 组数据，$1≤n≤100,1≤m≤5$；</p>
+<p>对于第 3 组至第 4 组数据，$1≤n≤3000,1≤m≤100$；</p>
+<p>对于第 5 组至第 6 组数据，$1≤n≤100000,1≤m≤100000$，且不存在出现次数超过 20 的颜色；</p>
+<p>对 于 全 部 10 组 数 据 ，$1≤n≤100000,1≤m≤100000,1≤color_i≤m,1≤number_i≤100000$</p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>此题是个<del>膜你</del>模拟题</p>
+<p>先说一下代码中变量的含义：</p>
+<p>1.m表纸带上格子的个数<br>2.$p=10007$，<del>膜</del>模数<br>3.n表颜色种类</p>
+<p>我们可以先定义个结构体node，存编号，颜色，数字</p>
+<pre><code class="cpp">struct node
+&#123;
+    int hao;//编号
+    int col;//颜色
+    int num;//数字
+&#125;paper[100000+10];</code></pre>
+<p>读入数据</p>
+<pre><code class="cpp">cin&gt;&gt;m&gt;&gt;n;
+for(int i=1;i&lt;=m;i++)
+&#123;
+    cin&gt;&gt;paper[i].num;
+    paper[i].hao=i;
+&#125;
+for(int i=1;i&lt;=m;i++)
+&#123;
+    cin&gt;&gt;paper[i].col;
+&#125;    </code></pre>
+<p>再1个for循环(i)枚举x</p>
+<p>根据条件“$y-x=z-y$”</p>
+<p>说明从x到y与从y到z的距离相等</p>
+<p>所以再一层for循环(j)枚举从x到y的距离(从y到z的距离),若$i+j+j+2&gt;m$,$break;$</p>
+<p>再按$(x+z) \times (number_x+number_z)$计算即可</p>
+<pre><code class="cpp">for(int i=1;i&lt;=m-2;i++)
+&#123;
+    for(int j=0;;j++)
+    &#123;
+        if((i+j+j+2)&gt;m)
+        &#123;
+            break;
+        &#125;
+        if(paper[i].col!=paper[i+j+j+2].col)
+        &#123;
+            continue;
+        &#125;
+        answer=(answer+ans(paper[i],paper[i+j+j+2]))%p;
+    &#125;
+&#125;
+cout&lt;&lt;answer;</code></pre>
+<p>这是ans函数(有点鬼畜，勿喷)</p>
+<pre><code class="cpp">int ans(node x,node z)
+&#123;
+    int q=x.hao%p;
+    int w=z.hao%p;
+    int e=x.num%p;
+    int r=z.num%p;
+    int t=(q+w)%p;
+    int y=(e+r)%p;
+    int u=(t \times y)%p;
+    return u;
+&#125;</code></pre>
+<p>代码全貌(namespace勿喷):</p>
+<pre><code class="cpp">#include &lt;iostream&gt;
+#include &lt;cstdio&gt;
+#include &lt;cmath&gt;
+#include &lt;cstring&gt;
+#include &lt;cstdlib&gt;
+#include &lt;algorithm&gt;
+#define ll long long
+using namespace std;
+namespace _yz
+&#123;
+    struct node
+    &#123;
+            int num,col,hao;
+    &#125;paper[100000+10];
+    int m,n,answer=0;
+    const int p=10007;
+    int ans(node x,node z)
+    &#123;
+        int q=x.hao%p;
+        int w=z.hao%p;
+        int e=x.num%p;
+        int r=z.num%p;
+        int t=(q+w)%p;
+        int y=(e+r)%p;
+        int u=(t*y)%p;
+        return u;
+    &#125;
+    void yzmain()
+    &#123;
+        cin&gt;&gt;m&gt;&gt;n;
+        for(int i=1;i&lt;=m;i++)
+        &#123;
+            cin&gt;&gt;paper[i].num;
+            paper[i].hao=i;
+        &#125;
+        for(int i=1;i&lt;=m;i++)
+        &#123;
+            cin&gt;&gt;paper[i].col;
+        &#125;
+        for(int i=1;i&lt;=m-2;i++)
+        &#123;
+            for(int j=0;;j++)
+            &#123;
+                if((i+j+j+2)&gt;m)
+                &#123;
+                    break;
+                &#125;
+                if(paper[i].col!=paper[i+j+j+2].col)
+                &#123;
+                    continue;
+                &#125;
+                answer=(answer+ans(paper[i],paper[i+j+j+2]))%p;
+            &#125;
+        &#125;
+        cout&lt;&lt;answer;
+        return;
+    &#125;
+&#125;
+int main()
+&#123;
+    _yz::yzmain();
+    return 0;
+&#125;</code></pre>
+<p>啥?  T飞了?</p>
+<p><img src="/postimg/%E8%AF%84%E6%B5%8B%E7%8A%B6%E6%80%81/tle.jpg" alt="ac.jpg"></p>
+<h1 id="Solution-100pts"><a href="#Solution-100pts" class="headerlink" title="Solution 100pts"></a>Solution 100pts</h1><p>正解如下(语文实在不好):</p>
+<h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>假设纸带只有一种颜色</p>
+<p>开始你只有一个格子，编号$a_1$,数字$n_1$;</p>
+<p>这样根据运算规则，不会产生运算。</p>
+<p>再加一个格子，编号$a_2$,数字$n_2$，<strong>不一定相邻</strong>，</p>
+<p>题干有$y-x=z-y$，得</p>
+<p>$2y=x+z$</p>
+<p>即当$a_1+a_2$是偶数时，就能产生运算。</p>
+<p>所以，当$a_i$ $a_j$同为偶数或奇数时，才能产生运算。</p>
+<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><p>运算规则是$(x+z)×(number_x+number_z)$</p>
+<p>即$(a_i+a_j)×(n_i+n_j)$</p>
+<p>朴素的运算代价是$O(n^2)$</p>
+<p>数据$1&lt;=m&lt;=100000$,一定超时</p>
+<p>优化：</p>
+<p>原式可分为</p>
+<p>$a_i \times n_i+a_i \times n_j+a_i \times n_i+a_j \times n_j$</p>
+<p>即：</p>
+<p>1.$a_i \times n_i$-&gt;A运算</p>
+<p>2.$a_i \times n_j$-&gt;B运算</p>
+<p>3.$a_j \times n_i$-&gt;C运算</p>
+<p>4.$a_j \times n_j$-&gt;D运算</p>
+<p>经分析，这些都可以做优化，这是突破口所在</p>
+<p>那么可以做前缀和优化，只需维护3个变量，运算求解的时间复杂度即可降为$O(n)$</p>
+<pre><code class="cpp">class node
+&#123;
+    public:
+    int anx;//AD运算
+    int ax;//B运算
+    int nx;//C运算
+    int cnt;
+&#125;c[100000+10][2];</code></pre>
+<p>其中c数组第一维表颜色</p>
+<p>为什么c[100000+10]<strong>[2]</strong>?</p>
+<p>因为</p>
+<p>$a_i$ $a_j$同为偶数或奇数两种情况</p>
+<p>另外cnt表示一种颜色有了cnt个偶/奇数位置项</p>
+<p>所以可以放心枚举而不超时</p>
+<p>另注输入部分：</p>
+<pre><code class="cpp">cin&gt;&gt;n&gt;&gt;m;
+for(int i=1;i&lt;=n;++i)
+&#123;
+     cin&gt;&gt;a[i];//数字
+&#125; 
+for(int i=1;i&lt;=n;++i)
+&#123;
+    cin&gt;&gt;b[i];//颜色
+&#125;</code></pre>
+<hr>
+<pre><code class="cpp">
+for(int i=1;i&lt;=n;++i)
+&#123;  
+    int k=b[i];//颜色
+    int j=i%2;//奇偶性
+    if(c[k][j].cnt)//运算规则把积分结果积累到 ans 上  注意每一步的模运算 防止溢出 
+    &#123; 
+         ans+=c[k][j].anx%md+(i%md*(c[k][j].nx%md))%md+i%md*(a[i]%md)%md*(c[k][j].cnt%md)%md+a[i]%md*(c[k][j].ax%md)%md;
+           ans%=md;
+           c[k][j].anx=(c[k][j].anx%md+i%md*(a[i]%md)%md)%md;//更新每一项位置 \times 每一项的数值之和(anx) 
+           c[k][j].nx=(c[k][j].nx%md+a[i])%md;//更新每一项的数值之和 (nx)
+           c[k][j].ax=(c[k][j].ax%md+i%md)%md;// 更新每一项的位置之和 (ax)
+           c[k][j].cnt=(c[k][j].cnt+1)%md;     // c[k][0].cnt 项表示 此时第k种颜色有了cnt个偶数位置项  
+    &#125;
+    else// 出现的第一个数用来初始化 c 
+    &#123;
+           c[k][j].anx=(c[k][j].anx%md+i%md*(a[i]%md)%md)%md;
+           c[k][j].nx=(c[k][j].nx%md+a[i]%md)%md;
+           c[k][j].ax=(c[k][j].ax%md+i%md)%md;
+           c[k][j].cnt=(c[k][j].cnt+1)%md;     
+    &#125;
+&#125;</code></pre>
+<p>啥？$%md$让你眼花缭乱？</p>
+<p>下面的代码可能让你更好理解</p>
+<pre><code class="cpp">for(int i=1;i&lt;=n;++i)
+&#123;  
+    int k=b[i];//颜色
+    int j=i%2;//奇偶性
+    if(c[k][j].cnt)//运算规则把积分结果积累到 ans 上 
+    &#123; 
+         ans+=c[k][j].anx+i*c[k][j].n+i*a[i]*c[k][j].cnt+a[i]*c[k][j].ax;
+           c[k][j].anx=c[k][j].anx+i*a[i];//更新每一项位置*每一项的数值之和(anx) 
+           c[k][j].nx=c[k][j].nx+a[i];//更新每一项的数值之和 (nx)
+           c[k][j].ax=c[k][j].ax+i;//更新每一项的位置之和 (ax)
+           c[k][j].cnt=c[k][j].cnt+1;// c[k][0].cnt 项表示此时第k种颜色有了cnt个偶数位置项  
+    &#125;
+    else// 出现的第一个数用来初始化 c 
+    &#123;
+           c[k][j].anx=c[k][j].anx+i*a[i];
+           c[k][j].nx=c[k][j].nx+a[i];
+           c[k][j].ax=c[k][j].ax+i;
+           c[k][j].cnt=c[k][j].cnt+1;     
+    &#125;
+&#125;</code></pre>
+<p>完整AC代码：</p>
+<pre><code class="cpp">#include&lt;iostream&gt;
+#include&lt;cstdio&gt;
+#include&lt;algorithm&gt; 
+using namespace std;
+namespace _yz
+&#123;
+    const int N=1e5+1000;
+    int md=10007;
+    class node
+    &#123;
+        public:
+        int anx;
+        int ax;
+        int nx;
+        int cnt;
+    &#125;c[100000+10][2];
+    int n,m,a[N],b[N];
+    long long ans;
+    void yzmain()
+    &#123;   
+        cin&gt;&gt;n&gt;&gt;m;
+        for(int i=1;i&lt;=n;++i)
+        &#123;
+            cin&gt;&gt;a[i];
+        &#125; 
+        for(int i=1;i&lt;=n;++i)
+        &#123;
+            cin&gt;&gt;b[i];
+        &#125;
+        for(int i=1;i&lt;=n;++i)
+        &#123;  
+            int k=b[i];
+            int j=i%2;
+            if(c[k][j].cnt)
+            &#123; 
+                ans+=c[k][j].anx%md+(i%md*(c[k][j].nx%md))%md+i%md*(a[i]%md)%md*(c[k][j].cnt%md)%md+a[i]%md*(c[k][j].ax%md)%md;
+                ans%=md;
+                c[k][j].anx=(c[k][j].anx%md+i%md*(a[i]%md)%md)%md;
+                c[k][j].nx=(c[k][j].nx%md+a[i])%md;
+                c[k][j].ax=(c[k][j].ax%md+i%md)%md;
+                c[k][j].cnt=(c[k][j].cnt+1)%md;    
+            &#125;
+            else
+            &#123;
+                c[k][j].anx=(c[k][j].anx%md+i%md*(a[i]%md)%md)%md;
+                c[k][j].nx=(c[k][j].nx%md+a[i]%md)%md;
+                c[k][j].ax=(c[k][j].ax%md+i%md)%md;
+                c[k][j].cnt=(c[k][j].cnt+1)%md;     
+            &#125;
+        &#125;
+        cout&lt;&lt;ans;
+        return;
+    &#125;
+&#125;
+int main()
+&#123;
+    _yz::yzmain();
+    return 0;
+&#125;</code></pre>
+<p><img src="/postimg/%E8%AF%84%E6%B5%8B%E7%8A%B6%E6%80%81/ac.jpg" alt="ac.jpg"></p>
+<h1 id="END"><a href="#END" class="headerlink" title="END"></a>END</h1><p>附$USACO$的毒瘤数据</p>
+<pre><code>....................................................................................................
+....................................................................................................
+....................................................................................................
+**..................................................................................................
+..*.................................................................................................
+...*................................................................................................
+....*...............................................................................................
+.....*..............................................................................................
+......*.............................................................................................
+.......*............................................................................................
+........*...........................................................................................
+.........*..........................................................................................
+..........*.........................................................................................
+...........*........................................................................................
+...........*........................................................................................
+...........*........................................................................................
+...........*.......................................................................................*
+............**..**..**......**......***....****...................................................*.
+............**..**.*.......****....*...*..*....*...*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*..*..*.*.*.*.*..
+............**..**..**....**..**...*C.....*....*..*..*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+............**..**....*..********..*...*..*....*.*................................................*.
+.............****..***..**......**..***....****.*..................................................*
+*..............................................*....................................................
+.*............................................*.....................................................
+..*..............................*******.....*......................................................
+...*............................**......*...*.............*............*............................
+....*...............*...........*........*.*.............**............**...........................
+.....*.............*.*..........*.........*.............**..............**..........................
+......*...........*...*.........*.........**...........**................**.........................
+.......*......****.....*.......*............*..........**................**.........................
+........*....*..........*.....*.............*..........***..............***.........................
+.........*..*............*...*...............*..........***...******...***..........................
+..........**..............***.................*.........*******....*******..........................
+...............................................*.......*..................*.........................
+......................................................*....***......***....*........................
+.................................................*...*....*...*....*...*....*.......................
+..................................................*..*....*.***....*.***....*.......................
+...................................................*.*.....***......***.....*.......................
+....................................................*.*....................*........................
+.......................................................*.....********.....*.........................
+........................................................*...*.**..**.*...*..........................
+.........................................................*..*........*..*...........................
+.................................................*********..*.*.****.*.*............................
+..........................................******..............******...****.........................
+...............***************************................................***.......................
+...........****.............................................................**......................
+..........*.......................................*..........................*......................
+.........*...**...................................*..........................*......................
+.........*..*.*....................................*.......*.........*.......*......................
+.........*.*..*....................................*......*...........*......*......................
+.........*.*...*...............*....................*.....*...........*.....*.......................
+.........*.*....*..............*....................*....*.............*....*.......................
+.........*.*.....*............*.....................*....*.............*....*.......................
+.........*.*......*..........*......................*....*..........****....*.......................
+.........*.*.......*........*****....................*..*........***....*..*........................
+.........*.*........*......*...*.*********************..*********.......*..*........................
+.........*.*.......*......*...*......................*..*...............*..*........................
+.........*.*......*......*...*.......................*..*...............*..*************************
+........*...*......*....*...*........................*..*...............*..*........................
+.........*C*........*...*...*........................*..*...............*..*........................
+..........*..........*...*...*.......................*..*...............*...........................
+......................*****.***......................****...............****........................
+.......................******.***...................******.............******.......................
+....................................................*.....*.........................................
+...................................................*.......*........................................
+..............**.........**.......................*.........*..**.........**........................
+.............***.........***.....................*...........****.........***.......................
+............***...........***...................*............***...........***......................
+............****...***...****..................*.............****...*.*...****......................
+.............******...******..................*...............******...******.......................
+..............****.....****..................*.................****.....****........................
+................**.....**...................*....................**.....**..........................
+..........*****.*.......*.*****...*..*.....*...............*****.*.......*.*****...*..*.............
+.........********..*.*..********..****....*...............********..*.*..********..****.............
+.........*******.........*******..****...*................*******.........*******..****.............
+..........****.*.........*.****...****..*..................****.*.........*.****...****.............
+.............*.*.........*..*.....*.**.*......................*.*.........*..*.....*.**.............
+............*.*...*****...*..*....*..**......................*.*...*****......*....*..*.............
+...........**.*************...*...*..*......................**.*************...*...*..*.............
+...........*..*************...*...*..*......................*..*************...*...*..*.............
+..........*....************....*.*...*.....................*....************....*.*...*.............
+..........*....***********.....*.*...*.....................*....***********.....*.*...*.............
+.........*......*********.......**...*....................*......*********.......**...*.............
+.........*....*..********.................................*....*..********............*.............
+........*....**.........**...**......*...................*....**.........**...**......*.............
+........*...**...........**...**....**...................*...**...........**...**....**.............
+.......*...**.............**...**..**...................*...**.............**...**..**..............
+.......*...*...............**...*****...................*...*...............**...*****..............
+.......*...*...............**...****....................*...*...............**...****...............
+.......*....**.............*.*..*............................**.............*.*..*..................
+.......*......*............*..*.*.......................*......*............*....*..................
+.......***.....*.................*......................***.......................*.................
+........*****.***................*.......................*****.***................*.................
+.........*.*******...............*........................*.*******...............*.................
+.........*....***................*........................*....****...............*.................
+.........*....***.*****.****.....*........................*....***.*****.****.....*.................
+.........********.****************........................*************************.................
+...................*................................................................................
+...................*................................................................................
+...................*................................................................................
+</code></pre>
+
+
+    
+
+
+<br /><hr />
+<img src="/img/end-heart.gif">
+<br />
+<blockquote>
+	<br />
+	本文作者： yz-hs
+	<br /><br />
+    本文链接： http://yz-hs.tk/6602a5cf26f4/
+    <br /><br />
+    版权声明： 本博客所有文章除特别声明外，均允许规范转载。转载请注明出处！当然也可对文章出处进行考证，在下方评论区评论！
+    <br /><br />
+</blockquote>
+<br />
+<div class="end-post-meta">
+	<i class="fa fa-refresh" aria-hidden="true"></i> 最后更新：  2020 年 10 月 01 日
+</div>
+
+
+
+  </div>
+
+  
+    <div class="prevnext">
+  	  
+  	  	  <a class="prev" href="/40c43703e9aa/">上一篇</a>
+  	  
+  		  <a class="next" href="/d0112e62216d/">下一篇</a>
+  	  
+    </div>
+  
+
+  <div class="comments">
+  <div class="inner">
+
+	
+
+        <div id="gitalk-container"></div>
+        <script>
+          var gitalk = new Gitalk({
+                         clientID: 'eee39c8ef2391d17d829',
+                         clientSecret: 'c9e42cc511159cc40a9afae6755952c55f098df5',
+                         repo: 'no-code',
+                         owner: 'yz-hs',
+                         admin: ['yz-hs']
+                      })
+
+          gitalk.render('gitalk-container')
+        </script>
+
+    
+
+  </div>
+</div>
+
+</div></div>
+    			<div class="toolbar">
+  <div class="toolbar-tab-page">
+    <div class="tb-tabTitle">
+     <ul>
+       <li class="tb-current"><i class="fa fa-random" aria-hidden="true"></i></li>
+       <li><i class="fa fa-refresh" aria-hidden="true"></i></li>
+       <li><i class="fa fa-briefcase" aria-hidden="true"></i></li>
+     </ul>
+    </div>
+    <div class="tb-tabContent">
+      <div>
+      	
+<!--  1-tab  -->
+<span class="title">随机文章</span><span class="sidetitle">回味旧文</span>
+<div class="item"><a class="post-link" href="/7df258aa190a/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 初赛知识</a><hr class="separator" /><a class="post-link" href="/32caf6cc933e/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 2020新年贺词</a><hr class="separator" /><a class="post-link" href="/5edc4ae0f30b/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-J1游记</a><hr class="separator" /><a class="post-link" href="/7a4ad76933ea/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-J2游记</a><hr class="separator" /><a class="post-link" href="/c7e8518fa892/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> O1759 最长上升子序列 等</a><hr class="separator" /><a class="post-link" href="/9492bebde047/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> P1038 神经网络</a></div>
+<!--  END 1-tab  -->
+
+      </div>
+      <div class="tb-hide">
+      	
+<!--  2-tab  -->
+
+<span class="title">最新更新</span><span class="sidetitle">旧文章的更新</span>
+<div class="item"><a class="post-link" href="/6a67f065c1cd/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> yzpheme使用文档</a><hr class="separator" /><a class="post-link" href="/fa77bf2711ec/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> Hello World</a><hr class="separator" /><a class="post-link" href="/aef345d5653d/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-S1&2游记</a><hr class="separator" /><a class="post-link" href="/b8f3e9b3c3ad/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 《幽默报5》</a><hr class="separator" /><a class="post-link" href="/2881a8ac419a/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 《幽默报2》</a><hr class="separator" /><a class="post-link" href="/7a4ad76933ea/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-J2游记</a></div>
+
+<!--  END 2-tab  -->
+
+      </div>
+      <div class="tb-hide">
+
+<!--  3-tab  -->
+
+  <span class="title">其他</span><span class="sidetitle">杂物</span>
+  
+  <div class="item">
+    <div class="text" id="displaytime"><script type="text/javascript" src="/js/displaytime.js"></script></div>
+    <div id="timeprogress"></div>
+	<script>
+		var myDate = new Date();
+		var hours=myDate.getHours();
+		var minutes=myDate.getMinutes();
+		minutes=hours*60+minutes;
+		var pro=minutes/14.4;
+		var innerhtml="<div class=\"progress-con\"><div class=\"progress\" title=\"时间已过去了"+pro.toFixed(2)+"%\"style=\"width: "+pro+"%; background-color: #4caf50; color: #4caf50;\">|</div></div>"
+		document.getElementById("timeprogress").innerHTML = innerhtml;
+	</script>
+  </div>
+
+  <div class="item">
+    <div id="hitokoto" class="text">yz-hs说，除了她以外的人都很强！嘤嘤嘤~~</div>
+    <script>
+    fetch('https://v1.hitokoto.cn')
+      .then(function (res){
+        return res.json();
+      })
+      .then(function (data) {
+        var hitokoto = document.getElementById('hitokoto');
+        hitokoto.innerText = '\t' + data.hitokoto + '\n' +'\n' +'from ' + data.from ;
+      })
+      .catch(function (err) {
+        console.error(err);
+      })
+    </script>
+  </div>
+
+<!--  END 3-tab  -->
+
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="item">
+  	<div class="title">博客信息</div>
+    <div class="text list-group">
+  	  <div class="list-group-item"><i class="fa fa-file fa-fw" aria-hidden="true"></i>&nbsp;文章数目<div class="badge">70</div></div>
+  	  <div class="list-group-item"><i class="fa fa-users fa-fw" aria-hidden="true"></i>&nbsp;访客数目<div class="badge"><span id="busuanzi_value_site_uv"></span></div></div>
+  	  <div class="list-group-item"><i class="fa fa-eye fa-fw" aria-hidden="true"></i>&nbsp;总访问量<div class="badge"><span id="busuanzi_value_site_pv"></span></div></div>
+  	  <div class="list-group-item"><i class="fa fa-font fa-fw" aria-hidden="true"></i>&nbsp;本站字数<div class="badge">157.8k<!-- npm i hexo-wordcount --save --></span></div></div>
+    </div>
+  </div>
+
+  <!-- 标签可能太多，影响目录 -->
+    <div class="post-toc">
+      <div class="title">文章目录</div>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%98%E5%B9%B2"><span class="toc-text">题干</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Solution"><span class="toc-text">Solution</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Solution-100pts"><span class="toc-text">Solution 100pts</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1"><span class="toc-text">1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2"><span class="toc-text">2</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#END"><span class="toc-text">END</span></a></li></ol>
+    </div>
+   
+
+  <script>
+    $(function(){
+      var ali = $('.tb-tabTitle>ul>li');
+      var aDiv = $('.tb-tabContent>div');
+      var timeId = null;
+      ali.click(function(){
+        var _this = $(this);
+        timeId = setTimeout(function(){
+          _this.addClass('tb-current').siblings().removeClass('tb-current');
+          var index = _this.index();
+          aDiv.eq(index).show().siblings().hide();
+        });
+      });
+  });
+  </script>
+
+</div>
+    		</div>
+    		<div class="footer">
+  <p class="text-left">Copyright ©2018-2020 yz-hs. All rights reserved.</p>
+  <p class="text-right">Theme is <a target="_blank" rel="noopener" href="https://github.com/yz-hs/yzpheme">yzpheme</a>,by yz-hs.</p>
+</div>
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script type="text/javascript" src="/js/ctitle.js"></script>
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<script type="text/javascript" src="/js/colored-egg.js"></script>
+<script type="text/javascript" src="/js/SmoothScroll.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<!--
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="/js/firework.js"></script>
+-->
+
+<!--<script type="text/javascript" src="/js/values.js"></script>-->
+
+<!--<script type="text/javascript" src="/js/particle.js"></script>-->
+<!--<script type="text/javascript" src="/js/snow.js"></script>-->
+
+<script src="/js/activate-power-mode.js"></script>
+<script>
+ POWERMODE.colorful = true; // 控制开启/开启礼花特效  
+ POWERMODE.shake = true; // 控制开启/关闭屏幕震动特效  
+ document.body.addEventListener('input', POWERMODE);
+</script>
+
+<script type="text/javascript" src="/js/chaffle.min.js"></script>  
+<link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  
+<script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {$('.chaffle').chaffle();});   //文字变幻
+    hljs.initHighlightingOnLoad();  //高亮
+    setTimeout(function(){siteLoading.classList.remove('siteLoading-active')},0);  //加载动画
+</script>
+
+<!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": { 
+        preferredFont: "TeX", 
+        availableFonts: ["STIX","TeX"], 
+        linebreaks: { automatic:true }, 
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) 
+    },
+    tex2jax: { 
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ], 
+        processEscapes: true, 
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {  
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, 
+        Macros: { href: "{}" } 
+    },
+    messageStyle: "none"
+    }); 
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += 'has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<script>  
+if (!Readdata("fool")) {
+    document.body.classList.add('reverse-coloregg');
+    window.setTimeout(function () {
+        Savedata("fool", "fool");
+        swal("你可以正常访问 Blog 啦！你还可以通过删除 Cookie 再体验一次！呵呵^_^");
+        document.body.classList.remove('reverse-coloregg');  
+    }, 10000);
+}  
+   
+function Savedata(key, data) {  
+    key = 'yz_' + key;  
+    data = JSON.stringify(data);  
+    if (window.localStorage) {  
+        localStorage.setItem(key, data);  
+    }  
+}  
+  
+function Readdata(key) {  
+    if (!window.localStorage) return '';  
+    key = 'yz_' + key;  
+    return JSON.parse(localStorage.getItem(key));  
+}  
+</script>  
+  
+<style>  
+	
+.reverse-coloregg {  
+    -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);  
+    -moz-transform: matrix(-1, 0, 0, 1, 0, 0);  
+    transform: matrix(-1, 0, 0, 1, 0, 0);  
+    -o-transform: skew(0deg, 180deg) scale(-1, 1);  
+    filter:progid: DXImageTransform.Microsoft.BasicImage(mirror=1); 
+}  
+
+/*from https://mkblog.cn/1469/*/
+</style>  
+
+<script>
+//	$(document).ready(function(){
+//    	$("div.post-text>p>a").append(" <i class=\"fa fa-external-link\" aria-hidden=\"true\"></i>");
+//	});
+//链接后加图标
+//不好看，弃置
+</script>
+
+<a class="santa-container" onclick="santacoloredegg()">
+  <div class="santa" id="santa-colored-egg">
+    <div class="santa-body">
+        <div class="santa-head">
+            <div class="santa-ear"></div>
+            <div class="santa-ear"></div>
+            <div class="santa-hat"></div>
+            <div class="santa-eye"></div>
+            <div class="santa-eye"></div>
+            <div class="santa-nose"></div>
+            <div class="santa-mouth"></div>
+        </div>
+    </div>
+  </div>
+</a>
+
+<script type="text/javascript">
+	function santacoloredegg() {
+		document.getElementById("santa-colored-egg").innerHTML = 
+		"<div class=\"santa-body\" style=\"font-size: 500px;\">"+
+		"<div class=\"santa-head\">"+
+		"<div class=\"santa-ear\"></div>"+
+		"<div class=\"santa-ear\"></div>"+
+		"<div class=\"santa-hat\"></div>"+
+		"<div class=\"santa-eye\"></div>"+
+		"<div class=\"santa-eye\"></div>"+
+		"<div class=\"santa-nose\"></div>"+
+		"<div class=\"santa-mouth\"></div>"+
+		"</div></div>";
+		swal("由于你触碰了圣诞老人，他快气炸了！快快刷新让他平静下来！");
+	}
+</script>
+		</div>
+  	</body>
+</html>

@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <title>
+  	
+  		P2668 斗地主 | Yz-hs&#39;s Blog
+  	
+  </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+  <script src="https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Yz-hs's Blog" type="application/atom+xml">
+</head>
+	<body>
+		<a name="back-to-top"></a>
+		<div id="siteLoading" class="siteloading siteLoading-active">
+			<div class="loader-inner">
+			<div class="loader-line-wrap"><div class="loader-line"></div></div>
+			<div class="loader-line-wrap"><div class="loader-line"></div></div>
+			<div class="loader-line-wrap"><div class="loader-line"></div></div>
+			<div class="loader-line-wrap"><div class="loader-line"></div></div>
+			<div class="loader-line-wrap"><div class="loader-line"></div></div>
+			</div>
+		</div>
+		<div class="main">
+			<a target="_blank" rel="noopener" href="https://github.com/yz-hs" class="github-corner" aria-label="View source on GitHub">
+	<svg width="80" height="80" viewBox="0 0 250 250" style="fill:#ffb6c1; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+		<path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+		<path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+		<path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+	</svg>
+</a>
+<style>
+.github-corner:hover 
+.octo-arm {animation:octocat-wave 560ms ease-in-out}
+@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}
+@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}
+</style>
+
+<div class="topbar">
+	<a href="/" class="topbar-title">
+		<i class="fa fa-home" aria-hidden="true"></i> Yz-hs&#39;s Blog
+	</a>
+	<div class="topbar-url">
+	  
+            <a href="/archives/index.html"><i class="fa fa-archive" aria-hidden="true"></i></a>
+      
+            <a href="/tags/index.html"><i class="fa fa-tags" aria-hidden="true"></i></a>
+      
+            <a href="/categories/index.html"><i class="fa fa-navicon" aria-hidden="true"></i></a>
+      
+            <a href="/somepage/about/index.html"><i class="fa fa-user" aria-hidden="true"></i></a>
+      
+            <a href="/somepage/projects/index.html"><i class="fa fa-cog" aria-hidden="true"></i></a>
+      
+      <a href="/somepage/%E5%90%90%E6%A7%BD/index.html"><i class="fa fa-bell-o" aria-hidden="true"></i></a>
+    </div>
+	<a href="/somepage/%E5%90%90%E6%A7%BD/index.html" class="topbar-comments">
+		<i class="fa fa-bell-o" aria-hidden="true"></i>
+	</a>
+	<div class="topbar-full-url">
+		<a href="/"><i class="fa fa-home" aria-hidden="true"></i></a>
+		
+            <a href="/archives/index.html"><i class="fa fa-archive" aria-hidden="true"></i></a>
+        
+            <a href="/tags/index.html"><i class="fa fa-tags" aria-hidden="true"></i></a>
+        
+            <a href="/categories/index.html"><i class="fa fa-navicon" aria-hidden="true"></i></a>
+        
+            <a href="/somepage/about/index.html"><i class="fa fa-user" aria-hidden="true"></i></a>
+        
+            <a href="/somepage/projects/index.html"><i class="fa fa-cog" aria-hidden="true"></i></a>
+        
+        <a href="/somepage/%E5%90%90%E6%A7%BD/index.html"><i class="fa fa-bell-o" aria-hidden="true"></i></a>
+	</div>
+</div>
+			<div class="sidebar">
+
+  <div class="sidebar-avatar-container">
+  	<img src="/img/avatar.jpg" class="sidebar-avatar bounce" />
+  </div>
+
+  <div class="sidebar-author">
+    yz-hs<br />
+    <div class="mini-text">A cute OIer</div>
+  </div>
+
+  <br /><br />
+
+  <div class="sidebar-list-container">
+  
+  <div class="mini-text">导航</div>
+
+  <br />
+
+  <div class="list-group">
+  	
+  	 
+  	   <a class="list-group-item" href="/archives/index.html"><i class="fa fa-archive fa-fw" aria-hidden="true"></i>&nbsp; 归档
+  	 
+  	    
+  	    	<div class="badge">70</div>
+  	    
+      </a>
+    
+  	 
+  	   <a class="list-group-item" href="/tags/index.html"><i class="fa fa-tags fa-fw" aria-hidden="true"></i>&nbsp; 标签
+  	 
+  	    
+  	    	<div class="badge">22</div>
+  	    
+      </a>
+    
+  	 
+  	   <a class="list-group-item" href="/categories/index.html"><i class="fa fa-navicon fa-fw" aria-hidden="true"></i>&nbsp; 分类
+  	 
+  	    
+  	    	<div class="badge">10</div>
+  	    
+      </a>
+    
+  	 
+  	   <a class="list-group-item" href="/somepage/about/index.html"><i class="fa fa-user fa-fw" aria-hidden="true"></i>&nbsp; 关于
+  	 
+  	    
+      </a>
+    
+  	 
+  	   <a class="list-group-item" href="/somepage/projects/index.html"><i class="fa fa-cog fa-fw" aria-hidden="true"></i>&nbsp; 项目
+  	 
+  	    
+      </a>
+    
+  </div>
+
+  </div>
+
+  <div class="sidebar-footer">
+  	<div class="item">
+  		<a href="#back-to-top"><i class="fa fa-hand-o-up" aria-hidden="true"></i><div class="mini-text">顶部</div></a>
+  	</div>
+  	<div class="item">
+  		<a href="/atom.xml"><i class="fa fa-feed" aria-hidden="true"></i><div class="mini-text">RSS</div></a>
+  	</div>
+  	<div class="item">
+  		<a href="javascript:(function(){window.open(&quot;http://yz-hs.tk&quot;)})()" onclick="swal('提示','请把图标拖动到书签栏','warning');return false;"><i class="fa fa-bookmark" aria-hidden="true"></i><div class="mini-text">收藏</div></a>
+  	</div>
+  </div>
+</div>
+			<div class="article">
+    			<div class="article-cell-body"><div class="post">
+  <div class="header">
+    <div class="title">P2668 斗地主</div>
+    <div class="meta">
+	  <span><i class="fa fa-user" aria-hidden="true"></i> yz-hs</span>
+	  <span><i class="fa fa-clock-o" aria-hidden="true"></i>  2020 年 02 月 01 日</span>
+      <span><i class="fa fa-font" aria-hidden="true"></i> 1.6k</span>
+      <span><i class="fa fa-eye fa-fw" aria-hidden="true"></i> <span id="busuanzi_value_page_pv"></span></span>
+      
+      
+    </div>
+  </div>
+
+  <div class="breadcrumb">
+    <div class="url">
+      <a href="/"><i class="fa fa-home" aria-hidden="true"></i> 主页</a> / P2668 斗地主
+    </div>
+    <div class="share">
+      分享到：<a target="_blank" rel="noopener" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yz-hs.tk/87780d906543/&title=P2668 斗地主&site=http://yz-hs.tk"><i class="fa fa-qq" aria-hidden="true"></i></a>
+    </div>
+  </div>
+
+  <div class="post-text">
+    <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2668">here</a></p>
+<a id="more"></a>
+
+<h1 id="CODE"><a href="#CODE" class="headerlink" title="CODE"></a>CODE</h1><p>先不$po$$\color{red}{\tt\text{code}}$。</p>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><h2 id="存储"><a href="#存储" class="headerlink" title="存储"></a>存储</h2><p><code>v[]</code>数组存储各牌型的数量。</p>
+<ul>
+<li><p><code>v[3]~v[13]</code>存储$3$~$K$的牌数。</p>
+</li>
+<li><p><code>v[14]</code>，<code>v[15]</code>存$A$，$2$的牌数。</p>
+</li>
+<li><p><code>v[16]</code>，<code>v[17]</code>存小大王。</p>
+</li>
+</ul>
+<h2 id="暴力出奇迹"><a href="#暴力出奇迹" class="headerlink" title="暴力出奇迹"></a>暴力出奇迹</h2><p>主体使用$dfs$爆搜解决（什么贪心，什么$dp$，不用！）。</p>
+<p>打牌顺序：顺子与几带几$-&gt;$剩下的牌。</p>
+<p>三带$X$：</p>
+<pre><code class="cpp">for(int i=3;i&lt;=15;i++)//大小王最多有一张
+        if(v[i]&gt;=3)//三 
+            for(int j=3;j&lt;=17;j++)
+                if(i!=j)//不能自己带♂自己
+                &#123;
+                    if(v[j]&gt;=1)
+                        v[i]-=3,v[j]-=1,dfs(num+1),v[i]+=3,v[j]+=1;//带一 
+                    if(v[j]&gt;=2)
+                        v[i]-=3,v[j]-=2,dfs(num+1),v[i]+=3,v[j]+=2;//带对 
+                &#125;//对称美
+/*
+num是当前的打牌次数
+记得回溯！
+*/</code></pre>
+<p>四带二$X$：</p>
+<pre><code class="cpp">for(int i=3;i&lt;=15;i++)
+    if(v[i]&gt;=4)//四
+            for(int j=3;j&lt;=17;j++)
+                for(int k=j;k&lt;=17;k++)
+                    if(i!=j&amp;&amp;i!=k)
+                    &#123;
+                        if(v[j]&gt;=1&amp;&amp;v[k]&gt;=1)
+                            v[i]-=4,v[j]-=1,v[k]-=1,dfs(num+1),v[i]+=4,v[j]+=1,v[k]+=1;//带二单
+                        if(v[j]&gt;=2&amp;&amp;v[k]&gt;=2)
+                            v[i]-=4,v[j]-=2,v[k]-=2,dfs(num+1),v[i]+=4,v[j]+=2,v[k]+=2;//带二对 
+                    &#125;</code></pre>
+<p>顺子：</p>
+<pre><code class="cpp">cnt=0;//牌数
+for(int j=i;j&lt;=14;j++)
+&#123;
+    if(v[j]&gt;=1)
+        cnt++;
+    else
+        break;
+    if(cnt&gt;=5)
+    &#123;
+        for(int k=i;k&lt;=i+cnt-1;k++)
+            v[k]-=1;
+        dfs(num+1);
+        for(int k=i;k&lt;=i+cnt-1;k++)
+            v[k]+=1;
+    &#125;
+&#125;</code></pre>
+<p>连对、三连不赘述了。</p>
+<p>出剩余牌：</p>
+<pre><code class="cpp">for(int i=3;i&lt;=17;i++)
+    if(v[i])
+        num++;//单牌、对子、三张、炸弹都包括在内
+ans=min(ans,num);//取最优</code></pre>
+<h2 id="CODE-1"><a href="#CODE-1" class="headerlink" title="CODE"></a>CODE</h2><p>拼在一起，就是：</p>
+<pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int T,n,ans,v[100];
+void dfs(int num)
+&#123;
+    int cnt=0;
+    if(num&gt;=ans)//最优化剪枝
+        return;
+    if(v[16]&gt;=1&amp;&amp;v[17]&gt;=1)
+        v[16]-=1,v[17]-=1,dfs(num+1),v[16]+=1,v[17]+=1;//火箭 
+    for(int i=3;i&lt;=15;i++)
+    &#123;
+        if(v[i]&gt;=3)//三 
+            for(int j=3;j&lt;=17;j++)
+                if(i!=j)
+                &#123;
+                    if(v[j]&gt;=1)
+                        v[i]-=3,v[j]-=1,dfs(num+1),v[i]+=3,v[j]+=1;//带一 
+                    if(v[j]&gt;=2)
+                        v[i]-=3,v[j]-=2,dfs(num+1),v[i]+=3,v[j]+=2;//带对 
+                &#125;
+        if(v[i]&gt;=4)//四
+            for(int j=3;j&lt;=17;j++)
+                for(int k=j;k&lt;=17;k++)
+                    if(i!=j&amp;&amp;i!=k)
+                    &#123;
+                        if(v[j]&gt;=1&amp;&amp;v[k]&gt;=1)
+                            v[i]-=4,v[j]-=1,v[k]-=1,dfs(num+1),v[i]+=4,v[j]+=1,v[k]+=1;//带二单
+                        if(v[j]&gt;=2&amp;&amp;v[k]&gt;=2)
+                            v[i]-=4,v[j]-=2,v[k]-=2,dfs(num+1),v[i]+=4,v[j]+=2,v[k]+=2;//带二对 
+                    &#125;
+        cnt=0;
+        for(int j=i;j&lt;=14;j++)
+        &#123;
+            if(v[j]&gt;=1)
+                cnt++;
+            else 
+                break; 
+            if(cnt&gt;=5)//顺子 
+            &#123;
+                for(int k=i;k&lt;=i+cnt-1;k++)
+                    v[k]-=1;
+                dfs(num+1);
+                for(int k=i;k&lt;=i+cnt-1;k++)
+                    v[k]+=1;
+            &#125;
+        &#125;
+        cnt=0;
+        for(int j=i;j&lt;=14;j++)
+        &#123;
+            if(v[j]&gt;=2)
+                cnt++;
+            else
+                break;
+            if(cnt&gt;=3)//连对 
+            &#123;
+                for(int k=i;k&lt;=i+cnt-1;k++)
+                    v[k]-=2;
+                dfs(num+1);
+                for(int k=i;k&lt;=i+cnt-1;k++)
+                    v[k]+=2;
+            &#125;
+        &#125;
+        cnt=0;
+        for(int j=i;j&lt;=14;j++)
+        &#123;
+            if(v[j]&gt;=3)
+                cnt++;
+            else
+                break;
+            if(cnt&gt;=2)//三连 
+            &#123;
+                for(int k=i;k&lt;=i+cnt-1;k++)
+                    v[k]-=3;
+                dfs(num+1);
+                for(int k=i;k&lt;=i+cnt-1;k++)
+                    v[k]+=3;
+            &#125;
+        &#125;
+    &#125;
+    for(int i=3;i&lt;=17;i++)
+        if(v[i])
+            num++;
+    ans=min(ans,num);
+    return; 
+&#125;
+int main()
+&#123; 
+    scanf(&quot;%d%d&quot;,&amp;T,&amp;n);
+    while(T--)
+    &#123;
+        memset(v,0,sizeof(v));
+        for(int i=1;i&lt;=n;i++)
+        &#123;
+            int a,b;
+            scanf(&quot;%d%d&quot;,&amp;a,&amp;b);
+            if(a&gt;=3&amp;&amp;a&lt;=13)//3~K
+                v[a]++;
+            else if(a&gt;=1&amp;&amp;a&lt;=2)//A~2
+                v[13+a]++;
+            else
+                if(b==1)
+                    v[16]++;//joker
+                else
+                    v[17]++;//JOKER
+        &#125;
+        ans=n;
+        dfs(0);
+        printf(&quot;%d\n&quot;,ans);
+    &#125;
+    return 0;
+&#125;</code></pre>
+<h1 id="END"><a href="#END" class="headerlink" title="END"></a>END</h1><p>彩蛋：</p>
+<p>双倍经验：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2540">P2540 斗地主增强版</a>//其实不算彩蛋。。。题目中都有。。。</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>啥，你交这个题的code时$Fa$♂现我的code居然$TLE$了？</p>
+<p><img src="/postimg/%E8%AF%84%E6%B5%8B%E7%8A%B6%E6%80%81/tle.jpg"></p>
+<h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><p>我们可以发现，出牌顺序对问题的解无嘤响。</p>
+<p>所以，可以采用组合的方法，在$dfs$时可剪去大量冗余运算。</p>
+<p>$100pts$code：</p>
+<pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int T,n,ans,v[100];
+void dfs(int num,int now)
+&#123;
+    int cnt=0;
+    if(num&gt;=ans||now&gt;17)
+        return;
+    if(v[16]&gt;=1&amp;&amp;v[17]&gt;=1)
+        v[16]-=1,v[17]-=1,dfs(num+1,now),v[16]+=1,v[17]+=1;//火箭 
+    for(int i=now;i&lt;=15;i++)
+    &#123;
+        if(v[i]&gt;=3)//三 
+            for(int j=3;j&lt;=17;j++)
+                if(i!=j)
+                &#123;
+                    if(v[j]&gt;=1)
+                        v[i]-=3,v[j]-=1,dfs(num+1,i),v[i]+=3,v[j]+=1;//带一 
+                    if(v[j]&gt;=2)
+                        v[i]-=3,v[j]-=2,dfs(num+1,i),v[i]+=3,v[j]+=2;//带对 
+                &#125;
+        if(v[i]&gt;=4)//四
+            for(int j=3;j&lt;=17;j++)
+                for(int k=j;k&lt;=17;k++)
+                    if(i!=j&amp;&amp;i!=k)
+                    &#123;
+                        if(v[j]&gt;=1&amp;&amp;v[k]&gt;=1)
+                            v[i]-=4,v[j]-=1,v[k]-=1,dfs(num+1,i),v[i]+=4,v[j]+=1,v[k]+=1;//带二单
+                        if(v[j]&gt;=2&amp;&amp;v[k]&gt;=2)
+                            v[i]-=4,v[j]-=2,v[k]-=2,dfs(num+1,i),v[i]+=4,v[j]+=2,v[k]+=2;//带二对 
+                    &#125;
+        cnt=0;
+        for(int j=i;j&lt;=14;j++)
+        &#123;
+            if(v[j]&gt;=1)
+                cnt++;
+            else 
+                break; 
+            if(cnt&gt;=5)//顺子 
+            &#123;
+                for(int k=i;k&lt;=i+cnt-1;k++)
+                    v[k]-=1;
+                dfs(num+1,i);
+                for(int k=i;k&lt;=i+cnt-1;k++)
+                    v[k]+=1;
+            &#125;
+        &#125;
+        cnt=0;
+        for(int j=i;j&lt;=14;j++)
+        &#123;
+            if(v[j]&gt;=2)
+                cnt++;
+            else
+                break;
+            if(cnt&gt;=3)//连对 
+            &#123;
+                for(int k=i;k&lt;=i+cnt-1;k++)
+                    v[k]-=2;
+                dfs(num+1,i);
+                for(int k=i;k&lt;=i+cnt-1;k++)
+                    v[k]+=2;
+            &#125;
+        &#125;
+        cnt=0;
+        for(int j=i;j&lt;=14;j++)
+        &#123;
+            if(v[j]&gt;=3)
+                cnt++;
+            else
+                break;
+            if(cnt&gt;=2)//三连 
+            &#123;
+                for(int k=i;k&lt;=i+cnt-1;k++)
+                    v[k]-=3;
+                dfs(num+1,i);
+                for(int k=i;k&lt;=i+cnt-1;k++)
+                    v[k]+=3;
+            &#125;
+        &#125;
+    &#125;
+    for(int i=3;i&lt;=17;i++)
+        if(v[i])
+            num++;//剩余牌 
+    ans=min(ans,num);
+    return; 
+&#125;
+int main()
+&#123; 
+    scanf(&quot;%d%d&quot;,&amp;T,&amp;n);
+    while(T--)
+    &#123;
+        memset(v,0,sizeof(v));
+        for(int i=1;i&lt;=n;i++)
+        &#123;
+            int a,b;
+            scanf(&quot;%d%d&quot;,&amp;a,&amp;b);
+            if(a&gt;=3&amp;&amp;a&lt;=13)//3~K
+                v[a]++;
+            else if(a&gt;=1&amp;&amp;a&lt;=2)//A~2
+                v[13+a]++;
+            else
+                if(b==1)
+                    v[16]++;//joker
+                else
+                    v[17]++;//JOKER
+            &#125;
+            ans=n;
+            dfs(0,3);
+            printf(&quot;%d\n&quot;,ans);
+        &#125;
+    return 0;
+&#125;</code></pre>
+<p><img src="/postimg/%E8%AF%84%E6%B5%8B%E7%8A%B6%E6%80%81/ac.jpg"></p>
+
+
+    
+
+
+<br /><hr />
+<img src="/img/end-heart.gif">
+<br />
+<blockquote>
+	<br />
+	本文作者： yz-hs
+	<br /><br />
+    本文链接： http://yz-hs.tk/87780d906543/
+    <br /><br />
+    版权声明： 本博客所有文章除特别声明外，均允许规范转载。转载请注明出处！当然也可对文章出处进行考证，在下方评论区评论！
+    <br /><br />
+</blockquote>
+<br />
+<div class="end-post-meta">
+	<i class="fa fa-refresh" aria-hidden="true"></i> 最后更新：  2020 年 10 月 01 日
+</div>
+
+
+
+  </div>
+
+  
+    <div class="prevnext">
+  	  
+  	  	  <a class="prev" href="/02d42ea552b4/">上一篇</a>
+  	  
+  		  <a class="next" href="/1dcd9c3da84a/">下一篇</a>
+  	  
+    </div>
+  
+
+  <div class="comments">
+  <div class="inner">
+
+	
+
+        <div id="gitalk-container"></div>
+        <script>
+          var gitalk = new Gitalk({
+                         clientID: 'eee39c8ef2391d17d829',
+                         clientSecret: 'c9e42cc511159cc40a9afae6755952c55f098df5',
+                         repo: 'no-code',
+                         owner: 'yz-hs',
+                         admin: ['yz-hs']
+                      })
+
+          gitalk.render('gitalk-container')
+        </script>
+
+    
+
+  </div>
+</div>
+
+</div></div>
+    			<div class="toolbar">
+  <div class="toolbar-tab-page">
+    <div class="tb-tabTitle">
+     <ul>
+       <li class="tb-current"><i class="fa fa-random" aria-hidden="true"></i></li>
+       <li><i class="fa fa-refresh" aria-hidden="true"></i></li>
+       <li><i class="fa fa-briefcase" aria-hidden="true"></i></li>
+     </ul>
+    </div>
+    <div class="tb-tabContent">
+      <div>
+      	
+<!--  1-tab  -->
+<span class="title">随机文章</span><span class="sidetitle">回味旧文</span>
+<div class="item"><a class="post-link" href="/7df258aa190a/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 初赛知识</a><hr class="separator" /><a class="post-link" href="/32caf6cc933e/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 2020新年贺词</a><hr class="separator" /><a class="post-link" href="/5edc4ae0f30b/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-J1游记</a><hr class="separator" /><a class="post-link" href="/7a4ad76933ea/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-J2游记</a><hr class="separator" /><a class="post-link" href="/c7e8518fa892/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> O1759 最长上升子序列 等</a><hr class="separator" /><a class="post-link" href="/9492bebde047/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> P1038 神经网络</a></div>
+<!--  END 1-tab  -->
+
+      </div>
+      <div class="tb-hide">
+      	
+<!--  2-tab  -->
+
+<span class="title">最新更新</span><span class="sidetitle">旧文章的更新</span>
+<div class="item"><a class="post-link" href="/6a67f065c1cd/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> yzpheme使用文档</a><hr class="separator" /><a class="post-link" href="/fa77bf2711ec/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> Hello World</a><hr class="separator" /><a class="post-link" href="/aef345d5653d/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-S1&2游记</a><hr class="separator" /><a class="post-link" href="/b8f3e9b3c3ad/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 《幽默报5》</a><hr class="separator" /><a class="post-link" href="/2881a8ac419a/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 《幽默报2》</a><hr class="separator" /><a class="post-link" href="/7a4ad76933ea/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-J2游记</a></div>
+
+<!--  END 2-tab  -->
+
+      </div>
+      <div class="tb-hide">
+
+<!--  3-tab  -->
+
+  <span class="title">其他</span><span class="sidetitle">杂物</span>
+  
+  <div class="item">
+    <div class="text" id="displaytime"><script type="text/javascript" src="/js/displaytime.js"></script></div>
+    <div id="timeprogress"></div>
+	<script>
+		var myDate = new Date();
+		var hours=myDate.getHours();
+		var minutes=myDate.getMinutes();
+		minutes=hours*60+minutes;
+		var pro=minutes/14.4;
+		var innerhtml="<div class=\"progress-con\"><div class=\"progress\" title=\"时间已过去了"+pro.toFixed(2)+"%\"style=\"width: "+pro+"%; background-color: #4caf50; color: #4caf50;\">|</div></div>"
+		document.getElementById("timeprogress").innerHTML = innerhtml;
+	</script>
+  </div>
+
+  <div class="item">
+    <div id="hitokoto" class="text">yz-hs说，除了她以外的人都很强！嘤嘤嘤~~</div>
+    <script>
+    fetch('https://v1.hitokoto.cn')
+      .then(function (res){
+        return res.json();
+      })
+      .then(function (data) {
+        var hitokoto = document.getElementById('hitokoto');
+        hitokoto.innerText = '\t' + data.hitokoto + '\n' +'\n' +'from ' + data.from ;
+      })
+      .catch(function (err) {
+        console.error(err);
+      })
+    </script>
+  </div>
+
+<!--  END 3-tab  -->
+
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="item">
+  	<div class="title">博客信息</div>
+    <div class="text list-group">
+  	  <div class="list-group-item"><i class="fa fa-file fa-fw" aria-hidden="true"></i>&nbsp;文章数目<div class="badge">70</div></div>
+  	  <div class="list-group-item"><i class="fa fa-users fa-fw" aria-hidden="true"></i>&nbsp;访客数目<div class="badge"><span id="busuanzi_value_site_uv"></span></div></div>
+  	  <div class="list-group-item"><i class="fa fa-eye fa-fw" aria-hidden="true"></i>&nbsp;总访问量<div class="badge"><span id="busuanzi_value_site_pv"></span></div></div>
+  	  <div class="list-group-item"><i class="fa fa-font fa-fw" aria-hidden="true"></i>&nbsp;本站字数<div class="badge">157.8k<!-- npm i hexo-wordcount --save --></span></div></div>
+    </div>
+  </div>
+
+  <!-- 标签可能太多，影响目录 -->
+    <div class="post-toc">
+      <div class="title">文章目录</div>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CODE"><span class="toc-text">CODE</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF"><span class="toc-text">思路</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%98%E5%82%A8"><span class="toc-text">存储</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9A%B4%E5%8A%9B%E5%87%BA%E5%A5%87%E8%BF%B9"><span class="toc-text">暴力出奇迹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CODE-1"><span class="toc-text">CODE</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#END"><span class="toc-text">END</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%98%E5%8C%96"><span class="toc-text">优化</span></a></li></ol></li></ol>
+    </div>
+   
+
+  <script>
+    $(function(){
+      var ali = $('.tb-tabTitle>ul>li');
+      var aDiv = $('.tb-tabContent>div');
+      var timeId = null;
+      ali.click(function(){
+        var _this = $(this);
+        timeId = setTimeout(function(){
+          _this.addClass('tb-current').siblings().removeClass('tb-current');
+          var index = _this.index();
+          aDiv.eq(index).show().siblings().hide();
+        });
+      });
+  });
+  </script>
+
+</div>
+    		</div>
+    		<div class="footer">
+  <p class="text-left">Copyright ©2018-2020 yz-hs. All rights reserved.</p>
+  <p class="text-right">Theme is <a target="_blank" rel="noopener" href="https://github.com/yz-hs/yzpheme">yzpheme</a>,by yz-hs.</p>
+</div>
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script type="text/javascript" src="/js/ctitle.js"></script>
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<script type="text/javascript" src="/js/colored-egg.js"></script>
+<script type="text/javascript" src="/js/SmoothScroll.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<!--
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="/js/firework.js"></script>
+-->
+
+<!--<script type="text/javascript" src="/js/values.js"></script>-->
+
+<!--<script type="text/javascript" src="/js/particle.js"></script>-->
+<!--<script type="text/javascript" src="/js/snow.js"></script>-->
+
+<script src="/js/activate-power-mode.js"></script>
+<script>
+ POWERMODE.colorful = true; // 控制开启/开启礼花特效  
+ POWERMODE.shake = true; // 控制开启/关闭屏幕震动特效  
+ document.body.addEventListener('input', POWERMODE);
+</script>
+
+<script type="text/javascript" src="/js/chaffle.min.js"></script>  
+<link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  
+<script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {$('.chaffle').chaffle();});   //文字变幻
+    hljs.initHighlightingOnLoad();  //高亮
+    setTimeout(function(){siteLoading.classList.remove('siteLoading-active')},0);  //加载动画
+</script>
+
+<!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": { 
+        preferredFont: "TeX", 
+        availableFonts: ["STIX","TeX"], 
+        linebreaks: { automatic:true }, 
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) 
+    },
+    tex2jax: { 
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ], 
+        processEscapes: true, 
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {  
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, 
+        Macros: { href: "{}" } 
+    },
+    messageStyle: "none"
+    }); 
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += 'has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<script>  
+if (!Readdata("fool")) {
+    document.body.classList.add('reverse-coloregg');
+    window.setTimeout(function () {
+        Savedata("fool", "fool");
+        swal("你可以正常访问 Blog 啦！你还可以通过删除 Cookie 再体验一次！呵呵^_^");
+        document.body.classList.remove('reverse-coloregg');  
+    }, 10000);
+}  
+   
+function Savedata(key, data) {  
+    key = 'yz_' + key;  
+    data = JSON.stringify(data);  
+    if (window.localStorage) {  
+        localStorage.setItem(key, data);  
+    }  
+}  
+  
+function Readdata(key) {  
+    if (!window.localStorage) return '';  
+    key = 'yz_' + key;  
+    return JSON.parse(localStorage.getItem(key));  
+}  
+</script>  
+  
+<style>  
+	
+.reverse-coloregg {  
+    -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);  
+    -moz-transform: matrix(-1, 0, 0, 1, 0, 0);  
+    transform: matrix(-1, 0, 0, 1, 0, 0);  
+    -o-transform: skew(0deg, 180deg) scale(-1, 1);  
+    filter:progid: DXImageTransform.Microsoft.BasicImage(mirror=1); 
+}  
+
+/*from https://mkblog.cn/1469/*/
+</style>  
+
+<script>
+//	$(document).ready(function(){
+//    	$("div.post-text>p>a").append(" <i class=\"fa fa-external-link\" aria-hidden=\"true\"></i>");
+//	});
+//链接后加图标
+//不好看，弃置
+</script>
+
+<a class="santa-container" onclick="santacoloredegg()">
+  <div class="santa" id="santa-colored-egg">
+    <div class="santa-body">
+        <div class="santa-head">
+            <div class="santa-ear"></div>
+            <div class="santa-ear"></div>
+            <div class="santa-hat"></div>
+            <div class="santa-eye"></div>
+            <div class="santa-eye"></div>
+            <div class="santa-nose"></div>
+            <div class="santa-mouth"></div>
+        </div>
+    </div>
+  </div>
+</a>
+
+<script type="text/javascript">
+	function santacoloredegg() {
+		document.getElementById("santa-colored-egg").innerHTML = 
+		"<div class=\"santa-body\" style=\"font-size: 500px;\">"+
+		"<div class=\"santa-head\">"+
+		"<div class=\"santa-ear\"></div>"+
+		"<div class=\"santa-ear\"></div>"+
+		"<div class=\"santa-hat\"></div>"+
+		"<div class=\"santa-eye\"></div>"+
+		"<div class=\"santa-eye\"></div>"+
+		"<div class=\"santa-nose\"></div>"+
+		"<div class=\"santa-mouth\"></div>"+
+		"</div></div>";
+		swal("由于你触碰了圣诞老人，他快气炸了！快快刷新让他平静下来！");
+	}
+</script>
+		</div>
+  	</body>
+</html>
