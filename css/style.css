@@ -305,6 +305,13 @@
   font-size: 14px;
   font-weight: 500;
 }
+.post .end-post-meta >span {
+  display: inline-block;
+  margin-right: 10px;
+}
+.post .end-post-meta >span >a {
+  color: #98a6ad;
+}
 .post .prevnext {
   margin: 20px;
   height: 40px;

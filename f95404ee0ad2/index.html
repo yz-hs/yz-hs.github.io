@@ -95,7 +95,7 @@
 			<div class="sidebar">
 
   <div class="sidebar-avatar-container">
-  	<img src="/img/avatar.jpg" class="sidebar-avatar bounce" />
+  	<img src="/img/new-avatar.jpg" class="sidebar-avatar bounce" />
   </div>
 
   <div class="sidebar-author">
@@ -190,7 +190,7 @@
     <div class="meta">
 	  <span><i class="fa fa-user" aria-hidden="true"></i> yz-hs</span>
 	  <span><i class="fa fa-clock-o" aria-hidden="true"></i>  2020 年 11 月 28 日</span>
-      <span><i class="fa fa-font" aria-hidden="true"></i> 871</span>
+      <span><i class="fa fa-font" aria-hidden="true"></i> 1.8k</span>
       <span><i class="fa fa-eye fa-fw" aria-hidden="true"></i> <span id="busuanzi_value_page_pv"></span></span>
       
       
@@ -215,6 +215,8 @@
 <p>线段树的时间复杂度可达 log 级别。而未优化的空间复杂度为 N 级别，因此有时需要离散化让空间压缩。</p>
 <p><img src="/postimg/%E7%BA%BF%E6%AE%B5%E6%A0%91/1.png"></p>
 <h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1><p>本模板使用 指针 的方式存储，比较好写。</p>
+<h2 id="1-区间加，区间查询和"><a href="#1-区间加，区间查询和" class="headerlink" title="#1 区间加，区间查询和"></a>#1 区间加，区间查询和</h2><details>     <summary>点击查看代码</summary>
+
 <pre><code class="cpp">const int N=100005;
 struct SGT
 &#123;
@@ -280,13 +282,105 @@ struct SGT
         return;
     &#125;
 &#125;Tree;</code></pre>
+</details>
+
+<h2 id="2-区间加，区间乘，区间查询和"><a href="#2-区间加，区间乘，区间查询和" class="headerlink" title="#2 区间加，区间乘，区间查询和"></a>#2 区间加，区间乘，区间查询和</h2><p>我们发现一个 lazytag 是不能够解决问题的，那就上两个，分别表示乘法意义上的lazytag和加法意义上的lazytag。紧接着想到 pushdown 操作之后我们又发现必须在向下传递 lazytag 的时候人为地为这两个lazytag规定一个先后顺序。本代码规定乘法优先。</p>
+<p>规定好 <code>tree-&gt;son-&gt;data = ( tree-&gt;son-&gt;data*tree-&gt;mtag + tree-&gt;atag*(r-l+1) ) %p</code>，这样的话假如改变 atag 的数值就只改变 atag，改变 mtag 的时候把 atag 也对应的乘一下就可以了，没有精度损失，看起来很不错。</p>
+<details>     <summary>点击查看代码</summary>
+
+<pre><code class="cpp">const int N=100005;int p=19260817;//模数
+struct SGT
+&#123;
+    long long idata[N],n,index=0;
+    struct Node
+    &#123;
+        Node *lson,*rson;
+        long long data,atag=0,mtag=1;
+    &#125;node[N&lt;&lt;3],*root=&amp;node[0];
+
+    void pushdown(Node *tree,int l,int r)
+    &#123;
+        if((tree-&gt;atag==0&amp;&amp;tree-&gt;mtag==1)||tree-&gt;lson==NULL) return;
+        int mid=(l+r)/2;
+        tree-&gt;lson-&gt;data=(tree-&gt;lson-&gt;data*tree-&gt;mtag+tree-&gt;atag*(mid-l+1))%p;
+        tree-&gt;rson-&gt;data=(tree-&gt;rson-&gt;data*tree-&gt;mtag+tree-&gt;atag*(r-mid))%p;
+        tree-&gt;lson-&gt;mtag=(tree-&gt;lson-&gt;mtag*tree-&gt;mtag)%p;
+        tree-&gt;rson-&gt;mtag=(tree-&gt;rson-&gt;mtag*tree-&gt;mtag)%p;
+        tree-&gt;lson-&gt;atag=(tree-&gt;lson-&gt;atag*tree-&gt;mtag+tree-&gt;atag)%p;
+        tree-&gt;rson-&gt;atag=(tree-&gt;rson-&gt;atag*tree-&gt;mtag+tree-&gt;atag)%p;
+        tree-&gt;atag=0,tree-&gt;mtag=1;
+        return;
+    &#125;
+
+    void aupdate(Node *tree,int l,int r,int x,int y,long long ndata)//区间加
+    &#123;
+        if(x&lt;=l&amp;&amp;y&gt;=r)
+        &#123;
+            tree-&gt;data=(tree-&gt;data+ndata*(r-l+1))%p;
+            tree-&gt;atag=(tree-&gt;atag+ndata)%p;
+            return;
+        &#125;
+        int mid=(l+r)/2;
+        pushdown(tree,l,r);
+        if(x&lt;=mid) aupdate(tree-&gt;lson,l,mid,x,y,ndata);
+        if(y&gt;mid) aupdate(tree-&gt;rson,mid+1,r,x,y,ndata);
+        tree-&gt;data=(tree-&gt;lson-&gt;data+tree-&gt;rson-&gt;data)%p;
+    &#125;
+
+    void mupdate(Node *tree,int l,int r,int x,int y,long long ndata)//区间乘
+    &#123;
+        if(x&lt;=l&amp;&amp;y&gt;=r)
+        &#123;
+            if(tree-&gt;atag) pushdown(tree,l,r);
+            tree-&gt;data=(tree-&gt;data*ndata)%p;
+            tree-&gt;mtag=(tree-&gt;mtag*ndata)%p;
+            return;
+        &#125;
+        int mid=(l+r)/2;
+        pushdown(tree,l,r);
+        if(x&lt;=mid) mupdate(tree-&gt;lson,l,mid,x,y,ndata);
+        if(y&gt;mid) mupdate(tree-&gt;rson,mid+1,r,x,y,ndata);
+        tree-&gt;data=(tree-&gt;lson-&gt;data+tree-&gt;rson-&gt;data)%p;
+    &#125;
+
+    long long query(Node *tree,int l,int r,int x,int y)
+    &#123;
+        if(x&lt;=l&amp;&amp;y&gt;=r) return tree-&gt;data;
+        pushdown(tree,l,r);
+        int mid=(l+r)/2;long long ansl=0,ansr=0;
+        if(x&lt;=mid) ansl=query(tree-&gt;lson,l,mid,x,y);
+        if(y&gt;mid) ansr=query(tree-&gt;rson,mid+1,r,x,y);
+        return ansl+ansr;
+    &#125;
+
+    void build(Node *tree,int l,int r)
+    &#123;
+        if(l==r)&#123;tree-&gt;data=idata[l];return;&#125;
+        int mid=(l+r)/2;
+        tree-&gt;lson=&amp;node[++index];
+        tree-&gt;rson=&amp;node[++index];
+        build(tree-&gt;lson,l,mid);build(tree-&gt;rson,mid+1,r);
+        tree-&gt;data=tree-&gt;lson-&gt;data+tree-&gt;rson-&gt;data;
+        return;
+    &#125;
+
+    void init(int cnt,long long data[])
+    &#123;
+        for(int i=1;i&lt;=cnt;i++) idata[i]=data[i];
+        n=cnt; build(root,1,n);
+        return;
+    &#125;
+&#125;Tree;</code></pre>
+</details>
+
 <h1 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h1><h2 id="P3372-【模板】线段树-1"><a href="#P3372-【模板】线段树-1" class="headerlink" title="P3372 【模板】线段树 1"></a>P3372 【模板】线段树 1</h2><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3372">link</a>。<del>这玩意是模板，怎么能是例题呢？</del>所以，直接抛代码：</p>
 <pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
 using namespace std;
 namespace _yz
 &#123;
     const int N=100005;
-    SGT Tree;long long m,n,a[N];
+    SGT Tree;//模板 #1
+    long long m,n,a[N];
     void yzmain()
     &#123;
         int t1,t2,t3;long long t4;
@@ -298,6 +392,37 @@ namespace _yz
             scanf(&quot;%d%d%d&quot;,&amp;t1,&amp;t2,&amp;t3);
             if(t1==1) scanf(&quot;%lld&quot;,&amp;t4),Tree.update(Tree.root,1,Tree.n,t2,t3,t4);
             else printf(&quot;%lld\n&quot;,Tree.query(Tree.root,1,Tree.n,t2,t3));
+        &#125;
+        return;
+    &#125;
+&#125;
+int main()
+&#123;
+    //freopen(&quot;in.txt&quot;,&quot;r&quot;,stdin);
+    //freopen(&quot;out.txt&quot;,&quot;w&quot;,stdout);
+    _yz::yzmain();
+    return 0;
+&#125;</code></pre>
+<h2 id="P3373-【模板】线段树-2"><a href="#P3373-【模板】线段树-2" class="headerlink" title="P3373 【模板】线段树 2"></a>P3373 【模板】线段树 2</h2><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3373">link</a>。<del>这玩意是模板，怎么能是例题呢？</del>所以，直接抛代码：</p>
+<pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+namespace _yz
+&#123;
+    const int N=100005;
+    long long m,n,a[N],p;
+    SGT Tree;//模板 #2
+    void yzmain()
+    &#123;
+        int t1,t2,t3;long long t4;
+        scanf(&quot;%lld%lld%lld&quot;,&amp;n,&amp;m,&amp;p);
+        for(long long i=1;i&lt;=n;i++) scanf(&quot;%lld&quot;,a+i);
+        Tree.init(n,a);
+        for(long long i=1;i&lt;=m;i++)
+        &#123;
+            scanf(&quot;%d%d%d&quot;,&amp;t1,&amp;t2,&amp;t3);
+            if(t1==1) scanf(&quot;%lld&quot;,&amp;t4),Tree.mupdate(Tree.root,1,Tree.n,t2,t3,t4);
+            else if(t1==2) scanf(&quot;%lld&quot;,&amp;t4),Tree.aupdate(Tree.root,1,Tree.n,t2,t3,t4);
+            else printf(&quot;%lld\n&quot;,Tree.query(Tree.root,1,Tree.n,t2,t3)%p);
         &#125;
         return;
     &#125;
@@ -327,8 +452,17 @@ int main()
     <br /><br />
 </blockquote>
 <br />
+
 <div class="end-post-meta">
-	<i class="fa fa-refresh" aria-hidden="true"></i> 最后更新：  2020 年 11 月 29 日
+	
+		<span><a href="/tags/OI"><i class="fa fa-tag" aria-hidden="true"></i> OI</a></span>
+	
+		<span><a href="/tags/线段树"><i class="fa fa-tag" aria-hidden="true"></i> 线段树</a></span>
+	
+</div>
+
+<div class="end-post-meta">
+	<span><i class="fa fa-refresh" aria-hidden="true"></i> 最后更新：  2020 年 11 月 29 日</span>
 </div>
 
 
@@ -381,7 +515,7 @@ int main()
       	
 <!--  1-tab  -->
 <span class="title">随机文章</span><span class="sidetitle">回味旧文</span>
-<div class="item"><a class="post-link" href="/e4b4986bb6ee/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 一些简单数论题</a><hr class="separator" /><a class="post-link" href="/32caf6cc933e/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 2020新年贺词</a><hr class="separator" /><a class="post-link" href="/5edc4ae0f30b/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-J1游记</a><hr class="separator" /><a class="post-link" href="/7a4ad76933ea/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-J2游记</a><hr class="separator" /><a class="post-link" href="/c7e8518fa892/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> O1759 最长上升子序列 等</a><hr class="separator" /><a class="post-link" href="/9492bebde047/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> P1038 神经网络</a></div>
+<div class="item"><a class="post-link" href="/e4b4986bb6ee/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 一些简单数论题</a><hr class="separator" /><a class="post-link" href="/32caf6cc933e/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 2020新年贺词</a><hr class="separator" /><a class="post-link" href="/7a4ad76933ea/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-J2游记</a><hr class="separator" /><a class="post-link" href="/bbf95a8d95b3/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> ASCII艺术</a><hr class="separator" /><a class="post-link" href="/c7e8518fa892/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> O1759 最长上升子序列 等</a><hr class="separator" /><a class="post-link" href="/9492bebde047/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> P1038 神经网络</a></div>
 <!--  END 1-tab  -->
 
       </div>
@@ -390,7 +524,7 @@ int main()
 <!--  2-tab  -->
 
 <span class="title">最新更新</span><span class="sidetitle">旧文章的更新</span>
-<div class="item"><a class="post-link" href="/f95404ee0ad2/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 线段树</a><hr class="separator" /><a class="post-link" href="/e4b4986bb6ee/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 一些简单数论题</a><hr class="separator" /><a class="post-link" href="/56eb3f581e0d/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 错误集合</a><hr class="separator" /><a class="post-link" href="/8d537e104173/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> P2114 [NOI2014]起床困难综合症</a><hr class="separator" /><a class="post-link" href="/5d1d458463ba/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 一些区间DP题目</a><hr class="separator" /><a class="post-link" href="/e78bf8b9bee6/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 新版骗分导论</a></div>
+<div class="item"><a class="post-link" href="/f95404ee0ad2/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 线段树</a><hr class="separator" /><a class="post-link" href="/aef345d5653d/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-S1&2游记</a><hr class="separator" /><a class="post-link" href="/e4b4986bb6ee/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 一些简单数论题</a><hr class="separator" /><a class="post-link" href="/56eb3f581e0d/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 错误集合</a><hr class="separator" /><a class="post-link" href="/8d537e104173/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> P2114 [NOI2014]起床困难综合症</a><hr class="separator" /><a class="post-link" href="/5d1d458463ba/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 一些区间DP题目</a></div>
 
 <!--  END 2-tab  -->
 
@@ -445,14 +579,14 @@ int main()
   	  <div class="list-group-item"><i class="fa fa-file fa-fw" aria-hidden="true"></i>&nbsp;文章数目<div class="badge">73</div></div>
   	  <div class="list-group-item"><i class="fa fa-users fa-fw" aria-hidden="true"></i>&nbsp;访客数目<div class="badge"><span id="busuanzi_value_site_uv"></span></div></div>
   	  <div class="list-group-item"><i class="fa fa-eye fa-fw" aria-hidden="true"></i>&nbsp;总访问量<div class="badge"><span id="busuanzi_value_site_pv"></span></div></div>
-  	  <div class="list-group-item"><i class="fa fa-font fa-fw" aria-hidden="true"></i>&nbsp;本站字数<div class="badge">156.7k<!-- npm i hexo-wordcount --save --></span></div></div>
+  	  <div class="list-group-item"><i class="fa fa-font fa-fw" aria-hidden="true"></i>&nbsp;本站字数<div class="badge">157.7k<!-- npm i hexo-wordcount --save --></span></div></div>
     </div>
   </div>
 
   <!-- 标签可能太多，影响目录 -->
     <div class="post-toc">
       <div class="title">文章目录</div>
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF"><span class="toc-text">模板</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BE%8B%E9%A2%98"><span class="toc-text">例题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#P3372-%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E7%BA%BF%E6%AE%B5%E6%A0%91-1"><span class="toc-text">P3372 【模板】线段树 1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%88%E5%92%95%E4%B8%80%E4%BC%9A%E5%90%A7"><span class="toc-text">先咕一会吧</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF"><span class="toc-text">模板</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%8C%BA%E9%97%B4%E5%8A%A0%EF%BC%8C%E5%8C%BA%E9%97%B4%E6%9F%A5%E8%AF%A2%E5%92%8C"><span class="toc-text">#1 区间加，区间查询和</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%8C%BA%E9%97%B4%E5%8A%A0%EF%BC%8C%E5%8C%BA%E9%97%B4%E4%B9%98%EF%BC%8C%E5%8C%BA%E9%97%B4%E6%9F%A5%E8%AF%A2%E5%92%8C"><span class="toc-text">#2 区间加，区间乘，区间查询和</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BE%8B%E9%A2%98"><span class="toc-text">例题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#P3372-%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E7%BA%BF%E6%AE%B5%E6%A0%91-1"><span class="toc-text">P3372 【模板】线段树 1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#P3373-%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E7%BA%BF%E6%AE%B5%E6%A0%91-2"><span class="toc-text">P3373 【模板】线段树 2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%88%E5%92%95%E4%B8%80%E4%BC%9A%E5%90%A7"><span class="toc-text">先咕一会吧</span></a></li></ol></li></ol>
     </div>
    
 
