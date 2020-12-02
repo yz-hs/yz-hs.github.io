@@ -131,6 +131,7 @@
   background-color: #e6e6e6;
 }
 .sidebar .badge {
+  font-weight: bold;
   float: right;
   padding: 3px 6px 3px 6px;
   color: #fff;
