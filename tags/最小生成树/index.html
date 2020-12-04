@@ -6,7 +6,7 @@
   <link rel="stylesheet" type="text/css" href="/css/style.css">
   <title>
   	
-  		hexo博客搭建 | Yz-hs&#39;s Blog
+  	    最小生成树 | Yz-hs&#39;s Blog
   	
   </title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
@@ -186,144 +186,33 @@
 			<div class="article">
     			<div class="article-cell-body"><div class="post">
   <div class="header">
-    <div class="title">hexo博客搭建</div>
-    <div class="meta">
-	  <span><i class="fa fa-user" aria-hidden="true"></i> yz-hs</span>
-	  <span><i class="fa fa-clock-o" aria-hidden="true"></i>  2019 年 10 月 03 日</span>
-      <span><i class="fa fa-font" aria-hidden="true"></i> 656</span>
-      <span><i class="fa fa-eye fa-fw" aria-hidden="true"></i> <span id="busuanzi_value_page_pv"></span></span>
-      
-      
-    </div>
+  	  <div class="title">
+  	    
+  	      最小生成树
+  	    
+  	  </div>
+  	  <div class="meta">
+  	    
+  	      <div>标签“最小生成树”下有以下文章。 </div>
+  	    
+  	  </div>
   </div>
-
-  <div class="breadcrumb">
-    <div class="url">
-      <a href="/"><i class="fa fa-home" aria-hidden="true"></i> 主页</a> / hexo博客搭建
-    </div>
-    <div class="share">
-      分享到：<a target="_blank" rel="noopener" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yz-hs.tk/fef921291289/&title=hexo博客搭建&site=http://yz-hs.tk"><i class="fa fa-qq" aria-hidden="true"></i></a>
-    </div>
-  </div>
-
+  
   <div class="post-text">
-    <p>注意是在windows系统中的</p>
-<a id="more"></a>
-
-<h1 id="1-安装git-amp-Node-js"><a href="#1-安装git-amp-Node-js" class="headerlink" title="1.安装git&amp;Node.js"></a>1.安装git&amp;Node.js</h1><p>请自行下载</p>
-<p><a target="_blank" rel="noopener" href="https://gitforwindows.org/">https://gitforwindows.org/</a></p>
-<p><a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></p>
-<h1 id="2-安装hexo"><a href="#2-安装hexo" class="headerlink" title="2.安装hexo"></a>2.安装hexo</h1><p>先创建一个文件夹blog，然后cd到这个文件夹下（或者在这个文件夹下直接右键git bash打开）。</p>
-<pre><code class="bash">npm install -g hexo-cli</code></pre>
-<p>初始化hexo。</p>
-<pre><code class="bash">hexo init
-npm install</code></pre>
-<p>打开hexo的服务，</p>
-<pre><code class="bash">hexo g
-hexo server</code></pre>
-<p>在浏览器输入localhost:4000就可以看到你生成的博客了。</p>
-<p>Ctrl+C关闭。</p>
-<h1 id="3-GitHub创建个人仓库"><a href="#3-GitHub创建个人仓库" class="headerlink" title="3.GitHub创建个人仓库"></a>3.GitHub创建个人仓库</h1><p>你先要有一个GitHub账户，去<a target="_blank" rel="noopener" href="https://github.com/">注册一个吧</a>。</p>
-<p>创建一个和你用户名相同的仓库，<strong>后面加<code>.github.io</code></strong></p>
-<p><img src="/postimg/%E6%90%ADhexo/1.png" alt="1.png"></p>
-<p><img src="/postimg/%E6%90%ADhexo/2.png" alt="2.png"></p>
-<p>点击create repository。</p>
-<h1 id="4-生成SSH添加到GitHub"><a href="#4-生成SSH添加到GitHub" class="headerlink" title="4. 生成SSH添加到GitHub"></a>4. 生成SSH添加到GitHub</h1><p>回到git bash中，</p>
-<pre><code class="bash">git config --global user.name &quot;yourname&quot;
-git config --global user.email &quot;youremail&quot;</code></pre>
-<p>这里的yourname输入你的GitHub用户名，youremail输入你GitHub的邮箱。</p>
-<p>可以用以下两条，检查一下你有没有输对。</p>
-<pre><code class="bash">git config user.name
-git config user.email</code></pre>
-<p>然后创建SSH,一路回车。</p>
-<pre><code class="bash">ssh-keygen -t rsa -C &quot;youremail&quot;</code></pre>
-<p>这个时候它会告诉你已经生成了.ssh的文件夹。在你的电脑中找到这个文件夹。</p>
-<p>ssh，简单来讲，就是一个秘钥，其中，id_rsa是你这台电脑的私人秘钥，不能给别人看的，id_rsa.pub是公共秘钥，可以随便给别人看。把这个公钥放在GitHub上，这样当你链接GitHub自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub上。</p>
-<p>而后在GitHub的setting中，找到SSH keys的设置选项，点击New SSH key 把你的id_rsa.pub里面的信息复制进去。</p>
-<pre><code class="bash">ssh -T git@github.com</code></pre>
-<p>如果出现让你写yes或no,写yes。</p>
-<h1 id="5-将hexo部署到GitHub"><a href="#5-将hexo部署到GitHub" class="headerlink" title="5.将hexo部署到GitHub"></a>5.将hexo部署到GitHub</h1><p>这一步，我们就可以将hexo和GitHub关联起来，也就是将hexo生成的文章部署到GitHub上，打开站点配置文件 <code>_config.yml</code>，翻到最后，修改为 YourName就是你的GitHub账户</p>
-<pre><code class="yml">deploy:
-  type: git
-  repository: git@github.com:YourName/YourName.github.io.git
-  branch: master</code></pre>
-<p>安装deploy-git ，也就是部署的命令,这样你才能用命令部署到GitHub。</p>
-<pre><code class="bash">npm install hexo-deployer-git --save</code></pre>
-<p>然后</p>
-<pre><code class="bash">hexo clean
-hexo generate
-hexo deploy</code></pre>
-<p>其中 hexo clean清除了你之前生成的东西，也可以不加。 hexo generate 顾名思义，生成静态文章，可以用 hexo g缩写 hexo deploy 部署文章，可以用hexo d缩写</p>
-<p>出现<code>INFO  Deploy done: git</code>就说明部署成功了，过一会儿就可以在<code>http://yourname.github.io</code> 这个网站看到你的博客了。</p>
-<h1 id="6-参考"><a href="#6-参考" class="headerlink" title="6.参考"></a>6.参考</h1><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/44213627">https://zhuanlan.zhihu.com/p/44213627</a></p>
-<p>接下来就要你自己配置了</p>
-
-
+  	<ol class="timeline">
     
-
-
-<br /><hr />
-<img src="/img/end-heart.gif">
-<br />
-<blockquote>
-	<br />
-	本文作者： yz-hs
-	<br /><br />
-    本文链接： http://yz-hs.tk/fef921291289/
-    <br /><br />
-    版权声明： 本博客所有文章除特别声明外，均允许规范转载。转载请注明出处！当然也可对文章出处进行考证，在下方评论区评论！
-    <br /><br />
-</blockquote>
-<br />
-
-<div class="end-post-meta">
-	
-		<span><a href="/tags/hexo"><i class="fa fa-tag" aria-hidden="true"></i> hexo</a></span>
-	
-</div>
-
-<div class="end-post-meta">
-	<span><i class="fa fa-refresh" aria-hidden="true"></i> 最后更新：  2020 年 07 月 19 日</span>
-</div>
-
-
-
+      <li>
+        <b class="date">2020-12-04</b>
+        <a class="title" href="/7fcca1bd3023/">最小生成树</a>
+      </li>
+    
+    </ol>
   </div>
 
   
-    <div class="prevnext">
-  	  
-  	  	  <a class="prev" href="/2a969ab32552/">上一篇</a>
-  	  
-  		  <a class="next" href="/5995204a66c6/">下一篇</a>
-  	  
-    </div>
   
-
-  <div class="comments">
-  <div class="inner">
-
-	
-
-        <div id="gitalk-container"></div>
-        <script>
-          var gitalk = new Gitalk({
-                         clientID: 'eee39c8ef2391d17d829',
-                         clientSecret: 'c9e42cc511159cc40a9afae6755952c55f098df5',
-                         repo: 'no-code',
-                         owner: 'yz-hs',
-                         admin: ['yz-hs']
-                      })
-
-          gitalk.render('gitalk-container')
-        </script>
-
-    
-
-  </div>
 </div>
-
-</div></div>
+</div>
     			<div class="toolbar">
   <div class="toolbar-tab-page">
     <div class="tb-tabTitle">
@@ -406,10 +295,10 @@ hexo deploy</code></pre>
     </div>
   </div>
 
-  <!-- 标签可能太多，影响目录 -->
-    <div class="post-toc">
-      <div class="title">文章目录</div>
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85git-amp-Node-js"><span class="toc-text">1.安装git&amp;Node.js</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85hexo"><span class="toc-text">2.安装hexo</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-GitHub%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%BB%93%E5%BA%93"><span class="toc-text">3.GitHub创建个人仓库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-%E7%94%9F%E6%88%90SSH%E6%B7%BB%E5%8A%A0%E5%88%B0GitHub"><span class="toc-text">4. 生成SSH添加到GitHub</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-%E5%B0%86hexo%E9%83%A8%E7%BD%B2%E5%88%B0GitHub"><span class="toc-text">5.将hexo部署到GitHub</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-%E5%8F%82%E8%80%83"><span class="toc-text">6.参考</span></a></li></ol>
+  
+    <div class="item">
+      <div class="title">标签云</div>
+      <div class="text toolbar-tag-cloud"><a href="/tags/OI/" style="font-size: 40px; color: #444">OI</a> <a href="/tags/Trie%E6%A0%91/" style="font-size: 22.5px; color: #b0b6af">Trie树</a> <a href="/tags/hexo/" style="font-size: 25px; color: #a0a6a0">hexo</a> <a href="/tags/root/" style="font-size: 30px; color: #828581">root</a> <a href="/tags/%E4%BA%8C%E5%88%86/" style="font-size: 20px; color: #bfc6be">二分</a> <a href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/" style="font-size: 20px; color: #bfc6be">位运算</a> <a href="/tags/%E5%80%8D%E5%A2%9E/" style="font-size: 22.5px; color: #b0b6af">倍增</a> <a href="/tags/%E5%85%B6%E4%BB%96/" style="font-size: 27.5px; color: #919590">其他</a> <a href="/tags/%E5%88%86%E5%B1%82%E5%9B%BE/" style="font-size: 20px; color: #bfc6be">分层图</a> <a href="/tags/%E5%89%8D%E7%BC%80%E5%92%8C/" style="font-size: 20px; color: #bfc6be">前缀和</a> <a href="/tags/%E5%8A%A0%E5%AF%86/" style="font-size: 27.5px; color: #919590">加密</a> <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" style="font-size: 35px; color: #636563">动态规划</a> <a href="/tags/%E5%9B%BE%E8%AE%BA/" style="font-size: 25px; color: #a0a6a0">图论</a> <a href="/tags/%E5%A0%86/" style="font-size: 22.5px; color: #b0b6af">堆</a> <a href="/tags/%E5%A5%87%E5%81%B6%E6%9C%80%E7%9F%AD%E8%B7%AF/" style="font-size: 20px; color: #bfc6be">奇偶最短路</a> <a href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/" style="font-size: 20px; color: #bfc6be">并查集</a> <a href="/tags/%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F/" style="font-size: 20px; color: #bfc6be">强连通分量</a> <a href="/tags/%E6%89%93%E8%A1%A8/" style="font-size: 20px; color: #bfc6be">打表</a> <a href="/tags/%E6%8E%A8%E7%BB%93%E8%AE%BA/" style="font-size: 20px; color: #bfc6be">推结论</a> <a href="/tags/%E6%95%B0%E8%AE%BA/" style="font-size: 22.5px; color: #b0b6af">数论</a> <a href="/tags/%E6%9A%B4%E6%90%9C/" style="font-size: 25px; color: #a0a6a0">暴搜</a> <a href="/tags/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" style="font-size: 20px; color: #bfc6be">最小生成树</a> <a href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/" style="font-size: 27.5px; color: #919590">最短路</a> <a href="/tags/%E6%A0%91/" style="font-size: 20px; color: #bfc6be">树</a> <a href="/tags/%E6%A8%A1%E6%8B%9F/" style="font-size: 22.5px; color: #b0b6af">模拟</a> <a href="/tags/%E6%AF%92%E7%98%A4%E9%A2%98/" style="font-size: 25px; color: #a0a6a0">毒瘤题</a> <a href="/tags/%E6%B0%B4/" style="font-size: 37.5px; color: #535453">水</a> <a href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/" style="font-size: 20px; color: #bfc6be">线段树</a> <a href="/tags/%E8%83%8C%E5%8C%85/" style="font-size: 32.5px; color: #727572">背包</a> <a href="/tags/%E8%B4%AA%E5%BF%83/" style="font-size: 22.5px; color: #b0b6af">贪心</a> <a href="/tags/%E8%BD%AC%E8%BD%BD/" style="font-size: 35px; color: #636563">转载</a> <a href="/tags/%E9%94%A3%E9%BC%93/" style="font-size: 27.5px; color: #919590">锣鼓</a></div>
     </div>
    
 

@@ -6,7 +6,7 @@
   <link rel="stylesheet" type="text/css" href="/css/style.css">
   <title>
   	
-  		hexo博客搭建 | Yz-hs&#39;s Blog
+  		最小生成树 | Yz-hs&#39;s Blog
   	
   </title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
@@ -186,11 +186,11 @@
 			<div class="article">
     			<div class="article-cell-body"><div class="post">
   <div class="header">
-    <div class="title">hexo博客搭建</div>
+    <div class="title">最小生成树</div>
     <div class="meta">
 	  <span><i class="fa fa-user" aria-hidden="true"></i> yz-hs</span>
-	  <span><i class="fa fa-clock-o" aria-hidden="true"></i>  2019 年 10 月 03 日</span>
-      <span><i class="fa fa-font" aria-hidden="true"></i> 656</span>
+	  <span><i class="fa fa-clock-o" aria-hidden="true"></i>  2020 年 12 月 04 日</span>
+      <span><i class="fa fa-font" aria-hidden="true"></i> 506</span>
       <span><i class="fa fa-eye fa-fw" aria-hidden="true"></i> <span id="busuanzi_value_page_pv"></span></span>
       
       
@@ -199,64 +199,66 @@
 
   <div class="breadcrumb">
     <div class="url">
-      <a href="/"><i class="fa fa-home" aria-hidden="true"></i> 主页</a> / hexo博客搭建
+      <a href="/"><i class="fa fa-home" aria-hidden="true"></i> 主页</a> / 最小生成树
     </div>
     <div class="share">
-      分享到：<a target="_blank" rel="noopener" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yz-hs.tk/fef921291289/&title=hexo博客搭建&site=http://yz-hs.tk"><i class="fa fa-qq" aria-hidden="true"></i></a>
+      分享到：<a target="_blank" rel="noopener" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yz-hs.tk/7fcca1bd3023/&title=最小生成树&site=http://yz-hs.tk"><i class="fa fa-qq" aria-hidden="true"></i></a>
     </div>
   </div>
 
   <div class="post-text">
-    <p>注意是在windows系统中的</p>
+    <p>本文为 yz-hs 学习最小生成树的笔记以及模板。</p>
 <a id="more"></a>
 
-<h1 id="1-安装git-amp-Node-js"><a href="#1-安装git-amp-Node-js" class="headerlink" title="1.安装git&amp;Node.js"></a>1.安装git&amp;Node.js</h1><p>请自行下载</p>
-<p><a target="_blank" rel="noopener" href="https://gitforwindows.org/">https://gitforwindows.org/</a></p>
-<p><a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></p>
-<h1 id="2-安装hexo"><a href="#2-安装hexo" class="headerlink" title="2.安装hexo"></a>2.安装hexo</h1><p>先创建一个文件夹blog，然后cd到这个文件夹下（或者在这个文件夹下直接右键git bash打开）。</p>
-<pre><code class="bash">npm install -g hexo-cli</code></pre>
-<p>初始化hexo。</p>
-<pre><code class="bash">hexo init
-npm install</code></pre>
-<p>打开hexo的服务，</p>
-<pre><code class="bash">hexo g
-hexo server</code></pre>
-<p>在浏览器输入localhost:4000就可以看到你生成的博客了。</p>
-<p>Ctrl+C关闭。</p>
-<h1 id="3-GitHub创建个人仓库"><a href="#3-GitHub创建个人仓库" class="headerlink" title="3.GitHub创建个人仓库"></a>3.GitHub创建个人仓库</h1><p>你先要有一个GitHub账户，去<a target="_blank" rel="noopener" href="https://github.com/">注册一个吧</a>。</p>
-<p>创建一个和你用户名相同的仓库，<strong>后面加<code>.github.io</code></strong></p>
-<p><img src="/postimg/%E6%90%ADhexo/1.png" alt="1.png"></p>
-<p><img src="/postimg/%E6%90%ADhexo/2.png" alt="2.png"></p>
-<p>点击create repository。</p>
-<h1 id="4-生成SSH添加到GitHub"><a href="#4-生成SSH添加到GitHub" class="headerlink" title="4. 生成SSH添加到GitHub"></a>4. 生成SSH添加到GitHub</h1><p>回到git bash中，</p>
-<pre><code class="bash">git config --global user.name &quot;yourname&quot;
-git config --global user.email &quot;youremail&quot;</code></pre>
-<p>这里的yourname输入你的GitHub用户名，youremail输入你GitHub的邮箱。</p>
-<p>可以用以下两条，检查一下你有没有输对。</p>
-<pre><code class="bash">git config user.name
-git config user.email</code></pre>
-<p>然后创建SSH,一路回车。</p>
-<pre><code class="bash">ssh-keygen -t rsa -C &quot;youremail&quot;</code></pre>
-<p>这个时候它会告诉你已经生成了.ssh的文件夹。在你的电脑中找到这个文件夹。</p>
-<p>ssh，简单来讲，就是一个秘钥，其中，id_rsa是你这台电脑的私人秘钥，不能给别人看的，id_rsa.pub是公共秘钥，可以随便给别人看。把这个公钥放在GitHub上，这样当你链接GitHub自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub上。</p>
-<p>而后在GitHub的setting中，找到SSH keys的设置选项，点击New SSH key 把你的id_rsa.pub里面的信息复制进去。</p>
-<pre><code class="bash">ssh -T git@github.com</code></pre>
-<p>如果出现让你写yes或no,写yes。</p>
-<h1 id="5-将hexo部署到GitHub"><a href="#5-将hexo部署到GitHub" class="headerlink" title="5.将hexo部署到GitHub"></a>5.将hexo部署到GitHub</h1><p>这一步，我们就可以将hexo和GitHub关联起来，也就是将hexo生成的文章部署到GitHub上，打开站点配置文件 <code>_config.yml</code>，翻到最后，修改为 YourName就是你的GitHub账户</p>
-<pre><code class="yml">deploy:
-  type: git
-  repository: git@github.com:YourName/YourName.github.io.git
-  branch: master</code></pre>
-<p>安装deploy-git ，也就是部署的命令,这样你才能用命令部署到GitHub。</p>
-<pre><code class="bash">npm install hexo-deployer-git --save</code></pre>
-<p>然后</p>
-<pre><code class="bash">hexo clean
-hexo generate
-hexo deploy</code></pre>
-<p>其中 hexo clean清除了你之前生成的东西，也可以不加。 hexo generate 顾名思义，生成静态文章，可以用 hexo g缩写 hexo deploy 部署文章，可以用hexo d缩写</p>
-<p>出现<code>INFO  Deploy done: git</code>就说明部署成功了，过一会儿就可以在<code>http://yourname.github.io</code> 这个网站看到你的博客了。</p>
-<h1 id="6-参考"><a href="#6-参考" class="headerlink" title="6.参考"></a>6.参考</h1><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/44213627">https://zhuanlan.zhihu.com/p/44213627</a></p>
-<p>接下来就要你自己配置了</p>
+<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1><p>规定：n 点数，m 边数。</p>
+<h2 id="Prim"><a href="#Prim" class="headerlink" title="Prim"></a>Prim</h2><p>Prim 算法是一种常见并且好写的最小生成树算法。该算法的基本思想是从一个结点开始，不断加点（而不是 Kruskal 算法的加边）。</p>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>具体来说，每次要选择距离最小的一个结点，以及用新的边更新其他结点的距离。</p>
+<p>其实跟 Dijkstra 算法一样，每次找到距离最小的一个点，可以暴力找也可以用堆维护。</p>
+<p>堆优化的方式类似 Dijkstra 的堆优化。</p>
+<p>在稠密图尤其是完全图上，一般选择暴力 Prim 算法，时间复杂度 $O(n^2+m)$，复杂度比 Kruskal 优，但 <strong>不一定</strong> 实际跑得更快。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre><code class="cpp">int g[500][500],visited[500],w[500];
+const int inf=2147483647;
+int Prim()
+&#123;
+    int sumW=0,v;
+    for(int i=1;i&lt;=n;i++)
+    &#123;
+        int min=inf;
+        for(int j=1;j&lt;=n;j++)
+            if(!visited[j]&amp;&amp;w[j]&lt;min)
+            &#123;
+                min=w[j];
+                v=j;
+            &#125;
+        sumW+=w[v];
+        visited[v]=1;
+        if(min==inf)
+            return sumW;
+        for(int j=1;j&lt;=n;j++)
+            if(!visited[j]&amp;&amp;w[j]&gt;g[v][j])
+                w[j]=g[v][j];
+    &#125;
+    return sumW;
+&#125;</code></pre>
+<h2 id="Kruskal"><a href="#Kruskal" class="headerlink" title="Kruskal"></a>Kruskal</h2><p>Kruskal 算法是一种常见并且好写的最小生成树算法。</p>
+<h3 id="实现-1"><a href="#实现-1" class="headerlink" title="实现"></a>实现</h3><p>该算法的基本思想是从小到大加入边，是个贪心算法。</p>
+<p>使用并查集维护一个森林，查询两个结点是否在同一棵树中，连接两棵树。</p>
+<p>如果使用 $O(m log m)$ 的排序算法，并且使用 $O(m\alpha(m,n))$  的并查集，就可以得到时间复杂度为 $O(m log m)$ 的 Kruskal 算法。</p>
+<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><pre><code class="cpp">void kruskal()
+&#123;
+    int cnt=0; 
+    sort(edge,edge+m,cmp);//将边的权值排序
+    for(int i=1;i&lt;=m;i++)
+    &#123;
+        eu=find(edge[i].u), ev=find(edge[i].v);//find 并查集 
+        if(eu==ev)
+            continue;//若出现两个点已经联通了，则说明这一条边不需要了
+        ans+=edge[i].w;
+        fa[ev]=eu;//将eu、ev合并
+        if(++cnt==n-1)
+            break;
+    &#125;
+&#125;</code></pre>
 
 
     
@@ -269,7 +271,7 @@ hexo deploy</code></pre>
 	<br />
 	本文作者： yz-hs
 	<br /><br />
-    本文链接： http://yz-hs.tk/fef921291289/
+    本文链接： http://yz-hs.tk/7fcca1bd3023/
     <br /><br />
     版权声明： 本博客所有文章除特别声明外，均允许规范转载。转载请注明出处！当然也可对文章出处进行考证，在下方评论区评论！
     <br /><br />
@@ -278,12 +280,14 @@ hexo deploy</code></pre>
 
 <div class="end-post-meta">
 	
-		<span><a href="/tags/hexo"><i class="fa fa-tag" aria-hidden="true"></i> hexo</a></span>
+		<span><a href="/tags/OI"><i class="fa fa-tag" aria-hidden="true"></i> OI</a></span>
+	
+		<span><a href="/tags/最小生成树"><i class="fa fa-tag" aria-hidden="true"></i> 最小生成树</a></span>
 	
 </div>
 
 <div class="end-post-meta">
-	<span><i class="fa fa-refresh" aria-hidden="true"></i> 最后更新：  2020 年 07 月 19 日</span>
+	<span><i class="fa fa-refresh" aria-hidden="true"></i> 最后更新：  2020 年 12 月 04 日</span>
 </div>
 
 
@@ -293,9 +297,7 @@ hexo deploy</code></pre>
   
     <div class="prevnext">
   	  
-  	  	  <a class="prev" href="/2a969ab32552/">上一篇</a>
-  	  
-  		  <a class="next" href="/5995204a66c6/">下一篇</a>
+  		  <a class="next" href="/e864794054ec/">下一篇</a>
   	  
     </div>
   
@@ -409,7 +411,7 @@ hexo deploy</code></pre>
   <!-- 标签可能太多，影响目录 -->
     <div class="post-toc">
       <div class="title">文章目录</div>
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85git-amp-Node-js"><span class="toc-text">1.安装git&amp;Node.js</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85hexo"><span class="toc-text">2.安装hexo</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-GitHub%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%BB%93%E5%BA%93"><span class="toc-text">3.GitHub创建个人仓库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-%E7%94%9F%E6%88%90SSH%E6%B7%BB%E5%8A%A0%E5%88%B0GitHub"><span class="toc-text">4. 生成SSH添加到GitHub</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-%E5%B0%86hexo%E9%83%A8%E7%BD%B2%E5%88%B0GitHub"><span class="toc-text">5.将hexo部署到GitHub</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-%E5%8F%82%E8%80%83"><span class="toc-text">6.参考</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF"><span class="toc-text">模板</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prim"><span class="toc-text">Prim</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0"><span class="toc-text">实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-text">代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Kruskal"><span class="toc-text">Kruskal</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0-1"><span class="toc-text">实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81-1"><span class="toc-text">代码</span></a></li></ol></li></ol></li></ol>
     </div>
    
 
