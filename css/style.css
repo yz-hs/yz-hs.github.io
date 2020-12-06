@@ -720,6 +720,7 @@
 }
 .timeline {
   position: relative;
+  font-size: 22px;
   list-style: none;
   padding-left: 1.2em !important;
   margin-left: 0.3em !important;
@@ -733,7 +734,7 @@
   color: #777 !important;
 }
 .timeline b {
-  font-size: 0.9em;
+  font-size: 20px;
   font-weight: normal;
   display: block;
   position: relative;
