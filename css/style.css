@@ -60,6 +60,7 @@
 }
 .sidebar {
   position: fixed;
+  overflow-y: auto;
   width: 13.45%;
   height: 100%;
   z-index: 888;
@@ -122,6 +123,14 @@
   color: #777;
   background-color: #e6e6e6;
 }
+.sidebar .list-group-empty {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  background-color: #fafafa;
+  color: #777;
+}
 .sidebar .list-group-item-current {
   position: relative;
   display: block;
@@ -168,6 +177,10 @@
   .sidebar {
     display: none !important;
   }
+}
+.sidebar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 .post {
   z-index: 777;
@@ -600,7 +613,7 @@
 }
 .text-alert a {
   color: inherit !important;
-  text-decoration: underline;
+  border-color: inherit !important;
 }
 .text-alert a:hover {
   opacity: 0.5;
@@ -776,6 +789,7 @@ img {
   }
 }
 a {
+  word-break: break-all;
   text-decoration: none;
   color: #777;
 }
