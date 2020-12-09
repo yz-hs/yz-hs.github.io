@@ -118,16 +118,18 @@
   </entry>
   
   <entry>
-    <title>NOIP-2020游记</title>
+    <title>NOIP 2020游记</title>
     <link href="http://yz-hs.tk/ec065edc5f19/"/>
     <id>http://yz-hs.tk/ec065edc5f19/</id>
     <published>2020-12-02T14:45:52.000Z</published>
-    <updated>2020-12-02T15:21:19.674Z</updated>
+    <updated>2020-12-09T16:40:23.437Z</updated>
     
-    <content type="html"><![CDATA[<p>yz-hs 的 NOIP 2020 游记。</p><a id="more"></a><h1 id="时间线"><a href="#时间线" class="headerlink" title="时间线"></a>时间线</h1><ol class="timeline">    <li> <b>2020/11/29</b>进入了 NOIP</li></ol><h1 id="Day-3"><a href="#Day-3" class="headerlink" title="Day -3"></a>Day -3</h1><p>AC 300，祭！</p><p><img src="/postimg/NOIP/AC-300.png"> </p><h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1>]]></content>
+    <content type="html"><![CDATA[<p>yz-hs 的 NOIP 2020 游记。</p><p>啊这，，，都沉了，，，那先置个顶吧。</p><p>这次的背景图没什么特殊东西。</p><a id="more"></a><p>题意简述：</p><ul><li>T1 —— 污 水 迷 路</li><li>T2 —— WA B C</li><li>T3 —— 汉 诺 球</li><li>T4 —— 十 维 人</li></ul><h1 id="时间线"><a href="#时间线" class="headerlink" title="时间线"></a>时间线</h1><ol class="timeline">    <li> <b>2020/11/29</b>进入了 NOIP</li>    <li> <b>2020/12/04</b>请假，去宾馆</li>    <li> <b>2020/12/05</b>比赛日</li>    <li> <b>2020/12/06</b>自测分136</li>    <li> <b>2020/12/09</b>官方分95 \kk</li></ol><p>坐标 SD，TG 选手。</p><p>作为初四 OIer，我和 $\tt{\color{black}{z}\color{red}{zy}}$ 是 xt 的唯二初中选手。还有原来是同学的新高一们、高二们，还有个高三大佬。</p><p><del>这句话好眼熟啊。</del></p><p>总的来说，这次虽然真实成绩和自己预想的差别很大，但也算是考出了自己的真实水平了。</p><p>本文没什么好说的，因此篇幅较短。</p><h1 id="Day-3"><a href="#Day-3" class="headerlink" title="Day -3"></a>Day -3</h1><p>AC 300，祭！</p><p><img src="/postimg/NOIP/AC-300.png"> </p><h1 id="Day-0"><a href="#Day-0" class="headerlink" title="Day 0"></a>Day 0</h1><p>这一天，我乘着 xtyz 的专车，来到了“假日海湾时尚酒店”。</p><p><del>第一次体验在宾馆居住。</del></p><p>下午，还去海边玩了会。<del>第一次去看海，并海滩写代码。</del></p><p>晚上吃了个泡面，看了看各种模板。把线段树模板看了又看，<del>然而事实证明没用上</del>。</p><p>就这样吧。</p><h1 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h1><p>早晨吃了点烤 main 包什么的。</p><p>8 分钟的车程，我们来到了考场。</p><p>试机时打了个线段树，还写挂了。<del>这是我第一次写线段树，当然会挂。</del>我太菜了。</p><p>依旧是那 4 个文件夹，4 道题。</p><p>先把 T1 到 T4 看了一遍。感觉 T1 可做。<del>不像 CSP T1 这么毒瘤了。</del></p><p>然后花了大概 1 h，把 T1 打出来了。测试所有样例，通过。感觉 100 分紧紧攥在手里，然后就没再管它。</p><p>开 T2。考了个字符串。花了大概 1.5 h，打了 16 分的暴力。<del>事实上挂了。</del></p><p>看了看 T3，感觉不可做；诶，有个 checker.cpp 啊，点开看看，<del>这是什么 shit 代码啊</del>，还编译失败了。原来要开 C++11 啊。</p><p>T4 感觉暴力很好写，而且还能输出 -1 骗分。开始打 T4。打完后大概还有 1 h。</p><p>回头改改 T2，然后看到还有 40 分钟，<del>闲的没事</del>，想优化 T4。</p><p>当时我这么想：反正 T4 要拿 35 分左右，T1 得拿 100 分<strong>左</strong>右，以休闲的心态优化 T4 吧。最后优化挂了，交的原版。</p><p>然后自认为 100+16+0+35=151，一等奖有希望。</p><hr><p>出来考场，和 $\tt{\color{black}{z}\color{red}{zy}}$ 与高中大佬们去时光餐厅吃饭。在路上，发现 T1 审错题了，完了，我没了。</p><p>没想到 T1 出题人还是要马🐎的：</p><blockquote><p><img src="/postimg/NOIP/2.jpg"></p></blockquote><h1 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h1><p>luogu 自测：90+16+0+30=136。</p><p>然后，我觉得，一等奖好像没什么希望了。</p><p>看到 T1 得了 90 分，感觉 T1 要挂啊。然后在 oitiku 上测了测：</p><p>oitiku 自测：90+0+0+30=120。</p><p>啊，T2 居然挂了。想了想，确实，因为我第二个样例没过。</p><p>感觉要完。</p><h1 id="Day-2020-12-09"><a href="#Day-2020-12-09" class="headerlink" title="Day 2020-12-09"></a>Day 2020-12-09</h1><p>官方成绩：60+0+0+35=95。</p><p>没想到，T1 挂 60 分了。</p><p>发现把 T1 改成 <code>unsigned long long</code> 还是 60 分，觉得这就是我的真实水平了。</p><p><del>没想到 T1 出题人居然不要马🐎了。</del></p><p>SD 排名 200+，不太行。还是太菜。</p><p><del>一等奖可以获得 xtyz 免试进入实验部的机会啊啊啊，这样就不用中考了啊啊啊</del>。</p><p>只能投奔文化课了。</p><h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1><p>指的是，yz-hs 的 OI 之路未完，待续。</p><p>本年最后一篇游记。</p><p>明年，2021年，高一，我还会回来的。</p><h1 id="一些奇怪的东西"><a href="#一些奇怪的东西" class="headerlink" title="一些奇怪的东西"></a>一些奇怪的东西</h1><p>How’s the weather,THINK IT BETTER。</p><p>（来自某选手第三题文件）</p><p><img src="/postimg/NOIP/3.jpg"></p><hr><p>I AK 101。</p><p>（来自某选手第二题文件<del>其实就是我的</del>）</p><p><img src="/postimg/NOIP/4.png"></p>]]></content>
     
     
-    <summary type="html">&lt;p&gt;yz-hs 的 NOIP 2020 游记。&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;yz-hs 的 NOIP 2020 游记。&lt;/p&gt;
+&lt;p&gt;啊这，，，都沉了，，，那先置个顶吧。&lt;/p&gt;
+&lt;p&gt;这次的背景图没什么特殊东西。&lt;/p&gt;</summary>
     
     
     
