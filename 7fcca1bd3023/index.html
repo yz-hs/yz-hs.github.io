@@ -197,7 +197,7 @@
     <div class="meta">
 	  <span><i class="fa fa-user" aria-hidden="true"></i> yz-hs</span>
 	  <span><i class="fa fa-clock-o" aria-hidden="true"></i>  2020 年 12 月 04 日</span>
-      <span><i class="fa fa-font" aria-hidden="true"></i> 506</span>
+      <span><i class="fa fa-font" aria-hidden="true"></i> 1.1k</span>
       <span><i class="fa fa-eye fa-fw" aria-hidden="true"></i> <span id="busuanzi_value_page_pv"></span></span>
       
       
@@ -219,52 +219,178 @@
 
 <h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1><p>规定：n 点数，m 边数。</p>
 <h2 id="Prim"><a href="#Prim" class="headerlink" title="Prim"></a>Prim</h2><p>Prim 算法是一种常见并且好写的最小生成树算法。该算法的基本思想是从一个结点开始，不断加点（而不是 Kruskal 算法的加边）。</p>
-<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>具体来说，每次要选择距离最小的一个结点，以及用新的边更新其他结点的距离。</p>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>具体来说，每次要选择距离当前已加入的点集最小的一个结点，以及用新的边更新其他结点的距离。</p>
+<pre><code>[1] [2]                         [8]
+ [3] [4] [5]            [7]
+   [6]                   ^                  [9]
+
+已加入的点集               已加入的点集之外
+
+^所指为距离当前已加入的点集最小的一个结点。</code></pre>
 <p>其实跟 Dijkstra 算法一样，每次找到距离最小的一个点，可以暴力找也可以用堆维护。</p>
 <p>堆优化的方式类似 Dijkstra 的堆优化。</p>
 <p>在稠密图尤其是完全图上，一般选择暴力 Prim 算法，时间复杂度 $O(n^2+m)$，复杂度比 Kruskal 优，但 <strong>不一定</strong> 实际跑得更快。</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre><code class="cpp">int g[500][500],visited[500],w[500];
-const int inf=2147483647;
-int Prim()
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre><code class="cpp">int g[N][N],v[N],d[N];//边，访问标记，距离当前已加入的点集的距离
+void prim()
 &#123;
-    int sumW=0,v;
-    for(int i=1;i&lt;=n;i++)
+    for(int i=1;i&lt;=n;i++) d[i]=g[1][i];v[1]=1;
+    for(int i=1;i&lt;=n-1;i++)
     &#123;
-        int min=inf;
+        int to=-114514,mn=inf;
+         for(int j=1;j&lt;=n;j++)
+            if(!v[j]&amp;&amp;d[j]&lt;mn) to=j,mn=d[j];
+        if(to&lt;0) return;
+        ans+=mn,v[to]=1;
         for(int j=1;j&lt;=n;j++)
-            if(!visited[j]&amp;&amp;w[j]&lt;min)
-            &#123;
-                min=w[j];
-                v=j;
-            &#125;
-        sumW+=w[v];
-        visited[v]=1;
-        if(min==inf)
-            return sumW;
-        for(int j=1;j&lt;=n;j++)
-            if(!visited[j]&amp;&amp;w[j]&gt;g[v][j])
-                w[j]=g[v][j];
+            if(!v[j]&amp;&amp;d[j]&gt;g[to][j])
+                d[j]=g[to][j];
     &#125;
-    return sumW;
+    return;
 &#125;</code></pre>
 <h2 id="Kruskal"><a href="#Kruskal" class="headerlink" title="Kruskal"></a>Kruskal</h2><p>Kruskal 算法是一种常见并且好写的最小生成树算法。</p>
 <h3 id="实现-1"><a href="#实现-1" class="headerlink" title="实现"></a>实现</h3><p>该算法的基本思想是从小到大加入边，是个贪心算法。</p>
 <p>使用并查集维护一个森林，查询两个结点是否在同一棵树中，连接两棵树。</p>
 <p>如果使用 $O(m log m)$ 的排序算法，并且使用 $O(m\alpha(m,n))$  的并查集，就可以得到时间复杂度为 $O(m log m)$ 的 Kruskal 算法。</p>
-<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><pre><code class="cpp">void kruskal()
+<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><pre><code class="cpp">struct edge&#123;int u,v,len;&#125;e[M*2];
+struct UFDS
 &#123;
-    int cnt=0; 
-    sort(edge,edge+m,cmp);//将边的权值排序
+    int dad[M],n;
+    void init(int p)&#123; n=p; for(int i=1;i&lt;=n;i++) dad[i]=i; &#125;
+    int find(int x)
+    &#123;  
+        int root=x;  
+        while(root!=dad[root])
+            root=dad[root];
+        return root;  
+    &#125;
+    void union_(int x,int y)
+    &#123;
+        int d1=find(x),d2=find(y);
+        dad[d1]=d2;
+        return;
+    &#125;
+    bool check(int x,int y)
+    &#123;
+        int d1=find(x),d2=find(y);
+        if(d1==d2)
+            return 1;
+        return 0;
+    &#125;
+&#125;ufds;//并查集，无需解释
+bool cmp(edge a,edge b)&#123; return a.len&lt;b.len; &#125;
+void kruskal()
+&#123;
+    int num=0,ru,rv; 
+    sort(e,e+cnt,cmp);
     for(int i=1;i&lt;=m;i++)
     &#123;
-        eu=find(edge[i].u), ev=find(edge[i].v);//find 并查集 
-        if(eu==ev)
-            continue;//若出现两个点已经联通了，则说明这一条边不需要了
-        ans+=edge[i].w;
-        fa[ev]=eu;//将eu、ev合并
-        if(++cnt==n-1)
-            break;
+           ru=ufds.find(e[i].u),rv=ufds.find(e[i].v);
+        if(ru==rv)
+               continue;
+           ans+=e[i].len;
+        ufds.union_(ru,rv);
+           if(++num==n-1)
+               break;
     &#125;
+&#125;</code></pre>
+<h1 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h1><h2 id="P3366-【模板】最小生成树"><a href="#P3366-【模板】最小生成树" class="headerlink" title="P3366 【模板】最小生成树"></a>P3366 【模板】最小生成树</h2><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3366">link</a>。<del>这玩意是模板，怎么能是例题呢？</del>所以，直接抛代码：</p>
+<pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+namespace _yz
+&#123;
+    const int M=200000+10,N=5000+10,inf=2147483647;
+    struct edge&#123;int u,v,len;&#125;e[M*2];
+    struct UFDS
+    &#123;
+        int dad[M],n;
+        void init(int p)&#123; n=p; for(int i=1;i&lt;=n;i++) dad[i]=i; &#125;
+        int find(int x)
+        &#123;  
+            int root=x;  
+            while(root!=dad[root])
+                root=dad[root];
+            return root;  
+        &#125;
+        void union_(int x,int y)
+        &#123;
+            int d1=find(x),d2=find(y);
+            dad[d1]=d2;
+            return;
+        &#125;
+        bool check(int x,int y)
+        &#123;
+            int d1=find(x),d2=find(y);
+            if(d1==d2)
+                return 1;
+            return 0;
+        &#125;
+    &#125;ufds;
+    int cnt=0,n,m,ans=0;
+    int g[N][N],v[N],d[N];
+    inline void add(int a,int b,int x)
+    &#123;
+        e[++cnt]=(edge)&#123;a,b,x&#125;;
+        g[a][b]=min(x,g[a][b]);
+    &#125;
+    bool cmp(edge a,edge b)&#123; return a.len&lt;b.len; &#125;
+    void kruskal()
+    &#123;
+        int num=0,ru,rv; 
+        sort(e,e+cnt,cmp);
+        for(int i=1;i&lt;=m;i++)
+        &#123;
+               ru=ufds.find(e[i].u),rv=ufds.find(e[i].v);
+            if(ru==rv)
+                continue;
+            ans+=e[i].len;
+            ufds.union_(ru,rv);
+            if(++num==n-1)
+                break;
+        &#125;
+    &#125;
+    void prim()
+    &#123;
+        for(int i=1;i&lt;=n;i++) d[i]=g[1][i];v[1]=1;
+        for(int i=1;i&lt;=n-1;i++)
+        &#123;
+            int to=-114514,mn=inf;
+             for(int j=1;j&lt;=n;j++)
+                if(!v[j]&amp;&amp;d[j]&lt;mn) to=j,mn=d[j];
+            if(to&lt;0) return;
+            ans+=mn,v[to]=1;
+            for(int j=1;j&lt;=n;j++)
+                if(!v[j]&amp;&amp;d[j]&gt;g[to][j])
+                    d[j]=g[to][j];
+        &#125;
+        return;
+    &#125;
+    void yzmain()
+    &#123;
+        int t1,t2,t3;
+        scanf(&quot;%d%d&quot;,&amp;n,&amp;m);
+        ufds.init(n);
+        for(int i=1;i&lt;=n;i++)
+            for(int j=1;j&lt;=n;j++)
+                if(i==j) g[i][j]=0;
+                else g[i][j]=inf;
+        for(int i=1;i&lt;=m;i++)
+        &#123;
+            scanf(&quot;%d%d%d&quot;,&amp;t1,&amp;t2,&amp;t3);
+            add(t1,t2,t3);
+            if(n%2) add(t2,t1,t3);
+        &#125;
+        if(n%2) prim();
+        else kruskal();
+        printf(&quot;%d\n&quot;,ans);
+        return;
+    &#125;
+&#125;
+int main()
+&#123;
+    //freopen(&quot;in.txt&quot;,&quot;r&quot;,stdin);
+    //freopen(&quot;out.txt&quot;,&quot;w&quot;,stdout);
+    _yz::yzmain();
+    return 0;
 &#125;</code></pre>
 
 
@@ -294,7 +420,7 @@ int Prim()
 </div>
 
 <div class="end-post-meta">
-	<span><i class="fa fa-refresh" aria-hidden="true"></i> 最后更新：  2020 年 12 月 04 日</span>
+	<span><i class="fa fa-refresh" aria-hidden="true"></i> 最后更新：  2020 年 12 月 13 日</span>
 </div>
 
 
@@ -358,7 +484,7 @@ int Prim()
 <!--  2-tab  -->
 
 <span class="title">最新更新</span><span class="sidetitle">旧文章的更新</span>
-<div class="item"><a class="post-link" href="/ec065edc5f19/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> NOIP 2020游记</a><hr class="separator" /><a class="post-link" href="/10c0864d52c3/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 常用字符</a><hr class="separator" /><a class="post-link" href="/6a67f065c1cd/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> yzpheme使用文档</a><hr class="separator" /><a class="post-link" href="/7cb3b671c76a/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> HMCL启动器教程</a><hr class="separator" /><a class="post-link" href="/7fcca1bd3023/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 最小生成树</a><hr class="separator" /><a class="post-link" href="/e864794054ec/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> P2048 [NOI2010]超级钢琴</a></div>
+<div class="item"><a class="post-link" href="/7fcca1bd3023/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 最小生成树</a><hr class="separator" /><a class="post-link" href="/ec065edc5f19/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> NOIP 2020游记</a><hr class="separator" /><a class="post-link" href="/10c0864d52c3/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 常用字符</a><hr class="separator" /><a class="post-link" href="/6a67f065c1cd/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> yzpheme使用文档</a><hr class="separator" /><a class="post-link" href="/7cb3b671c76a/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> HMCL启动器教程</a><hr class="separator" /><a class="post-link" href="/e864794054ec/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> P2048 [NOI2010]超级钢琴</a></div>
 
 <!--  END 2-tab  -->
 
@@ -413,14 +539,14 @@ int Prim()
   	  <div class="list-group-item"><i class="fa fa-file fa-fw" aria-hidden="true"></i>&nbsp;文章数目<div class="badge">79</div></div>
   	  <div class="list-group-item"><i class="fa fa-users fa-fw" aria-hidden="true"></i>&nbsp;访客数目<div class="badge"><span id="busuanzi_value_site_uv"></span></div></div>
   	  <div class="list-group-item"><i class="fa fa-eye fa-fw" aria-hidden="true"></i>&nbsp;总访问量<div class="badge"><span id="busuanzi_value_site_pv"></span></div></div>
-  	  <div class="list-group-item"><i class="fa fa-font fa-fw" aria-hidden="true"></i>&nbsp;本站字数<div class="badge">165.3k<!-- npm i hexo-wordcount --save --></span></div></div>
+  	  <div class="list-group-item"><i class="fa fa-font fa-fw" aria-hidden="true"></i>&nbsp;本站字数<div class="badge">166k<!-- npm i hexo-wordcount --save --></span></div></div>
     </div>
   </div>
 
   <!-- 标签可能太多，影响目录 -->
     <div class="post-toc">
       <div class="title">文章目录</div>
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF"><span class="toc-text">模板</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prim"><span class="toc-text">Prim</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0"><span class="toc-text">实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-text">代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Kruskal"><span class="toc-text">Kruskal</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0-1"><span class="toc-text">实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81-1"><span class="toc-text">代码</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF"><span class="toc-text">模板</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prim"><span class="toc-text">Prim</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0"><span class="toc-text">实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-text">代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Kruskal"><span class="toc-text">Kruskal</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0-1"><span class="toc-text">实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81-1"><span class="toc-text">代码</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BE%8B%E9%A2%98"><span class="toc-text">例题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#P3366-%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91"><span class="toc-text">P3366 【模板】最小生成树</span></a></li></ol></li></ol>
     </div>
    
 
