@@ -293,7 +293,7 @@
 .post .post-text {
   margin: 20px;
   background-color: #fff;
-  border: 1px solid #fff;
+  border: 1px solid #eee;
   border-radius: 5px;
   padding: 30px;
 }
@@ -312,6 +312,8 @@
 .post .post-text h5,
 .post .post-text h6 {
   line-height: 100%;
+  background: linear-gradient(to bottom, transparent 60%, rgba(189,202,219,0.3) 0) no-repeat;
+  display: table;
 }
 .post .end-post-meta {
   padding: 3px;
@@ -720,7 +722,7 @@
 }
 .timeline {
   position: relative;
-  font-size: 22px;
+  font-size: 20px;
   list-style: none;
   padding-left: 1.2em !important;
   margin-left: 0.3em !important;
@@ -734,7 +736,7 @@
   color: #777 !important;
 }
 .timeline b {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   display: block;
   position: relative;
@@ -765,9 +767,11 @@
   color: #eb5055;
 }
 blockquote {
-  padding: 10px 20px;
-  border-left: 3px solid #dde6e9;
-  background-color: #f3f5f7;
+  padding: 1em;
+  margin: 1em 3em 1em 2em;
+  font-weight: 400;
+  border-left: 4px solid rgba(0,0,0,0.12);
+  background-color: #fafafa;
   word-break: break-all;
 }
 @media screen and (max-width: 480px) {
@@ -1339,7 +1343,7 @@ body {
   background-color: #efefef;
   color: #555;
   margin: 0px;
-  font-family: DengXian, sans-serif;
+  font-family: Saira, DengXian, sans-serif;;
   -webkit-font-smoothing: antialiased;
 }
 *::selection {

@@ -10,7 +10,6 @@
     width: 100%;
     padding: 0;
     position:relative;
-    overflow-y: scroll;
     overflow-x: hidden;
 }
 

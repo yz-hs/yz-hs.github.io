@@ -197,7 +197,7 @@
     <div class="meta">
 	  <span><i class="fa fa-user" aria-hidden="true"></i> yz-hs</span>
 	  <span><i class="fa fa-clock-o" aria-hidden="true"></i>  2020 年 12 月 04 日</span>
-      <span><i class="fa fa-font" aria-hidden="true"></i> 1.1k</span>
+      <span><i class="fa fa-font" aria-hidden="true"></i> 1.9k</span>
       <span><i class="fa fa-eye fa-fw" aria-hidden="true"></i> <span id="busuanzi_value_page_pv"></span></span>
       
       
@@ -212,6 +212,8 @@
       分享到：<a target="_blank" rel="noopener" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yz-hs.tk/7fcca1bd3023/&title=最小生成树&site=http://yz-hs.tk"><i class="fa fa-qq" aria-hidden="true"></i></a>
     </div>
   </div>
+
+  
 
   <div class="post-text">
     <p>本文为 yz-hs 学习最小生成树的笔记以及模板。</p>
@@ -392,6 +394,67 @@ int main()
     _yz::yzmain();
     return 0;
 &#125;</code></pre>
+<h2 id="P1265-公路修建"><a href="#P1265-公路修建" class="headerlink" title="P1265 公路修建"></a>P1265 公路修建</h2><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1265">link</a>。</p>
+<h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>某国有 $n$ 个城市，它们互相之间没有公路相通。政府决定修建公路。</p>
+<p>修建工程分若干轮完成。在每一轮中，每个城市选择一个与它最近的城市，申请修建通往该城市的公路。政府负责审批这些申请以决定是否同意修建。</p>
+<p>政府审批的规则如下：</p>
+<ul>
+<li><p>如果两个或以上城市申请修建同一条公路，则让它们共同修建；</p>
+</li>
+<li><p>如果三个或以上的城市申请修建的公路成环，例如，若 A 申请修建公路 AB，B 申请修建公路 BC，C 申请修建公路 CA，则政府将否决其中最短的一条公路的修建申请；</p>
+</li>
+<li><p>其他情况的申请一律同意。</p>
+</li>
+</ul>
+<p>一轮修建结束后，可能会有若干城市可以通过公路直接或间接相连。这些可以互相连通的城市即组成“城市联盟”。在下一轮修建中，每个“城市联盟”将被看作一个城市，发挥一个城市的作用。</p>
+<p>当所有城市被组合成一个“城市联盟”时，修建工程也就完成了。你的任务是计算出将要修建的公路总长度。</p>
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>首先可以证明，规则 2 是毫无用处的，因为三个以上城市成环的情况是不可能出现的。满足题意的话，A B C 只能组成正三角形。</p>
+<p>接下来可以证明，按“轮”进行处理也是没有必要的。</p>
+<p>因此只需直接求出最小生成树即可。</p>
+<p>Prim 算法的优势：稠密图，尤其是完全图。因为在 Kruskal 算法中，必须事先求出所有边的长度才能对之排序。但是一个有 5000 节点的完全图，这样做的空间、时间开销是巨大的。Prim 算法只在更新点到树的距离时需要用到边长，因此对于这种给坐标的完全图，可以现用现算。</p>
+<h3 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h3><pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+namespace _yz
+&#123;
+    const long long N=5000+10,inf=2147483647;
+    struct Pos&#123;long long x,y;&#125;c[N];
+    long long v[N],n; double d[N],ans=0;
+
+    double g(long long a,long long b)&#123;return sqrt((c[a].x-c[b].x)*(c[a].x-c[b].x)+(c[a].y-c[b].y)*(c[a].y-c[b].y));&#125;
+    void prim()
+    &#123;
+        for(long long i=1;i&lt;=n;i++) d[i]=g(1,i);v[1]=1;
+        for(long long i=1;i&lt;=n-1;i++)
+        &#123;
+            long long to=-114514;
+            double mn=inf;
+             for(long long j=1;j&lt;=n;j++)
+                if(!v[j]&amp;&amp;d[j]&lt;mn) to=j,mn=d[j];
+            if(to&lt;0) return;
+            ans+=mn,v[to]=1;
+            for(long long j=1;j&lt;=n;j++)
+                if(!v[j]&amp;&amp;d[j]&gt;g(to,j))
+                    d[j]=g(to,j);
+        &#125;
+        return;
+    &#125;
+    void yzmain()
+    &#123;
+        scanf(&quot;%lld&quot;,&amp;n);
+        for(long long i=1;i&lt;=n;i++)
+            scanf(&quot;%lld%lld&quot;,&amp;c[i].x,&amp;c[i].y);
+        prim();
+        printf(&quot;%.2lf&quot;,ans);
+        return;
+    &#125;
+&#125;
+int main()
+&#123;
+    //freopen(&quot;in.txt&quot;,&quot;r&quot;,stdin);
+    //freopen(&quot;out.txt&quot;,&quot;w&quot;,stdout);
+    _yz::yzmain();
+    return 0;
+&#125;</code></pre>
 
 
     
@@ -420,7 +483,7 @@ int main()
 </div>
 
 <div class="end-post-meta">
-	<span><i class="fa fa-refresh" aria-hidden="true"></i> 最后更新：  2020 年 12 月 13 日</span>
+	<span><i class="fa fa-refresh" aria-hidden="true"></i> 最后更新：  2020 年 12 月 19 日 11 : 34 : 53 晚上</span>
 </div>
 
 
@@ -475,7 +538,7 @@ int main()
       	
 <!--  1-tab  -->
 <span class="title">随机文章</span><span class="sidetitle">回味旧文</span>
-<div class="item"><a class="post-link" href="/7df258aa190a/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 初赛知识</a><hr class="separator" /><a class="post-link" href="/bbf95a8d95b3/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> ASCII艺术</a><hr class="separator" /><a class="post-link" href="/5edc4ae0f30b/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-J1游记</a><hr class="separator" /><a class="post-link" href="/7a4ad76933ea/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-J2游记</a><hr class="separator" /><a class="post-link" href="/7cb3b671c76a/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> HMCL启动器教程</a><hr class="separator" /><a class="post-link" href="/c7e8518fa892/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> O1759 最长上升子序列 等</a></div>
+<div class="item"><a class="post-link" href="/7df258aa190a/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 初赛知识</a><hr class="separator" /><a class="post-link" href="/32caf6cc933e/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 2020新年贺词</a><hr class="separator" /><a class="post-link" href="/5edc4ae0f30b/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-J1游记</a><hr class="separator" /><a class="post-link" href="/7a4ad76933ea/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-J2游记</a><hr class="separator" /><a class="post-link" href="/7cb3b671c76a/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> HMCL启动器教程</a><hr class="separator" /><a class="post-link" href="/ec065edc5f19/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> NOIP 2020游记</a></div>
 <!--  END 1-tab  -->
 
       </div>
@@ -484,7 +547,7 @@ int main()
 <!--  2-tab  -->
 
 <span class="title">最新更新</span><span class="sidetitle">旧文章的更新</span>
-<div class="item"><a class="post-link" href="/d7884a43c481/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 大佬摘录</a><hr class="separator" /><a class="post-link" href="/7fcca1bd3023/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 最小生成树</a><hr class="separator" /><a class="post-link" href="/ec065edc5f19/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> NOIP 2020游记</a><hr class="separator" /><a class="post-link" href="/10c0864d52c3/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 常用字符</a><hr class="separator" /><a class="post-link" href="/6a67f065c1cd/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> yzpheme使用文档</a><hr class="separator" /><a class="post-link" href="/7cb3b671c76a/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> HMCL启动器教程</a></div>
+<div class="item"><a class="post-link" href="/d9868096178d/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 对顶堆</a><hr class="separator" /><a class="post-link" href="/7fcca1bd3023/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 最小生成树</a><hr class="separator" /><a class="post-link" href="/6a67f065c1cd/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> yzpheme使用文档</a><hr class="separator" /><a class="post-link" href="/d7884a43c481/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 大佬摘录</a><hr class="separator" /><a class="post-link" href="/1f81513251d3/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 树形数据结构</a><hr class="separator" /><a class="post-link" href="/d3dec5d93e6e/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 欢迎</a></div>
 
 <!--  END 2-tab  -->
 
@@ -539,14 +602,14 @@ int main()
   	  <div class="list-group-item"><i class="fa fa-file fa-fw" aria-hidden="true"></i>&nbsp;文章数目<div class="badge">80</div></div>
   	  <div class="list-group-item"><i class="fa fa-users fa-fw" aria-hidden="true"></i>&nbsp;访客数目<div class="badge"><span id="busuanzi_value_site_uv"></span></div></div>
   	  <div class="list-group-item"><i class="fa fa-eye fa-fw" aria-hidden="true"></i>&nbsp;总访问量<div class="badge"><span id="busuanzi_value_site_pv"></span></div></div>
-  	  <div class="list-group-item"><i class="fa fa-font fa-fw" aria-hidden="true"></i>&nbsp;本站字数<div class="badge">166.8k<!-- npm i hexo-wordcount --save --></span></div></div>
+  	  <div class="list-group-item"><i class="fa fa-font fa-fw" aria-hidden="true"></i>&nbsp;本站字数<div class="badge">167.6k<!-- npm i hexo-wordcount --save --></span></div></div>
     </div>
   </div>
 
   <!-- 标签可能太多，影响目录 -->
     <div class="post-toc">
       <div class="title">文章目录</div>
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF"><span class="toc-text">模板</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prim"><span class="toc-text">Prim</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0"><span class="toc-text">实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-text">代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Kruskal"><span class="toc-text">Kruskal</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0-1"><span class="toc-text">实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81-1"><span class="toc-text">代码</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BE%8B%E9%A2%98"><span class="toc-text">例题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#P3366-%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91"><span class="toc-text">P3366 【模板】最小生成树</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF"><span class="toc-text">模板</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prim"><span class="toc-text">Prim</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0"><span class="toc-text">实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-text">代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Kruskal"><span class="toc-text">Kruskal</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0-1"><span class="toc-text">实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81-1"><span class="toc-text">代码</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BE%8B%E9%A2%98"><span class="toc-text">例题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#P3366-%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91"><span class="toc-text">P3366 【模板】最小生成树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#P1265-%E5%85%AC%E8%B7%AF%E4%BF%AE%E5%BB%BA"><span class="toc-text">P1265 公路修建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E6%84%8F"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3"><span class="toc-text">题解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81-2"><span class="toc-text">代码</span></a></li></ol></li></ol></li></ol>
     </div>
    
 
@@ -654,6 +717,8 @@ int main()
 	}
 </style>
 
+
+
 <script>  
 if (!Readdata("fool")) {
     document.body.classList.add('reverse-coloregg');
@@ -692,6 +757,8 @@ function Readdata(key) {
 /*from https://mkblog.cn/1469/*/
 </style>  
 
+
+
 <script>
 //	$(document).ready(function(){
 //    	$("div.post-text>p>a").append(" <i class=\"fa fa-external-link\" aria-hidden=\"true\"></i>");
@@ -699,6 +766,8 @@ function Readdata(key) {
 //链接后加图标
 //不好看，弃置
 </script>
+
+
 
 <a class="santa-container" id="santa-colored-egg">
   <div class="santa" onclick="santacoloredegg()">
@@ -737,6 +806,8 @@ function Readdata(key) {
 		document.getElementById("santa-colored-egg").innerHTML = "";
 	}
 </script>
+
+
 		</div>
   	</body>
 </html>
