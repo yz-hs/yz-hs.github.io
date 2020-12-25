@@ -16,7 +16,7 @@
   padding: 15px;
   position: sticky;
   top: 0px;
-  z-index: 999;
+  z-index: 5;
 }
 .topbar .topbar-title {
   font-size: 20px;
@@ -63,7 +63,7 @@
   overflow-y: auto;
   width: 13.45%;
   height: 100%;
-  z-index: 888;
+  z-index: 4;
   background-color: #fafafa;
 }
 .sidebar .sidebar-avatar {
@@ -183,7 +183,7 @@
   height: 0;
 }
 .post {
-  z-index: 777;
+  z-index: 3;
   background-color: #eee;
   line-height: 140%;
 }
@@ -394,7 +394,7 @@
   background-color: #000;
 }
 .toolbar {
-  z-index: 666;
+  z-index: 2;
   border: 1px solid #fafafa;
   background-color: #fafafa;
   width: 220px;
