@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -47,6 +48,7 @@
 	<a href="/" class="topbar-title">
 		<i class="fa fa-home" aria-hidden="true"></i> Yz-hs&#39;s Blog
 	</a>
+
 	<div class="topbar-url">
 	  
             <a href="/archives/index.html"><i class="fa fa-archive" aria-hidden="true"></i></a>
@@ -100,8 +102,51 @@
 
   <div class="sidebar-author">
     yz-hs<br />
-    <div class="mini-text">A cute OIer</div>
+    <div class="mini-text" id="binft">A cute OIer</div>
   </div>
+
+  <script>
+    var binft = function (r) {
+      function t() {
+        return b[Math.floor(Math.random() * b.length)]
+      }  
+      function e() {
+        return String.fromCharCode(94 * Math.random() + 33)
+      }
+      function n(r) {
+        for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
+          var l = document.createElement("span");
+          l.textContent = e(), l.style.color = t(), n.appendChild(l)
+        }
+        return n
+      }
+      function i() {
+        var t = o[c.skillI];
+        c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
+      }
+      var l = "",
+
+      o = [document.getElementById('binft').innerHTML].map(function (r) {
+      return r + ""
+      }),
+      a = 2,
+      g = 1,
+      s = 5,
+      d = 100,
+      b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
+      c = {
+        text: "",
+        prefixP: -s,
+        skillI: 0,
+        skillP: 0,
+        direction: "forward",
+        delay: a,
+        step: g
+      };
+      i()
+      };
+      binft(document.getElementById('binft'));
+  </script>
 
   <br />
 
@@ -692,7 +737,7 @@ int main()
       	
 <!--  1-tab  -->
 <span class="title">随机文章</span><span class="sidetitle">回味旧文</span>
-<div class="item"><a class="post-link" href="/e4b4986bb6ee/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 一些简单数论题</a><hr class="separator" /><a class="post-link" href="/32caf6cc933e/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 2020新年贺词</a><hr class="separator" /><a class="post-link" href="/5edc4ae0f30b/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-J1游记</a><hr class="separator" /><a class="post-link" href="/7a4ad76933ea/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-J2游记</a><hr class="separator" /><a class="post-link" href="/7cb3b671c76a/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> HMCL启动器教程</a><hr class="separator" /><a class="post-link" href="/ec065edc5f19/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> NOIP 2020游记</a></div>
+<div class="item"><a class="post-link" href="/e4b4986bb6ee/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 一些简单数论题</a><hr class="separator" /><a class="post-link" href="/32caf6cc933e/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 2020新年贺词</a><hr class="separator" /><a class="post-link" href="/bbf95a8d95b3/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> ASCII艺术</a><hr class="separator" /><a class="post-link" href="/7a4ad76933ea/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-J2游记</a><hr class="separator" /><a class="post-link" href="/7cb3b671c76a/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> HMCL启动器教程</a><hr class="separator" /><a class="post-link" href="/ec065edc5f19/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> NOIP 2020游记</a></div>
 <!--  END 1-tab  -->
 
       </div>
@@ -742,6 +787,7 @@ int main()
       })
     </script>
   </div>
+  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=18412635&auto=1&height=32"></iframe>
 
 <!--  END 3-tab  -->
 
@@ -805,6 +851,8 @@ int main()
 
 <!--<script type="text/javascript" src="/js/snow.js"></script>--> <!--前景下雪  注：与“点击烟花”冲突-->
 
+<script type="text/javascript" src="/js/snow-2.js"></script> <!--前景下雪——样式二-->
+
 <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 99999; pointer-events: none;" ></canvas> 
 <script type="text/javascript" src="/js/firework.js"></script> <!--点击烟花-->
 
@@ -812,7 +860,7 @@ int main()
 
 <!--<script type="text/javascript" src="/js/particle.js"></script>--> <!--背景粒子-->
 
-<script type="text/javascript" src="/js/sakura.js"></script> <!--前景樱花-->
+<!--<script type="text/javascript" src="/js/sakura.js"></script>--> <!--前景樱花-->
 
 <script src="/js/activate-power-mode.js"></script>
 <script>
@@ -974,11 +1022,14 @@ function Readdata(key) {
 <script type="text/javascript" src="/js/chaffle.min.js"></script>
 <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  
 <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
-
+<!--<script src="http://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>-->
 <script type="text/javascript">
 	$(document).ready(function() {$('.chaffle').chaffle();});   //文字变幻
     hljs.initHighlightingOnLoad();  //高亮
     setTimeout(function(){siteLoading.classList.remove('siteLoading-active')},0);  //加载动画
+    //jQuery(document).ready(function($) {
+	//	$(document).pjax('a[target!=_blank][pjax!="no"]', '#main-container', {fragment:'#main-container', timeout:6000});
+	//});
 </script>
 		</div>
   	</body>
