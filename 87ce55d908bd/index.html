@@ -105,49 +105,6 @@
     <div class="mini-text" id="binft">A cute OIer</div>
   </div>
 
-  <script>
-    var binft = function (r) {
-      function t() {
-        return b[Math.floor(Math.random() * b.length)]
-      }  
-      function e() {
-        return String.fromCharCode(94 * Math.random() + 33)
-      }
-      function n(r) {
-        for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
-          var l = document.createElement("span");
-          l.textContent = e(), l.style.color = t(), n.appendChild(l)
-        }
-        return n
-      }
-      function i() {
-        var t = o[c.skillI];
-        c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
-      }
-      var l = "",
-
-      o = [document.getElementById('binft').innerHTML].map(function (r) {
-      return r + ""
-      }),
-      a = 2,
-      g = 1,
-      s = 5,
-      d = 100,
-      b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
-      c = {
-        text: "",
-        prefixP: -s,
-        skillI: 0,
-        skillP: 0,
-        direction: "forward",
-        delay: a,
-        step: g
-      };
-      i()
-      };
-      binft(document.getElementById('binft'));
-  </script>
-
   <br />
 
   <div class="sidebar-list-container">
@@ -667,7 +624,7 @@ Ctrl+W -            减少高度。</code></pre>
 
 
 <br /><hr />
-<img src="/img/end-heart.gif">
+<!--<img src="/img/end-heart.gif">-->
 <br />
 <blockquote>
 	<br />
@@ -753,7 +710,7 @@ Ctrl+W -            减少高度。</code></pre>
 <!--  2-tab  -->
 
 <span class="title">最新更新</span><span class="sidetitle">旧文章的更新</span>
-<div class="item"><a class="post-link" href="/10c0864d52c3/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 常用字符</a><hr class="separator" /><a class="post-link" href="/1dcd9c3da84a/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 此网站的新玩法</a><hr class="separator" /><a class="post-link" href="/d3dec5d93e6e/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 欢迎</a><hr class="separator" /><a class="post-link" href="/d9868096178d/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 对顶堆</a><hr class="separator" /><a class="post-link" href="/7fcca1bd3023/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 最小生成树</a><hr class="separator" /><a class="post-link" href="/6a67f065c1cd/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> yzpheme使用文档</a></div>
+<div class="item"><a class="post-link" href="/d3dec5d93e6e/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 欢迎</a><hr class="separator" /><a class="post-link" href="/10c0864d52c3/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 常用字符</a><hr class="separator" /><a class="post-link" href="/1dcd9c3da84a/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 此网站的新玩法</a><hr class="separator" /><a class="post-link" href="/d9868096178d/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 对顶堆</a><hr class="separator" /><a class="post-link" href="/7fcca1bd3023/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 最小生成树</a><hr class="separator" /><a class="post-link" href="/6a67f065c1cd/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> yzpheme使用文档</a></div>
 
 <!--  END 2-tab  -->
 
@@ -849,6 +806,8 @@ Ctrl+W -            减少高度。</code></pre>
 !#                     页面效果                     #!
 !#                                                 #!
 -->
+
+<script type="text/javascript" src="/js/binft.js"></script> <!--sidebar的“short description”的滚动效果，加入`id="#binft"`即可。-->
 
 <script type="text/javascript" src="/js/ctitle.js"></script> <!--标题改动-->
 

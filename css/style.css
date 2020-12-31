@@ -1,9 +1,9 @@
 @media screen and (min-width: 800px) {
   html {
-    opacity: 0.92;
+    opacity: 0.94;
   }
   body {
-    background-image: url("/img/new-bgp.jpg");
+    background-image: url("/img/newyear-bgp.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -11,8 +11,8 @@
   }
 }
 .topbar {
-  background-color: #fcfcfc;
-  box-shadow: 0px 0px 5px #ccc;
+  background-color: #c92e26;
+  box-shadow: 0px 0px 5px #c92e26;
   padding: 15px;
   position: sticky;
   top: 0px;
@@ -39,7 +39,7 @@
   text-align: center;
 }
 .topbar a {
-  color: #777;
+  color: #222;
 }
 @media screen and (max-width: 800px) {
   .topbar .topbar-comments {
@@ -64,7 +64,7 @@
   width: 13.45%;
   height: 100%;
   z-index: 4;
-  background-color: #fafafa;
+  background-color: #dd554e;
 }
 .sidebar .sidebar-avatar {
   border-radius: 50%;
@@ -93,7 +93,7 @@
   position: fixed;
   width: 13.45%;
   bottom: 0px;
-  background-color: #f7f7f7;
+  background-color: #c92e26;
   padding: 10px 0px;
 }
 .sidebar .sidebar-footer .item {
@@ -102,7 +102,7 @@
   float: left;
 }
 .sidebar .mini-text {
-  color: #98a6ad;
+  color: #444;
   font-size: 12px;
   font-weight: 500;
 }
@@ -115,29 +115,29 @@
   display: block;
   padding: 10px 15px;
   margin-bottom: -1px;
-  background-color: #fafafa;
-  color: #777;
+  background-color: #dd554e;
+  color: #222;
 }
 .sidebar .list-group-item:hover,
 .sidebar .list-group-item:focus {
-  color: #777;
-  background-color: #e6e6e6;
+  color: #222;
+  background-color: #c92e26;
 }
 .sidebar .list-group-empty {
   position: relative;
   display: block;
   padding: 10px 15px;
   margin-bottom: -1px;
-  background-color: #fafafa;
-  color: #777;
+  background-color: #dd554e;
+  color: #222;
 }
 .sidebar .list-group-item-current {
   position: relative;
   display: block;
   padding: 10px 15px;
   margin-bottom: -1px;
-  color: #777;
-  background-color: #e6e6e6;
+  color: #222;
+  background-color: #c92e26;
 }
 .sidebar .badge {
   font-weight: bold;
@@ -184,14 +184,14 @@
 }
 .post {
   z-index: 3;
-  background-color: #eee;
+  background-color: #e47772;
   line-height: 140%;
 }
 .post .header {
-  background-color: #fafafa;
+  background-color: #dd554e;
   font-weight: 300;
   padding: 25px;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #dd554e;
 }
 .post .header .title {
   font-size: 30px;
@@ -201,7 +201,7 @@
 }
 .post .header .meta {
   padding: 3px;
-  color: #98a6ad;
+  color: #444;
   font-size: 15px;
   font-weight: 500;
 }
@@ -212,10 +212,10 @@
 .post .post-item {
   margin: 20px;
   padding: 30px;
-  background-color: #fff;
-  border: 1px solid #fff;
+  background-color: #dd554e;
+  border: 1px solid #dd554e;
   border-radius: 7px;
-  box-shadow: 0px 0px 15px #ccc;
+  box-shadow: 0px 0px 15px #c92e26;
 }
 .post .post-item .title {
   font-size: 25px;
@@ -224,12 +224,12 @@
 }
 .post .post-item .meta {
   padding: 3px;
-  color: #98a6ad;
+  color: #444;
   font-size: 14px;
   font-weight: 500;
 }
 .post .post-item:hover {
-  box-shadow: 0px 0px 15px #aaa;
+  box-shadow: 0px 0px 15px #9a241d;
 }
 .post .post-item .meta >span {
   display: inline-block;
@@ -239,7 +239,7 @@
   margin: 20px;
   border-radius: 7px;
   background-size: cover;
-  box-shadow: 0px 0px 15px #ccc;
+  box-shadow: 0px 0px 15px #c92e26;
 }
 .post .post-bgimg-item * {
   color: #fff !important;
@@ -264,12 +264,12 @@
   margin-right: 10px;
 }
 .post .post-bgimg-item:hover {
-  box-shadow: 0px 0px 15px #aaa;
+  box-shadow: 0px 0px 15px #9a241d;
 }
 .post .breadcrumb {
   margin: 20px;
-  background-color: #fff;
-  border: 1px solid #fff;
+  background-color: #dd554e;
+  border: 1px solid #dd554e;
   border-radius: 5px;
   padding: 10px;
   padding-bottom: 15px;
@@ -292,18 +292,18 @@
 }
 .post .post-text {
   margin: 20px;
-  background-color: #fff;
-  border: 1px solid #eee;
+  background-color: #dd554e;
+  border: 1px solid #dd554e;
   border-radius: 5px;
   padding: 30px;
 }
 .post .post-text a {
-  color: #777;
-  border-bottom: 1px solid #777;
-}
-.post .post-text a:hover {
   color: #222;
   border-bottom: 1px solid #222;
+}
+.post .post-text a:hover {
+  color: #777;
+  border-bottom: 1px solid #777;
 }
 .post .post-text h1,
 .post .post-text h2,
@@ -317,7 +317,7 @@
 }
 .post .end-post-meta {
   padding: 3px;
-  color: #98a6ad;
+  color: #444;
   font-size: 14px;
   font-weight: 500;
 }
@@ -326,7 +326,7 @@
   margin-right: 10px;
 }
 .post .end-post-meta >span >a {
-  color: #98a6ad;
+  color: #444;
 }
 .post .prevnext {
   margin: 20px;
@@ -334,15 +334,15 @@
   font-size: 15px;
 }
 .post .prevnext .prev {
-  background-color: #fff;
-  border: 1px solid #fff;
+  background-color: #dd554e;
+  border: 1px solid #dd554e;
   border-radius: 20px;
   padding: 10px;
   float: left;
 }
 .post .prevnext .next {
-  background-color: #fff;
-  border: 1px solid #fff;
+  background-color: #dd554e;
+  border: 1px solid #dd554e;
   border-radius: 20px;
   padding: 10px;
   float: right;
@@ -369,24 +369,24 @@
 .paginator {
   padding: 70px 0;
   text-align: center;
-  background-color: #eee;
+  background-color: #e47772;
 }
 .paginator .page-number,
 .paginator .space,
 .paginator .prev,
 .paginator .next {
-  border: 1px solid #eee;
+  border: 1px solid #e47772;
   padding: 10px;
   margin: 2px;
-  background-color: #fff;
+  background-color: #dd554e;
   border-radius: 5px 5px 5px 5px;
-  color: #777;
+  color: #222;
 }
 .paginator .page-number:hover,
 .paginator .prev:hover,
 .paginator .next:hover {
-  color: #777;
-  background-color: #dedede;
+  color: #222;
+  background-color: #c92e26;
 }
 .paginator .current,
 .paginator .current:hover {
@@ -395,8 +395,8 @@
 }
 .toolbar {
   z-index: 2;
-  border: 1px solid #fafafa;
-  background-color: #fafafa;
+  border: 1px solid #dd554e;
+  background-color: #dd554e;
   width: 220px;
   height: 100%;
   display: table-cell;
@@ -412,7 +412,7 @@
   padding: 5px;
 }
 .toolbar .item .separator {
-  border-color: #fafafa;
+  border-color: #dd554e;
 }
 .toolbar .post-toc {
   position: sticky;
@@ -431,9 +431,9 @@
   display: block;
   padding: 8px;
   margin-bottom: -1px;
-  background-color: #fff;
-  color: #fff;
-  border: 1px solid #ddd;
+  background-color: #c92e26;
+  color: #c92e26;
+  border: 1px solid #dd554e;
 }
 .toolbar .post-toc li span {
   word-wrap: break-word;
@@ -468,10 +468,10 @@
   text-align: center;
 }
 .toolbar .toolbar-tab-page .tb-current {
-  border-bottom: 1px solid #333;
+  border-bottom: 2px solid #000;
 }
 .toolbar .toolbar-tab-page .tb-tabContent >div {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #dd554e;
   padding: 15px;
   padding-bottom: 25px;
   overflow: auto;
@@ -481,12 +481,12 @@
   margin-bottom: 10px;
 }
 .toolbar .toolbar-tab-page .sidetitle {
-  color: #98a6ad;
+  color: #222;
   font-size: 10px;
   font-weight: 500;
 }
 .toolbar .toolbar-tab-page .fa-border {
-  border-color: $toolbar-fa-border-color;
+  border-color: #fff !important;
 }
 .toolbar .list-group {
   margin-bottom: 20px;
@@ -497,9 +497,9 @@
   display: block;
   padding: 10px 15px;
   margin-bottom: -1px;
-  background-color: #fff;
-  color: #777;
-  border: 1px solid #ddd;
+  background-color: #c92e26;
+  color: #222;
+  border: 1px solid #dd554e;
 }
 .toolbar .list-group-item .badge {
   float: right;
@@ -522,8 +522,8 @@
   }
 }
 .footer {
-  background-color: #e0e0e0;
-  border: 1px solid #e0e0e0;
+  background-color: #c12c25;
+  border: 1px solid #c12c25;
   padding: 17px;
   height: 15px;
   font-size: 15px;
@@ -578,16 +578,16 @@
   color: #777 !important;
 }
 .tags hr {
-  border-color: #fff;
+  border-color: #dd554e;
 }
 .comments {
-  background-color: #eee;
+  background-color: #e47772;
   padding: 20px;
   padding-top: 0px;
 }
 .comments .inner {
-  background-color: #fff;
-  border: 1px solid #fff;
+  background-color: #dd554e;
+  border: 1px solid #dd554e;
   border-radius: 5px;
   padding: 30px;
 }
@@ -660,7 +660,7 @@
 }
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  background-color: #f5f5f5;
+  background-color: #dd554e;
 }
 ::-webkit-scrollbar {
   width: 7px;
@@ -698,10 +698,10 @@
   padding-left: 20px;
 }
 .tab-page .current {
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #000;
 }
 .tab-page .tabContent >div {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #dd554e;
   padding: 15px;
   padding-bottom: 25px;
   overflow: auto;
@@ -726,11 +726,11 @@
   list-style: none;
   padding-left: 1.2em !important;
   margin-left: 0.3em !important;
-  border-left: 0.2em solid #eee;
-  color: #777 !important;
+  border-left: 0.2em solid #c92e26;
+  color: #333 !important;
 }
 .timeline a {
-  color: #000 !important;
+  color: #222 !important;
 }
 .timeline a:hover {
   color: #777 !important;
@@ -742,7 +742,7 @@
   position: relative;
   margin-top: 20px;
   margin-bottom: 10px;
-  color: #909399;
+  color: #333;
 }
 .timeline b::after {
   content: '';
@@ -752,8 +752,8 @@
   width: 0.8em;
   height: 0.8em;
   border-radius: 50%;
-  background-color: #fff;
-  border: 0.14em solid #ccc;
+  background-color: #dd554e;
+  border: 0.14em solid #c92e26;
   box-shadow: m 0.15em 0.15em 0 #fff, -0.15em -0.15em 0 #fff;
 }
 .timeline li {
@@ -761,17 +761,17 @@
   line-height: 100%;
 }
 .timeline li:hover b::after {
-  border-color: #eb5055;
+  border-color: #c12c25;
 }
 .timeline li:hover b {
-  color: #eb5055;
+  color: #c12c25;
 }
 blockquote {
   padding: 1em;
   margin: 1em 3em 1em 2em;
   font-weight: 400;
   border-left: 4px solid rgba(0,0,0,0.12);
-  background-color: #fafafa;
+  background-color: #c92e26;
   word-break: break-all;
 }
 @media screen and (max-width: 480px) {
@@ -796,11 +796,11 @@ img {
 a {
   word-break: break-all;
   text-decoration: none;
-  color: #777;
+  color: #222;
 }
 hr {
   border-style: solid;
-  border-color: #dfdfdf;
+  border-color: #e47772;
   border-width: 0.1px;
   margin: 10px;
 }
@@ -1341,7 +1341,7 @@ input[type="button"]:disabled,
 }
 body {
   background-color: #efefef;
-  color: #555;
+  color: #333;
   margin: 0px;
   font-family: Saira, DengXian, sans-serif;;
   -webkit-font-smoothing: antialiased;
@@ -1365,7 +1365,7 @@ body {
   width: 84% !important;
   min-height: 800px;
   display: table;
-  background-color: #eee;
+  background-color: #e47772;
 }
 @media screen and (max-width: 1200px) {
   .article {
@@ -1389,4 +1389,7 @@ body {
   .article-cell-body {
     display: block;
   }
+}
+.fa-border {
+  border-color: #c92e26 !important;
 }

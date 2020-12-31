@@ -1,6 +1,9 @@
 (function($){
     $.fn.snow = function(options){
-    var $flake = $('<div id="snowbox" />').css({'position': 'fixed','z-index':'9999', 'top': '-50px'}).html('❄'),
+    var $flakes = ['🏮','🧨','🧧'],
+    $rnd = new Date().getSeconds() % 3;
+    $choice = $flakes[$rnd],
+    $flake = $('<div id="snowbox" />').css({'position': 'fixed','z-index':'9999', 'top': '-50px'}).html($choice),
     documentHeight  = $(document).height(),
     documentWidth   = $(document).width(),
     defaults = {
