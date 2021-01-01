@@ -1,0 +1,191 @@
+/*  黑幕  */
+.text-shady {
+  color: #000;
+  background-color: #000;
+}
+.text-shady:hover {
+  color: #fff;
+}
+.text-shady .black:hover {
+  color: #000;
+}
+/*  警告条  */
+.text-alert {
+  padding: 0.6em 0.9em;
+  border-radius: 0.3em;
+  margin: 1em auto;
+  line-height: 1.6em;
+  display: block;
+  background-color: #ddd;
+  color: #999;
+}
+.text-alert a {
+  color: inherit !important;
+  border-color: inherit !important;
+}
+.text-alert a:hover {
+  opacity: 0.5;
+}
+.text-alert.fa:before {
+  margin-right: 0.3em;
+}
+/* For http://www.fontawesome.com.cn/ */
+.text-alert.success {
+  background-color: #dff0d8;
+  color: #3c763d;
+}
+.text-alert.info {
+  background-color: #d9edf7;
+  color: #31708f;
+}
+.text-alert.warning {
+  background-color: #fcf8e3;
+  color: #8a6d3b;
+}
+.text-alert.danger {
+  background-color: #f2dede;
+  color: #a94442;
+}
+/*  展开折叠-兼容  */
+.text-collapse {
+  margin: 2px;
+}
+.text-collapse .col-title {
+  border-radius: 25px;
+  background-color: #f5f5f5;
+  text-align: center;
+  padding: 10px;
+}
+.text-collapse .col-text {
+  display: none;
+  margin-top: 10px;
+}
+.text-collapse .col-title:hover + .col-text {
+  display: block;
+}
+.text-collapse .col-title:hover {
+  background-color: #eee;
+}
+/*  滚动条美化  */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #eee;
+}
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  background-color: #f5f5f5;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #f90;
+  background-image: -webkit-linear-gradient(45deg, rgba(255,255,255,0.2) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 75%, transparent 75%, transparent);
+  border-radius: 10px;
+}
+/*  标签页  */
+.tab-page {
+  box-shadow: 0px 0px 15px #ddd;
+}
+.tab-page .hide {
+  display: none;
+}
+.tab-page .tabTitle >ul {
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+.tab-page .tabTitle >ul >li {
+  float: left;
+  height: 20px;
+  font-size: 20px;
+  padding: 20px 10px;
+  margin: 0px;
+  line-height: 30px;
+  cursor: pointer;
+  text-align: center;
+}
+.tab-page .tabTitle >ul >li:first-child {
+  padding-left: 20px;
+}
+.tab-page .current {
+  border-bottom: 1px solid #222;
+}
+.tab-page .tabContent >div {
+  border-top: 1px solid #ddd;
+  padding: 15px;
+  padding-bottom: 25px;
+  overflow: auto;
+}
+/* need js:
+
+$(function(){
+      var ali = $('.tb-tabTitle>ul>li');
+      var aDiv = $('.tb-tabContent>div');
+      var timeId = null;
+      ali.click(function(){
+        var _this = $(this);
+        timeId = setTimeout(function(){
+          _this.addClass('tb-current').siblings().removeClass('tb-current');
+          var index = _this.index();
+          aDiv.eq(index).show().siblings().hide();
+        });
+      });
+  });
+
+*/
+/*  注解文字  */
+.text-comments {
+  color: #aaa;
+  font-size: 10px;
+  font-weight: 500;
+}
+/*  进度条  */
+.progress-con {
+  width: 100%;
+  background-color: #ddd;
+}
+.progress-con .progress {
+  text-align: right;
+  line-height: 30px;
+  color: #fff;
+}
+/* 时间线 */
+.timeline {
+  position: relative;
+  font-size: 20px;
+  list-style: none;
+  padding-left: 1.2em !important;
+  margin-left: 0.3em !important;
+  border-left: 0.2em solid #eee;
+}
+.timeline b {
+  font-size: 18px;
+  font-weight: normal;
+  display: block;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #909399;
+}
+.timeline b::after {
+  content: '';
+  position: absolute;
+  top: 0.38em;
+  left: -2em;
+  width: 0.8em;
+  height: 0.8em;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 0.14em solid #ccc;
+  box-shadow: m 0.15em 0.15em 0 #fff, -0.15em -0.15em 0 #fff;
+}
+.timeline li {
+  list-style: none;
+  line-height: 100%;
+}
+.timeline li:hover b::after {
+  border-color: #eb5055;
+}
+.timeline li:hover b {
+  color: #eb5055;
+}
