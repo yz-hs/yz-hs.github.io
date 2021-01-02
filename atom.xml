@@ -6,7 +6,7 @@
   <link href="http://yz-hs.tk/atom.xml" rel="self"/>
   
   <link href="http://yz-hs.tk/"/>
-  <updated>2021-01-01T13:00:52.111Z</updated>
+  <updated>2021-01-02T11:04:30.307Z</updated>
   <id>http://yz-hs.tk/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yz-hs.tk/d40b978d6cc1/"/>
     <id>http://yz-hs.tk/d40b978d6cc1/</id>
     <published>2021-01-01T12:55:53.000Z</published>
-    <updated>2021-01-01T13:00:52.111Z</updated>
+    <updated>2021-01-02T11:04:30.307Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>yzwheme  是一个简洁的 hexo 主题。本主题由<a href="https://github.com/yz-hs/"> yz-hs </a>制作，外观借鉴了<a href="https://nine-lie.com/"> Nine-lie </a>，部分代码借鉴自<a href="https://github.com/yz-hs/yzpheme"> yzpheme </a>。本主题可在<a href="https://github.com/yz-hs/yzwheme"> Github </a>获取。</p><p>功能：短代码效果同 yzpheme。不过样式没 yzpheme 多。</p><h1 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h1><ul><li>继承了 yzpheme 的一些特性</li><li>Pjax 无刷新加载</li><li>代码极其简洁，yz-hs 从制作到使用不到 1day 。</li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>yzwheme  是一个简洁的 hexo 主题。本主题由<a href="https://github.com/yz-hs/"> yz-hs </a>制作，外观借鉴了 WordPress 主题<a href="https://cn.wordpress.org/themes/iriska/"> iriska </a>，部分代码借鉴自<a href="https://github.com/yz-hs/yzpheme"> yzpheme </a>。本主题可在<a href="https://github.com/yz-hs/yzwheme"> Github </a>获取。</p><p>功能：短代码效果同 yzpheme。不过样式没 yzpheme 多。</p><h1 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h1><ul><li>继承了 yzpheme 的一些特性</li><li>Pjax 无刷新加载</li><li>代码极其简洁，yz-hs 从制作到使用不到 1day 。</li></ul>]]></content>
     
     
       
