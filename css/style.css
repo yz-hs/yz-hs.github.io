@@ -3,7 +3,7 @@
     opacity: 0.94;
   }
   body {
-    background-image: url("/img/night-bgp.png");
+    background-image: url("/img/new-bgp.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -11,8 +11,8 @@
   }
 }
 .topbar {
-  background-color: #212121;
-  box-shadow: 0px 0px 5px #000;
+  background-color: #fcfcfc;
+  box-shadow: 0px 0px 5px #ccc;
   padding: 15px;
   position: sticky;
   top: 0px;
@@ -64,7 +64,7 @@
   width: 13.45%;
   height: 100%;
   z-index: 4;
-  background-color: #212121;
+  background-color: #fafafa;
 }
 .sidebar .sidebar-avatar {
   border-radius: 50%;
@@ -93,7 +93,7 @@
   position: fixed;
   width: 13.45%;
   bottom: 0px;
-  background-color: #252525;
+  background-color: #f7f7f7;
   padding: 10px 0px;
 }
 .sidebar .sidebar-footer .item {
@@ -115,20 +115,20 @@
   display: block;
   padding: 10px 15px;
   margin-bottom: -1px;
-  background-color: #252525;
+  background-color: #fafafa;
   color: #777;
 }
 .sidebar .list-group-item:hover,
 .sidebar .list-group-item:focus {
   color: #777;
-  background-color: #212121;
+  background-color: #e6e6e6;
 }
 .sidebar .list-group-empty {
   position: relative;
   display: block;
   padding: 10px 15px;
   margin-bottom: -1px;
-  background-color: #252525;
+  background-color: #fafafa;
   color: #777;
 }
 .sidebar .list-group-item-current {
@@ -137,14 +137,14 @@
   padding: 10px 15px;
   margin-bottom: -1px;
   color: #777;
-  background-color: #212121;
+  background-color: #e6e6e6;
 }
 .sidebar .badge {
   font-weight: bold;
   float: right;
   padding: 3px 6px 3px 6px;
   color: #fff;
-  background-color: #000;
+  background-color: #ee82ee;
   border-radius: 20px;
   font-size: 15px;
 }
@@ -184,18 +184,18 @@
 }
 .post {
   z-index: 3;
-  background-color: #191919;
+  background-color: #eee;
   line-height: 140%;
 }
 .post .header {
-  background-color: #212121;
+  background-color: #fafafa;
   font-weight: 300;
   padding: 25px;
-  border-bottom: 1px solid #252525;
+  border-bottom: 1px solid #fff;
 }
 .post .header .title {
   font-size: 30px;
-  color: #aaa;
+  color: #000;
   padding: 3px;
   line-height: 100%;
 }
@@ -212,10 +212,10 @@
 .post .post-item {
   margin: 20px;
   padding: 30px;
-  background-color: #212121;
-  border: 1px solid #212121;
+  background-color: #fff;
+  border: 1px solid #fff;
   border-radius: 7px;
-  box-shadow: 0px 0px 15px #000;
+  box-shadow: 0px 0px 15px #ccc;
 }
 .post .post-item .title {
   font-size: 25px;
@@ -229,7 +229,7 @@
   font-weight: 500;
 }
 .post .post-item:hover {
-  box-shadow: 0px 0px 15px #555;
+  box-shadow: 0px 0px 15px #aaa;
 }
 .post .post-item .meta >span {
   display: inline-block;
@@ -239,7 +239,7 @@
   margin: 20px;
   border-radius: 7px;
   background-size: cover;
-  box-shadow: 0px 0px 15px #000;
+  box-shadow: 0px 0px 15px #ccc;
 }
 .post .post-bgimg-item * {
   color: #fff !important;
@@ -264,12 +264,12 @@
   margin-right: 10px;
 }
 .post .post-bgimg-item:hover {
-  box-shadow: 0px 0px 15px #555;
+  box-shadow: 0px 0px 15px #aaa;
 }
 .post .breadcrumb {
   margin: 20px;
-  background-color: #212121;
-  border: 1px solid #212121;
+  background-color: #fff;
+  border: 1px solid #fff;
   border-radius: 5px;
   padding: 10px;
   padding-bottom: 15px;
@@ -292,18 +292,18 @@
 }
 .post .post-text {
   margin: 20px;
-  background-color: #212121;
-  border: 1px solid #212121;
+  background-color: #fff;
+  border: 1px solid #eee;
   border-radius: 5px;
   padding: 30px;
 }
 .post .post-text a {
-  color: #eee;
-  border-bottom: 1px solid #eee;
+  color: #777;
+  border-bottom: 1px solid #777;
 }
 .post .post-text a:hover {
-  color: #fff;
-  border-bottom: 1px solid #fff;
+  color: #222;
+  border-bottom: 1px solid #222;
 }
 .post .post-text h1,
 .post .post-text h2,
@@ -312,7 +312,7 @@
 .post .post-text h5,
 .post .post-text h6 {
   line-height: 100%;
-  background: linear-gradient(to bottom, transparent 60%, rgba(99,99,99,0.3) 0) no-repeat;
+  background: linear-gradient(to bottom, transparent 60%, rgba(189,202,219,0.3) 0) no-repeat;
   display: table;
 }
 .post .end-post-meta {
@@ -334,15 +334,15 @@
   font-size: 15px;
 }
 .post .prevnext .prev {
-  background-color: #212121;
-  border: 1px solid #212121;
+  background-color: #fff;
+  border: 1px solid #fff;
   border-radius: 20px;
   padding: 10px;
   float: left;
 }
 .post .prevnext .next {
-  background-color: #212121;
-  border: 1px solid #212121;
+  background-color: #fff;
+  border: 1px solid #fff;
   border-radius: 20px;
   padding: 10px;
   float: right;
@@ -369,34 +369,34 @@
 .paginator {
   padding: 70px 0;
   text-align: center;
-  background-color: #191919;
+  background-color: #eee;
 }
 .paginator .page-number,
 .paginator .space,
 .paginator .prev,
 .paginator .next {
-  border: 1px solid #212121;
+  border: 1px solid #eee;
   padding: 10px;
   margin: 2px;
-  background-color: #212121;
+  background-color: #fff;
   border-radius: 5px 5px 5px 5px;
-  color: #aaa;
+  color: #777;
 }
 .paginator .page-number:hover,
 .paginator .prev:hover,
 .paginator .next:hover {
-  color: #fff;
-  background-color: #212121;
+  color: #777;
+  background-color: #dedede;
 }
 .paginator .current,
 .paginator .current:hover {
   color: #fff;
-  background-color: #252525;
+  background-color: #000;
 }
 .toolbar {
   z-index: 2;
-  border: 1px solid #212121;
-  background-color: #212121;
+  border: 1px solid #fafafa;
+  background-color: #fafafa;
   width: 220px;
   height: 100%;
   display: table-cell;
@@ -412,7 +412,7 @@
   padding: 5px;
 }
 .toolbar .item .separator {
-  border-color: #212121;
+  border-color: #fafafa;
 }
 .toolbar .post-toc {
   position: sticky;
@@ -431,9 +431,9 @@
   display: block;
   padding: 8px;
   margin-bottom: -1px;
-  background-color: #252525;
+  background-color: #fff;
   color: #fff;
-  border: 1px solid #252525;
+  border: 1px solid #ddd;
 }
 .toolbar .post-toc li span {
   word-wrap: break-word;
@@ -468,10 +468,10 @@
   text-align: center;
 }
 .toolbar .toolbar-tab-page .tb-current {
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #333;
 }
 .toolbar .toolbar-tab-page .tb-tabContent >div {
-  border-top: 1px solid #252525;
+  border-top: 1px solid #ddd;
   padding: 15px;
   padding-bottom: 25px;
   overflow: auto;
@@ -486,7 +486,7 @@
   font-weight: 500;
 }
 .toolbar .toolbar-tab-page .fa-border {
-  border-color: #252525 !important;
+  border-color: #fff !important;
 }
 .toolbar .list-group {
   margin-bottom: 20px;
@@ -497,15 +497,15 @@
   display: block;
   padding: 10px 15px;
   margin-bottom: -1px;
-  background-color: #252525;
+  background-color: #fff;
   color: #777;
-  border: 1px solid #252525;
+  border: 1px solid #ddd;
 }
 .toolbar .list-group-item .badge {
   float: right;
   padding: 3px 6px 3px 6px;
   color: #fff;
-  background-color: #000;
+  background-color: #ee82ee;
   border-radius: 20px;
   font-size: 12px;
 }
@@ -522,8 +522,8 @@
   }
 }
 .footer {
-  background-color: #252525;
-  border: 1px solid #252525;
+  background-color: #e0e0e0;
+  border: 1px solid #e0e0e0;
   padding: 17px;
   height: 15px;
   font-size: 15px;
@@ -560,7 +560,7 @@
   margin: 5px 5px 5px 20px;
   padding: 4px 8px 4px 8px;
   color: #fff;
-  background-color: #000;
+  background-color: #ee82ee;
   border-radius: 20px;
 }
 .category-list-item {
@@ -578,16 +578,16 @@
   color: #777 !important;
 }
 .tags hr {
-  border-color: #212121;
+  border-color: #fff;
 }
 .comments {
-  background-color: #191919;
+  background-color: #eee;
   padding: 20px;
   padding-top: 0px;
 }
 .comments .inner {
-  background-color: #212121;
-  border: 1px solid #212121;
+  background-color: #fff;
+  border: 1px solid #fff;
   border-radius: 5px;
   padding: 30px;
 }
@@ -660,7 +660,7 @@
 }
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  background-color: #212121;
+  background-color: #f5f5f5;
 }
 ::-webkit-scrollbar {
   width: 7px;
@@ -698,10 +698,10 @@
   padding-left: 20px;
 }
 .tab-page .current {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #333;
 }
 .tab-page .tabContent >div {
-  border-top: 1px solid #252525;
+  border-top: 1px solid #ddd;
   padding: 15px;
   padding-bottom: 25px;
   overflow: auto;
@@ -726,14 +726,14 @@
   list-style: none;
   padding-left: 1.2em !important;
   margin-left: 0.3em !important;
-  border-left: 0.2em solid #000;
+  border-left: 0.2em solid #eee;
   color: #555 !important;
 }
 .timeline a {
-  color: #eee !important;
+  color: #777 !important;
 }
 .timeline a:hover {
-  color: #fff !important;
+  color: #222 !important;
 }
 .timeline b {
   font-size: 18px;
@@ -752,8 +752,8 @@
   width: 0.8em;
   height: 0.8em;
   border-radius: 50%;
-  background-color: #222;
-  border: 0.14em solid #000;
+  background-color: #fff;
+  border: 0.14em solid #ccc;
   box-shadow: m 0.15em 0.15em 0 #fff, -0.15em -0.15em 0 #fff;
 }
 .timeline li {
@@ -771,7 +771,7 @@ blockquote {
   margin: 1em 3em 1em 2em;
   font-weight: 400;
   border-left: 4px solid rgba(0,0,0,0.12);
-  background-color: #252525;
+  background-color: #fafafa;
   word-break: break-all;
 }
 @media screen and (max-width: 480px) {
@@ -796,11 +796,11 @@ img {
 a {
   word-break: break-all;
   text-decoration: none;
-  color: #aaa;
+  color: #777;
 }
 hr {
   border-style: solid;
-  border-color: #212121;
+  border-color: #dfdfdf;
   border-width: 0.1px;
   margin: 10px;
 }
@@ -1191,7 +1191,7 @@ input[type="button"]:disabled,
 }
 .siteloading {
   display: none;
-  background-color: rgba(33,33,33,0.7);
+  background-color: rgba(255,255,255,0.7);
   position: fixed;
   top: 0;
   left: 0;
@@ -1352,7 +1352,7 @@ body {
 }
 .main {
   margin: 0 8%;
-  box-shadow: 0 0 40px #212121;
+  box-shadow: 0 0 40px rgba(0,0,0,0.3);
   height: auto;
 }
 @media screen and (max-width: 800px) {
@@ -1365,7 +1365,7 @@ body {
   width: 84% !important;
   min-height: 800px;
   display: table;
-  background-color: #191919;
+  background-color: #eee;
 }
 @media screen and (max-width: 1200px) {
   .article {
@@ -1391,5 +1391,5 @@ body {
   }
 }
 .fa-border {
-  border-color: #212121 !important;
+  border-color: #eee !important;
 }
