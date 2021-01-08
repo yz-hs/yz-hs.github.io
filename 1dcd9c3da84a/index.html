@@ -286,8 +286,214 @@
         <span>本 Blog 包含 10+ 个彩蛋！</span>
     </div>
 </div>
+# 彩灯
+
+<style type="text/css">
+        .container {
+  width: 10em;
+  height: 10em;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-animation: rotate 12s infinite linear;
+          animation: rotate 12s infinite linear;
+}
+
+.cube {
+  position: absolute;
+  width: 10em;
+  height: 10em;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.cube--2 {
+  -webkit-transform: rotateX(45deg) rotateY(45deg);
+          transform: rotateX(45deg) rotateY(45deg);
+}
+.cube--3 {
+  -webkit-transform: rotateX(45deg) rotateZ(45deg);
+          transform: rotateX(45deg) rotateZ(45deg);
+}
+
+.side {
+  position: absolute;
+  width: 10em;
+  height: 10em;
+  border: 2px dotted rgba(255, 213, 0, 0.35);
+  border-radius: 50%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.side::before, .side::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  box-sizing: border-box;
+  border-radius: inherit;
+  border: 1px solid;
+  box-shadow: inset 0 0 2em, 0 0 2em;
+}
+.side::before {
+  width: 2.5em;
+  height: 2.5em;
+  color: gold;
+}
+.side::after {
+  width: 1.5em;
+  height: 1.5em;
+  -webkit-transform: translateZ(-2em);
+          transform: translateZ(-2em);
+  box-shadow: inset 0 0 1em, 0 0 1em;
+  color: teal;
+}
+
+.side--back {
+  -webkit-transform: translateZ(-5em) rotateY(180deg);
+          transform: translateZ(-5em) rotateY(180deg);
+}
+
+.side--left {
+  -webkit-transform: translateX(-5em) rotateY(-90deg);
+          transform: translateX(-5em) rotateY(-90deg);
+}
+
+.side--right {
+  -webkit-transform: translateX(5em) rotateY(90deg);
+          transform: translateX(5em) rotateY(90deg);
+}
+
+.side--top {
+  -webkit-transform: translateY(-5em) rotateX(90deg);
+          transform: translateY(-5em) rotateX(90deg);
+}
+
+.side--bottom {
+  -webkit-transform: translateY(5em) rotateX(-90deg);
+          transform: translateY(5em) rotateX(-90deg);
+}
+
+.side--front {
+  -webkit-transform: translateZ(5em);
+          transform: translateZ(5em);
+}
+
+.side__inner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 5em;
+  height: 5em;
+  margin: auto;
+  border-radius: inherit;
+  border: 1px solid;
+  box-shadow: inset 0 0 2em;
+  color: orangered;
+  -webkit-transform: translateZ(2em);
+          transform: translateZ(2em);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.side__inner::before, .side__inner::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  box-sizing: border-box;
+  border-radius: inherit;
+  border: 1px solid;
+  box-shadow: inset 0 0 2em, 0 0 2em;
+}
+.side__inner::before {
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-transform: translateZ(2em);
+          transform: translateZ(2em);
+  color:#999;
+}
+.side__inner::after {
+  width: 1.5em;
+  height: 1.5em;
+  -webkit-transform: translateZ(4em);
+          transform: translateZ(4em);
+  color:#6CF;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotateX(360deg) rotateY(720deg) rotateZ(360deg);
+            transform: rotateX(360deg) rotateY(720deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotateX(360deg) rotateY(720deg) rotateZ(360deg);
+            transform: rotateX(360deg) rotateY(720deg) rotateZ(360deg);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.4;
+            }
+            100% {
+                opacity: 0.8; 
+            }
+        }
 
 
+.Pos{
+                        margin-top:350px;
+                        margin-left:45%;
+            width:100%;
+            height:100%;
+            color:#999;
+                        opacity:0.8;
+            text-align:center;
+            -webkit-animation-name: fadeIn; 
+            -webkit-animation-duration: 3s; 
+            -webkit-animation-iteration-count: 1; 
+            -webkit-animation-delay: 0s; 
+}
+</style>
+<div class="Pos" style="text-align:center;position:absolute;">
+           <div class="container">
+    <div class="cube cube--1">
+        <div class="side side--back">
+            <div class="side__inner"></div>
+        </div>
+        <div class="side side--left">
+            <div class="side__inner"></div>
+        </div>
+        <div class="side side--right">
+            <div class="side__inner"></div>
+        </div>
+        <div class="side side--top">
+            <div class="side__inner"></div>
+        </div>
+        <div class="side side--bottom">
+            <div class="side__inner"></div>
+        </div>
+        <div class="side side--front">
+            <div class="side__inner"></div>
+        </div>
+    </div>
+</div>
 
     
 
@@ -313,7 +519,7 @@
 </div>
 
 <div class="end-post-meta">
-	<span><i class="fa fa-refresh" aria-hidden="true"></i> 最后更新：  2021 年 01 月 01 日 05 : 27 : 06 下午</span>
+	<span><i class="fa fa-refresh" aria-hidden="true"></i> 最后更新：  2021 年 01 月 08 日 11 : 38 : 47 晚上</span>
 </div>
 
 
@@ -368,7 +574,7 @@
       	
 <!--  1-tab  -->
 <span class="title">随机文章</span><span class="sidetitle">回味旧文</span>
-<div class="item"><a class="post-link" href="/7df258aa190a/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 初赛知识</a><hr class="separator" /><a class="post-link" href="/bbf95a8d95b3/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> ASCII艺术</a><hr class="separator" /><a class="post-link" href="/5edc4ae0f30b/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-J1游记</a><hr class="separator" /><a class="post-link" href="/7a4ad76933ea/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-J2游记</a><hr class="separator" /><a class="post-link" href="/7cb3b671c76a/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> HMCL启动器教程</a><hr class="separator" /><a class="post-link" href="/c7e8518fa892/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> O1759 最长上升子序列 等</a></div>
+<div class="item"><a class="post-link" href="/e4b4986bb6ee/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 一些简单数论题</a><hr class="separator" /><a class="post-link" href="/32caf6cc933e/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 2020新年贺词</a><hr class="separator" /><a class="post-link" href="/5edc4ae0f30b/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-J1游记</a><hr class="separator" /><a class="post-link" href="/7a4ad76933ea/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-J2游记</a><hr class="separator" /><a class="post-link" href="/7cb3b671c76a/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> HMCL启动器教程</a><hr class="separator" /><a class="post-link" href="/ec065edc5f19/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> NOIP 2020游记</a></div>
 <!--  END 1-tab  -->
 
       </div>
@@ -377,7 +583,7 @@
 <!--  2-tab  -->
 
 <span class="title">最新更新</span><span class="sidetitle">旧文章的更新</span>
-<div class="item"><a class="post-link" href="/d40b978d6cc1/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> yzwheme使用文档</a><hr class="separator" /><a class="post-link" href="/1dcd9c3da84a/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 此网站的新玩法</a><hr class="separator" /><a class="post-link" href="/d3dec5d93e6e/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 欢迎</a><hr class="separator" /><a class="post-link" href="/6a67f065c1cd/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> yzpheme使用文档</a><hr class="separator" /><a class="post-link" href="/10c0864d52c3/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 常用字符</a><hr class="separator" /><a class="post-link" href="/d9868096178d/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 对顶堆</a></div>
+<div class="item"><a class="post-link" href="/1dcd9c3da84a/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 此网站的新玩法</a><hr class="separator" /><a class="post-link" href="/d40b978d6cc1/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> yzwheme使用文档</a><hr class="separator" /><a class="post-link" href="/d3dec5d93e6e/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 欢迎</a><hr class="separator" /><a class="post-link" href="/6a67f065c1cd/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> yzpheme使用文档</a><hr class="separator" /><a class="post-link" href="/10c0864d52c3/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 常用字符</a><hr class="separator" /><a class="post-link" href="/d9868096178d/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 对顶堆</a></div>
 
 <!--  END 2-tab  -->
 
