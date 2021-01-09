@@ -216,6 +216,7 @@
   border: 1px solid #fff;
   border-radius: 7px;
   box-shadow: 0px 0px 15px #ccc;
+  display: block;
 }
 .post .post-item .title {
   font-size: 25px;
@@ -240,6 +241,7 @@
   border-radius: 7px;
   background-size: cover;
   box-shadow: 0px 0px 15px #ccc;
+  display: block;
 }
 .post .post-bgimg-item * {
   color: #fff !important;
@@ -417,7 +419,7 @@
 .toolbar .post-toc {
   position: sticky;
   top: 60px;
-  padding: 15px;
+  padding: 9px 13px;
 }
 .toolbar .post-toc .title {
   font-weight: 700;
@@ -495,7 +497,7 @@
 .toolbar .list-group-item {
   position: relative;
   display: block;
-  padding: 10px 15px;
+  padding: 9px 13px;
   margin-bottom: -1px;
   background-color: #fff;
   color: #777;
@@ -1343,7 +1345,8 @@ body {
   background-color: #efefef;
   color: #555;
   margin: 0px;
-  font-family: Saira, DengXian, sans-serif;;
+  font-family: Montserrat;
+  font-size: 14.8px;
   -webkit-font-smoothing: antialiased;
 }
 *::selection {

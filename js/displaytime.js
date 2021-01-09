@@ -1,3 +1,4 @@
+function displaytime(){
 $(function(){
 $('#displaytime').html('<canvas id="canvas"></canvas>');
 var WINDOW_WIDTH = 920;
@@ -279,4 +280,4 @@ var WINDOW_WIDTH = 920;
 			context.clearRect(0, 0, context.canvas.width, context.canvas.height);
 			drawDatetime(context);
 		}, 50)
-});
+});}
