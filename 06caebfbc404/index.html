@@ -179,8 +179,7 @@
     <div class="meta">
 	  <span><i class="fa fa-user" aria-hidden="true"></i> yz-hs</span>
 	  <span><i class="fa fa-clock-o" aria-hidden="true"></i> 2020 年 07 月 26 日</span>
-      <span><i class="fa fa-font" aria-hidden="true"></i> 14</span>
-      <span><i class="fa fa-eye fa-fw" aria-hidden="true"></i> <span id="busuanzi_value_page_pv"></span></span>
+      <span><i class="fa fa-font" aria-hidden="true"></i> 15</span>
       
       
     </div>
@@ -198,40 +197,45 @@
     <p><button class="btn" onclick="demo()" style="display:block;margin:0 auto">点击查看Demo</button></p>
 <script>
   function demo() {
-    swal({
+
+swal.fire({
       title: "这是示例 >_<",
       text: "⌈ yz-hs 是一只可爱的 OIer。 ⌋",
-      icon: "success",
-      button: "嘤嘤嘤",
+      icon: "success"
+}).then((result) => {
+
+swal.fire({
+  title: '请确认',
+  text: "如果你吊打了yz-hs，你会AK IOI！ >_<",
+  showCancelButton: true,
+  confirmButtonText: '吊打她！',
+  cancelButtonText: '她这么可爱，算了！',
+  reverseButtons: true
+}).then((result) => {
+  if (result.value) {
+    swal.fire({
+      text: '你成功地吊打了yz-hs，并AK了IOI，orz。',
     })
-    .then((willDelete) => swal({
-      title: "请确认",
-      text: "如果你吊打了yz-hs，你会AK IOI！ >_<",
-      icon: "warning",
-      buttons: true,
-      dangerMode: true,
+  } else if (
+    result.dismiss === Swal.DismissReason.cancel
+  ) {
+    swal.fire({
+      text: '你不屑于吊打yz-hs，而是AK IOI，orz。',
     })
-    .then((willDelete) => {
-      if (willDelete) {
-        swal("你成功地吊打了yz-hs，并AK了IOI，orz。", {
-          icon: "success",
-        });
-      } else {
-        swal("你不屑于吊打yz-hs，而是AK IOI，orz。");
-      }
-    }));
   }
+})})}
 </script>
 
-<p>本文仅讲述常用用法，更多请访问<a target="_blank" rel="noopener" href="https://sweetalert.js.org/">官方网站</a></p>
+
+<p>本文仅讲述常用用法，更多请访问<a target="_blank" rel="noopener" href="https://www.sweetalert2.cn/">官方网站</a></p>
 <a id="more"></a>
 
-<h1 id="简单弹窗"><a href="#简单弹窗" class="headerlink" title="简单弹窗"></a>简单弹窗</h1><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre><code class="javascript">swal(&quot;Hello world!&quot;);</code></pre>
-<h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p><button class="btn" onclick="swal(&quot;Hello world!&quot;)" style="display:block;margin:0 auto">点击查看</button></p>
-<h1 id="带内容弹窗"><a href="#带内容弹窗" class="headerlink" title="带内容弹窗"></a>带内容弹窗</h1><h2 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h2><pre><code class="javascript">swal(&quot;标题&quot;,&quot;内容&quot;);</code></pre>
-<h2 id="效果-1"><a href="#效果-1" class="headerlink" title="效果"></a>效果</h2><p><button class="btn" onclick="swal(&quot;标题&quot;,&quot;内容&quot;)" style="display:block;margin:0 auto">点击查看</button></p>
-<h1 id="带图标弹窗"><a href="#带图标弹窗" class="headerlink" title="带图标弹窗"></a>带图标弹窗</h1><h2 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h2><pre><code class="javascript">swal(&quot;标题&quot;,&quot;内容&quot;,&quot;success&quot;);</code></pre>
-<h2 id="效果-2"><a href="#效果-2" class="headerlink" title="效果"></a>效果</h2><p><button class="btn" onclick="swal(&quot;标题&quot;,&quot;内容&quot;,&quot;success&quot;);" style="display:block;margin:0 auto">点击查看</button></p>
+<h1 id="简单弹窗"><a href="#简单弹窗" class="headerlink" title="简单弹窗"></a>简单弹窗</h1><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre><code class="javascript">swal.fire(&quot;Hello world!&quot;);</code></pre>
+<h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p><button class="btn" onclick="swal.fire(&quot;Hello world!&quot;)" style="display:block;margin:0 auto">点击查看</button></p>
+<h1 id="带内容弹窗"><a href="#带内容弹窗" class="headerlink" title="带内容弹窗"></a>带内容弹窗</h1><h2 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h2><pre><code class="javascript">swal.fire(&quot;标题&quot;,&quot;内容&quot;);</code></pre>
+<h2 id="效果-1"><a href="#效果-1" class="headerlink" title="效果"></a>效果</h2><p><button class="btn" onclick="swal.fire(&quot;标题&quot;,&quot;内容&quot;)" style="display:block;margin:0 auto">点击查看</button></p>
+<h1 id="带图标弹窗"><a href="#带图标弹窗" class="headerlink" title="带图标弹窗"></a>带图标弹窗</h1><h2 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h2><pre><code class="javascript">swal.fire(&quot;标题&quot;,&quot;内容&quot;,&quot;success&quot;);</code></pre>
+<h2 id="效果-2"><a href="#效果-2" class="headerlink" title="效果"></a>效果</h2><p><button class="btn" onclick="swal.fire(&quot;标题&quot;,&quot;内容&quot;,&quot;success&quot;);" style="display:block;margin:0 auto">点击查看</button></p>
 <h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h2><p>第三参数是图标，有四种选择：</p>
 <ul>
 <li><code>&quot;warning&quot;</code>——警告</li>
@@ -239,27 +243,21 @@
 <li><code>&quot;success&quot;</code>——成功</li>
 <li><code>&quot;info&quot;</code>——信息</li>
 </ul>
-<h1 id="另一种写法"><a href="#另一种写法" class="headerlink" title="另一种写法"></a>另一种写法</h1><h2 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h2><pre><code class="javascript">swal(&#123;
+<h1 id="另一种写法"><a href="#另一种写法" class="headerlink" title="另一种写法"></a>另一种写法</h1><h2 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h2><pre><code class="javascript">swal.fire(&#123;
   title: &quot;标题&quot;,
   text: &quot;内容&quot;,
   icon: &quot;success&quot;,
 &#125;);</code></pre>
-<h2 id="效果-3"><a href="#效果-3" class="headerlink" title="效果"></a>效果</h2><p><button class="btn" onclick="swal({
+<h2 id="效果-3"><a href="#效果-3" class="headerlink" title="效果"></a>效果</h2><p><button class="btn" onclick="swal.fire({
   title: &quot;标题&quot;,
   text: &quot;内容&quot;,
   icon: &quot;success&quot;,
 });" style="display:block;margin:0 auto">点击查看</button></p>
 <h2 id="提示-1"><a href="#提示-1" class="headerlink" title="提示"></a>提示</h2><p>效果是等价的。可以与前文写法混用：</p>
-<pre><code class="javascript">swal(&quot;标题&quot;, &quot;内容&quot;, &quot;success&quot;, &#123;
+<pre><code class="javascript">swal.fire(&quot;标题&quot;, &quot;内容&quot;, &quot;success&quot;, &#123;
   button: &quot;嘤嘤嘤&quot;,//更改按钮文字
 &#125;);</code></pre>
 <h1 id="其他用法"><a href="#其他用法" class="headerlink" title="其他用法"></a>其他用法</h1><p>请访问官方网站。</p>
-<ul>
-<li><p><a target="_blank" rel="noopener" href="https://sweetalert.js.org/docs/">文档</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://sweetalert.js.org/guides/">指导手册</a></p>
-</li>
-</ul>
 
     
 <br /><hr />
@@ -281,7 +279,7 @@
 	
 </div>
 <div class="end-post-meta">
-	<span><i class="fa fa-refresh" aria-hidden="true"></i> 最后更新： 2020 年 08 月 22 日</span>
+	<span><i class="fa fa-refresh" aria-hidden="true"></i> 最后更新： 2021 年 01 月 10 日</span>
 </div>
 
   </div>
@@ -331,7 +329,7 @@
       <div class="tb-hide">
 <!--  2-tab  -->
 <span class="title">最新更新</span><span class="sidetitle">旧文章的更新</span>
-<div class="item"><a class="post-link" href="/d7884a43c481/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 大佬摘录</a><hr class="separator" /><a class="post-link" href="/1dcd9c3da84a/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 此网站的新玩法</a><hr class="separator" /><a class="post-link" href="/d40b978d6cc1/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> yzwheme使用文档</a><hr class="separator" /><a class="post-link" href="/d3dec5d93e6e/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 欢迎</a><hr class="separator" /><a class="post-link" href="/6a67f065c1cd/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> yzpheme使用文档</a><hr class="separator" /><a class="post-link" href="/10c0864d52c3/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 常用字符</a></div>
+<div class="item"><a class="post-link" href="/d3dec5d93e6e/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 欢迎</a><hr class="separator" /><a class="post-link" href="/6a67f065c1cd/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> yzpheme使用文档</a><hr class="separator" /><a class="post-link" href="/06caebfbc404/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> SweetAlert的使用</a><hr class="separator" /><a class="post-link" href="/d7884a43c481/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 大佬摘录</a><hr class="separator" /><a class="post-link" href="/1dcd9c3da84a/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 此网站的新玩法</a><hr class="separator" /><a class="post-link" href="/d40b978d6cc1/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> yzwheme使用文档</a></div>
 <!--  END 2-tab  -->
       </div>
       <div class="tb-hide">
@@ -374,7 +372,7 @@
   	<div class="title">博客信息</div>
     <div class="text list-group">
   	  <div class="list-group-item"><i class="fa fa-file fa-fw" aria-hidden="true"></i>&nbsp;文章数目<div class="badge">80</div></div>
-  	  <div class="list-group-item"><i class="fa fa-refresh fa-fw" aria-hidden="true"></i>&nbsp;最近更新<div class="badge">08-22</div></div>
+  	  <div class="list-group-item"><i class="fa fa-refresh fa-fw" aria-hidden="true"></i>&nbsp;最近更新<div class="badge">01-10</div></div>
   	  <div class="list-group-item"><i class="fa fa-user-o fa-fw" aria-hidden="true"></i>&nbsp;本站作者<div class="badge">yz-hs</div></div>
   	  <div class="list-group-item"><i class="fa fa-font fa-fw" aria-hidden="true"></i>&nbsp;本站字数<div class="badge">164.8k<!--npm i hexo-wordcount --save--></span></div></div>
     </div>
@@ -589,11 +587,11 @@ function Readdata(key) {
 -->
 
 <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 <script type="text/javascript" src="/js/SmoothScroll.js"></script>
 <script type="text/javascript" src="/js/chaffle.min.js"></script>
 <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  
 <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/limonte-sweetalert2/10.12.5/sweetalert2.all.js"></script>
 <script type="text/javascript">
     hljs.initHighlighting();
     $(document).ready(function() {
