@@ -2,7 +2,7 @@ function click()
 {
 	if(event.button==2)
 	{
-		swal('注意','可爱的yz-hs提示你：右键不能用啦嘤~','error');
+		swal.fire('注意','可爱的yz-hs提示你：本页面屏蔽了审查元素，并且右键不能用啦嘤~','error');
 	}
 }
 document.onmousedown=click;
@@ -35,5 +35,3 @@ catch(e){}
         }
     });
     devtoolsDetector.lanuch();
-
-swal('注意','可爱的yz-hs提示你：本页面屏蔽了审查元素~','warning');
