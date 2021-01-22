@@ -36,7 +36,7 @@
   text-align: center;
 }
 .topbar a {
-  color: #f5a8ba;
+  color: #f5a9b8;
 }
 @media screen and (max-width: 800px) {
   .topbar .topbar-comments {
@@ -90,7 +90,7 @@
   position: fixed;
   width: 13.45%;
   bottom: 0px;
-  background-color: #f5a8ba;
+  background-color: #f5a9b8;
   padding: 10px 0px;
 }
 .sidebar .sidebar-footer .item {
@@ -122,7 +122,7 @@
 .sidebar .list-group-item:hover,
 .sidebar .list-group-item:focus {
   color: #fff;
-  background-color: #f5a8ba;
+  background-color: #f5a9b8;
 }
 .sidebar .list-group-empty {
   position: relative;
@@ -145,7 +145,7 @@
   float: right;
   padding: 3px 6px 3px 6px;
   color: #fff;
-  background-color: #f5a8ba;
+  background-color: #f5a9b8;
   border-radius: 20px;
   font-size: 15px;
 }
@@ -197,7 +197,7 @@
 }
 .post .header .title {
   font-size: 30px;
-  color: #f5a8ba;
+  color: #f5a9b8;
   padding: 3px;
   line-height: 100%;
 }
@@ -217,7 +217,7 @@
   background-color: #fff;
   border: 1px solid #fff;
   border-radius: 7px;
-  box-shadow: 0px 0px 15px #f5a8ba;
+  box-shadow: 0px 0px 15px #f5a9b8;
   display: block;
 }
 .post .post-item .title {
@@ -242,7 +242,7 @@
   margin: 20px;
   border-radius: 7px;
   background-size: cover;
-  box-shadow: 0px 0px 15px #f5a8ba;
+  box-shadow: 0px 0px 15px #f5a9b8;
   display: block;
 }
 .post .post-bgimg-item * {
@@ -250,7 +250,7 @@
 }
 .post .post-bgimg-item .inner {
   padding: 30px;
-  background: linear-gradient(180deg, transparent, rgba(245,168,186,0.8));
+  background: linear-gradient(180deg, transparent, rgba(245,169,184,0.8));
   border-radius: 7px;
 }
 .post .post-bgimg-item .inner .title {
@@ -302,8 +302,8 @@
   padding: 30px;
 }
 .post .post-text a {
-  color: #f5a8ba;
-  border-bottom: 1px solid #f5a8ba;
+  color: #f5a9b8;
+  border-bottom: 1px solid #f5a9b8;
 }
 .post .post-text a:hover {
   color: #5bcefa;
@@ -327,7 +327,7 @@
 .post .post-text h5:before,
 .post .post-text h6:before {
   content: '# ';
-  color: #f5a8ba;
+  color: #f5a9b8;
 }
 .post .end-post-meta {
   padding: 3px;
@@ -348,8 +348,8 @@
   font-size: 15px;
 }
 .post .prevnext .prev {
-  background-color: #f5a8ba;
-  border: 1px solid #f5a8ba;
+  background-color: #f5a9b8;
+  border: 1px solid #f5a9b8;
   border-radius: 20px;
   padding: 10px;
   float: left;
@@ -407,7 +407,7 @@
 .paginator .current,
 .paginator .current:hover {
   color: #fff;
-  background-color: #f5a8ba;
+  background-color: #f5a9b8;
 }
 .toolbar {
   z-index: 2;
@@ -476,10 +476,10 @@
   text-align: center;
 }
 .toolbar .toolbar-tab-page .tb-current {
-  border-bottom: 2px solid #f5a8ba;
+  border-bottom: 2px solid #f5a9b8;
 }
 .toolbar .toolbar-tab-page .tb-tabContent >div {
-  border-top: 1px solid #f5a8ba;
+  border-top: 1px solid #f5a9b8;
   padding: 15px;
   padding-bottom: 25px;
   overflow: auto;
@@ -495,7 +495,7 @@
 .toolbar .item .title,
 .toolbar .toolbar-tab-page .title,
 .toolbar .post-toc .title {
-  color: #f5a8ba !important;
+  color: #f5a9b8 !important;
   font-weight: 500;
   margin-bottom: 10px;
 }
@@ -516,7 +516,7 @@
   float: right;
   padding: 3px 6px 3px 6px;
   color: #fff;
-  background-color: #f5a8ba;
+  background-color: #f5a9b8;
   border-radius: 20px;
   font-size: 12px;
 }
@@ -573,7 +573,7 @@
   margin: 5px 5px 5px 20px;
   padding: 4px 8px 4px 8px;
   color: #fff;
-  background-color: #f5a8ba;
+  background-color: #f5a9b8;
   border-radius: 20px;
 }
 .category-list-item {
@@ -711,10 +711,10 @@
   padding-left: 20px;
 }
 .tab-page .current {
-  border-bottom: 1px solid #f5a8ba;
+  border-bottom: 1px solid #f5a9b8;
 }
 .tab-page .tabContent >div {
-  border-top: 1px solid #f5a8ba;
+  border-top: 1px solid #f5a9b8;
   padding: 15px;
   padding-bottom: 25px;
   overflow: auto;
@@ -743,7 +743,7 @@
   color: #555 !important;
 }
 .timeline a {
-  color: #f5a8ba !important;
+  color: #f5a9b8 !important;
 }
 .timeline a:hover {
   color: #5bcefa !important;
@@ -812,7 +812,8 @@ table tfoot tr td {
   padding-right: 20px;
 }
 blockquote {
-  padding: 1em;
+  padding: 5px;
+  padding-left: 9px;
   margin: 1em 3em 1em 2em;
   font-weight: 400;
   border-left: 4px solid rgba(0,0,0,0.12);
@@ -846,7 +847,7 @@ a {
 }
 hr {
   border-style: solid;
-  border-color: #f5a8ba;
+  border-color: #f5a9b8;
   border-width: 0.1px;
   margin: 10px;
 }
@@ -1400,7 +1401,7 @@ body {
   font-weight: 100;
 }
 *::selection {
-  background: #f5a8ba;
+  background: #f5a9b8;
   color: #5bcefa;
 }
 .main {
