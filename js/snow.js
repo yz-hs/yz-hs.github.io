@@ -1,4 +1,3 @@
-/*样式二*/
 /* 控制下雪 */
 function snowFall(snow) {
     /* 可配置属性 */

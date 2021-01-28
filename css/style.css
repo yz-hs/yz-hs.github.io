@@ -244,14 +244,15 @@
   background-size: cover;
   box-shadow: 0px 0px 15px #f5a9b8;
   display: block;
-}
-.post .post-bgimg-item * {
-  color: #fff !important;
+  color: #fff;
 }
 .post .post-bgimg-item .inner {
   padding: 30px;
   background: linear-gradient(180deg, transparent, rgba(245,169,184,0.8));
   border-radius: 7px;
+}
+.post .post-bgimg-item .inner a {
+  color: inherit;
 }
 .post .post-bgimg-item .inner .title {
   font-size: 25px;
