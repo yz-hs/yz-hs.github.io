@@ -238,6 +238,9 @@
   display: inline-block;
   margin-right: 10px;
 }
+.post .post-item blockquote {
+  border: none;
+}
 .post .post-bgimg-item {
   margin: 20px;
   border-radius: 7px;
@@ -270,6 +273,9 @@
 }
 .post .post-bgimg-item:hover {
   box-shadow: 0px 0px 15px #5bcefa;
+}
+.post .post-bgimg-item blockquote {
+  border: none;
 }
 .post .breadcrumb {
   margin: 20px;
@@ -419,10 +425,7 @@
   display: table-cell;
 }
 .toolbar .item {
-  padding: 15px;
-}
-.toolbar .item .text {
-  padding: 5px;
+  padding: 12px;
 }
 .toolbar .item .separator {
   border-color: #fafafa;
@@ -454,7 +457,11 @@
   border-radius: 0px 0px 10px 10px;
 }
 .toolbar .toolbar-tag-cloud a {
-  word-break: keep-all;
+  display: inline-block;
+  margin: 2px;
+  padding: 2px;
+  border-radius: 10px;
+  background-color: #f9cdd6;
 }
 .toolbar .toolbar-tab-page .tb-hide {
   display: none;
@@ -813,12 +820,11 @@ table tfoot tr td {
   padding-right: 20px;
 }
 blockquote {
-  padding: 5px;
   padding-left: 9px;
   margin: 1em 3em 1em 2em;
   font-weight: 400;
   border-left: 4px solid rgba(0,0,0,0.12);
-  background-color: #fafafa;
+  background-color: #fff;
   word-break: break-all;
   font-family: Georgia, KaiTi;
 }
@@ -866,11 +872,6 @@ code {
   margin: auto;
   overflow: auto;
   line-height: 120%;
-}
-p,
-div,
-span {
-  word-break: break-all;
 }
 @media screen and (max-width: 1200px) {
   pre,
