@@ -110,7 +110,7 @@
   	   <a class="list-group-item" href="/archives/index.html"><i class="fa fa-archive fa-fw" aria-hidden="true"></i>&nbsp; 归档
   	 
   	    
-  	    	<div class="badge">80</div>
+  	    	<div class="badge">82</div>
   	    
       </a>
     
@@ -118,7 +118,7 @@
   	   <a class="list-group-item" href="/tags/index.html"><i class="fa fa-tags fa-fw" aria-hidden="true"></i>&nbsp; 标签
   	 
   	    
-  	    	<div class="badge">33</div>
+  	    	<div class="badge">36</div>
   	    
       </a>
     
@@ -231,9 +231,9 @@
 <li><p>数据范围：$n&lt;5000$，$m&lt;2000$。</p>
 </li>
 </ul>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>由于<del>出题人的数据很毒瘤，要必须写出满分解</del>，下面介绍$O(1)$解法。</p>
-<p>考虑两个点$(a,b)$，$(c,d)$满足题意的条件。易得：</p>
-<p>$a$与$c$，$b$与$d$同为奇数或偶数，且$a\not=c$，$b\not=d$。</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>由于<del>出题人的数据很毒瘤，要必须写出满分解</del>，下面介绍 $O(1)$ 解法。</p>
+<p>考虑两个点 $(a,b)$，$(c,d)$ 满足题意的条件。易得：</p>
+<p>$a$ 与 $c$，$b$ 与 $d$ 同为奇数或偶数，且 $a\not=c$，$b\not=d$。</p>
 <p>则有四种情况：</p>
 <p>同为偶偶，偶奇，奇偶，奇奇。</p>
 <p>同一种情况中的两个点，可以任意组合，形成合法解。</p>
@@ -494,56 +494,18 @@ i=4 p5-p0</code></pre>
     cout&lt;&lt;round(ans/num*10000);</code></pre>
 <h1 id="E-合并欢喜"><a href="#E-合并欢喜" class="headerlink" title="E. 合并欢喜"></a>E. 合并欢喜</h1><p><img src="/postimg/HITACM%E5%AD%A6%E9%95%BF2020%E9%98%B2%E7%96%AB%E5%88%9B%E6%96%B0%E6%80%9D%E7%BB%B4%E5%8F%8B%E8%B0%8A%E8%B5%9B/3.jpg"></p>
 <h2 id="题意简述-4"><a href="#题意简述-4" class="headerlink" title="题意简述"></a>题意简述</h2><ul>
-<li><p>给定$T$圈数。</p>
+<li><p>给定 $T$ 圈数。</p>
 </li>
-<li><p>规定一个操作：设一个数$x$的<strong>旁边</strong>的一个数为$a$，使$x$变为它原来的$a$倍，并移除$a$这个数，剩下的数重新结为一个圈。</p>
+<li><p>规定一个操作：设一个数 $x$ 的<strong>旁边</strong>的一个数为 $a$，使 $x$ 变为它原来的 $a$ 倍，并移除 $a$ 这个数，剩下的数重新结为一个圈。</p>
 </li>
 <li><p>进行若干次操作后，只会剩下一个数。</p>
 </li>
 <li><p>输出对于每个圈，进行若干次操作后，这个最后一个数的最大值。</p>
 </li>
-<li><p>数据范围：$T&lt;5$，$n&lt;1000$，$a&lt;100$。</p>
+<li><p>数据范围：$T&lt;5$，$n&lt;1000$，$0&lt;a&lt;100$。</p>
 </li>
 </ul>
-<h2 id="思路-4"><a href="#思路-4" class="headerlink" title="思路"></a>思路</h2><p>经过证明，答案其实就是这一圈数所有数的乘积。</p>
-<!--
-
-让我们证明它。
-
----
-
-证明：答案是这一圈数所有数的乘积。
-
-设有三个积：$A$，$B$，$C$。
-
-则：$A\times(B\times C)=(A\times B)\times C$。
-
-则一个字母既然是一个积，也可以看作一对括号内一个字母乘一个字母的形式。
-
-这样，就会形成“括号套括号”的局面，表示，先算括号里的，且每个括号序列运算结果都是等价的：
-
-```
-(((a*b)*c)*d*(e*f)*(g*(h*i)*j)*k)*(l*(m*n)*(o*p)*q)*r...
-```
-
-这样，每次操作代表一次运算，生成的任何运算序列都可以对应一个括号序列。
-
-那么，这个括号序列是等价于下面的括号序列：
-
-```
-(((((((a*b)*c)*d)*e)*f)*g)*h)*i...
-```
-
-也就是依次相乘。
-
-得证。
-
-这样，每次操作代表一次运算，
-
----
-
--->
-
+<h2 id="思路-4"><a href="#思路-4" class="headerlink" title="思路"></a>思路</h2><p>经过证明，答案其实就是这一圈数所有数的乘积。有理数乘法满足交换律、结合律。</p>
 <h2 id="CODE-5"><a href="#CODE-5" class="headerlink" title="CODE"></a>CODE</h2><pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
 using namespace std;
 const int mod=998244353;
@@ -582,9 +544,13 @@ int main()
 	
 		<span><a href="/tags/OI"><i class="fa fa-tag" aria-hidden="true"></i> OI</a></span>
 	
+		<span><a href="/tags/推结论"><i class="fa fa-tag" aria-hidden="true"></i> 推结论</a></span>
+	
+		<span><a href="/tags/数学期望"><i class="fa fa-tag" aria-hidden="true"></i> 数学期望</a></span>
+	
 </div>
 <div class="end-post-meta">
-	<span><i class="fa fa-refresh" aria-hidden="true"></i> 最后更新： 2020 年 11 月 06 日</span>
+	<span><i class="fa fa-refresh" aria-hidden="true"></i> 最后更新： 2021 年 02 月 04 日</span>
 </div>
 
   </div>
@@ -628,13 +594,13 @@ int main()
       <div>
 <!--  1-tab  -->
 <div class="title">随机文章<span class="sidetitle">回味旧文</span></div>
-<div class="item"><a class="post-link" href="/e4b4986bb6ee/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 一些简单数论题</a><hr class="separator" /><a class="post-link" href="/bbf95a8d95b3/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> ASCII艺术</a><hr class="separator" /><a class="post-link" href="/5edc4ae0f30b/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-J1游记</a><hr class="separator" /><a class="post-link" href="/7a4ad76933ea/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-J2游记</a><hr class="separator" /><a class="post-link" href="/7cb3b671c76a/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> HMCL启动器教程</a><hr class="separator" /><a class="post-link" href="/ec065edc5f19/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> NOIP 2020游记</a></div>
+<div class="item"><a class="post-link" href="/74712bf38d4c/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 临时-Luogu网课进度</a><hr class="separator" /><a class="post-link" href="/32caf6cc933e/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 2020新年贺词</a><hr class="separator" /><a class="post-link" href="/5edc4ae0f30b/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-J1游记</a><hr class="separator" /><a class="post-link" href="/7a4ad76933ea/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-J2游记</a><hr class="separator" /><a class="post-link" href="/7cb3b671c76a/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> HMCL启动器教程</a><hr class="separator" /><a class="post-link" href="/ec065edc5f19/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> NOIP 2020游记</a></div>
 <!--  END 1-tab  -->
       </div>
       <div class="tb-hide">
 <!--  2-tab  -->
 <div class="title">最新更新<span class="sidetitle">旧文章的更新</span></div>
-<div class="item"><a class="post-link" href="/1f81513251d3/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 树形数据结构</a><hr class="separator" /><a class="post-link" href="/5d1d458463ba/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 一些区间DP题目</a><hr class="separator" /><a class="post-link" href="/1dcd9c3da84a/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 此网站的新玩法</a><hr class="separator" /><a class="post-link" href="/6515fc8a93b1/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 《幽默报》</a><hr class="separator" /><a class="post-link" href="/2881a8ac419a/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 《幽默报2》</a><hr class="separator" /><a class="post-link" href="/b8f3e9b3c3ad/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 《幽默报5》</a></div>
+<div class="item"><a class="post-link" href="/74712bf38d4c/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 临时-Luogu网课进度</a><hr class="separator" /><a class="post-link" href="/9e6a3c62d05d/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 洛谷 7 月月赛题目</a><hr class="separator" /><a class="post-link" href="/6d7dc401c66b/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> ⌈ HITACM学长2020防疫创新思维友谊赛 ⌋解题报告</a><hr class="separator" /><a class="post-link" href="/6050547f89c8/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> yzwheme使用文档</a><hr class="separator" /><a class="post-link" href="/7a11f3286a84/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> boxcar2D</a><hr class="separator" /><a class="post-link" href="/fef921291289/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> hexo博客搭建</a></div>
 <!--  END 2-tab  -->
       </div>
       <div class="tb-hide">
@@ -676,10 +642,10 @@ int main()
   <div class="item">
   	<div class="title">博客信息</div>
     <div class="list-group">
-  	  <div class="list-group-item"><i class="fa fa-file fa-fw" aria-hidden="true"></i>&nbsp;文章数目<div class="badge">80</div></div>
-  	  <div class="list-group-item"><i class="fa fa-refresh fa-fw" aria-hidden="true"></i>&nbsp;最近更新<div class="badge">11-06</div></div>
+  	  <div class="list-group-item"><i class="fa fa-file fa-fw" aria-hidden="true"></i>&nbsp;文章数目<div class="badge">82</div></div>
+  	  <div class="list-group-item"><i class="fa fa-refresh fa-fw" aria-hidden="true"></i>&nbsp;最近更新<div class="badge">02-04</div></div>
   	  <div class="list-group-item"><i class="fa fa-user-o fa-fw" aria-hidden="true"></i>&nbsp;本站作者<div class="badge">cieu</div></div>
-  	  <div class="list-group-item"><i class="fa fa-font fa-fw" aria-hidden="true"></i>&nbsp;本站字数<div class="badge">164.9k<!--npm i hexo-wordcount --save--></span></div></div>
+  	  <div class="list-group-item"><i class="fa fa-font fa-fw" aria-hidden="true"></i>&nbsp;本站字数<div class="badge">167.1k<!--npm i hexo-wordcount --save--></span></div></div>
     </div>
   </div>
   <!-- 标签可能太多，影响目录 -->

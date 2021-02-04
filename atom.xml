@@ -6,7 +6,7 @@
   <link href="http://yz-hs.tk/atom.xml" rel="self"/>
   
   <link href="http://yz-hs.tk/"/>
-  <updated>2021-01-15T14:59:42.838Z</updated>
+  <updated>2021-02-04T16:21:53.503Z</updated>
   <id>http://yz-hs.tk/</id>
   
   <author>
@@ -17,26 +17,60 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>yzwheme使用文档</title>
-    <link href="http://yz-hs.tk/d40b978d6cc1/"/>
-    <id>http://yz-hs.tk/d40b978d6cc1/</id>
-    <published>2021-01-01T12:55:53.000Z</published>
-    <updated>2021-01-15T14:59:42.838Z</updated>
+    <title>临时-Luogu网课进度</title>
+    <link href="http://yz-hs.tk/74712bf38d4c/"/>
+    <id>http://yz-hs.tk/74712bf38d4c/</id>
+    <published>2021-02-04T16:15:58.000Z</published>
+    <updated>2021-02-04T16:21:53.503Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>yzwheme  是一个简洁的 hexo 主题。本主题由<a href="https://github.com/yz-hs/"> yz-hs </a>制作，外观借鉴了 WordPress 主题<a href="https://cn.wordpress.org/themes/iriska/"> iriska </a>，部分代码借鉴自<a href="https://github.com/yz-hs/yzpheme"> yzpheme </a>。本主题可在<a href="https://github.com/yz-hs/yzwheme"> Github </a>获取。</p><p>功能：短代码效果同 yzpheme。不过样式没 yzpheme 多。</p><h1 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h1><ul><li>继承了 yzpheme 的一些特性</li><li>Pjax 无刷新加载</li><li>代码极其简洁，yz-hs 从制作到使用不到 1day 。</li></ul>]]></content>
+    <content type="html"><![CDATA[<p><del><a href="https://class.luogu.com.cn/classroom/lgr73">LGR73 洛谷 7 月月赛 讲评 </a>已看完，后面过难放弃。</del></p><p><del>By skydogli | 2020-07-25 19:00 ~ 20:00</del></p><hr><p><a href="https://class.luogu.com.cn/classroom/yugu20ntg1">TG1 初级数据结构 1 </a></p><p>By anantheparty | 2020-07-27 14:00 ~ 17:30</p><hr><p><a href="https://class.luogu.com.cn/classroom/yugu20npt1">PT1 强基计划科普 </a></p><p>By kkksc03 | 2020-07-27 19:00 ~ 20:00</p><hr><p><a href="https://class.luogu.com.cn/classroom/yugu20ntg2">TG2 动态规划及优化 </a></p><p>By amberframe | 2020-07-28 14:00 ~ 17:30</p><hr><p><a href="https://class.luogu.com.cn/classroom/yugu20npt2">PT2 OI知识概述 </a></p><p>By Created_equal1 | 2020-07-28 20:00 ~ 21:00</p><hr><p><a href="https://class.luogu.com.cn/classroom/yugu20ntg3">TG3 初级数据结构 2 </a></p><p>By anantheparty | 2020-07-29 14:00 ~ 17:30</p><hr><p><a href="https://class.luogu.com.cn/classroom/yugu20ntg4">TG4 树形问题专题 </a></p><p>By noip | 2020-07-30 14:00 ~ 17:30</p><hr><p><a href="https://class.luogu.com.cn/classroom/yugu20npt4">PT4 不使用IDE写程序——gdb，vim和ecmas </a></p><p>By cdcq | 2020-07-30 19:00 ~ 20:00</p><hr><p><a href="https://class.luogu.com.cn/classroom/yugu20ntg5">TG5 [讲评]模拟赛 1 </a></p><p>By ddd | 2020-07-31 14:00 ~ 15:00</p><hr><p><a href="https://class.luogu.com.cn/classroom/yugu20npt5">PT5 普通OIer如何面对OI现状以及如何规划未来 </a></p><p>By 阮行止 | 2020-07-31 20:30 ~ 21:30</p><hr><p><a href="https://class.luogu.com.cn/classroom/yugu20ntg6">TG6 简单数论 </a></p><p>By Krydom | 2020-08-03 14:00 ~ 17:30</p><hr><p><a href="https://class.luogu.com.cn/classroom/yugu20npt6">PT6 使用Python和CyaRon </a></p><p>By kkksc03 | 2020-08-03 19:00 ~ 20:00</p><hr><p><a href="https://class.luogu.com.cn/classroom/yugu20ntg7">TG7 搜索及剪枝 </a></p><p>By Taihou | 2020-08-04 14:00 ~ 17:30</p><hr><p><a href="https://class.luogu.com.cn/classroom/yugu20npt7">PT7 如何学习OI以外的CS </a></p><p>By 阮行止 | 2020-08-04 19:00 ~ 20:00</p><hr><p><a href="https://class.luogu.com.cn/classroom/yugu20ntg8">TG8 图论进阶 </a></p><p>By Taihou | 2020-08-05 14:00 ~ 17:30</p><hr><p><a href="https://class.luogu.com.cn/classroom/yugu20npt8">PT8 如何编写博客和整理知识 </a></p><p>By cdcq | 2020-08-05 19:00 ~ 20:00</p><hr><p><a href="https://class.luogu.com.cn/classroom/yugu20ntg9">TG9 组合数学及简单计数 </a></p><p>By Krydom | 2020-08-06 14:00 ~ 17:30</p><hr><p><a href="https://class.luogu.com.cn/classroom/yugu20npt9">PT9 如何优雅地使用noi linux </a></p><p>By 阮行止 | 2020-08-06 19:00 ~ 20:00</p><hr><p><a href="https://class.luogu.com.cn/classroom/yugu20ntg10">TG10 [讲评]模拟赛 2 </a></p><p>By Taihou | 2020-08-07 19:00 ~ 20:00</p><hr><p><a href="https://class.luogu.com.cn/classroom/lgr74">LGR74 洛谷 8 月月赛 I 讲评 </a></p><p>By zghtyarecrenj | 2020-08-08 19:00 ~ 20:00</p><hr><p><a href="https://class.luogu.com.cn/classroom/lgr75">LGR75 洛谷 8 月月赛 II 讲评 </a></p><p>By Alex_Wei | 2020-08-22 19:00 ~ 20:00</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h1&gt;&lt;p&gt;yzwheme  是一个简洁的 hexo 主题。本主题由&lt;a href=&quot;https://github.com/yz-hs/&quot;&gt; yz-hs</summary>
+    <summary type="html">&lt;p&gt;&lt;del&gt;&lt;a href=&quot;https://class.luogu.com.cn/classroom/lgr73&quot;&gt;LGR73 洛谷 7 月月赛 讲评 &lt;/a&gt;已看完，后面过难放弃。&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;By skydogli | 2020-07-25 19</summary>
       
     
     
     
-    <category term="其他" scheme="http://yz-hs.tk/categories/%E5%85%B6%E4%BB%96/"/>
+    <category term="root" scheme="http://yz-hs.tk/categories/root/"/>
     
     
-    <category term="hexo" scheme="http://yz-hs.tk/tags/hexo/"/>
+    <category term="root" scheme="http://yz-hs.tk/tags/root/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>洛谷 7 月月赛题目</title>
+    <link href="http://yz-hs.tk/9e6a3c62d05d/"/>
+    <id>http://yz-hs.tk/9e6a3c62d05d/</id>
+    <published>2021-02-04T01:59:35.000Z</published>
+    <updated>2021-02-04T16:15:24.564Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文为题解集：</p><pre><code>P6685 可持久化动态仙人掌的直径问题P6686 混凝土数学P6687 论如何玩转 Excel 表格</code></pre><p>为什么不全呢，因为 cieu 太弱了，还不能解决那些题目，以后可能会补充（是不可能的）。</p><a id="more"></a><h1 id="P6685-可持久化动态仙人掌的直径问题"><a href="#P6685-可持久化动态仙人掌的直径问题" class="headerlink" title="P6685 可持久化动态仙人掌的直径问题"></a>P6685 可持久化动态仙人掌的直径问题</h1><p><strong>题意</strong>：给定 $n$，$m$， 求有多少个正整数 $x$，使得 $x^m\le n$</p><p><strong>题解</strong>：$x^m\le n$ 等价于 $x \le \sqrt[m]n$。</p><p><strong>代码</strong>：<code>printf(&quot;%.0lf&quot;,pow(n,1.0/m));</code></p><h1 id="P6686-混凝土数学"><a href="#P6686-混凝土数学" class="headerlink" title="P6686 混凝土数学"></a>P6686 混凝土数学</h1><p><strong>题意</strong>：给定 $n$ 个数，问这些数可组成多少等腰三角形。</p><details><summary>点击查看题解</summary><p><strong>题解</strong>：</p><p>我们可以枚举腰来判断。注意以下内容在正整数范围内讨论。</p><p>首先，注意到当腰为 $x$ 时，底边的取值范围是：$[1,2x-1]$。</p><p>所以，我们可以计算，设值为 $i$ 的数有 $a_i$ 个，则我们可以组成的等腰三角形（非等边三角形）的个数为（$C$ 是组合数）：</p><p>$$C_{a_x}^2 \times [(\sum_{i=1}^{2i-1}a_i)-a_x]$$</p><p>然后，别忘了，相同数之间也能组成等边三角形。所以我们可以得到，可组成的等边三角形数为：</p><p>$$C_{a_x}^3$$</p><p>然后答案就很明显了。</p><p><strong>代码</strong>：</p><pre><code class="cpp">#include&lt;bits/stdc++.h&gt;using namespace std;namespace _yz&#123;    const long long N=200000+10,Mod=998244353;    long long n,a[N*2],p[N*2],ans=0,mx=-1;    long long C1(long long x,long long y)    &#123;        return (x-y)*y*(y-1)/2;        //(x-y)*C_y^2  底*腰     &#125;    long long C2(long long x)    &#123;        return x*(x-1)*(x-2)/6;        //C_m^3      &#125;    void yzmain()    &#123;        long long tmp;        scanf(&quot;%lld&quot;,&amp;n);        for(long long i=1;i&lt;=n;i++)        &#123;            scanf(&quot;%lld&quot;,&amp;tmp);            mx=max(mx,tmp);            a[tmp]++;        &#125;        for(int i=1;i&lt;=2*N-5;i++)             p[i]=p[i-1]+a[i];//用前缀和记录        for(long long i=1;i&lt;=mx;i++)        &#123;            ans=(ans+C1(p[2*i-1],a[i]))%Mod;            ans=(ans+C2(a[i]))%Mod;        &#125;        printf(&quot;%lld\n&quot;,ans%Mod);        return;    &#125;&#125;int main()&#123;    //freopen(&quot;out.txt&quot;,&quot;r&quot;,stdin);    //freopen(&quot;out.txt&quot;,&quot;w&quot;,stdout);    _yz::yzmain();    return 0;&#125;</code></pre></details><h1 id="P6687-论如何玩转-Excel-表格"><a href="#P6687-论如何玩转-Excel-表格" class="headerlink" title="P6687 论如何玩转 Excel 表格"></a>P6687 论如何玩转 Excel 表格</h1><p><strong>题意</strong>：</p><p>有一个 $2 \times n$ 的表格，表格内不重不漏地填有 $1 \sim 2 \times n$ 这些数字。你可以进行若干次操作，每次操作可以选择一个 $2 \times 2$ 的正方形区域，然后旋转 $180°$。</p><p>给出现在的状态以及目标状态。问是否可以达到目标状态。如果能，最少操作次数是多少。</p><details><summary>点击查看题解</summary><p><strong>题解</strong>：</p><p>我们要想解决这道题，可以分两步：判断无解、得到答案。</p><p>我们注意到，旋转操作中，每列数字只可能会上下颠倒，不可能变成其他的数字；旋转一列数字，旋转奇数次会上下颠倒，旋转偶数次会恢复原来的位置。</p><p>所以，在现在的状态和目标状态间，列是一一对应的。</p><p>据此，我们得到判断无解的两个依据：</p><ul><li>在原状态中同一列的两个数在目标状态中不处于同一列。</li><li>对于现有状态的一列，其翻转到目标状态时，上下关系不一致。比如，旋转奇数次，目标状态中的列相对原状态中的列会上下颠倒，但实际并没有颠倒。</li></ul><p>接下来是得到答案。</p><p>既然列是一一对应的，且翻转操作不可能将一列拆散，我们可以把一列“绑在一起”：给每个对应的列设定同一个编号，再以任一状态的列的顺序作为关键字，得到另一状态的列的编号的顺序。我们就得到一个编号顺序的数列。求其逆序对个数，就是答案。</p><p>例如：</p><pre><code class="cpp">     1 6 2                                     2 4 3     4 3 5  根据左面的状态，得到右面状态的编号顺序。 5 1 6编号：1 2 3 ----------------------------------&gt; 3 1 2</code></pre><p>注意特判 $n=1$。</p><p><strong>代码</strong>：</p><pre><code class="cpp">#include&lt;bits/stdc++.h&gt;using namespace std;namespace _yz&#123;    const long long N=1000000+10;    long long n,ans=0,Map[N],O[N];    string Err=&quot;dldsgay!!1&quot;;    struct Tree    &#123;        long long c[N],size;        Tree()&#123;memset(c,0,sizeof(c));&#125;        long long lowbit(long long x)&#123;return x&amp;(-x);&#125;        void update(long long x)&#123;while(x&lt;=size)&#123;c[x]++;x+=lowbit(x);&#125;&#125;        long long query(long long x)&#123;long long ans=0;while(x&gt;=1)&#123;ans+=c[x];x-=lowbit(x);&#125;return ans;&#125;    &#125;tree;    struct Pair&#123;long long x,y;&#125;A[N],B[N],P[N*2];    void swap(long long &amp;a,long long &amp;b)&#123;long long c=a;a=b;b=c;&#125;    void yzmain()    &#123;        scanf(&quot;%lld&quot;,&amp;n);tree.size=n;        for(int i=1;i&lt;=n;i++) scanf(&quot;%lld&quot;,&amp;A[i].x);        for(int i=1;i&lt;=n;i++) scanf(&quot;%lld&quot;,&amp;A[i].y);        for(int i=1;i&lt;=n;i++) scanf(&quot;%lld&quot;,&amp;B[i].x),P[B[i].x]=(Pair)&#123;i,1&#125;;        for(int i=1;i&lt;=n;i++) scanf(&quot;%lld&quot;,&amp;B[i].y),P[B[i].y]=(Pair)&#123;i,2&#125;;        if(n==1)&#123;if(A[1].x==B[1].x&amp;&amp;A[1].y==B[1].y)printf(&quot;0&quot;);else cout&lt;&lt;Err&lt;&lt;endl;return;&#125;        for(int i=1;i&lt;=n;i++) Map[A[i].x]=A[i].y,Map[A[i].y]=A[i].x;        for(int i=1;i&lt;=n;i++)        &#123;            if(Map[B[i].x]!=B[i].y || Map[B[i].y]!=B[i].x)&#123;cout&lt;&lt;Err&lt;&lt;endl;return;&#125;//在原状态中同一列的两个数在目标状态中不处于同一列            if(P[A[i].x].y==1 &amp;&amp; abs(i-P[A[i].x].x)%2)&#123;cout&lt;&lt;Err&lt;&lt;endl;return;&#125;//对应列数字上下关系相同，却移动了奇数次            if(P[A[i].x].y==2 &amp;&amp; abs(i-P[A[i].x].x)%2==0)&#123;cout&lt;&lt;Err&lt;&lt;endl;return;&#125;//对应列数字上下关系不同，却移动了偶数次        &#125;        for(int i=1;i&lt;=n;i++) O[i]=P[A[i].x].x;//以初始状态的列的顺序作为关键字，得到另一状态的列的编号的顺序        for(int i=n;i&gt;=1;i--)        &#123;            ans+=tree.query(O[i]-1);            tree.update(O[i]);        &#125;        printf(&quot;%lld\n&quot;,ans);        return;    &#125;&#125;int main()&#123;    //freopen(&quot;in.txt&quot;,&quot;r&quot;,stdin);    //freopen(&quot;out.txt&quot;,&quot;w&quot;,stdout);    _yz::yzmain();    return 0;&#125;</code></pre><ul><li>通过 <code>Map[]</code> 数组可以判断在原状态中同一列的两个数在目标状态中是否处于同一列。</li><li><code>P[]</code> 数组记录了目标状态中列的顺序和数字上下关系（用的 $1$，$2$）。</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;本文为题解集：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;P6685 可持久化动态仙人掌的直径问题
+P6686 混凝土数学
+P6687 论如何玩转 Excel 表格&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;为什么不全呢，因为 cieu 太弱了，还不能解决那些题目，以后可能会补充（是不可能的）。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="OI" scheme="http://yz-hs.tk/categories/OI/"/>
+    
+    
+    <category term="OI" scheme="http://yz-hs.tk/tags/OI/"/>
+    
+    <category term="锣鼓" scheme="http://yz-hs.tk/tags/%E9%94%A3%E9%BC%93/"/>
+    
+    <category term="数论" scheme="http://yz-hs.tk/tags/%E6%95%B0%E8%AE%BA/"/>
+    
+    <category term="前缀和" scheme="http://yz-hs.tk/tags/%E5%89%8D%E7%BC%80%E5%92%8C/"/>
+    
+    <category term="排列组合" scheme="http://yz-hs.tk/tags/%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88/"/>
     
   </entry>
   
@@ -45,7 +79,7 @@
     <link href="http://yz-hs.tk/d7884a43c481/"/>
     <id>http://yz-hs.tk/d7884a43c481/</id>
     <published>2020-12-13T15:22:10.000Z</published>
-    <updated>2021-01-15T14:55:19.520Z</updated>
+    <updated>2021-02-04T03:49:28.191Z</updated>
     
     <content type="html"><![CDATA[<p>考完NOIp的话</p><p>特别想跟 yz-hs 大佬谈谈</p><p>现在就是好好备考</p><p>rp++</p><hr><p>我不会去考什么清华北大 也不会为了考第一 而半夜打手电学习 我只希望我高中生活有喜欢的人，喜欢的事 有健康的身体，有无悔的每一天 然后尽我最大的努力考上一所理想的大学 青春是该付出在那一张张试卷上 但青春不全是那一张张试卷 有目标，有信仰，有理想，那才叫青春</p><hr><p>咱一开始就注定悲剧了</p><p>省选哪有希望。</p><p>走文化课裸分呗</p><p>祝愿 yz-hs 大佬不要重蹈覆辙</p><p>就是晚一年在初中训练</p><p>这么好的人才被 xtyz 摧残那太太太可惜了</p><p>害</p><p>咱这几天做的题都是江浙沪小学生AK的题</p><p>有的都没有std</p><p>直接就是他们小学生选手的代码</p><p>咱的强项是他妈文化课</p><p>搞OI的好处在于</p><p>深刻了解了这一点</p><p>了解了差异</p><p>了解了教育不公平</p><p>以及高考的相对公平性</p><p>那就加油干吧</p><p>不靠报送劳资也要上</p><p>不要再厌烦文化课了</p><p>除了文化课咱，咱啥都不是</p><hr><p>退役吧</p><p>确实是想太多</p><p>@yz-bt 您一定会进省队</p><p>(ง •̀_•́)ง</p><p>我买书买多了</p><p>等有机会</p><p>签名（尽管我不是神犇）送给 yz-hs</p><p>一本通他妈的提高班</p><p>那我就，</p><p>吧B站装回来吧</p><hr><p>您水平已经跟我们相当了</p><p>就是没经历过高中老师的蹂躏</p><p>心态不太强</p><p>@yz-bt 高一和高二有两次省选机会</p><blockquote><p>  @yz-bt 高一和高二有两次省选机会</p></blockquote><p>艹at错人了</p><p>@yz-hs 高一高二有两次省选机会，拿到NOIp一等奖是省选的前提</p><p>高三不能省选</p><p>省选得提前准备</p><p>找个机会面基我送你书</p><p>新一本通</p><p>里面是提高和基础省选内容</p><p>加油，看好你</p><p>早睡</p><p>我装好B站了玩去了</p><p>纯粹是我退了</p><p>省选又选不上</p><p>省一又已经到手</p><p>没啥可干了</p><p>今中午还没想明白，脑子一热买了本书</p><p>对我而言没用了</p><p>找个机会送给需要它的人</p><p>啊，补充下</p><p>前提是yz考到实验部</p><p>（我也没法去您家</p><p>加油吧少年</p><hr><p>省队靠yz了</p><p>高一高二就两次机会</p><p>yz大佬下一次一定要拿省一，去一次省选</p><p>信息学奥赛提高篇</p><p>蓝色的书</p><p>我买来也没啥用了</p><p>等您到实验部来再送就完了？</p><p>*晚了</p><p>yz加油呀</p><p>寒假您要是来xtyz说一声</p><p>橙色的一本通太老旧了啥都不讲</p><p>拿那玩意AK普及组都难</p><p>蓝色这本挺不错的</p><p>LOJ首页有它上面的题</p><p>我的代码都公开着，不嫌弃的话可以看看</p><p>您机会还多着，我们这“抱憾/圆满退役了”</p><p>初中生早睡 当然，如果在研究有意义的东西</p><p>这个点还不算晚（确实）</p><p>另外</p><p>线段树越早学会和熟练掌握越好</p><p>这可太重要了</p><p>叩开省选的大门</p><p>我们19级叩开的有点晚了（太晚了）</p><p>彳亍，我抄作业去了</p><p>没事早睡，但是大佬您肯定是有事的</p><hr><blockquote><p><strong>我：</strong></p><p>这次数学和政治能直接把我拉向数十米（ng）的深渊。</p><p>月考结束，几家欢喜几家愁。</p><p>每夜宿舍里，我大多最晚入睡；<br>每页草稿纸，都写满了各种算式；<br>每张试卷，都保存得比较完好；<br>每根笔，都浸染了手上的汗渍。</p><p>一天早晨，从梦中醒来，<br>而手中执笔，笔尖对一数学式。<br>不过为何，成绩不遂人意？</p><p>确实，<br>回到宿舍，我首先去和同学嬉闹；<br>下了课，我并没有去讨论问题；<br>每夜，虽灯火通明，但二次函数上存在一个矩形；<br>有了空，我去破坏三人的学习氛围；<br>双休日晚上，掀开盖，颓废一晚；<br>有时，仍放不下二十一之四。</p><p>希望下次，<br>不要再带着遗憾，<br>看着一个个数字。</p></blockquote><p>好诗<span class="text-comments">yz-hs注：其实不算多么好，月考考砸后的一时之作</span>，别气馁，知道了自己的不足就去干。希望今年下半年看到您在SDOI</p>]]></content>
     
@@ -67,6 +101,8 @@
     
     <category term="root" scheme="http://yz-hs.tk/tags/root/"/>
     
+    <category term="Shortcut" scheme="http://yz-hs.tk/tags/Shortcut/"/>
+    
   </entry>
   
   <entry>
@@ -74,7 +110,7 @@
     <link href="http://yz-hs.tk/10c0864d52c3/"/>
     <id>http://yz-hs.tk/10c0864d52c3/</id>
     <published>2020-12-06T12:46:51.000Z</published>
-    <updated>2020-12-31T09:53:49.044Z</updated>
+    <updated>2021-02-04T03:49:39.630Z</updated>
     
     <content type="html"><![CDATA[<p>☃</p><a id="more"></a><p>♂  </p><p>♀</p><p>❄</p><p>🧧</p><p>🧨</p>]]></content>
     
@@ -88,6 +124,8 @@
     
     <category term="水" scheme="http://yz-hs.tk/tags/%E6%B0%B4/"/>
     
+    <category term="Shortcut" scheme="http://yz-hs.tk/tags/Shortcut/"/>
+    
   </entry>
   
   <entry>
@@ -95,7 +133,7 @@
     <link href="http://yz-hs.tk/7cb3b671c76a/"/>
     <id>http://yz-hs.tk/7cb3b671c76a/</id>
     <published>2020-12-05T10:11:53.000Z</published>
-    <updated>2020-12-06T09:25:39.949Z</updated>
+    <updated>2021-02-04T03:49:56.163Z</updated>
     
     <content type="html"><![CDATA[<p><strong>本文转自 <a href="https://www.zhihu.com/column/c_1269345049814491136">https://www.zhihu.com/column/c_1269345049814491136</a>。</strong></p><p>HMCL 和其他第三方 Minecraft 启动器的安装流程比别的软件都难多了。它们不提供核善的安装程序，所以格外麻（quan）烦（tui）。下面是 HMCL 详细安装教程。</p><a id="more"></a><hr><h2 id="安装-Java-运行时环境（JRE）"><a href="#安装-Java-运行时环境（JRE）" class="headerlink" title="安装 Java 运行时环境（JRE）"></a>安装 Java 运行时环境（JRE）</h2><p><a href="https://link.zhihu.com/?target=https://www.java.com/en/download/manual.jsp">https://www.java.com/en/download/manual.jsp</a></p><p>注意选择正确的版本。</p><hr><h2 id="创建一个空的文件夹"><a href="#创建一个空的文件夹" class="headerlink" title="创建一个空的文件夹"></a><strong>创建一个空的文件夹</strong></h2><p><img src="https://pic3.zhimg.com/80/v2-d0871210b4616b7ce117bd26a365d24e_720w.jpg" alt="img"></p><p>这个文件夹用于安放你的游戏文件夹（.minecraft）、启动器及其文件，还有一堆杂七杂八的东西。</p><p>你可以将这个文件夹放在电脑上任何地方，但是不建议在 C 盘，因为你应该不希望看到 C 盘存储空间提示条变红的样子。</p><p>不要为了图省事，用桌面顶替空文件夹。虽然这样做游戏也能正常运行，但相信我，你会后悔的。</p><p><strong>一定要记住这个空文件夹的路径，以后会经常用到。</strong>（此处是 “D:\HMCL 测试&quot;）</p><p>（别告诉我你连新建文件夹都不会）</p><hr><h2 id="下载-HMCL-启动器本体"><a href="#下载-HMCL-启动器本体" class="headerlink" title="下载 HMCL 启动器本体"></a>下载 HMCL 启动器本体</h2><p>下载链接：</p><p>官方网站：<a href="https://link.zhihu.com/?target=https://hmcl.huangyuhui.net/download">https://hmcl.huangyuhui.net/download</a>（访问速度奇慢，有时候还上不去）</p><p>MCBBS：<a href="https://link.zhihu.com/?target=https://www.mcbbs.net/thread-142335-1-1.html">https://www.mcbbs.net/thread-142335-1-1.html</a>（其实本身不提供下载，只是抛几个链接出来）</p><p>yz-hs 提供的：<a href="https://ci.huangyuhui.net/job/HMCL">https://ci.huangyuhui.net/job/HMCL</a></p><p>如果你是 Windows 用户，选择 .exe 版本；如果你是其他系统的用户，选择 .jar 版本。</p><p>然后把下载好的程序文件放进你创建的空文件夹中。</p><p><img src="https://pic3.zhimg.com/80/v2-4cbc8aa32b0acf51b8b1a2db4c9e45ce_720w.jpg" alt="img">鬼知道这图片怎么这么糊</p><p>（别告诉我你连移动文件都不会）</p><hr><h2 id="填写账户信息"><a href="#填写账户信息" class="headerlink" title="填写账户信息"></a>填写账户信息</h2><p>打开该程序，填写你的账户信息以新建账户，正版玩家将登录方式改成正版登录，盗版玩家则是离线登录（不提倡盗版，不提倡盗版，不提倡盗版）。操作界面过于简单，只要你有一个健康的大脑都能完成。</p><hr><h2 id="完成后"><a href="#完成后" class="headerlink" title="完成后"></a><strong>完成后</strong></h2><p>最后，如果需要，可以在桌面上创建一个快捷方式，指向那个程序。</p><p>（别告诉我你连创建快捷方式都不会）</p><p>如果喜欢，可以把 HMCL 固定到任务栏。</p><hr><p>至此，HMCL 已经可以正常使用了。但是由于你还没有安装游戏本体，所以还不能玩 MC。你已经学会如何安装 HMCL 了。但是光有一个启动器还不够——启动器需要启动的东西，也就是游戏还没有安装。所以你还不能打开 Minecraft。</p><p>接下来是如何安装游戏版本。</p><hr><h2 id="什么是游戏版本？"><a href="#什么是游戏版本？" class="headerlink" title="什么是游戏版本？"></a>什么是游戏版本？</h2><p>“游戏版本”可能指：</p><ul><li>不同平台的游戏版本，如 JE 和 BE</li><li>同一平台的不同版本号，如 1.8 和 1.16</li><li>不同的 client.jar，其中版本号可能相同，如 1.14 - 1和 1.14 - 2</li></ul><p>我们现在需要安装的是第三者，即 client.jar。</p><hr><h2 id="开始安装游戏版本"><a href="#开始安装游戏版本" class="headerlink" title="开始安装游戏版本"></a>开始安装游戏版本</h2><p>第一步，打开你的 HMCL，点击左侧的“版本列表”，然后点击上方的“安装新游戏版本”。</p><p>如果准确无误的话，各种游戏版本都列在了你的眼前。但现在还不是安装的时候。</p><p>注意到这个地方，学会切换你的下载源。</p><p><img src="https://pic3.zhimg.com/80/v2-a3ba3cdcb565432af91e9ff7bfb7b80e_720w.jpg" alt="img"></p><p>如你所知，文件需要存储在一个地方才能供用户下载，而下载源就是存放文件并为用户提供下载服务的地方。当前下载人数过多、下载源网络状况不佳等因素都会影响你的下载速度，所以你需要“随机应变”，在当前下载源速度过慢时学会切换它。</p><p>这是三个下载源的区别：</p><ul><li><p>官方：Minecraft 官方下载源</p></li><li><ul><li>优点：安全、始终最新</li><li>缺点：不稳定、无法下载 OptiFine（自动转为 BMCLAPI）</li></ul></li><li><p>BMCLAPI：bangbang93 提供的国内公益下载源</p></li><li><ul><li>优点：比官方下载源<strong>相对</strong>高速稳定，定期更新，可下载各加载器</li><li>缺点：仍不算稳定</li></ul></li><li><p>MCBBS：</p></li><li><ul><li>优点：高速稳定</li><li>缺点：无法保证资源最新</li></ul></li></ul><p>通常建议使用 BMCLAPI，如果遇到速度过慢的问题可以尝试用 MCBBS 下载源。一般情况下我们<strong>不</strong>推荐使用官方下载源，因为它是最不稳定的。</p><p>接下来，选择你的游戏版本，然后点进去。如果想要显示测试版（快照）或者远古版（正式版以前的版本）的安装，只需在左侧勾选。</p><p>点进去后，你可以修改版本名称（随便修改，接受中文），然后点击右下角的“安装”。安装将会开始进行。</p><p><img src="https://pic2.zhimg.com/80/v2-e63c2fc76ff072642589eb6de35f1d19_720w.jpg" alt="img">待安装界面</p><p>注意：在这个界面安装加载器听起来是个不错的注意，但是不要这样做：加载器的安装非常容易出错，这时你只需要重新安装即可；但如果你是在安装游戏的同时安装加载器的，加载器下载错误会使游戏下载进度一并丢失！</p><p>点击“安装”后，安装操作就会自动进行。因为某些原因，首次安装会消耗很长一段时间。以后安装的速度就会快很多。</p><p>安装完成后，启动器目录就会出现 .minecraft 文件夹。</p><p>尝试多安装几个版本，并熟练掌握安装技巧。注意，你可以同时安装多个相同版本的游戏，比如同时存在两个 1.14.4 是被允许的。</p><p><img src="https://pic2.zhimg.com/80/v2-b28df44d79ebaa1925415fc2d3c30079_720w.jpg" alt="img">一个安装了四个游戏的 HMCL，其中包含了两个 1.14.4</p><hr><h2 id="安装模组加载器"><a href="#安装模组加载器" class="headerlink" title="安装模组加载器"></a>安装模组加载器</h2><p>理论上来说，你现在就可以进行游戏了，但是如果你想使用 Mod，还需要安装模组加载器。</p><p>模组加载器可以从官网（见下文『注：』）上的安装包安装，也可以用启动器的<strong>自动安装</strong>功能。自动安装的好处是非常方便，缺点是可能不太稳定可靠。</p><p>打开版本列表，点击你选择的游戏版本，点击上方的“自动安装”，然后你就能自行操作了——模组加载器的安装流程和游戏一样简单！注意：在新的游戏版本（可能是 1.13）中你只能同时安装一种加载器，因为多种加载器互相不兼容。</p><p><img src="https://pic2.zhimg.com/80/v2-351b05d77a69607d662ef34742a98781_720w.jpg" alt="img"></p><p>安装完毕后，你就可以使用模组了。启动一次游戏以创建 mods 文件夹（或者手动新建），然后把你的 Mod 放到文件夹下面！</p><p>Fabric 用户需要安装模组 Fabric API 才能正常使用模组，想要显示 Mod 列表还需安装 ModMenu。（将两个模组放入 mods 即可）</p><hr><h2 id="安装高清修复（OptiFine）"><a href="#安装高清修复（OptiFine）" class="headerlink" title="安装高清修复（OptiFine）"></a>安装高清修复（OptiFine）</h2><p>OptiFine 的安装流程和模组加载器大致相同，但是在新的游戏版本（可能是 1.13）中，OptiFine 与其他模组加载器排斥，所以如果你先前安装了模组加载器，那么安装 OptiFine 将会遇到一些困难。</p><p>没关系！你只需在 OptiFine 官网下载其安装包，然后作为一个 Mod 放入 mods 文件夹下，然后再安装它的前置 Mod（Forge 是 OptiForge，Fabric 是 OptiFabric），就可以正常使用了。</p><p>安装完毕后，就可以享受 OptiFine 带来的功能了。如果想要安装光影，只需将光影放入 shaderpacks 文件夹下。</p><p><em>注意：由于 OptiFabric 的作者无力与 OptiFine 糟糕的代码对线，他决定停止更新 OptiFabric，这意味着最后一个 OptiFabric 版本停留在了 1.16.1，而之后的版本中 Fabric 无法与 OptiFine 共存（不出意料的话）。想要在 1.16.1 之后的版本优化帧率，请使用另一个替代模组 <a href="https://link.zhihu.com/?target=https://www.mcmod.cn/class/2785.html">Sodium</a>；想安装光影的，推荐使用基于资源包的光影（Sodium 目前不支持光影，未来可能支持，但不保证），或者直接转向 Forge。具体内容见下文『注：』。</em></p><hr><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>现在基本没有什么东西阻碍你进行游戏了，尽情去玩吧，好孩子！</p><hr><h2 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h2><p><strong>相关链接：</strong></p><ul><li><p>Forge</p></li><li><ul><li>官网 <a href="https://link.zhihu.com/?target=https://files.minecraftforge.net/">https://files.minecraftforge.net/</a></li></ul></li><li><p>Fabric</p></li><li><ul><li><p>Fabric Loader</p></li><li><ul><li>官网 <a href="https://link.zhihu.com/?target=https://fabricmc.net/use/">https://fabricmc.net/use/</a></li></ul></li><li><p>Fabric API</p></li><li><ul><li>CurseForge <a href="https://link.zhihu.com/?target=https://minecraft.curseforge.com/projects/fabric/files">https://minecraft.curseforge.com/projects/fabric/files</a></li></ul></li></ul></li><li><p>OptiFine</p></li><li><ul><li>官网 <a href="https://link.zhihu.com/?target=https://www.optifine.net/">https://www.optifine.net/</a></li></ul></li><li><p>OptiFabric</p></li><li><ul><li>CurseForge <a href="https://link.zhihu.com/?target=https://www.curseforge.com/minecraft/mc-mods/optifabric">https://www.curseforge.com/minecraft/mc-mods/optifabric</a></li><li>MCMOD <a href="https://link.zhihu.com/?target=https://www.mcmod.cn/class/1703.html">https://www.mcmod.cn/class/1703.html</a></li></ul></li><li><p>Sodium</p></li><li><ul><li>CurseForge <a href="https://link.zhihu.com/?target=https://www.curseforge.com/minecraft/mc-mods/sodium">https://www.curseforge.com/minecraft/mc-mods/sodium</a></li><li>MCMOD <a href="https://link.zhihu.com/?target=https://www.mcmod.cn/class/2785.html">https://www.mcmod.cn/class/2785.html</a></li></ul></li></ul><p>你在访问 CruseForge 时可能会遇到一些网络障碍，请尝试使用特殊的上网方式。</p><p><strong>OptiFabric 作者对于停更的说明（来源：OptiFabric 的 CurseForge 页面）</strong></p><blockquote><p>The future of Optifabric and Recommended alternatives<br>In 1.15 and 1.16 optifine has been casuing a lot of incompatibilities with a growing number of mods, this is due to the way optifine changes the vanilla code in increasingly invasive and incompatible ways. Fixing these crashes isn’t easy or fun and takes a lot of time and energy that I don’t have.<br>I have no plans to continue updating OptiFabric going forward, thus with the help of LambdAurora I have compiled a list of mods that replace and supersede Optifine:<br><a href="https://link.zhihu.com/?target=https://www.curseforge.com/minecraft/mc-mods/sodium">Sodium</a><br>Sodium is a free and open source fabric mod made by JellySquid that <a href="https://link.zhihu.com/?target=https://www.youtube.com/watch?v=0fAB6pJK6U4">drastically increases</a> the performance of Minecraft. Sodium utilises modern rendering techniques along with a range of other optimisations. More more information can be found on the download page linked.<br>Other recommended mods:<br><a href="https://link.zhihu.com/?target=https://www.curseforge.com/minecraft/mc-mods/canvas-renderer">Canvas</a><br>Canvas focuses the use of shaders to improve the visual appearance of the game along with providing performance improvements. (<em>Incompatible with Sodium</em>)<br><a href="https://link.zhihu.com/?target=https://www.curseforge.com/minecraft/mc-mods/ok-zoomer">Ok Zoomer</a> - <a href="https://link.zhihu.com/?target=https://www.curseforge.com/minecraft/mc-mods/logical-zoom">Logicial Zoom</a> - <a href="https://link.zhihu.com/?target=https://www.curseforge.com/minecraft/mc-mods/wi-zoom">WI Zoom</a><br>These 3 mods are each a great replacement to Optifine’s much loved zoom feature. They provide more options than optifine’s zoom functionality. (<em>You only need to install one</em>)<br><a href="https://link.zhihu.com/?target=https://www.curseforge.com/minecraft/mc-mods/colormatic">Colormatic</a><br>Colormatic provides support for resource packs that use Optifine’s custom color features.<br><a href="https://link.zhihu.com/?target=https://www.curseforge.com/minecraft/mc-mods/lambdynamiclights">LambDynamicLights</a><br>LambDynamicLights adds dynamic lights to Minecraft similar to Optifine’s.<br><a href="https://link.zhihu.com/?target=https://www.curseforge.com/minecraft/mc-mods/motiono">motioNO</a><br>motioNO is a client only mod that prevents Minecraft from changing the FOV when sprinting.<br><a href="https://link.zhihu.com/?target=https://www.curseforge.com/minecraft/mc-mods/soaring-clouds">Soaring Clouds</a><br>Soaring Clouds is a client only mod that lets you change the cloud height.<br><a href="https://link.zhihu.com/?target=https://www.curseforge.com/minecraft/mc-mods/lithium">Lithium </a>and <a href="https://link.zhihu.com/?target=https://www.curseforge.com/minecraft/mc-mods/phosphor">Phosphor</a><br>Lithium provides a great improvement to server performance while Phosphor targets lighting performance. Both mods can be installed on the client or the server and are also made by Jelly Squid.</p></blockquote><p><strong>翻译（不保证翻译质量）</strong></p><blockquote><p>OptiFabric 的将来和推荐的替代品<br>在 1.15 和 1.16 中，OptiFine 导致越来越多的 Mod 产生了许多不兼容性，这是由于 OptiFine 以越来越具有侵入性和不兼容的方式更改原版代码的方式所致。修复这些崩溃并不简单有趣，并且需要很多时间和精力，而我却没有。<br>我没有打算继续更新 OptiFabric 的计划，因此，在 LambdAurora 的帮助下，我已编写了一系列取代 OptiFine 的模组：<br><a href="https://link.zhihu.com/?target=https://www.curseforge.com/minecraft/mc-mods/sodium">Sodium</a><br>Sodium 是由 JellySquid 编写的一种免费的开源 Fabric Mod，可以<a href="https://link.zhihu.com/?target=https://www.youtube.com/watch?v=0fAB6pJK6U4">大大提高</a> Minecraft 的性能。Sodium 利用了现代渲染技术以及一系列其他优化方法。在链接的下载页面上可以找到更多信息。<br>其他推荐的 Mod：<br><a href="https://link.zhihu.com/?target=https://www.curseforge.com/minecraft/mc-mods/canvas-renderer">Canvas</a><br>Canvas 着重于使用着色器来改善游戏的视觉外观并提供性能改进。（<em>与 Sodium 不兼容</em>）<br><a href="https://link.zhihu.com/?target=https://www.curseforge.com/minecraft/mc-mods/ok-zoomer">Ok Zoomer</a> - <a href="https://link.zhihu.com/?target=https://www.curseforge.com/minecraft/mc-mods/logical-zoom">Logicial Zoom</a> - <a href="https://link.zhihu.com/?target=https://www.curseforge.com/minecraft/mc-mods/wi-zoom">WI Zoom</a><br>这 3 个模组分别是 OptiFine 倍受喜爱的缩放功能的绝佳替代品。它们比 OptiFine 的缩放功能提供更多选项。（<em>您只需要安装一个</em>）<br><a href="https://link.zhihu.com/?target=https://www.curseforge.com/minecraft/mc-mods/colormatic">Colormatic</a><br>Colormatic 为使用 OptiFine 自定义颜色功能的资源包提供支持。<br><a href="https://link.zhihu.com/?target=https://www.curseforge.com/minecraft/mc-mods/lambdynamiclights">LambDynamicLights</a><br>LambDynamicLights 向 Minecraft 添加动态光源，类似于 OptiFine 的动态光源。<br><a href="https://link.zhihu.com/?target=https://www.curseforge.com/minecraft/mc-mods/motiono">motioNO</a><br>motioNO 是仅客户端的 Mod，可防止 Minecraft 在冲刺时更改 FOV。<br><a href="https://link.zhihu.com/?target=https://www.curseforge.com/minecraft/mc-mods/soaring-clouds">Soaring Clouds</a><br>Soaring Clouds是仅客户端的 Mod，可让您更改云的高度。<br><a href="https://link.zhihu.com/?target=https://www.curseforge.com/minecraft/mc-mods/lithium">Lithium</a> 和 <a href="https://link.zhihu.com/?target=https://www.curseforge.com/minecraft/mc-mods/phosphor">Phosphor</a><br>Lithium 大大提高了服务器性能，而 Phosphor 则以照明性能为目标。这两个模块都可以安装在客户端或服务器上，并且由 Jelly Squid 制作。</p></blockquote>]]></content>
     
@@ -113,6 +151,8 @@
     <category term="娱乐" scheme="http://yz-hs.tk/tags/%E5%A8%B1%E4%B9%90/"/>
     
     <category term="转载" scheme="http://yz-hs.tk/tags/%E8%BD%AC%E8%BD%BD/"/>
+    
+    <category term="Shortcut" scheme="http://yz-hs.tk/tags/Shortcut/"/>
     
   </entry>
   
@@ -175,9 +215,9 @@
     <link href="http://yz-hs.tk/ec065edc5f19/"/>
     <id>http://yz-hs.tk/ec065edc5f19/</id>
     <published>2020-12-02T14:45:52.000Z</published>
-    <updated>2020-12-09T16:40:23.437Z</updated>
+    <updated>2021-02-04T03:45:33.345Z</updated>
     
-    <content type="html"><![CDATA[<p>yz-hs 的 NOIP 2020 游记。</p><p>啊这，，，都沉了，，，那先置个顶吧。</p><p>这次的背景图没什么特殊东西。</p><a id="more"></a><p>题意简述：</p><ul><li>T1 —— 污 水 迷 路</li><li>T2 —— WA B C</li><li>T3 —— 汉 诺 球</li><li>T4 —— 十 维 人</li></ul><h1 id="时间线"><a href="#时间线" class="headerlink" title="时间线"></a>时间线</h1><ol class="timeline">    <li> <b>2020/11/29</b>进入了 NOIP</li>    <li> <b>2020/12/04</b>请假，去宾馆</li>    <li> <b>2020/12/05</b>比赛日</li>    <li> <b>2020/12/06</b>自测分136</li>    <li> <b>2020/12/09</b>官方分95 \kk</li></ol><p>坐标 SD，TG 选手。</p><p>作为初四 OIer，我和 $\tt{\color{black}{z}\color{red}{zy}}$ 是 xt 的唯二初中选手。还有原来是同学的新高一们、高二们，还有个高三大佬。</p><p><del>这句话好眼熟啊。</del></p><p>总的来说，这次虽然真实成绩和自己预想的差别很大，但也算是考出了自己的真实水平了。</p><p>本文没什么好说的，因此篇幅较短。</p><h1 id="Day-3"><a href="#Day-3" class="headerlink" title="Day -3"></a>Day -3</h1><p>AC 300，祭！</p><p><img src="/postimg/NOIP/AC-300.png"> </p><h1 id="Day-0"><a href="#Day-0" class="headerlink" title="Day 0"></a>Day 0</h1><p>这一天，我乘着 xtyz 的专车，来到了“假日海湾时尚酒店”。</p><p><del>第一次体验在宾馆居住。</del></p><p>下午，还去海边玩了会。<del>第一次去看海，并海滩写代码。</del></p><p>晚上吃了个泡面，看了看各种模板。把线段树模板看了又看，<del>然而事实证明没用上</del>。</p><p>就这样吧。</p><h1 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h1><p>早晨吃了点烤 main 包什么的。</p><p>8 分钟的车程，我们来到了考场。</p><p>试机时打了个线段树，还写挂了。<del>这是我第一次写线段树，当然会挂。</del>我太菜了。</p><p>依旧是那 4 个文件夹，4 道题。</p><p>先把 T1 到 T4 看了一遍。感觉 T1 可做。<del>不像 CSP T1 这么毒瘤了。</del></p><p>然后花了大概 1 h，把 T1 打出来了。测试所有样例，通过。感觉 100 分紧紧攥在手里，然后就没再管它。</p><p>开 T2。考了个字符串。花了大概 1.5 h，打了 16 分的暴力。<del>事实上挂了。</del></p><p>看了看 T3，感觉不可做；诶，有个 checker.cpp 啊，点开看看，<del>这是什么 shit 代码啊</del>，还编译失败了。原来要开 C++11 啊。</p><p>T4 感觉暴力很好写，而且还能输出 -1 骗分。开始打 T4。打完后大概还有 1 h。</p><p>回头改改 T2，然后看到还有 40 分钟，<del>闲的没事</del>，想优化 T4。</p><p>当时我这么想：反正 T4 要拿 35 分左右，T1 得拿 100 分<strong>左</strong>右，以休闲的心态优化 T4 吧。最后优化挂了，交的原版。</p><p>然后自认为 100+16+0+35=151，一等奖有希望。</p><hr><p>出来考场，和 $\tt{\color{black}{z}\color{red}{zy}}$ 与高中大佬们去时光餐厅吃饭。在路上，发现 T1 审错题了，完了，我没了。</p><p>没想到 T1 出题人还是要马🐎的：</p><blockquote><p><img src="/postimg/NOIP/2.jpg"></p></blockquote><h1 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h1><p>luogu 自测：90+16+0+30=136。</p><p>然后，我觉得，一等奖好像没什么希望了。</p><p>看到 T1 得了 90 分，感觉 T1 要挂啊。然后在 oitiku 上测了测：</p><p>oitiku 自测：90+0+0+30=120。</p><p>啊，T2 居然挂了。想了想，确实，因为我第二个样例没过。</p><p>感觉要完。</p><h1 id="Day-2020-12-09"><a href="#Day-2020-12-09" class="headerlink" title="Day 2020-12-09"></a>Day 2020-12-09</h1><p>官方成绩：60+0+0+35=95。</p><p>没想到，T1 挂 60 分了。</p><p>发现把 T1 改成 <code>unsigned long long</code> 还是 60 分，觉得这就是我的真实水平了。</p><p><del>没想到 T1 出题人居然不要马🐎了。</del></p><p>SD 排名 200+，不太行。还是太菜。</p><p><del>一等奖可以获得 xtyz 免试进入实验部的机会啊啊啊，这样就不用中考了啊啊啊</del>。</p><p>只能投奔文化课了。</p><h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1><p>指的是，yz-hs 的 OI 之路未完，待续。</p><p>本年最后一篇游记。</p><p>明年，2021年，高一，我还会回来的。</p><h1 id="一些奇怪的东西"><a href="#一些奇怪的东西" class="headerlink" title="一些奇怪的东西"></a>一些奇怪的东西</h1><p>How’s the weather,THINK IT BETTER。</p><p>（来自某选手第三题文件）</p><p><img src="/postimg/NOIP/3.jpg"></p><hr><p>I AK 101。</p><p>（来自某选手第二题文件<del>其实就是我的</del>）</p><p><img src="/postimg/NOIP/4.png"></p>]]></content>
+    <content type="html"><![CDATA[<p>yz-hs 的 NOIP 2020 游记。</p><p>啊这，，，都沉了，，，那先置个顶吧。</p><p>这次的背景图没什么特殊东西。</p><a id="more"></a><p>题意简述：</p><ul><li>T1 —— 污 水 迷 路</li><li>T2 —— WA B C</li><li>T3 —— 汉 诺 球</li><li>T4 —— 十 维 人</li></ul><h1 id="时间线"><a href="#时间线" class="headerlink" title="时间线"></a>时间线</h1><ol class="timeline">    <li> <b>2020/11/29</b>进入了 NOIP</li>    <li> <b>2020/12/04</b>请假，去宾馆</li>    <li> <b>2020/12/05</b>比赛日</li>    <li> <b>2020/12/06</b>自测分136</li>    <li> <b>2020/12/09</b>官方分95 \kk</li></ol><p>坐标 SD，TG 选手。</p><p>作为初四 OIer，我和 $\tt{\color{black}{z}\color{red}{zy}}$ 是 xt 的唯二初中选手。还有原来是同学的新高一们、高二们，还有个高三大佬。</p><p><del>这句话好眼熟啊。</del></p><p>总的来说，这次虽然真实成绩和自己预想的差别很大，但也算是考出了自己的真实水平了。</p><p>本文没什么好说的，因此篇幅较短。</p><h1 id="Day-3"><a href="#Day-3" class="headerlink" title="Day -3"></a>Day -3</h1><p>AC 300，祭！</p><p><img src="/postimg/NOIP/AC-300.png"> </p><h1 id="Day-0"><a href="#Day-0" class="headerlink" title="Day 0"></a>Day 0</h1><p>这一天，我乘着 xtyz 的专车，来到了“假日海湾时尚酒店”。</p><p><del>第一次体验在宾馆居住。</del></p><p>下午，还去海边玩了会。<del>第一次去看海，并海滩写代码。</del></p><p>晚上吃了个泡面，看了看各种模板。把线段树模板看了又看，<del>然而事实证明没用上</del>。</p><p>就这样吧。</p><h1 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h1><p>早晨吃了点烤 main 包什么的。</p><p>8 分钟的车程，我们来到了考场。</p><p>试机时打了个线段树，还写挂了。<del>这是我第一次写线段树，当然会挂。</del>我太菜了。</p><p>依旧是那 4 个文件夹，4 道题。</p><p>先把 T1 到 T4 看了一遍。感觉 T1 可做。<del>不像 CSP T1 这么毒瘤了。</del></p><p>然后花了大概 1 h，把 T1 打出来了。测试所有样例，通过。感觉 100 分紧紧攥在手里，然后就没再管它。</p><p>开 T2。考了个字符串。花了大概 1.5 h，打了 16 分的暴力。<del>事实上挂了。</del></p><p>看了看 T3，感觉不可做；诶，有个 checker.cpp 啊，点开看看，<del>这是什么 shit 代码啊</del>，还编译失败了。原来要开 C++11 啊。</p><p>T4 感觉暴力很好写，而且还能输出 -1 骗分。开始打 T4。打完后大概还有 1 h。</p><p>回头改改 T2，然后看到还有 40 分钟，<del>闲的没事</del>，想优化 T4。</p><p>当时我这么想：反正 T4 要拿 35 分左右，T1 得拿 100 分<strong>左</strong>右，以休闲的心态优化 T4 吧。最后优化挂了，交的原版。</p><p>然后自认为 100+16+0+35=151，一等奖有希望。</p><hr><p>出来考场，和 $\tt{\color{black}{z}\color{red}{zy}}$ 与高中大佬们去时光餐厅吃饭。在路上，发现 T1 审错题了，完了，我没了。</p><p>没想到 T1 出题人还是要马🐎的：</p><blockquote><p><img src="/postimg/NOIP/2.jpg"></p></blockquote><h1 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h1><p>luogu 自测：90+16+0+30=136。</p><p>然后，我觉得，一等奖好像没什么希望了。</p><p>看到 T1 得了 90 分，感觉 T1 要挂啊。然后在 oitiku 上测了测：</p><p>oitiku 自测：90+0+0+30=120。</p><p>啊，T2 居然挂了。想了想，确实，因为我第二个样例没过。</p><p>感觉要完。</p><h1 id="Day-2020-12-09"><a href="#Day-2020-12-09" class="headerlink" title="Day 2020-12-09"></a>Day 2020-12-09</h1><p>官方成绩：60+0+0+35=95。</p><p>没想到，T1 挂 60 分了。</p><p>发现把 T1 改成 <code>unsigned long long</code> 还是 60 分，觉得这就是我的真实水平了。</p><p><del>没想到 T1 出题人居然不要马🐎了。</del></p><p>SD 排名 200+，不太行。还是太菜。</p><p><del>一等奖可以获得 xtyz 免试进入实验部的机会啊啊啊，这样就不用中考了啊啊啊</del>。</p><p>只能投奔文化课了。</p><h1 id="Day-？？？"><a href="#Day-？？？" class="headerlink" title="Day ？？？"></a>Day ？？？</h1><p>发现初中生并没有资格评奖。</p><p><del>不过就算是能评，二三等奖的也没有用。</del></p><h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1><p>指的是，cieu 的 OI 之路未完，待续。</p><p>本年最后一篇游记。</p><p>明年，2021年，高一，我还会回来的。</p><h1 id="一些奇怪的东西"><a href="#一些奇怪的东西" class="headerlink" title="一些奇怪的东西"></a>一些奇怪的东西</h1><p>How’s the weather,THINK IT BETTER。</p><p>（来自某选手第三题文件）</p><p><img src="/postimg/NOIP/3.jpg"></p><hr><p>I AK 101。</p><p>（来自某选手第二题文件<del>其实就是我的</del>）</p><p><img src="/postimg/NOIP/4.png"></p>]]></content>
     
     
     <summary type="html">&lt;p&gt;yz-hs 的 NOIP 2020 游记。&lt;/p&gt;
@@ -407,7 +447,7 @@
     <link href="http://yz-hs.tk/56eb3f581e0d/"/>
     <id>http://yz-hs.tk/56eb3f581e0d/</id>
     <published>2020-10-03T15:43:26.000Z</published>
-    <updated>2021-01-15T15:00:40.920Z</updated>
+    <updated>2021-02-04T03:49:15.527Z</updated>
     
     <content type="html"><![CDATA[<h1 id="错误集合"><a href="#错误集合" class="headerlink" title="错误集合"></a>错误集合</h1><blockquote><p>yz-hs 犯过的（OI 方面的）错误。</p></blockquote><h2 id="奇怪错误"><a href="#奇怪错误" class="headerlink" title="奇怪错误"></a>奇怪错误</h2><blockquote><p>指不应该出、很奇怪的错误。</p></blockquote><p><strong># 1</strong></p><p>时间：2020-10-03</p><p>详情：打 trie，为了卡空间，竟用 <code>char</code> 类型数组作为儿子数组。<a href="https://www.luogu.com.cn/record/39210493">链接</a></p><pre><code class="cpp">struct Trie片段：    struct Node    &#123;        char son[10],exist;~~~~~~~~~^建议：使用int    &#125;node[500000+10];--------------------------------------    void insert(char s[])片段：           for(int i=0;i&lt;=len-1;i++)               if(!node[root].son[sons])                   node[root].son[sons]=++index;~~~~~~~~~~~~~~~~~~~~~~~~~~~~^警告：有溢出风险</code></pre><p>分析：类似“十年 OI 一场空，不开 LL 见祖宗”。即开变量不考虑数据范围。</p><p><strong># 2</strong></p><p>时间：2020-10-24</p><p>详情：</p><ul><li>dp 不初始化，WAWA两行泪：<a href="https://www.luogu.com.cn/record/40380312">https://www.luogu.com.cn/record/40380312</a> 。</li><li>dp 初始化错误，WAWA两行泪：<a href="https://www.luogu.com.cn/record/40386016">https://www.luogu.com.cn/record/40386016</a> 。</li><li>终于过了（\kk）：<a href="https://www.luogu.com.cn/record/40390920">https://www.luogu.com.cn/record/40390920</a> 。</li></ul><p>分析：dp 一定要初始化啊！！！</p><p><strong># 3</strong></p><p>时间：2020-11-07</p><p>详情：CSP-S 考场。由于对 T1 过于自信，花了 2.5h 做（考试时间 4h）。最终放弃，也导致错失了 AC T2 的机会。</p><p>分析：一定要合理分配时间，在考场上千万不要死磕一道题！</p><p><strong># 4</strong></p><p>时间：2020-11-27</p><p>详情：做 [THUPC2019]鸭棋 这个题时，发现判断是否能下棋的函数总是返回“是”。看了看我的一长串 switch 中的 case 语句。嗯，好的，原来是…</p><p>$$\color{red}{\Huge{\texttt{没加 “break;” 语句！}}}$$</p><p>分析：注意 C++ 的毒瘤语法啊！！！</p><h2 id="知识错误"><a href="#知识错误" class="headerlink" title="知识错误"></a>知识错误</h2><blockquote><p>一般是初赛考的知识点之类。</p></blockquote><p><strong># 1</strong>：dijkstra 若未使用任何优化，时间复杂度为 $O(n^2)$。借助优先队列等，时间复杂度则为 $O((n+m)logn)$。</p><p><strong># 2</strong>：1948年，克劳德·香农将热力学中的熵引入信息通信领域，标志着信息论研究的开端。</p><h2 id="预防错误"><a href="#预防错误" class="headerlink" title="预防错误"></a>预防错误</h2><blockquote><p>指未犯过的错误，但要预防。</p></blockquote><p><strong># 1</strong>：程序 debug 好之后再使用快读快写，因为快读快写容易写错。</p>]]></content>
     
@@ -428,6 +468,8 @@
     <category term="root" scheme="http://yz-hs.tk/tags/root/"/>
     
     <category term="OI" scheme="http://yz-hs.tk/tags/OI/"/>
+    
+    <category term="Shortcut" scheme="http://yz-hs.tk/tags/Shortcut/"/>
     
   </entry>
   
@@ -510,60 +552,6 @@
     
     
     <category term="hexo" scheme="http://yz-hs.tk/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SweetAlert的使用</title>
-    <link href="http://yz-hs.tk/06caebfbc404/"/>
-    <id>http://yz-hs.tk/06caebfbc404/</id>
-    <published>2020-07-26T02:18:21.000Z</published>
-    <updated>2021-01-10T14:39:13.315Z</updated>
-    
-    <content type="html"><![CDATA[<p><button class="btn" onclick="demo()" style="display:block;margin:0 auto">点击查看Demo</button></p><script>  function demo() {swal.fire({      title: "这是示例 >_<",      text: "⌈ yz-hs 是一只可爱的 OIer。 ⌋",      icon: "success"}).then((result) => {swal.fire({  title: '请确认',  text: "如果你吊打了yz-hs，你会AK IOI！ >_<",  showCancelButton: true,  confirmButtonText: '吊打她！',  cancelButtonText: '她这么可爱，算了！',  reverseButtons: true}).then((result) => {  if (result.value) {    swal.fire({      text: '你成功地吊打了yz-hs，并AK了IOI，orz。',    })  } else if (    result.dismiss === Swal.DismissReason.cancel  ) {    swal.fire({      text: '你不屑于吊打yz-hs，而是AK IOI，orz。',    })  }})})}</script><p>本文仅讲述常用用法，更多请访问<a href="https://www.sweetalert2.cn/">官方网站</a></p><a id="more"></a><h1 id="简单弹窗"><a href="#简单弹窗" class="headerlink" title="简单弹窗"></a>简单弹窗</h1><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre><code class="javascript">swal.fire(&quot;Hello world!&quot;);</code></pre><h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p><button class="btn" onclick="swal.fire(&quot;Hello world!&quot;)" style="display:block;margin:0 auto">点击查看</button></p><h1 id="带内容弹窗"><a href="#带内容弹窗" class="headerlink" title="带内容弹窗"></a>带内容弹窗</h1><h2 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h2><pre><code class="javascript">swal.fire(&quot;标题&quot;,&quot;内容&quot;);</code></pre><h2 id="效果-1"><a href="#效果-1" class="headerlink" title="效果"></a>效果</h2><p><button class="btn" onclick="swal.fire(&quot;标题&quot;,&quot;内容&quot;)" style="display:block;margin:0 auto">点击查看</button></p><h1 id="带图标弹窗"><a href="#带图标弹窗" class="headerlink" title="带图标弹窗"></a>带图标弹窗</h1><h2 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h2><pre><code class="javascript">swal.fire(&quot;标题&quot;,&quot;内容&quot;,&quot;success&quot;);</code></pre><h2 id="效果-2"><a href="#效果-2" class="headerlink" title="效果"></a>效果</h2><p><button class="btn" onclick="swal.fire(&quot;标题&quot;,&quot;内容&quot;,&quot;success&quot;);" style="display:block;margin:0 auto">点击查看</button></p><h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h2><p>第三参数是图标，有四种选择：</p><ul><li><code>&quot;warning&quot;</code>——警告</li><li> <code>&quot;error&quot;</code>——错误</li><li><code>&quot;success&quot;</code>——成功</li><li><code>&quot;info&quot;</code>——信息</li></ul><h1 id="另一种写法"><a href="#另一种写法" class="headerlink" title="另一种写法"></a>另一种写法</h1><h2 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h2><pre><code class="javascript">swal.fire(&#123;  title: &quot;标题&quot;,  text: &quot;内容&quot;,  icon: &quot;success&quot;,&#125;);</code></pre><h2 id="效果-3"><a href="#效果-3" class="headerlink" title="效果"></a>效果</h2><p><button class="btn" onclick="swal.fire({  title: &quot;标题&quot;,  text: &quot;内容&quot;,  icon: &quot;success&quot;,});" style="display:block;margin:0 auto">点击查看</button></p><h2 id="提示-1"><a href="#提示-1" class="headerlink" title="提示"></a>提示</h2><p>效果是等价的。可以与前文写法混用：</p><pre><code class="javascript">swal.fire(&quot;标题&quot;, &quot;内容&quot;, &quot;success&quot;, &#123;  button: &quot;嘤嘤嘤&quot;,//更改按钮文字&#125;);</code></pre><h1 id="其他用法"><a href="#其他用法" class="headerlink" title="其他用法"></a>其他用法</h1><p>请访问官方网站。</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;button class=&quot;btn&quot; onclick=&quot;demo()&quot; style=&quot;display:block;margin:0 auto&quot;&gt;点击查看Demo&lt;/button&gt;&lt;/p&gt;
-&lt;script&gt;
-  function demo() {
-
-swal.fire({
-      title: &quot;这是示例 &gt;_&lt;&quot;,
-      text: &quot;⌈ yz-hs 是一只可爱的 OIer。 ⌋&quot;,
-      icon: &quot;success&quot;
-}).then((result) =&gt; {
-
-swal.fire({
-  title: &#39;请确认&#39;,
-  text: &quot;如果你吊打了yz-hs，你会AK IOI！ &gt;_&lt;&quot;,
-  showCancelButton: true,
-  confirmButtonText: &#39;吊打她！&#39;,
-  cancelButtonText: &#39;她这么可爱，算了！&#39;,
-  reverseButtons: true
-}).then((result) =&gt; {
-  if (result.value) {
-    swal.fire({
-      text: &#39;你成功地吊打了yz-hs，并AK了IOI，orz。&#39;,
-    })
-  } else if (
-    result.dismiss === Swal.DismissReason.cancel
-  ) {
-    swal.fire({
-      text: &#39;你不屑于吊打yz-hs，而是AK IOI，orz。&#39;,
-    })
-  }
-})})}
-&lt;/script&gt;
-
-
-&lt;p&gt;本文仅讲述常用用法，更多请访问&lt;a href=&quot;https://www.sweetalert2.cn/&quot;&gt;官方网站&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="其他" scheme="http://yz-hs.tk/categories/%E5%85%B6%E4%BB%96/"/>
-    
-    
-    <category term="其他" scheme="http://yz-hs.tk/tags/%E5%85%B6%E4%BB%96/"/>
     
   </entry>
   
