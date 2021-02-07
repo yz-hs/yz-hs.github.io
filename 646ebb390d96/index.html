@@ -7,7 +7,7 @@
   <link rel="stylesheet" type="text/css" href="/css/style.css">
   <title>
   	
-  		2 | cieu&#39;s Blog
+  		一些树形DP题目 | cieu&#39;s Blog
   	
   </title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
@@ -182,42 +182,312 @@
   </div>
 </div>
 				<div class="article">
-    				<div class="article-cell-body">
-	<div class="post">
+    				<div class="article-cell-body"><div class="post">
   <div class="header">
-    <div class="title">2</div>
+    <div class="title">一些树形DP题目</div>
     <div class="meta">
 	  <span><i class="fa fa-user" aria-hidden="true"></i> cieu</span>
-	  <span><i class="fa fa-clock-o" aria-hidden="true"></i> 2019 年 09 月 07 日</span>
-      <span><i class="fa fa-font" aria-hidden="true"></i> 8</span>
+	  <span><i class="fa fa-clock-o" aria-hidden="true"></i> 2021 年 02 月 07 日</span>
+      <span><i class="fa fa-font" aria-hidden="true"></i> 2k</span>
       
       
     </div>
   </div>
   <div class="breadcrumb">
     <div class="url">
-      <a href="/"><i class="fa fa-home" aria-hidden="true"></i> 主页</a> / 2
+      <a href="/"><i class="fa fa-home" aria-hidden="true"></i> 主页</a> / 一些树形DP题目
     </div>
     <div class="share">
-      分享到：<a target="_blank" rel="noopener" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yz-hs.tk/yznazo/1-AC/index.html&title=2&site=http://yz-hs.tk"><i class="fa fa-qq" aria-hidden="true"></i></a>
+      分享到：<a target="_blank" rel="noopener" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yz-hs.tk/646ebb390d96/&title=一些树形DP题目&site=http://yz-hs.tk"><i class="fa fa-qq" aria-hidden="true"></i></a>
     </div>
   </div>
   
   <div class="post-text">
-    <p>氢铝氮镝硫氧镁铒</p>
-<script type="text/javascript" src="/js/fuckdevtools.js"></script>
+    <p>以下是一些树形DP题目，为本蒟蒻在上网课时所整理。</p>
+<p>顾名思义，树形 dp 是发生在树上的，状态转移发生在父结点和子结点之间。</p>
+<p>状态转移的方向：一般叶子结点向根结点转移，也有相反的时候。</p>
+<p>树的结构是递归的，我们常在树上进行 dfs 控制转移发生的次序。</p>
+<p>由叶子结点向根结点的转移是发生在递归返回过程中，因此，dp 方程常出现在递归调用之后。由根向叶子结点转移的 dp 与之相反。</p>
+<h1 id="P1352-没有上司的舞会"><a href="#P1352-没有上司的舞会" class="headerlink" title="P1352 没有上司的舞会"></a>P1352 没有上司的舞会</h1><h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p>一个<strong>树上最大独立集</strong>问题。一棵树有一些节点（$\le 6\times 10^3$），点有权（$[-128,127]$），选择一个点集，点集中任意两点不可相邻，使得这个点集权之和最大。</p>
+<details><summary>点击查看题解</summary>
+
+
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>设<code>value[x]</code> 是 $x$ 节点点权，son 是 root 的后继，<code>f[root][status] </code> 为以 root 为根的子树，根节点的状态是 status（入选 $1$ 或者不入选 $0$）时的最大独立集。则答案就是取 root 入选和不入选两者的最大值。状态转移方程：</p>
+<pre><code class="cpp">f[root][1] = value[root] + ∑f[son][0];
+f[root][0] = ∑max&#123;f[son][1],f[son][0]&#125;;</code></pre>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+namespace _yz
+&#123;
+    const int N=6000+10;
+    int n,root,r[N],head[N],cnt=0,m,f[N][2],in[N];
+    struct edge&#123;int nxt,to;&#125;e[N];
+    void add(int x,int y)&#123;e[++cnt]=(edge)&#123;head[x],y&#125;;head[x]=cnt;&#125;
+    void dfs(int now)
+    &#123;
+        f[now][1]=r[now];
+        for(int i=head[now];i;i=e[i].nxt)
+        &#123;
+            int to=e[i].to;
+            dfs(to);
+            f[now][0]+=max(f[to][1],f[to][0]);//没去
+            f[now][1]+=f[to][0];//去了 
+        &#125;
+    &#125;
+    void yzmain()
+    &#123;
+        int t1,t2;
+        scanf(&quot;%d&quot;,&amp;n);m=n-1;
+        for(int i=1;i&lt;=n;i++) scanf(&quot;%d&quot;,r+i);
+        for(int i=1;i&lt;=m;i++)
+        &#123;
+            scanf(&quot;%d%d&quot;,&amp;t1,&amp;t2);
+            add(t2,t1);
+            in[t1]++;
+        &#125;
+        for(int i=1;i&lt;=n;i++) if(in[i]==0) root=i;
+        dfs(root);
+        printf(&quot;%d\n&quot;,max(f[root][0],f[root][1]));
+        return;
+    &#125;
+&#125;
+int main()
+&#123;
+    //freopen(&quot;in.txt&quot;,&quot;r&quot;,stdin);
+    //freopen(&quot;out.txt&quot;,&quot;w&quot;,stdout);
+    _yz::yzmain();
+    return 0;
+&#125;</code></pre>
+</details>
+
+<h1 id="P2014-CTSC1997-选课"><a href="#P2014-CTSC1997-选课" class="headerlink" title="P2014 [CTSC1997]选课"></a>P2014 [CTSC1997]选课</h1><h2 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h2><p>一个<strong>树上背包</strong>问题。一个森林，$n$ 个点，点有权，选择一个数量为 $m$ 的点集，使点集权值和最大，除各树的根节点外，每个点的父节点必在点集内。$1\le m \le n \le 300$。</p>
+<details><summary>点击查看题解</summary>
+
+
+<h2 id="题解-1"><a href="#题解-1" class="headerlink" title="题解"></a>题解</h2><p>设<code>f[u][j]</code>是以 $u$ 为根的子树入选 $j$ 个点的最大值，其中 $v$ 是 $u$ 的子节点；设<code>value[x]</code> 是 $x$ 节点点权。加一个虚拟的根，把森林变成树。根权值为 $0$，容量为 $1$。问题转化为，一棵树，$n+1$ 个点，选择一个数量为 $m+1$ 的点集，…</p>
+<p>显而易见地：</p>
+<p>$$f_{u,j}=\begin{cases} 0 &amp; j=0 \\ value_j &amp; j=1 \\ “分组背包” &amp; j&gt;1. \end{cases}$$</p>
+<h2 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h2><pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+namespace _yz
+&#123;
+    const int N=300+10;
+    int n,m,s[N],head[N],cnt=0,f[N][N];
+    struct edge&#123;int nxt,to;&#125;e[N];
+    void add(int x,int y)&#123;e[++cnt]=(edge)&#123;head[x],y&#125;;head[x]=cnt;&#125;
+    void dfs(int root)
+    &#123;
+        f[root][1]=s[root];
+        for(int i=head[root];i;i=e[i].nxt)//相当于分组背包的枚举组
+        &#123;
+            int son=e[i].to;
+            dfs(son);
+            for(int j=m+1;j&gt;=1;j--)//枚举“体积”
+                for(int k=1;k&lt;j;k++)//相当于枚举“组”内物品  要为 root 腾出 1 来
+                    f[root][j]=max(f[root][j],f[root][j-k]+f[son][k]);
+        &#125;
+    &#125;
+    void yzmain()
+    &#123;
+        int tmp;
+        scanf(&quot;%d%d&quot;,&amp;n,&amp;m);
+        for(int i=1;i&lt;=n;i++)
+        &#123;
+            scanf(&quot;%d%d&quot;,&amp;tmp,s+i);
+            add(tmp,i);
+        &#125;
+        dfs(0);
+        printf(&quot;%d\n&quot;,f[0][m+1]);
+        return;
+    &#125;
+&#125;
+int main()
+&#123;
+    //freopen(&quot;in.txt&quot;,&quot;r&quot;,stdin);
+    //freopen(&quot;out.txt&quot;,&quot;w&quot;,stdout);
+    _yz::yzmain();
+    return 0;
+&#125;</code></pre>
+</details>
+
+<h1 id="P2015-二叉苹果树"><a href="#P2015-二叉苹果树" class="headerlink" title="P2015 二叉苹果树"></a>P2015 二叉苹果树</h1><h2 id="题意-2"><a href="#题意-2" class="headerlink" title="题意"></a>题意</h2><p>一个<strong>树上背包</strong>问题。一棵树，$n-1$ 条边，边有边权（$\le 30000$），选择一个数量为 $q$ 的边集，使边集权值和最大，每条边的“父边”必在边集内。$1\le q\le n\le 100$。</p>
+<details><summary>点击查看题解</summary>
+
+
+<h2 id="题解-2"><a href="#题解-2" class="headerlink" title="题解"></a>题解</h2><p>我们要把这个问题转化为“选课“问题。注意到，每条边只会有一个后继。于是，将边的权值转化为后继节点的权值；保留 $q$ 条边，可转化为保留 $q+1$ 个点。</p>
+<p>其余的做法就和”选课“问题类似了。</p>
+<h2 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h2><pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+namespace _yz
+&#123;
+    const int N=100+10;
+    int n,m,head[N],cnt=0,f[N][N];
+    struct edge&#123;int nxt,to,len;&#125;e[N*2];
+    void add(int x,int y,int len)&#123;e[++cnt]=(edge)&#123;head[x],y,len&#125;;head[x]=cnt;&#125;
+    void dfs(int root,int dad)
+    &#123;
+        for(int i=head[root];i;i=e[i].nxt)
+        &#123;
+            int son=e[i].to;
+            if(son==dad) continue;
+            f[son][1]=e[i].len;
+            dfs(son,root);
+            for(int j=m;j&gt;=1;j--)
+                for(int k=1;k&lt;j;k++)
+                    f[root][j]=max(f[root][j],f[root][j-k]+f[son][k]);
+        &#125;
+    &#125;
+    void yzmain()
+    &#123;
+        int t1,t2,t3;
+        scanf(&quot;%d%d&quot;,&amp;n,&amp;m);m++;
+        for(int i=1;i&lt;=n-1;i++)
+        &#123;
+            scanf(&quot;%d%d%d&quot;,&amp;t1,&amp;t2,&amp;t3);
+            add(t1,t2,t3),add(t2,t1,t3);
+        &#125;
+        dfs(1,1);
+        printf(&quot;%d\n&quot;,f[1][m]);
+        return;
+    &#125;
+&#125;
+int main()
+&#123;
+    //freopen(&quot;in.txt&quot;,&quot;r&quot;,stdin);
+    //freopen(&quot;out.txt&quot;,&quot;w&quot;,stdout);
+    _yz::yzmain();
+    return 0;
+&#125;</code></pre>
+</details>
+
+<h1 id="P1131-ZJOI2007-时态同步"><a href="#P1131-ZJOI2007-时态同步" class="headerlink" title="P1131 [ZJOI2007] 时态同步"></a>P1131 [ZJOI2007] 时态同步</h1><p>这道题我好像用了一个奇特的做法。此做法为原创。如有雷同，纯属巧合。</p>
+<h2 id="题意-3"><a href="#题意-3" class="headerlink" title="题意"></a>题意</h2><p>给一棵树的一些边增加边权，使得每个叶子节点到根节点的距离最小。求要增加的最小边权。节点数 $\le 500000$，边权 $\le 1000000$。</p>
+<details><summary>点击查看题解</summary>
+
+
+<h2 id="题解-3"><a href="#题解-3" class="headerlink" title="题解"></a>题解</h2><p>将边权转化为点权仍按照上题所述。显然，我们调整靠近根节点的节点，其下叶子节点距离根节点的距离都会增加，所以，<strong>调整越靠根节点的节点调整的代价越少</strong>。</p>
+<p>据此结论，我们从叶子节点开始调起。在一个子树中，我们只需要使同一层的叶子节点权值相同，即都使权值增加为这些叶子节点的最大值。之后，用这个值更新它们的父节点权值（加上这个值）。</p>
+<p>更新后，将叶子节点”砍“掉。父节点成了”叶子节点“。再按照类似的方法更新即可。</p>
+<p>示例：</p>
+<pre><code class="cpp">    1                 1                   8              8
+   / \               / \                 : :
+  2   3     --&gt;     7   5      --&gt;      7   7    --&gt;   ans=6
+ / \   \           : :   :              
+5   1   2         5  5   2           </code></pre>
+<p>更新途中，我们可以计算答案。对于每次更新，所作贡献是 叶子节点最大值 $\times$ 叶子节点数量 $-$ 叶子节点权值和。记得用 <code>long long</code>。</p>
+<h2 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h2><pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+namespace _yz
+&#123;
+    const long long N=500000+10,Val=1,Max=2,Num=3,Sum=4;
+    long long n,root,ans=0,head[N],cnt=0,f[N][10];
+    struct edge&#123;long long nxt,to,len;&#125;e[N*2];
+    void add(long long x,long long y,long long len)&#123;e[++cnt]=(edge)&#123;head[x],y,len&#125;;head[x]=cnt;&#125;
+    void dfs(long long root,long long dad)
+    &#123;
+        for(long long i=head[root];i;i=e[i].nxt)
+        &#123;
+            long long son=e[i].to;
+            if(son==dad) continue;
+            f[son][Val]=e[i].len;
+            dfs(son,root);
+            f[root][Num]++;
+            f[root][Max]=max(f[root][Max],f[son][Max]);
+            f[root][Sum]+=f[son][Max];
+        &#125;
+        ans+=f[root][Max]*f[root][Num]-f[root][Sum];
+        f[root][Max]+=f[root][Val];
+    &#125;
+    void yzmain()
+    &#123;
+        long long t1,t2,t3;
+        scanf(&quot;%lld%lld&quot;,&amp;n,&amp;root);
+        for(long long i=1;i&lt;=n-1;i++)
+        &#123;
+            scanf(&quot;%lld%lld%lld&quot;,&amp;t1,&amp;t2,&amp;t3);
+            add(t1,t2,t3),add(t2,t1,t3);
+        &#125;
+        dfs(root,root);
+        printf(&quot;%lld\n&quot;,ans);
+        return;
+    &#125;
+&#125;
+int main()
+&#123;
+    //freopen(&quot;in.txt&quot;,&quot;r&quot;,stdin);
+    //freopen(&quot;out.txt&quot;,&quot;w&quot;,stdout);
+    _yz::yzmain();
+    return 0;
+&#125;</code></pre>
+</details>
+
+<h1 id="附注"><a href="#附注" class="headerlink" title="附注"></a>附注</h1><p>以下是类似“一些XXDP题目”文章的写作模板。</p>
+<pre><code class="html"># 
+
+## 题意
+
+&lt;details&gt;&lt;summary&gt;点击查看题解&lt;/summary&gt;
+
+## 题解
+
+## 代码
+
+​```cpp
+​```
+
+&lt;/details&gt;</code></pre>
+
     
+<br /><hr />
+<img src="/img/end-heart.gif">
+<br />
+<blockquote>
+	<br />
+	本文作者： cieu
+	<br /><br />
+    本文链接： http://yz-hs.tk/646ebb390d96/
+    <br /><br />
+    版权声明： 本博客所有文章除特别声明外，均允许规范转载。转载请注明出处！当然也可对文章出处进行考证，在下方评论区评论！
+    <br /><br />
+</blockquote>
+<br />
+<div class="end-post-meta">
+	
+		<span><a href="/tags/OI"><i class="fa fa-tag" aria-hidden="true"></i> OI</a></span>
+	
+		<span><a href="/tags/动态规划"><i class="fa fa-tag" aria-hidden="true"></i> 动态规划</a></span>
+	
+</div>
+<div class="end-post-meta">
+	<span><i class="fa fa-refresh" aria-hidden="true"></i> 最后更新： 2021 年 02 月 07 日</span>
+</div>
+
   </div>
+  
+    <div class="prevnext">
+  	  
+  		  <a class="next" href="/b484fa229a5b/">下一篇</a>
+  	  
+    </div>
   
   <div class="comments">
   <div class="inner">
 	
-      <div class="big-font">本页面并未开启评论功能哦！</div>
-	
+        <div id="gitalk-container"></div>
+        <script>
+          var gitalk = new Gitalk({
+                         clientID: 'eee39c8ef2391d17d829',
+                         clientSecret: 'c9e42cc511159cc40a9afae6755952c55f098df5',
+                         repo: 'no-code',
+                         owner: 'yz-hs',
+                         admin: ['yz-hs']
+                      })
+          gitalk.render('gitalk-container')
+        </script>
+    
   </div>
 </div>
-</div>
-</div>
+</div></div>
     				<div class="toolbar">
   <div class="toolbar-tab-page">
     <div class="tb-tabTitle">
@@ -280,15 +550,15 @@
   	<div class="title">博客信息</div>
     <div class="list-group">
   	  <div class="list-group-item"><i class="fa fa-file fa-fw" aria-hidden="true"></i>&nbsp;文章数目<div class="badge">85</div></div>
-  	  <div class="list-group-item"><i class="fa fa-refresh fa-fw" aria-hidden="true"></i>&nbsp;最近更新<div class="badge">07-26</div></div>
+  	  <div class="list-group-item"><i class="fa fa-refresh fa-fw" aria-hidden="true"></i>&nbsp;最近更新<div class="badge">02-07</div></div>
   	  <div class="list-group-item"><i class="fa fa-user-o fa-fw" aria-hidden="true"></i>&nbsp;本站作者<div class="badge">cieu</div></div>
   	  <div class="list-group-item"><i class="fa fa-font fa-fw" aria-hidden="true"></i>&nbsp;本站字数<div class="badge">171.7k<!--npm i hexo-wordcount --save--></span></div></div>
     </div>
   </div>
-  
-    <div class="item">
-      <div class="title">标签云</div>
-      <div class="toolbar-tag-cloud"><a href="/tags/OI/" style="font-size: 40px; color: #fff">OI</a> <a href="/tags/Shortcut/" style="font-size: 32px; color: #fff">Shortcut</a> <a href="/tags/Trie%E6%A0%91/" style="font-size: 22px; color: #fff">Trie树</a> <a href="/tags/hexo/" style="font-size: 24px; color: #fff">hexo</a> <a href="/tags/root/" style="font-size: 32px; color: #fff">root</a> <a href="/tags/%E4%BA%8C%E5%88%86/" style="font-size: 20px; color: #fff">二分</a> <a href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/" style="font-size: 20px; color: #fff">位运算</a> <a href="/tags/%E5%80%8D%E5%A2%9E/" style="font-size: 22px; color: #fff">倍增</a> <a href="/tags/%E5%85%B6%E4%BB%96/" style="font-size: 26px; color: #fff">其他</a> <a href="/tags/%E5%88%86%E5%B1%82%E5%9B%BE/" style="font-size: 20px; color: #fff">分层图</a> <a href="/tags/%E5%89%8D%E7%BC%80%E5%92%8C/" style="font-size: 22px; color: #fff">前缀和</a> <a href="/tags/%E5%8A%A0%E5%AF%86/" style="font-size: 24px; color: #fff">加密</a> <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" style="font-size: 36px; color: #fff">动态规划</a> <a href="/tags/%E5%9B%BE%E8%AE%BA/" style="font-size: 24px; color: #fff">图论</a> <a href="/tags/%E5%A0%86/" style="font-size: 22px; color: #fff">堆</a> <a href="/tags/%E5%A5%87%E5%81%B6%E6%9C%80%E7%9F%AD%E8%B7%AF/" style="font-size: 20px; color: #fff">奇偶最短路</a> <a href="/tags/%E5%A8%B1%E4%B9%90/" style="font-size: 20px; color: #fff">娱乐</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" style="font-size: 20px; color: #fff">字符串</a> <a href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/" style="font-size: 20px; color: #fff">并查集</a> <a href="/tags/%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F/" style="font-size: 20px; color: #fff">强连通分量</a> <a href="/tags/%E6%89%93%E8%A1%A8/" style="font-size: 20px; color: #fff">打表</a> <a href="/tags/%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88/" style="font-size: 20px; color: #fff">排列组合</a> <a href="/tags/%E6%8E%A8%E7%BB%93%E8%AE%BA/" style="font-size: 22px; color: #fff">推结论</a> <a href="/tags/%E6%95%B0%E5%AD%A6%E6%9C%9F%E6%9C%9B/" style="font-size: 20px; color: #fff">数学期望</a> <a href="/tags/%E6%95%B0%E8%AE%BA/" style="font-size: 24px; color: #fff">数论</a> <a href="/tags/%E6%9A%B4%E6%90%9C/" style="font-size: 24px; color: #fff">暴搜</a> <a href="/tags/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" style="font-size: 20px; color: #fff">最小生成树</a> <a href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/" style="font-size: 26px; color: #fff">最短路</a> <a href="/tags/%E6%A0%91/" style="font-size: 20px; color: #fff">树</a> <a href="/tags/%E6%A8%A1%E6%8B%9F/" style="font-size: 24px; color: #fff">模拟</a> <a href="/tags/%E6%AF%92%E7%98%A4%E9%A2%98/" style="font-size: 24px; color: #fff">毒瘤题</a> <a href="/tags/%E6%B0%B4/" style="font-size: 38px; color: #fff">水</a> <a href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/" style="font-size: 20px; color: #fff">线段树</a> <a href="/tags/%E8%83%8C%E5%8C%85/" style="font-size: 30px; color: #fff">背包</a> <a href="/tags/%E8%B4%AA%E5%BF%83/" style="font-size: 22px; color: #fff">贪心</a> <a href="/tags/%E8%BD%AC%E8%BD%BD/" style="font-size: 34px; color: #fff">转载</a> <a href="/tags/%E9%80%86%E5%BA%8F%E5%AF%B9/" style="font-size: 20px; color: #fff">逆序对</a> <a href="/tags/%E9%94%A3%E9%BC%93/" style="font-size: 28px; color: #fff">锣鼓</a></div>
+  <!-- 标签可能太多，影响目录 -->
+    <div class="post-toc">
+      <div class="title">文章目录</div>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#P1352-%E6%B2%A1%E6%9C%89%E4%B8%8A%E5%8F%B8%E7%9A%84%E8%88%9E%E4%BC%9A"><span class="toc-text">P1352 没有上司的舞会</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#P2014-CTSC1997-%E9%80%89%E8%AF%BE"><span class="toc-text">P2014 [CTSC1997]选课</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#P2015-%E4%BA%8C%E5%8F%89%E8%8B%B9%E6%9E%9C%E6%A0%91"><span class="toc-text">P2015 二叉苹果树</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#P1131-ZJOI2007-%E6%97%B6%E6%80%81%E5%90%8C%E6%AD%A5"><span class="toc-text">P1131 [ZJOI2007] 时态同步</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%99%84%E6%B3%A8"><span class="toc-text">附注</span></a></li></ol>
     </div>
    
   <script>

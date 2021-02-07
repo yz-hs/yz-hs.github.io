@@ -1,0 +1,961 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <title>
+  	
+  		NOI Linux | cieu&#39;s Blog
+  	
+  </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+  <script src="https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="cieu's Blog" type="application/atom+xml">
+</head>
+	<body>
+		<script type="text/javascript">
+			if(document.referrer.indexOf("http://yz-hs.tk")==-1 && document.referrer.indexOf("localhost:4000")==-1 && window.location.href.indexOf("cieu_is_cute")==-1)
+			{
+				let url = window.location.href;
+				window.history.pushState(null, '', url);
+				window.location.href="/blog";
+			}
+		</script>
+		<a name="back-to-top"></a>
+		<div class="main">
+			<a target="_blank" rel="noopener" href="https://github.com/yz-hs" class="github-corner" aria-label="View source on GitHub">
+	<svg width="80" height="80" viewBox="0 0 250 250" style="fill:#ffb6c1; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+		<path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+		<path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+		<path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+	</svg>
+</a>
+<style>
+.github-corner:hover 
+.octo-arm {animation:octocat-wave 560ms ease-in-out}
+@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}
+@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}
+</style>
+<div class="topbar">
+	<a href="/" class="topbar-title">
+		<i class="fa fa-home" aria-hidden="true"></i> cieu&#39;s Blog
+	</a>
+	<div class="topbar-url">
+	  
+            <a href="/archives/index.html"><i class="fa fa-archive" aria-hidden="true"></i></a>
+      
+            <a href="/tags/index.html"><i class="fa fa-tags" aria-hidden="true"></i></a>
+      
+            <a href="/categories/index.html"><i class="fa fa-navicon" aria-hidden="true"></i></a>
+      
+            <a href="/somepage/about/index.html"><i class="fa fa-user" aria-hidden="true"></i></a>
+      
+            <a href="/somepage/chat/index.html"><i class="fa fa-commenting" aria-hidden="true"></i></a>
+      
+            <a href="/somepage/link/index.html"><i class="fa fa-link" aria-hidden="true"></i></a>
+      
+            <a href="/somepage/projects/index.html"><i class="fa fa-cog" aria-hidden="true"></i></a>
+      
+            <a href="/yznazo/index.html"><i class="fa fa-gamepad" aria-hidden="true"></i></a>
+      
+      <a href="/somepage/%E5%90%90%E6%A7%BD/index.html"><i class="fa fa-bell-o" aria-hidden="true"></i></a>
+    </div>
+	<a href="/somepage/%E5%90%90%E6%A7%BD/index.html" class="topbar-comments">
+		<i class="fa fa-bell-o" aria-hidden="true"></i>
+	</a>
+	<div class="topbar-full-url">
+		<a href="/"><i class="fa fa-home" aria-hidden="true"></i></a>
+		
+            <a href="/archives/index.html"><i class="fa fa-archive" aria-hidden="true"></i></a>
+        
+            <a href="/tags/index.html"><i class="fa fa-tags" aria-hidden="true"></i></a>
+        
+            <a href="/categories/index.html"><i class="fa fa-navicon" aria-hidden="true"></i></a>
+        
+            <a href="/somepage/about/index.html"><i class="fa fa-user" aria-hidden="true"></i></a>
+        
+            <a href="/somepage/chat/index.html"><i class="fa fa-commenting" aria-hidden="true"></i></a>
+        
+            <a href="/somepage/link/index.html"><i class="fa fa-link" aria-hidden="true"></i></a>
+        
+            <a href="/somepage/projects/index.html"><i class="fa fa-cog" aria-hidden="true"></i></a>
+        
+            <a href="/yznazo/index.html"><i class="fa fa-gamepad" aria-hidden="true"></i></a>
+        
+        <a href="/somepage/%E5%90%90%E6%A7%BD/index.html"><i class="fa fa-bell-o" aria-hidden="true"></i></a>
+	</div>
+</div>
+			<div id="main-container">
+				<div class="sidebar">
+  <div class="sidebar-avatar-container">
+  	<img src="/img/new-avatar.jpg" class="sidebar-avatar bounce" />
+  </div>
+  <div class="sidebar-author">
+    cieu<br />
+    <div class="mini-text" id="binft">A cute OIer</div>
+  </div>
+  <div class="sidebar-list-container">
+  <div class="mini-text">导航</div><br>
+  <div class="list-group">
+  	
+  	 
+  	   <a class="list-group-item" href="/archives/index.html"><i class="fa fa-archive fa-fw" aria-hidden="true"></i>&nbsp; 归档
+  	 
+  	    
+  	    	<div class="badge">85</div>
+  	    
+      </a>
+    
+  	 
+  	   <a class="list-group-item" href="/tags/index.html"><i class="fa fa-tags fa-fw" aria-hidden="true"></i>&nbsp; 标签
+  	 
+  	    
+  	    	<div class="badge">38</div>
+  	    
+      </a>
+    
+  	 
+  	   <a class="list-group-item" href="/categories/index.html"><i class="fa fa-navicon fa-fw" aria-hidden="true"></i>&nbsp; 分类
+  	 
+  	    
+  	    	<div class="badge">11</div>
+  	    
+      </a>
+    
+  	 
+  	   <a class="list-group-item" href="/somepage/about/index.html"><i class="fa fa-user fa-fw" aria-hidden="true"></i>&nbsp; 关于
+  	 
+  	    
+      </a>
+    
+  	 
+  	   <a class="list-group-item" href="/somepage/chat/index.html"><i class="fa fa-commenting fa-fw" aria-hidden="true"></i>&nbsp; 留言
+  	 
+  	    
+      </a>
+    
+  	 
+  	   <a class="list-group-item" href="/somepage/link/index.html"><i class="fa fa-link fa-fw" aria-hidden="true"></i>&nbsp; 链接
+  	 
+  	    
+      </a>
+    
+  	 
+  	   <a class="list-group-item" href="/somepage/projects/index.html"><i class="fa fa-cog fa-fw" aria-hidden="true"></i>&nbsp; 项目
+  	 
+  	    
+      </a>
+    
+  	 
+  	   <a class="list-group-item" href="/yznazo/index.html"><i class="fa fa-gamepad fa-fw" aria-hidden="true"></i>&nbsp; yz's nazo
+  	 
+  	    
+      </a>
+    
+      <!-- for overflow -->
+      <div class="list-group-empty"></div>
+      <div class="list-group-empty"></div>
+      <div class="list-group-empty"></div>
+      <div class="list-group-empty"></div>
+      <div class="list-group-empty"></div>
+      <div class="list-group-empty"></div>
+  </div>
+  </div>
+  <div class="sidebar-footer">
+  	<div class="item">
+  		<a href="#back-to-top"><i class="fa fa-hand-o-up" aria-hidden="true"></i><div class="mini-text">顶部</div></a>
+  	</div>
+  	<div class="item">
+  		<a href="/atom.xml"><i class="fa fa-feed" aria-hidden="true"></i><div class="mini-text">RSS</div></a>
+  	</div>
+  	<div class="item">
+  		<a href="javascript:(function(){window.open(&quot;http://yz-hs.tk&quot;)})()" onclick="swal('提示','请把图标拖动到书签栏','warning');return false;"><i class="fa fa-bookmark" aria-hidden="true"></i><div class="mini-text">收藏</div></a>
+  	</div>
+  </div>
+</div>
+				<div class="article">
+    				<div class="article-cell-body"><div class="post">
+  <div class="header">
+    <div class="title">NOI Linux</div>
+    <div class="meta">
+	  <span><i class="fa fa-user" aria-hidden="true"></i> cieu</span>
+	  <span><i class="fa fa-clock-o" aria-hidden="true"></i> 2020 年 02 月 05 日</span>
+      <span><i class="fa fa-font" aria-hidden="true"></i> 6.9k</span>
+      
+      
+    </div>
+  </div>
+  <div class="breadcrumb">
+    <div class="url">
+      <a href="/"><i class="fa fa-home" aria-hidden="true"></i> 主页</a> / NOI Linux
+    </div>
+    <div class="share">
+      分享到：<a target="_blank" rel="noopener" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yz-hs.tk/87ce55d908bd/&title=NOI Linux&site=http://yz-hs.tk"><i class="fa fa-qq" aria-hidden="true"></i></a>
+    </div>
+  </div>
+  
+  <div class="post-text">
+    <p>关于NOI-linux</p>
+<a id="more"></a>
+
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>转自<a target="_blank" rel="noopener" href="https://www.cnblogs.com/Rorshach/p/8901781.html">NOI Linux的安装说明以及使用指南</a></p>
+<p>安装环境windows。</p>
+<ol>
+<li><p>首先从官网上下载一个CCF官方提供的Noi linux虚拟机以及安装文档 <a target="_blank" rel="noopener" href="http://www.noi.cn/newsview.html?id=690&hash=9A0662&type=11">传送门</a></p>
+</li>
+<li><p>然后，安装一个VMware Workstation 14 Pro，这里给出<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1nrRgyKUmU7ELaKG_yfxMbw">网盘</a> 然后一步步解压安装 记得安装的时候不要勾选”启动时检查产品更新”，其他按照默认设置安装就好。</p>
+</li>
+<li><p>打开VMware Workstation Pro，然后用keygen.exe获取激活码将产品激活。</p>
+</li>
+<li><p>然后创建新的虚拟机，选择典型。</p>
+</li>
+<li><p>在下一个弹窗中，选择稍后安装操作系统。之后的弹窗中，操作系统选择Linux，版本选择默认的Ubuntu</p>
+</li>
+<li><p>选择名称与位置，名称和路径最好不要带中文。</p>
+</li>
+<li><p>硬盘容量选择20G，将虚拟机存储为单个文件。</p>
+</li>
+<li><p>最后的一个弹框，点确定就好了。</p>
+</li>
+<li><p>然后，点击左上角 编辑——虚拟网络编辑器，点击桥接模式这一栏，然后勾选桥接模式</p>
+</li>
+<li><p>然后右键单击安装的虚拟机，进入设置。</p>
+</li>
+<li><p>跳到CD/DVD，勾选使用ISO镜像文件，路径是你下载的NoiLinux安装包</p>
+</li>
+<li><p>点击网络适配器，并勾选右边栏的前两项。</p>
+</li>
+<li><p>最后关闭设置，启动虚拟机。</p>
+</li>
+</ol>
+<p>如果虚拟机一直黑屏，用管理员模式运行cmd，输入<code>netsh winsock reset</code>并重启电脑。</p>
+<p>然后再按照安装文档里面写的做就可以安装好了</p>
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>改编自<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/blog/darkflames/noi-linux">darkflames 的博客</a></p>
+<h2 id="进入终端"><a href="#进入终端" class="headerlink" title="进入终端"></a>进入终端</h2><p>$Ctrl+Alt+T$组合键</p>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p>绝对目录：<code>/yz-hs/code/hello/hello.cpp</code></p>
+<p>相对目录（当前在<code>code</code>目录中）：<code>./hello/hello.cpp或hello/hello.cpp</code></p>
+<p>当前目录：<code>./</code></p>
+<p>父目录：<code>../</code></p>
+<p>注意<strong>linux没有扩展名这一个概念</strong></p>
+<h2 id="文件操作的相关命令"><a href="#文件操作的相关命令" class="headerlink" title="文件操作的相关命令"></a>文件操作的相关命令</h2><h3 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h3><pre><code class="bash">$ ls</code></pre>
+<p>显示当前目录的所有文件与目录</p>
+<pre><code class="bash">$ ls [DIR]</code></pre>
+<p>显示指定目录的所有文件与目录（<code>[DIR]</code>目录）</p>
+<h3 id="cd"><a href="#cd" class="headerlink" title="cd"></a>cd</h3><pre><code class="bash">$ cd [DIR]</code></pre>
+<p>进入指定目录</p>
+<h3 id="mkdir"><a href="#mkdir" class="headerlink" title="mkdir"></a>mkdir</h3><pre><code class="bash">$ mkdir [DIR]</code></pre>
+<p>创建子目录(新建文件夹)</p>
+<pre><code class="bash">$ mkdir -p [DIR]</code></pre>
+<p>使用参数 <code>-p</code> 确保目录名称存在，不存在的就建一个</p>
+<h3 id="mv与cp"><a href="#mv与cp" class="headerlink" title="mv与cp"></a>mv与cp</h3><pre><code class="bash">$ mv [DIR] [DIR]
+$ cp [DIR] [DIR]</code></pre>
+<p><code>mv</code>是将一个目录或文件移动到另一个目录</p>
+<p><code>cp</code>是将一个目录或文件复制到另一个目录</p>
+<h3 id="rm"><a href="#rm" class="headerlink" title="rm"></a>rm</h3><p>删除文件或目录，参数</p>
+<ul>
+<li><code>-i</code> 删除前逐一询问确认。</li>
+<li><code>-f</code> 即使原档案属性设为唯读，亦直接删除，无需逐一确认。</li>
+<li><code>-r</code> 将目录及以下之档案亦逐一删除。</li>
+<li><code>-rf</code>直接删除指定的目录或文件</li>
+</ul>
+<p>删除文件可以直接无参数执行，删除目录则需要使用<code>-r</code>。</p>
+<pre><code class="bash">$ rm [参数] [DIR]</code></pre>
+<h3 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h3><pre><code class="bash">$ pwd</code></pre>
+<p>显示当前工作目录的绝对路径</p>
+<h2 id="命令行下编辑，编译，运行程序"><a href="#命令行下编辑，编译，运行程序" class="headerlink" title="命令行下编辑，编译，运行程序"></a>命令行下编辑，编译，运行程序</h2><ol>
+<li><p>编辑</p>
+<pre><code class="bash">$ vim [FILE1]
+$ gedit [FILE1]</code></pre>
+</li>
+<li><p>编译</p>
+<pre><code class="bash">$ g++ [FILE1]   #输出文件默认为a.out
+$ g++ [FILE1] -o [FILE2] #输出文件为[FILE2]
+$ g++ [FILE1] -o [FILE2] -O2 # 开启O2优化
+$ g++ [FILE1] -o [FILE2] -Wall #显示所有警告建议开启</code></pre>
+</li>
+<li><p>运行程序</p>
+<pre><code class="bash">$ ./[FILE]</code></pre>
+</li>
+<li><p>其他辅助工具</p>
+<pre><code class="bash">$ time ./[FILE2] #统计运行时间
+$ diff -b [FILE3] [FILE4] # 比较文件差异，-b参数忽略行末空格</code></pre>
+</li>
+</ol>
+<h2 id="对拍"><a href="#对拍" class="headerlink" title="对拍"></a>对拍</h2><h3 id="bat脚本版"><a href="#bat脚本版" class="headerlink" title="bat脚本版"></a>bat脚本版</h3><pre><code class="bat">@echo off
+:loop
+    数据生成器 &gt; data.txt
+    std程序 &lt; data.txt &gt; std.txt
+    debug程序 &lt; data.txt &gt; debug.txt
+    fc std.txt debug.txt
+    if not errorlevel 1 goto loop
+pause
+goto loop</code></pre>
+<h3 id="C-版"><a href="#C-版" class="headerlink" title="C++版"></a>C++版</h3><pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define cmd(cmds) for(int a=0;a&lt;sizeof(cmds)/4;a++)&#123;system((cmds[a]));&#125;
+
+char* build[]=&#123;
+    &quot;g++ test.cpp -o test&quot;,
+    &quot;g++ gen.cpp -o gen -O2&quot;,
+    &quot;g++ std.cpp -o std -O2&quot;
+&#125;;
+
+char* genData[]=&#123;
+    &quot;./gen &gt; data.in&quot;,
+    &quot;./std &lt; data.in &gt; data.ans&quot;
+&#125;;
+
+int main() &#123;
+    cmd(build);
+    for(int i=0;i&lt;100;i++)
+    &#123;
+        cmd(genData);
+        printf(&quot;CASE: %d&quot;, i);
+        if(system(&quot;./test &lt; data.in &gt; data.out&quot;) != 0)
+        &#123;
+            printf(&quot;RE\n&quot;);
+            break;
+        &#125;
+        else if(system(&quot;diff -b data.out data.ans&quot;))
+        &#123;
+            printf(&quot;WA\n&quot;);
+            break;
+        &#125;
+        else printf(&quot;AC\n&quot;);
+            printf(&quot;#####################################&quot;);
+    &#125;
+    return 0;
+&#125;</code></pre>
+<h3 id="Shell脚本版"><a href="#Shell脚本版" class="headerlink" title="Shell脚本版"></a>Shell脚本版</h3><pre><code class="bash">#!/bin/bash
+g++ test.cpp -o test
+g++ std.cpp -o std -O2
+g++ gen.cpp -o gen
+i=1
+tot=100
+while [  $i -le $ tot ]; do
+    ./gen &gt; data.in
+    ./std &lt; data.in &gt; data.ans
+    ./test &lt; data.in &gt; data.out
+    if [  $? -ne 0 ]; then
+        echo -e &quot;CASE $ i: RE&quot;
+        break
+    elif diff -b data.ans data.out ; then
+        echo -e &quot;CASE $ i: AC&quot;
+    else
+        echo -e &quot;CASE $ i: WA&quot;
+        break
+    fi
+    let i++
+done</code></pre>
+<h1 id="vim"><a href="#vim" class="headerlink" title="vim"></a>vim</h1><p>改编自<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/bcbe916f97e1">Vim入门基础</a></p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>在终端输入<code>vim ~/.vimrc</code> 然后添加配置代码：</p>
+<pre><code class="bash">set nu 设置行标号
+set tabstop=4 这一条以及以下三条都把缩进设为4
+set shiftwidth=4
+set softtabstop=4
+set autochdir  自动切换到当前目录
+set smartindent 以下两行都是智能缩进相关
+set autoindent
+set mouse=a 激活鼠标
+set cursorline 行高亮
+inoremap ( ()&lt;ESC&gt;i  括号匹配相关  
+inoremap [ []&lt;ESC&gt;i
+inoremap &quot; &quot;&quot;&lt;ESC&gt;i
+inoremap &#39; &#39;&#39;&lt;ESC&gt;i
+inoremap &#123;&lt;CR&gt;  &#123;&lt;CR&gt;&#125;&lt;ESC&gt;O</code></pre>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>进入Vim编辑程序，可以在终端输入下面的命令：</p>
+<pre><code class="bash">$ vim [filename]</code></pre>
+<p>其中<code>filename</code>是要编辑器的文件的路径名。如果文件不存在，它将为你建立一个新文件。Vim编辑程序有三种操作模式，分别称为 <strong>编辑模式</strong>、<strong>插入模式</strong> 和 <strong>命令模式</strong>，当运行Vim时，首先进入编辑模式。</p>
+<h2 id="编辑模式"><a href="#编辑模式" class="headerlink" title="编辑模式"></a>编辑模式</h2><p>Vim编辑方式的主要用途是在被编辑的文件中移动光标的位置。一旦光标移到到所要的位置，就可以进行剪切和粘贴正文块，删除正文和插入新的正文。当完成所有的编辑工作后，需要保存编辑器结果，退出编辑程序回到终端，可以发出<code>ZZ</code>命令，连续按两次大写的<code>Z</code>键。</p>
+<h3 id="跳转"><a href="#跳转" class="headerlink" title="跳转"></a>跳转</h3><p>如果键盘上有上、下、左、右箭头的导航键，就由这些键来完成光标的移动。另外，可以用下面的键完成同样的 <strong>按字符移动</strong> 功能：</p>
+<pre><code class="bash">k               上移；
+j               下移；
+h               左移；
+l               右移。</code></pre>
+<p>上面这４个键将光标位置每次移动一行或一个 <strong>字符</strong> 。Vim还提供稍大范围移动光标的命令：</p>
+<pre><code class="bash">ctrl+f      在文件中前移一页（相当于 page down）；
+ctrl+b      在文件中后移一页（相当于 page up）；</code></pre>
+<p>更大范围的移动：</p>
+<pre><code class="bash">*         当光标停留在一个单词上，* 键会在文件内搜索该单词，并跳转到下一处；
+#         当光标停留在一个单词上，# 在文件内搜索该单词，并跳转到上一处；
+(         移动到 前 句 的开始；
+)         移动到 前 句 的开始；
+&#123;         跳转到 当前 段落 的开始。
+&#125;         跳转到 下一个 段落 的开始。
+g_        到本行最后一个不是 blank 字符的位置。
+fa        到下一个为 a 的字符处。
+ta        到a前的第一个字符。
+3fa       在当前行查找第三个出现的 a。
+F/T       和 f 和 t 一样，只不过是相反方向;
+gg        将光标定位到文件第一行起始位置；
+G         将光标定位到文件最后一行起始位置；
+NG或Ngg   将光标定位到第 N 行的起始位置。</code></pre>
+<p>在屏幕中找到需要的 <strong>一页</strong> 时，可以用下面的命令快速移动光标：</p>
+<pre><code class="bash">H               将光标移到屏幕上的起始行（或最上行）；
+M               将光标移到屏幕中间；
+L               将光标移到屏幕最后一行。</code></pre>
+<p>同样需要注意字母的大小写。<code>H</code> 和 <code>L</code> 命令还可以加数字。如 <code>2H</code> 表示将光标移到屏幕的第２行，<code>3L</code> 表示将光标移到屏幕的倒数第3行。<br> 当将光标移到所要的行是，<strong>行内移动</strong> 光标可以用下面的命令来实现：</p>
+<pre><code class="bash">w               右移光标到下一个字的开头；
+e               右移光标到一个字的末尾；
+b               左移光标到前一个字的开头；
+0               数字０，左移光标到本行的开始；
+$               右移光标，到本行的末尾；
+^               移动光标，到本行的第一个非空字符。</code></pre>
+<h3 id="搜索匹配"><a href="#搜索匹配" class="headerlink" title="搜索匹配"></a>搜索匹配</h3><p>和许多先进的编辑器一样，Vim 提供了强大的字符串搜索功能。要查找文件中指定字或短语出现的位置，可以用Vim直接进行搜索，而不必以手工方式进行。</p>
+<pre><code class="bash">/str1               正向搜索字符串 str1,并在找到指定字符串后，将光标停到该字符串的开头；
+n                   继续搜索，找出 str1 字符串下次出现的位置；
+N                   继续搜索，找出 str1 字符串上一次出现的位置；
+?str2               反向搜索字符串 str2,并在找到指定字符串后，将光标停到该字符串的开头。</code></pre>
+<p>无论搜索方向如何，当到达文件末尾或开头时，搜索工作会循环到文件的另一端并继续执行。<br> Vim中执行搜索匹配最强大的地方是结合 <strong>正则表达式</strong> 来搜索，后续将会介绍。</p>
+<h3 id="替换和删除"><a href="#替换和删除" class="headerlink" title="替换和删除"></a>替换和删除</h3><p>Vim常规的删除命令是 <code>d</code>、 <code>x</code> (前者删除 <code>行</code> ，后者删除 <code>字符</code> ),结合Vim的其他特性可以实现基础的删除功能。将光标定位于文件内指定位置后，可以用其他字符来替换光标所指向的字符，或从当前光标位置删除一个或多个字符或一行、多行。例如：</p>
+<pre><code class="bash">rc               用 c 替换光标所指向的当前字符；
+nrc              用 c 替换光标所指向的前 n 个字符；
+x                删除光标所指向的当前字符；
+nx               删除光标所指向的前 n 个字符；
+dw               删除光标右侧的字；
+ndw              删除光标右侧的 n 个字；
+db               删除光标左侧的字；
+ndb              删除光标左侧的 n 个字；
+dd               删除光标所在行，并去除空隙；
+ndd              删除（剪切） n 行内容，并去除空隙；
+d$               从当前光标起删除字符直到行的结束；
+d0               从当前光标起删除字符直到行的开始；
+J                删除本行的回车符（CR），并和下一行合并。</code></pre>
+<p>Vim常规的替换命令有 <code>c</code> 和 <code>s</code> ，结合Vim的其他特性可以实现基础的替换功能，不过替换命令执行以后，通常会由 <strong>编辑模式</strong> 进入 <strong>插入模式</strong> ：</p>
+<pre><code class="bash">s               用输入的正文替换光标所指向的字符；
+S               删除当前行，并进入插入模式；
+ns              用输入的正文替换光标右侧 n 个字符；
+nS              删除当前行在内的 n 行，并进入插入模式；
+cw              用输入的正文替换光标右侧的字；
+cW              用输入的正文替换从光标到行尾的所有字符（同 c$ )；
+ncw             用输入的正文替换光标右侧的 n 个字；
+cb              用输入的正文替换光标左侧的字；
+ncb             用输入的正文替换光标左侧的 n 个字；
+cd              用输入的正文替换光标的所在行；
+ncd             用输入的正文替换光标下面的 n 行；
+c$              用输入的正文替换从光标开始到本行末尾的所有字符；
+c0              用输入的正文替换从本行开头到光标的所有字符。</code></pre>
+<h3 id="复制粘贴"><a href="#复制粘贴" class="headerlink" title="复制粘贴"></a>复制粘贴</h3><p>从正文中删除的内容（如字符、字或行）并没有真正丢失，而是被剪切并复制到了一个内存缓冲区中。用户可将其粘贴到正文中的指定位置。完成这一操作的命令是：</p>
+<pre><code class="bash">p               小写字母 p，将缓冲区的内容粘贴到光标的后面；
+P               大写字母 P，将缓冲区的内容粘贴到光标的前面。</code></pre>
+<p>如果缓冲区的内容是字符或字，直接粘贴在光标的前面或后面；如果缓冲区的内容为整行正文，执行上述粘贴命令将会粘贴在当前光标所在行的上一行或下一行。<br> 注意上述两个命令中字母的大小写。Vim 编辑器经常以一对大、小写字母（如 <code>p</code> 和 <code>P</code>）来提供一对相似的功能。通常，小写命令在光标的后面进行操作，大写命令在光标的前面进行操作。</p>
+<p>有时需要复制一段正文到新位置，同时保留原有位置的内容。这种情况下，首先应当把指定内容复制（而不是剪切）到内存缓冲区。完成这一操作的命令是：</p>
+<pre><code class="bash">yy              复制当前行到内存缓冲区；
+nyy             复制 n 行内容到内存缓冲区；
+5yy             复制 5 行内容到内存缓冲区；
+“+y             复制 1 行到操作系统的粘贴板；
+“+nyy           复制 n 行到操作系统的粘贴板。</code></pre>
+<h3 id="撤销和重复"><a href="#撤销和重复" class="headerlink" title="撤销和重复"></a>撤销和重复</h3><p>在编辑文档的过程中，为消除某个错误的编辑命令造成的后果，可以用撤消命令。另外，如果用户希望在新的光标位置重复前面执行过的编辑命令，可用重复命令。</p>
+<pre><code class="bash">u               撤消前一条命令的结果；
+.               重复最后一条修改正文的命令。</code></pre>
+<h2 id="插入模式"><a href="#插入模式" class="headerlink" title="插入模式"></a>插入模式</h2><h3 id="进入插入模式"><a href="#进入插入模式" class="headerlink" title="进入插入模式"></a>进入插入模式</h3><p>在编辑模式下正确定位光标之后，可用以下命令切换到插入模式：</p>
+<pre><code class="bash">i           在光标左侧插入正文
+a           在光标右侧插入正文
+o           在光标所在行的下一行增添新行
+O           在光标所在行的上一行增添新行
+I           在光标所在行的开头插入
+A           在光标所在行的末尾插入</code></pre>
+<h3 id="退出插入模式"><a href="#退出插入模式" class="headerlink" title="退出插入模式"></a>退出插入模式</h3><p>退出插入模式的方法是，按 <code>ESC</code> 键或组合键 <code>Ctrl+[</code> ，退出插入模式之后，将会进入编辑模式 。</p>
+<h2 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h2><p>在Vim的命令模式下，可以使用复杂的命令。在编辑模式下键入 <code>:</code> ，光标就跳到屏幕最后一行，并在那里显示冒号，此时已进入命令模式。命令模式又称 <strong>末行模式</strong> ，用户输入的内容均显示在屏幕的最后一行，按回车键，Vim 执行命令。</p>
+<h3 id="打开、保存、退出"><a href="#打开、保存、退出" class="headerlink" title="打开、保存、退出"></a>打开、保存、退出</h3><p>在已经启动的Vim中打开一个文件需要用 <code>:e</code> 命令：</p>
+<pre><code class="ruby">:e [DIR]</code></pre>
+<p>保存当前编辑的文件需要用 <code>:w</code>命令：</p>
+<pre><code class="css">:w</code></pre>
+<p>将当前文件另存为 <code>file</code> 则：</p>
+<pre><code class="css">:w file</code></pre>
+<p>在编辑模式下可以用 <code>ZZ</code> 命令退出Vim编辑程序，该命令保存对正文所作的修改，覆盖原始文件。如果只需要退出编辑程序，而不打算保存编辑的内容，可用下面的命令：</p>
+<pre><code class="undefined">: q             在未作修改的情况下退出；
+: q!            放弃所有修改，退出编辑程序。</code></pre>
+<p>保存并退出则可以将两条命令结合起来使用（注意命令顺序，先保存，后退出）：</p>
+<pre><code class="css">:wq</code></pre>
+<h3 id="行号与文件"><a href="#行号与文件" class="headerlink" title="行号与文件"></a>行号与文件</h3><p>编辑中的每一行正文都有自己的行号，用下列命令可以移动光标到指定行（效果与 <strong>编辑模式</strong> 下的 <code>ngg</code> 或 <code>nG</code> 相同）：</p>
+<pre><code class="undefined">:n             将光标移到第 n 行</code></pre>
+<p>命令模式下，可以规定命令操作的行号范围。数值用来指定绝对行号；字符“.”表示光标所在行的行号；字符符“$”表示正文最后一行的行号；简单的表达式，例如“.+5”表示当前行往下的第 5 行。例如：</p>
+<pre><code class="ruby">:n                  将光标移到第 n 行
+:nw file            将第 n 行写入 file 文件
+:a,bw file          将第 a 行至第 b 行写入 file 文件
+:n,.w file          将第 n 行至当前行写入 file 文件
+:.,$w file          将当前行至最后一行写入 file 文件
+:.,.+nw file        从当前行开始将 n+1 行内容写入 file 文件
+:1,$w file          将所有内容写入 file 文件，相当于 :w file 命令</code></pre>
+<p>在命令模式下，允许从文件中读取正文，或将正文写入文件。例如：</p>
+<pre><code class="css">:w file         将编辑的内容写入 file 文件，保持原有文件的内容不变
+:r file         读取 file 文件的内容，插入当前光标所在行的后面
+:e file         编辑新文件 file 代替原有内容
+:f file         将当前文件重命名为 file
+:f              打印当前文件名称和状态，如文件的行数、光标所在的行号等</code></pre>
+<h3 id="字符串搜索"><a href="#字符串搜索" class="headerlink" title="字符串搜索"></a>字符串搜索</h3><p>在 <strong>编辑模式</strong> 讲过字符串的搜索，此处的 <strong>命令模式</strong> 也可以进行字符串搜索，给出一个字符串，可以通过搜索该字符串到达指定行。如果希望进行正向搜索，将待搜索的字符串置于两个 <code>/</code> 之间；如果希望反向搜索，则将字符串放在两个 <code>?</code> 之间。例如：</p>
+<pre><code class="ruby">:/str/                  正向搜索，将光标移到下一个包含字符串 str 的行
+:?str?                  反向搜索，将光标移到上一个包含字符串 str 的行
+:/str/w file            正向搜索，并将第一个包含字符串 str 的行写入 file 文件
+:/str1/,/str2/w file    正向搜索，并将包含字符串 str1 的行至包含字符串 str2 的行写入 file 文件</code></pre>
+<h3 id="Vim中的正则表达式"><a href="#Vim中的正则表达式" class="headerlink" title="Vim中的正则表达式"></a>Vim中的正则表达式</h3><p>当给Vim指定搜索字符串时，可以包含具有特殊含义的字符。包含这些特殊字符的搜索字符串称为正则表达式（Regular Expressions）。下表给出大多数特殊字符和它们的含义：</p>
+<pre><code class="rust">^               放在字符串前面，匹配行首的字；
+$               放在字符串后面，匹配行尾的字；
+\&lt;             匹配一个字的字头；
+\&gt;             匹配一个字的字尾；
+.               匹配任何单个正文字符；
+[str]           匹配 str 中的任何单个字符；
+[^str]         匹配任何不在 str 中的单个字符；
+[a-b]           匹配 a 到 b 之间的任一字符；
+*               匹配前一个字符的 0 次或多次出现；
+\               转义后面的字符。</code></pre>
+<p>简单介绍这么多，正则表达式知识可以参考<a target="_blank" rel="noopener" href="http://deerchao.net/tutorials/regex/regex.htm">《正则表达式30分钟入门》</a>另外，进阶的Vim正则表达式还有对Magic 模式的介绍，可以参考<a target="_blank" rel="noopener" href="http://blog.csdn.net/salc3k/article/details/8222397">《Vim正则表达式详解》</a></p>
+<h3 id="正文替换"><a href="#正文替换" class="headerlink" title="正文替换"></a>正文替换</h3><p>利用 <code>:s</code> 命令可以实现字符串的替换。具体的用法包括：</p>
+<pre><code class="ruby">:%s/str1/str2/      用字符串 str2 替换行中首次出现的字符串 str1
+:s/str1/str2/g      用字符串 str2 替换行中所有出现的字符串 str1
+:g/str1/s//str2/g   用字符串 str2 替换正文中所有出现的字符串 str1
+:m,ns/str1/str2/g   将从m行到n行的str1替换成str2</code></pre>
+<p>从上述替换命令可以看到：</p>
+<ol>
+<li><code>g</code> 放在命令末尾，表示对搜索字符串的每次出现进行替换,不止匹配每行中的第一次出现；不加 <code>g</code>，表示只对搜索字符串的首次出现进行替换；<code>g</code> 放在命令开头，表示对正文中所有包含搜索字符串的行进行替换操作;</li>
+<li><code>s</code> 表示后面跟着一串替换的命令；</li>
+<li><code>%</code> 表示替换范围是所有行，即全文。</li>
+</ol>
+<p>另外一个实用的命令，在Vim中统计当前文件中字符串 <code>str</code> 出现的次数，可用替换命令的变形：</p>
+<pre><code class="ruby">:%s/str/&amp;/gn</code></pre>
+<h3 id="删除正文"><a href="#删除正文" class="headerlink" title="删除正文"></a>删除正文</h3><p>在命令模式下，同样可以删除正文中的内容。例如：</p>
+<pre><code class="ruby">:d                              删除光标所在行
+:3d                             删除 3 行
+:.,$d                           删除当前行至正文的末尾
+:/str1/,/str2/d                 删除从字符串 str1 到 str2 的所有行
+:g/^\(.*\)$\n\1$/d              删除连续相同的行，保留最后一行
+:g/\%(^\1$\n\)\@&lt;=\(.*\)$/d     删除连续相同的行，保留最开始一行
+:g/^\s*$\n\s*$/d                删除连续多个空行，只保留一行空行
+:n,ms/^#//g                     删除n到m行开头的#注释</code></pre>
+<p>总之，Vim的初级删除命令是用 <code>d</code> ，高级删除命令可以用 <strong>正则替换</strong> 的方式执行。</p>
+<h3 id="恢复文件"><a href="#恢复文件" class="headerlink" title="恢复文件"></a>恢复文件</h3><p>Vim 在编辑某个文件时，会另外生成一个临时文件，这个文件的名称通常以 <code>.</code> 开头，并以 <code>.swp</code> 结尾。Vim 在正常退出时，该文件被删除，若意外退出，而没有保存文件的最新修改内容，则可以使用恢复命令 <code>:recover</code> 来恢复文件，也可以在启动Vim时用 <code>-r</code> 选项。</p>
+<h3 id="选项设置"><a href="#选项设置" class="headerlink" title="选项设置"></a>选项设置</h3><p>为控制不同的编辑功能，Vim 提供了很多内部选项。利用 <code>:set</code> 命令可以设置选项。基本语法为：</p>
+<pre><code class="bash">:set option         设置选项 option</code></pre>
+<p>常见的功能选项包括：</p>
+<pre><code class="tsx">autoindent      设置该选项，则正文自动缩进
+ignorecase      设置该选项，则忽略规则表达式中大小写字母的区别
+number          设置该选项，则显示正文行号
+ruler           设置该选项，则在屏幕底部显示光标所在行、列的位置
+tabstop         设置按 Tab 键跳过的空格数。例如 :set tabstop=n，n 默认值为 8
+mk              将选项保存在当前目录的 .exrc 文件中</code></pre>
+<h3 id="Shell切换"><a href="#Shell切换" class="headerlink" title="Shell切换"></a>Shell切换</h3><p>当处于编辑的对话过程中时，可能需要执行一些Linux命令。如果需要保存当前的结果，退出编辑程序，再执行所需的Linux命令，然后再回头继续编辑过程，就显得十分累赘。如果能在编辑的环境中运行Linux命令就要省事得多。在Vim中，可以用下面的命令来做到这一点：</p>
+<pre><code class="undefined">:!shell_command       执行完 shell_command 后回到Vim</code></pre>
+<p>这称为Shell切换。它允许执行任何可以在标准的Shell提示符下执行的命令。当这条命令执行完毕，控制返回给编辑程序。又可以继续编辑对话过程。</p>
+<h3 id="分屏与标签页"><a href="#分屏与标签页" class="headerlink" title="分屏与标签页"></a>分屏与标签页</h3><h4 id="分屏"><a href="#分屏" class="headerlink" title="分屏"></a>分屏</h4><p>普通的Vim模式，打开一个Vim程序只能查看一个文件，如果想同时查看多个文件，就需要用到Vim分屏与标签页功能。<br> Vim的分屏，主要有两种方式：上下分屏（水平分屏）和左右分屏（垂直分屏），在命令模式分别敲入以下命令即可：</p>
+<pre><code class="css">:split（可用缩写 :sp）            上下分屏；
+:vsplit（可用缩写 :vsp）          左右分屏。</code></pre>
+<p>另外，也可以在终端里启动vim时就开启分屏操作：</p>
+<pre><code class="csharp">vim -On file1 file2...   打开 file1 和 file2 ，垂直分屏
+vim -on file1 file2...   打开 file1 和 file2 ，水平分屏</code></pre>
+<p>理论上，一个Vim窗口，可以分为多个Vim屏幕，切换屏幕需要用键盘快捷键，命令分别有：</p>
+<pre><code class="undefined">Ctrl+w+h            切换到当前分屏的左边一屏；
+Ctrl+w+l            切换到当前分屏的右边一屏；
+Ctrl+w+j            切换到当前分屏的下方一屏；
+Ctrl+w+k            切换到当前分屏的上方一屏。</code></pre>
+<p>另外，也可以直接按 <code>Ctrl+w+w</code> 来跳转分屏，不过跳转方向则是在当前Vim窗口所有分屏中，按照<code>逆时针</code>方向跳转。<br> 下面是改变尺寸的一些操作，主要是高度，对于宽度你可以使用 <code>Ctrl+W &lt;</code> 或是 <code>Ctrl+W &gt;</code> ，但这可能需要最新的版本才支持。</p>
+<pre><code class="undefined">Ctrl+W =            让所有的屏都有一样的高度；
+Ctrl+W +            增加高度；
+Ctrl+W -            减少高度。</code></pre>
+<h4 id="标签页"><a href="#标签页" class="headerlink" title="标签页"></a>标签页</h4><p>Vim的标签（Tab）页，类似浏览器的标签页，一个标签页打开一个Vim的窗口，一个Vim的窗口可以支持N个分屏。<br> 在Vim中新建一个标签的命令是：</p>
+<pre><code class="css">:tabnew</code></pre>
+<p>如果要在新建标签页的同时打开一个文件，则可以在命令后面直接附带文件路径：</p>
+<pre><code class="css">:tabnew filename</code></pre>
+<p>Vim中的每个标签页有一个唯一的数字序号，第一个标签页的序号是<code>0</code>，从左向右依次加一。关于标签页有一系列操作命令，简介如下（<code>[]</code>为缩/全写）：</p>
+<pre><code class="ruby">:tN[ext]                跳转到上一个匹配的标签
+:tabN[ext]              跳到上一个标签页
+:tabc[lose]             关闭当前标签页
+:tabdo                  为每个标签页执行命令
+:tabe[dit]              在新标签页里编辑文件
+:tabf[ind]              寻找path里的文件，在新标签页里编辑之
+:tabfir[st]             转到第一个标签页
+:tabl[ast]              转到最后一个标签页
+:tabm[ove] N            把标签页移到序号为N位置
+:tabnew [filename]      在新标签页里编辑文件
+:tabn[ext]              转到下一个标签页
+:tabo[nly]              关闭所有除了当前标签页以外的所有标签页
+:tabp[revious]          转到前一个标签页
+:tabr[ewind]            转到第一个标签页</code></pre>
+<h3 id="与外部工具集成"><a href="#与外部工具集成" class="headerlink" title="与外部工具集成"></a>与外部工具集成</h3><p>Vim可以与许多外部程序集成，功能十分强大，比如 <code>diff</code> , <code>ctags</code> , <code>sort</code> , <code>xxd</code> 等等，下面选取几个简单介绍一下。</p>
+<h4 id="diff"><a href="#diff" class="headerlink" title="diff"></a>diff</h4><p>Linux命令 <code>diff</code> 用来对比两个文件的内容，不过对比结果显示在终端里，可读性比较差。结合Vim，在终端里可以直接输入命令 <code>vimdiff</code>，后面跟两个文件名作为参数：</p>
+<pre><code class="undefined">vimdiff file1 file2</code></pre>
+<p>即可在Vim里分屏显示两个文件内容的对比结果，对文件内容差异部分进行高亮标记，还可以同步滚动两个文件内容，更可以实时修改文件内容，方便程度和用户体验大大提高。如果直接给 <code>-d</code> 选项是一样的：</p>
+<pre><code class="css">vim -d file1 file2</code></pre>
+<p>除了在终端里开启vimdiff 功能，也可以在打开Vim后，在Vim的命令模式输入相关命令来开启 <code>vimdiff</code> 功能：</p>
+<pre><code class="css">:diffsplit filename</code></pre>
+<p>如果你现在已经开启了一个文件，想Vim帮你区分你的文件跟 <code>abc.txt</code> 有什么区别，可以在Vim中用 <code>diffsplit</code> 的方式打开第二个文件，这个时 候Vim会用 <code>split</code>（分<strong>上下</strong>两屏）的方式开启第二个文件，并且通过颜色，<code>fold</code>来显示两个文件的区别<br> 这样Vim就会用颜色帮你区分开2个文件的区别。如果文件比较大（源码）重复的部分会帮你折叠起来。</p>
+<pre><code class="css">:diffpatch filename </code></pre>
+<p>通过 <code>:diffpatch</code> 你的patch的文件名，就可以以当前文件加上你的patch来显示。vim会split一个新的屏，显示patch后的信息并且用颜色标明区别。<br> 如果不喜欢上下对比，喜欢左右（比较符合视觉）可以在前面加 <code>vert</code> ，例如：</p>
+<pre><code class="css">:vert diffsplit abc.txt
+:vert diffpatch abc.txt</code></pre>
+<p>看完diff，用 <code>:only</code> 回到原本编辑的文件，觉得diff的讨厌颜色还是在哪里，只要用 <code>:diffoff</code> 关闭就好了。<br> 还有个常用的diff中的就是 <code>:diffu</code> ,这个是 <code>:diffupdate</code> 的简写，更新的时候用。</p>
+<h4 id="sort"><a href="#sort" class="headerlink" title="sort"></a>sort</h4><p>Linux命令 <code>sort</code> 可以对文本内容进行按行中的字符比较、排序，但在终端里使用 <code>sort</code> 命令处理文件，并不能实时查看文件内容。具体用法请自查手册。</p>
+<h4 id="xxd"><a href="#xxd" class="headerlink" title="xxd"></a>xxd</h4><p><code>vim+xxd</code> 是Linux下最常用的二进制文本编辑工具，<code>xxd</code>其实是Vim外部的一个转换程序，随Vim一起发布，在Vim里调用它来编辑二进制文本非常方便。<br> 首先以二进制模式在终端里打开一个文件：</p>
+<pre><code class="undefined">vim -b filename</code></pre>
+<p>Vim 的 <code>-b</code> 选项是告诉 Vim 打开的是一个二进制文件，不指定的话，会在后面加上 <code>0x0a</code> ，即一个换行符。<br> 然后在Vim的命令模式下键入：</p>
+<pre><code class="bash">:%!xxd</code></pre>
+<p>即可看到二进制模式显示出来的文本。然后就可以在二进制模式下编辑该文件，编辑后保存，然后用下面命令从二进制模式转换到普通模式：</p>
+<pre><code class="bash">:%!xxd -r</code></pre>
+<p>另外，也可以调整二进制的显示模式，默认是 <strong>2</strong> 个字节为一组，可以通过 <code>g</code> 参数调整每组字节数：</p>
+<pre><code class="bash">:%!xxd -g 1         表示每1个字节为1组 
+:%!xxd -g 2         表示每2个字节为1组(默认) 
+:%!xxd -g 4         表示每4个字节为1组</code></pre>
+
+    
+<br /><hr />
+<img src="/img/end-heart.gif">
+<br />
+<blockquote>
+	<br />
+	本文作者： cieu
+	<br /><br />
+    本文链接： http://yz-hs.tk/87ce55d908bd/
+    <br /><br />
+    版权声明： 本博客所有文章除特别声明外，均允许规范转载。转载请注明出处！当然也可对文章出处进行考证，在下方评论区评论！
+    <br /><br />
+</blockquote>
+<br />
+<div class="end-post-meta">
+	
+		<span><a href="/tags/转载"><i class="fa fa-tag" aria-hidden="true"></i> 转载</a></span>
+	
+		<span><a href="/tags/其他"><i class="fa fa-tag" aria-hidden="true"></i> 其他</a></span>
+	
+</div>
+<div class="end-post-meta">
+	<span><i class="fa fa-refresh" aria-hidden="true"></i> 最后更新： 2020 年 02 月 14 日</span>
+</div>
+
+  </div>
+  
+    <div class="prevnext">
+  	  
+  	  	  <a class="prev" href="/93e27e2143e8/">上一篇</a>
+  	  
+  		  <a class="next" href="/02d42ea552b4/">下一篇</a>
+  	  
+    </div>
+  
+  <div class="comments">
+  <div class="inner">
+	
+        <div id="gitalk-container"></div>
+        <script>
+          var gitalk = new Gitalk({
+                         clientID: 'eee39c8ef2391d17d829',
+                         clientSecret: 'c9e42cc511159cc40a9afae6755952c55f098df5',
+                         repo: 'no-code',
+                         owner: 'yz-hs',
+                         admin: ['yz-hs']
+                      })
+          gitalk.render('gitalk-container')
+        </script>
+    
+  </div>
+</div>
+</div></div>
+    				<div class="toolbar">
+  <div class="toolbar-tab-page">
+    <div class="tb-tabTitle">
+     <ul>
+       <li class="tb-current"><i class="fa fa-random" aria-hidden="true"></i></li>
+       <li><i class="fa fa-refresh" aria-hidden="true"></i></li>
+       <li><i class="fa fa-briefcase" aria-hidden="true"></i></li>
+     </ul>
+    </div>
+    <div class="tb-tabContent">
+      <div>
+<!--  1-tab  -->
+<div class="title">随机文章<span class="sidetitle">回味旧文</span></div>
+<div class="item"><a class="post-link" href="/646ebb390d96/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 一些树形DP题目</a><hr class="separator" /><a class="post-link" href="/32caf6cc933e/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 2020新年贺词</a><hr class="separator" /><a class="post-link" href="/5edc4ae0f30b/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-J1游记</a><hr class="separator" /><a class="post-link" href="/7a4ad76933ea/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> CSP-J2游记</a><hr class="separator" /><a class="post-link" href="/7cb3b671c76a/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> HMCL启动器教程</a><hr class="separator" /><a class="post-link" href="/ec065edc5f19/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> NOIP 2020游记</a></div>
+<!--  END 1-tab  -->
+      </div>
+      <div class="tb-hide">
+<!--  2-tab  -->
+<div class="title">最新更新<span class="sidetitle">旧文章的更新</span></div>
+<div class="item"><a class="post-link" href="/646ebb390d96/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 一些树形DP题目</a><hr class="separator" /><a class="post-link" href="/2cdb27ff0193/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 求方案类背包问题题解I</a><hr class="separator" /><a class="post-link" href="/79fe9aa09b34/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 背包问题系列题解II</a><hr class="separator" /><a class="post-link" href="/95d87dd8d707/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 背包问题系列题解I</a><hr class="separator" /><a class="post-link" href="/4ef25f847728/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 一些状压DP题目</a><hr class="separator" /><a class="post-link" href="/6515fc8a93b1/"><i class="fa fa-file-text fa-fw fa-pull-left fa-border" aria-hidden="true" style="height: 30px;border: none;"></i> 《幽默报》</a></div>
+<!--  END 2-tab  -->
+      </div>
+      <div class="tb-hide">
+<!--  3-tab  -->
+  <div class="title">其他<a href="javascript:document.body.contentEditable='true';document.designMode='on';void(0);" title="彩蛋：点击，可以编辑本页面！不过，不要利用这个功能来制造虚假信息！" target="_self" class="sidetitle">杂物</a></div>
+  <div class="item">
+    <div id="displaytime"><script type="text/javascript" src="/js/displaytime.js"></script></div>
+    <div id="timeprogress"></div>
+	<script>
+		var myDate = new Date();
+		var hours=myDate.getHours();
+		var minutes=myDate.getMinutes();
+		minutes=hours*60+minutes;
+		var pro=minutes/14.4;
+		var innerhtml="<div class=\"progress-con\"><div class=\"progress\" title=\"时间已过去了"+pro.toFixed(2)+"%\"style=\"width: "+pro+"%; background-color: #4caf50; color: #4caf50;\">|</div></div>"
+		document.getElementById("timeprogress").innerHTML = innerhtml;
+	</script>
+  </div>
+  <div class="item">
+    <div id="hitokoto">cieu说，除了她以外的人都很强！嘤嘤嘤~~</div>
+    <script>
+    fetch('https://v1.hitokoto.cn')
+      .then(function (res){
+        return res.json();
+      })
+      .then(function (data) {
+        var hitokoto = document.getElementById('hitokoto');
+        hitokoto.innerText = '\t' + data.hitokoto + '\n' +'\n' +'from ' + data.from ;
+      })
+      .catch(function (err) {
+        console.error(err);
+      })
+    </script>
+  </div>
+<!--  END 3-tab  -->
+      </div>
+    </div>
+  </div>
+  <div class="item">
+  	<div class="title">博客信息</div>
+    <div class="list-group">
+  	  <div class="list-group-item"><i class="fa fa-file fa-fw" aria-hidden="true"></i>&nbsp;文章数目<div class="badge">85</div></div>
+  	  <div class="list-group-item"><i class="fa fa-refresh fa-fw" aria-hidden="true"></i>&nbsp;最近更新<div class="badge">02-14</div></div>
+  	  <div class="list-group-item"><i class="fa fa-user-o fa-fw" aria-hidden="true"></i>&nbsp;本站作者<div class="badge">cieu</div></div>
+  	  <div class="list-group-item"><i class="fa fa-font fa-fw" aria-hidden="true"></i>&nbsp;本站字数<div class="badge">171.7k<!--npm i hexo-wordcount --save--></span></div></div>
+    </div>
+  </div>
+  <!-- 标签可能太多，影响目录 -->
+    <div class="post-toc">
+      <div class="title">文章目录</div>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-text">使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5%E7%BB%88%E7%AB%AF"><span class="toc-text">进入终端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95"><span class="toc-text">目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E7%9A%84%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="toc-text">文件操作的相关命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ls"><span class="toc-text">ls</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cd"><span class="toc-text">cd</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mkdir"><span class="toc-text">mkdir</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mv%E4%B8%8Ecp"><span class="toc-text">mv与cp</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rm"><span class="toc-text">rm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pwd"><span class="toc-text">pwd</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8B%E7%BC%96%E8%BE%91%EF%BC%8C%E7%BC%96%E8%AF%91%EF%BC%8C%E8%BF%90%E8%A1%8C%E7%A8%8B%E5%BA%8F"><span class="toc-text">命令行下编辑，编译，运行程序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E6%8B%8D"><span class="toc-text">对拍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#bat%E8%84%9A%E6%9C%AC%E7%89%88"><span class="toc-text">bat脚本版</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#C-%E7%89%88"><span class="toc-text">C++版</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Shell%E8%84%9A%E6%9C%AC%E7%89%88"><span class="toc-text">Shell脚本版</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#vim"><span class="toc-text">vim</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-text">配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F"><span class="toc-text">编辑模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%B3%E8%BD%AC"><span class="toc-text">跳转</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%9C%E7%B4%A2%E5%8C%B9%E9%85%8D"><span class="toc-text">搜索匹配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%BF%E6%8D%A2%E5%92%8C%E5%88%A0%E9%99%A4"><span class="toc-text">替换和删除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E5%88%B6%E7%B2%98%E8%B4%B4"><span class="toc-text">复制粘贴</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%92%A4%E9%94%80%E5%92%8C%E9%87%8D%E5%A4%8D"><span class="toc-text">撤销和重复</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E6%A8%A1%E5%BC%8F"><span class="toc-text">插入模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5%E6%8F%92%E5%85%A5%E6%A8%A1%E5%BC%8F"><span class="toc-text">进入插入模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%80%E5%87%BA%E6%8F%92%E5%85%A5%E6%A8%A1%E5%BC%8F"><span class="toc-text">退出插入模式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F"><span class="toc-text">命令模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%93%E5%BC%80%E3%80%81%E4%BF%9D%E5%AD%98%E3%80%81%E9%80%80%E5%87%BA"><span class="toc-text">打开、保存、退出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E5%8F%B7%E4%B8%8E%E6%96%87%E4%BB%B6"><span class="toc-text">行号与文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%90%9C%E7%B4%A2"><span class="toc-text">字符串搜索</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Vim%E4%B8%AD%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-text">Vim中的正则表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E6%96%87%E6%9B%BF%E6%8D%A2"><span class="toc-text">正文替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E6%AD%A3%E6%96%87"><span class="toc-text">删除正文</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%81%A2%E5%A4%8D%E6%96%87%E4%BB%B6"><span class="toc-text">恢复文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%89%E9%A1%B9%E8%AE%BE%E7%BD%AE"><span class="toc-text">选项设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Shell%E5%88%87%E6%8D%A2"><span class="toc-text">Shell切换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%B1%8F%E4%B8%8E%E6%A0%87%E7%AD%BE%E9%A1%B5"><span class="toc-text">分屏与标签页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8E%E5%A4%96%E9%83%A8%E5%B7%A5%E5%85%B7%E9%9B%86%E6%88%90"><span class="toc-text">与外部工具集成</span></a></li></ol></li></ol></li></ol>
+    </div>
+   
+  <script>
+    $(function(){
+      var ali = $('.tb-tabTitle>ul>li');
+      var aDiv = $('.tb-tabContent>div');
+      var timeId = null;
+      ali.click(function(){
+        var _this = $(this);
+        timeId = setTimeout(function(){
+          _this.addClass('tb-current').siblings().removeClass('tb-current');
+          var index = _this.index();
+          aDiv.eq(index).show().siblings().hide();
+        });
+      });
+  });
+  </script>
+</div>
+    			</div>
+    		</div>
+    		<div class="footer">
+  <p class="text-left">Copyright ©2018-2020 cieu. All rights reserved.</p>
+  <p class="text-right">Theme is <a target="_blank" rel="noopener" href="https://github.com/yz-hs/yzpheme">yzpheme</a>,by cieu.</p>
+</div>
+
+
+<!-- 
+!#                                                 #!
+!#                     MathJax                     #!
+!#                                                 #!
+-->
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": { 
+        preferredFont: "TeX", 
+        availableFonts: ["STIX","TeX"], 
+        linebreaks: { automatic:true }, 
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) 
+    },
+    tex2jax: { 
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ], 
+        processEscapes: true, 
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {  
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, 
+        Macros: { href: "{}" } 
+    },
+    messageStyle: "none"
+    }); 
+</script>
+
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+<!-- 
+!#                                                 #!
+!#                 首次访问reverse                  #!
+!#                                                 #!
+-->
+
+
+<script>  
+if (!Readdata("fool")) {
+    document.body.classList.add('reverse-coloregg');
+    window.setTimeout(function () {
+        Savedata("fool", "fool");
+        swal("你可以正常访问 Blog 啦！你还可以通过删除 Cookie 再体验一次！呵呵^_^");
+        document.body.classList.remove('reverse-coloregg');  
+    }, 10000);
+}  
+   
+function Savedata(key, data) {  
+    key = 'yz_' + key;  
+    data = JSON.stringify(data);  
+    if (window.localStorage) {  
+        localStorage.setItem(key, data);  
+    }  
+}  
+  
+function Readdata(key) {  
+    if (!window.localStorage) return '';  
+    key = 'yz_' + key;  
+    return JSON.parse(localStorage.getItem(key));  
+}  
+</script>  
+<style>  
+.reverse-coloregg {  
+    -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);  
+    -moz-transform: matrix(-1, 0, 0, 1, 0, 0);  
+    transform: matrix(-1, 0, 0, 1, 0, 0);  
+    -o-transform: skew(0deg, 180deg) scale(-1, 1);  
+    filter:progid: DXImageTransform.Microsoft.BasicImage(mirror=1); 
+}  
+
+/*本部分代码来自 https://mkblog.cn/1469/*/
+</style>  
+
+
+
+<!-- 
+!#                                                 #!
+!#                  看板圣诞老人                    #!
+!#                                                 #!
+-->
+
+
+
+
+<a class="santa-container" id="santa-colored-egg">
+  <div class="santa" onclick="santacoloredegg()">
+    <div class="santa-body">
+        <div class="santa-head">
+            <div class="santa-ear"></div>
+            <div class="santa-ear"></div>
+            <div class="santa-hat"></div>
+            <div class="santa-eye"></div>
+            <div class="santa-eye"></div>
+            <div class="santa-nose"></div>
+            <div class="santa-mouth"></div>
+        </div>
+    </div>
+  </div>
+</a>
+
+<script type="text/javascript">
+	function santacoloredegg() {
+		document.getElementById("santa-colored-egg").innerHTML = 
+		"<div class=\"santa\" onclick=\"santaremove()\">"+
+		"<div class=\"santa-body\" style=\"font-size: 500px;\">"+
+		"<div class=\"santa-head\">"+
+		"<div class=\"santa-ear\"></div>"+
+		"<div class=\"santa-ear\"></div>"+
+		"<div class=\"santa-hat\"></div>"+
+		"<div class=\"santa-eye\"></div>"+
+		"<div class=\"santa-eye\"></div>"+
+		"<div class=\"santa-nose\"></div>"+
+		"<div class=\"santa-mouth\"></div>"+
+		"</div></div></div>";
+		swal.fire("由于你触碰了圣诞老人，他快气炸了！\n快快刷新让他平静下来！\n若再触碰，他会气炸的 qwq！");
+	}
+
+	function santaremove() {
+		document.getElementById("santa-colored-egg").innerHTML = "";
+		swal.fire("圣诞老人已气炸。 R.I.P.\n同时页面效果清除一些。")
+		$("canvas").hide();
+		$("meting-js").hide();
+	}
+</script>
+
+
+
+<!-- 
+!#                                                 #!
+!#                      其他                        #!
+!#                                                 #!
+-->
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+<script type="text/javascript" src="/js/SmoothScroll.js"></script>
+<script type="text/javascript" src="/js/chaffle.min.js"></script>
+<link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  
+<script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/limonte-sweetalert2/10.12.5/sweetalert2.all.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/sketch.js/1.1/sketch.min.js"></script>
+<script type="text/javascript">
+    hljs.initHighlighting();
+    $(document).ready(function() {
+    	$('.chaffle').chaffle();
+    });
+    displaytime();
+	$(document).pjax('a[target!=_blank][pjax!="no"]', '#main-container', {fragment:'#main-container', timeout:6000});
+	$(document).on('pjax:complete', function() {
+		MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+		document.querySelectorAll('pre code').forEach((block) => {
+    		hljs.highlightBlock(block);
+    	});
+		$('.chaffle').chaffle();
+		displaytime();
+    });//pjax
+</script>
+
+
+<!-- 
+!#                                                 #!
+!#                     页面效果                     #!
+!#                                                 #!
+-->
+
+<script type="text/javascript" src="/js/binft.js"></script> <!--sidebar的“short description”的滚动效果，加入`id="#binft"`即可。-->
+
+<script type="text/javascript" src="/js/ctitle.js"></script> <!--标题改动-->
+
+<!--<script type="text/javascript" src="/js/clicklove.js"></script>--> <!--点击爱心-->
+
+<script type="text/javascript" src="/js/colored-egg.js"></script> <!--控制台输出彩蛋-->
+
+<!--<script type="text/javascript" src="/js/snow.js"></script>--> <!--前景下雪  注：与“点击烟花”冲突-->
+
+<!--<script type="text/javascript" src="/js/snow-2.js"></script>--> <!--前景下雪——样式二（其实这个版本飘什么都行）-->
+
+<!--<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 99999;pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="/js/firework.js"></script> 点击烟花-->
+
+<div id="clickCanvas" style=" position: fixed;left: 0;top: 0;z-index: 99999;pointer-events: none;"></div>
+<script type="text/javascript" src="/js/clickple.js"></script> <!--点击烟花2-->
+
+<!--<script type="text/javascript" src="/js/values.js"></script>--> <!--点击社会主义核心价值观-->
+
+<!--<script type="text/javascript" src="/js/particle.js"></script>--> <!--背景粒子-->
+
+<script type="text/javascript" src="/js/sakura.js"></script> <!--前景樱花-->
+
+<script src="/js/activate-power-mode.js"></script>
+<script>
+ POWERMODE.colorful = true; // 控制开启/开启礼花特效  
+ POWERMODE.shake = true; // 控制开启/关闭屏幕震动特效  
+ document.body.addEventListener('input', POWERMODE);
+</script> <!--文字输入特效-->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+<meting-js server="netease" type="playlist" id="2948937407" fixed="true"></meting-js> <!-- 底部播放器-->
+		</div>
+  	</body>
+</html>
