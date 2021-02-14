@@ -837,14 +837,14 @@
 
   
   <url>
-    <loc>http://yz-hs.tk/tags/%E6%B0%B4/</loc>
+    <loc>http://yz-hs.tk/tags/root/</loc>
     <lastmod>2021-02-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yz-hs.tk/tags/root/</loc>
+    <loc>http://yz-hs.tk/tags/%E6%B0%B4/</loc>
     <lastmod>2021-02-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1105,13 +1105,6 @@
 
   
   <url>
-    <loc>http://yz-hs.tk/categories/%E5%A8%B1%E4%B9%90/</loc>
-    <lastmod>2021-02-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://yz-hs.tk/categories/root/</loc>
     <lastmod>2021-02-14</lastmod>
     <changefreq>daily</changefreq>
@@ -1119,14 +1112,14 @@
   </url>
   
   <url>
-    <loc>http://yz-hs.tk/categories/OI/</loc>
+    <loc>http://yz-hs.tk/categories/%E5%A8%B1%E4%B9%90/</loc>
     <lastmod>2021-02-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yz-hs.tk/categories/%E5%A8%B1%E4%B9%90/MC/</loc>
+    <loc>http://yz-hs.tk/categories/OI/</loc>
     <lastmod>2021-02-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1141,6 +1134,13 @@
   
   <url>
     <loc>http://yz-hs.tk/categories/OI/%E4%B8%93%E9%A2%98%EF%BC%9A%E6%B8%B8%E8%AE%B0/</loc>
+    <lastmod>2021-02-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yz-hs.tk/categories/%E5%A8%B1%E4%B9%90/MC/</loc>
     <lastmod>2021-02-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
