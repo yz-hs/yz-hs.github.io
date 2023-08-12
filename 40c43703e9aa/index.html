@@ -1,0 +1,232 @@
+<!DOCTYPE html><html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"><meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no"><meta name="msvalidate.01" content="A7B4DB5A7BF5E5C6E52E34BB024D6319"><meta name="description" content="本站为 Yurchiu 用来记录 OI、笔记、感想的 Blog，欢迎来到本博客！希望我们能相互交流，共同进步～"><meta http-equiv="content-language" content="zh-cn"><title>P2239 螺旋矩阵 | Yurchiu's Blog</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js"></script><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.17/sweetalert2.all.min.js"></script><script src="https://cdn.staticfile.org/sketch.js/1.0/sketch.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/js/chaffle.min.js"></script><script src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/js/core/main.js"></script><script src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/js/core/search.js"></script><script src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/js/core/initialization.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.6/katex.min.css"><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/vs2015.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/css/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/css/colors/std.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/css/colors/white.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/css/colors/night.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/css/colors/trans.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/css/special/special.css"><link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload='this.media="all"'><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload='this.media="all"'><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Yurchiu's Blog" type="application/atom+xml"></head><body style="background-image:url(https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/img/new-bgp.jpg)"><div id="YurLoading" class="YurLoading"><div class="inner"><div class="line-wrap"><div class="line"></div></div><div class="line-wrap"><div class="line"></div></div><div class="line-wrap"><div class="line"></div></div><div class="line-wrap"><div class="line"></div></div><div class="line-wrap"><div class="line"></div></div></div></div><div class="topbar"><a onclick="topbarToggle()" class="topbar-menu" style="cursor:pointer"><i class="fa fa-bars"></i> </a><a href="/" class="topbar-title"><i class="fa fa-home"></i> Yurchiu's Blog </a><a target="_blank" rel="noopener" href="https://github.com/yz-hs" class="topbar-title"><i class="fa fa-github"></i></a></div><div id="pjax"><div class="sidebar"><div class="avatar-container"><img src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/img/new-avatar.jpg" class="avatar revolve"></div><div class="sidebar-author">Yurchiu<br><span class="mini-text">An AFO whker.</span></div><div class="sidebar-list-container"><div style="height:10px"></div><a class="list-group-item" href="/"><div><i class="fa fa-home fa-fw"></i>&nbsp; 首页</div><div class="badge"></div></a><a class="list-group-item" href="/archives/"><div><i class="fa fa-tasks fa-fw"></i>&nbsp; 归档</div><div class="badge">158</div></a><a class="list-group-item" href="/tags/"><div><i class="fa fa-tags fa-fw"></i>&nbsp; 标签</div><div class="badge">70</div></a><a class="list-group-item" href="/categories/"><div><i class="fa fa-th-large fa-fw"></i>&nbsp; 分类</div><div class="badge">13</div></a><a class="list-group-item" href="/somepage/mood/"><div><i class="fa fa-photo fa-fw"></i>&nbsp; 说说</div><div class="badge"></div></a><a class="list-group-item" href="/somepage/about/"><div><i class="fa fa-user-o fa-fw"></i>&nbsp; 关于</div><div class="badge"></div></a><a class="list-group-item" href="/somepage/chat/"><div><i class="fa fa-commenting-o fa-fw"></i>&nbsp; 留言</div><div class="badge"></div></a><a class="list-group-item" href="/somepage/link/"><div><i class="fa fa-link fa-fw"></i>&nbsp; 链接</div><div class="badge"></div></a><a class="list-group-item" href="/somepage/settings/"><div><i class="fa fa-cog fa-fw"></i>&nbsp; 设置</div><div class="badge"></div></a><div style="height:200px"></div></div><div class="sidebar-footer"><div class="item" id="back2Top" data-bs-toggle="tooltip" title="顶部"><i class="fa fa-arrow-circle-up"></i></div><div class="item" data-bs-toggle="tooltip" title="RSS"><a href="/atom.xml"><i class="fa fa-feed"></i></a></div><div class="item" data-bs-toggle="tooltip" title="搜索"><a href="/somepage/search/"><i class="fa fa-search"></i></a></div></div></div><div class="article"><div class="vertical fake-sidebar"></div><div class="vertical post"><div class="header"><h1 class="title">P2239 螺旋矩阵</h1><div class="meta"><span><i class="fa fa-user-o"></i> Yurchiu </span><span><i class="fa fa-clock-o"></i> 2019-08-23, 19:24:42</span> <span><i class="fa fa-font"></i> 2.6k</span> <span class="hideBars" onclick="hideBars()"><i class="fa fa-eye-slash"></i> 隐藏左右两栏 </span><span class="showBars" onclick="showBars()"><i class="fa fa-eye"></i> 展示左右两栏</span></div></div><div class="breadcrumb"><div class="url"><a href="/"><i class="fa fa-home"></i> 首页</a> / P2239 螺旋矩阵</div><div class="share">分享到 <a target="_blank" rel="noopener" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yz-hs.github.io/40c43703e9aa/&title=P2239 螺旋矩阵&site=https://yz-hs.github.io"><i class="fa fa-qq"></i></a></div></div><div class="post-text"><p><s>做什么螺旋矩阵，看看灌水矩阵</s></p><pre class="highlight"><code>水水水水水水水水水水水水水水水水水水灌灌灌灌灌灌灌灌灌灌灌灌灌灌灌水水水水
+水水水水水水水水水水水水水水水水灌灌灌灌灌灌灌灌灌灌灌灌灌灌灌灌灌灌水水水
+水水水水水水水水水水水灌灌灌灌水灌灌灌灌灌灌灌灌灌灌灌水水水水水水水水水水
+水水水水水水水水灌灌灌灌灌灌灌水灌灌灌水水灌灌灌灌灌水水水水水水水水水水水
+水水水灌灌灌灌灌灌灌灌灌灌灌灌水水水水水水灌灌灌灌水水水水水水水水水水水水
+水灌灌灌灌灌灌灌灌灌灌灌灌灌灌水水水水水水灌灌灌灌水水水水水水水水水水水水
+水灌灌灌灌灌灌灌灌灌灌灌灌水水水水水水水灌灌灌灌灌灌灌灌灌灌灌水水水水水水
+水灌灌灌灌灌灌灌灌灌灌灌灌水水水水水水灌灌灌灌灌灌灌灌灌灌灌灌灌灌水水水水
+水水灌灌灌灌灌灌灌灌灌灌水水水水水灌灌灌灌灌灌水水水灌灌灌灌灌灌灌水水水水
+水水水水水水水水灌灌灌灌水水水水水灌灌灌灌水水水水水水灌灌灌灌灌水水水水水
+水水水水水水水水灌灌灌灌水水水水灌灌灌灌水水灌灌水水水灌灌灌灌灌水水水水水
+水水水水水水水水灌灌灌灌水水水水灌灌灌灌水水灌灌灌灌水灌灌灌灌灌水水水水水
+水水水水水水水水灌灌灌灌水水水水灌灌灌灌水水灌灌灌灌水灌灌灌灌灌水水水水水
+水水水水水水水水灌灌灌灌水水水水灌灌灌灌水水灌灌灌水水灌灌灌灌灌水水水水水
+水水水水水水水水灌灌灌灌水水水水灌灌灌灌水水灌灌灌水水灌灌灌灌灌水水水水水
+水水水水水水水水灌灌灌灌水水水水灌灌灌灌水灌灌灌灌水水灌灌灌灌灌水水水水水
+水水水水水水水水灌灌灌灌水水水水灌灌灌灌水灌灌灌灌水水灌灌灌灌灌水水水水水
+水水水水水水水水灌灌灌灌水水水水灌灌灌灌水灌灌灌灌水水灌灌灌灌灌水水水水水
+水水水水水水水水灌灌灌灌水水水水灌灌灌灌水灌灌灌灌水水灌灌灌灌灌水水水水水
+水水水水水水水水灌灌灌灌水水水水灌灌灌水水灌灌灌灌水水灌灌灌灌灌水水水水水
+水水灌灌水水水灌灌灌灌灌水水水水灌灌灌水水灌灌灌水水水灌灌灌灌灌水水水水水
+水水灌灌灌灌灌灌灌灌灌灌水水水水水灌灌水水灌灌水水水水灌灌灌灌灌水水水水水
+水水水灌灌灌灌灌灌灌灌灌水水水水水水水水灌灌灌水水水水水灌灌灌灌水水水水水
+水水水水水灌灌灌灌灌灌灌水水水水水水水水灌灌灌水灌灌灌灌水水水水水水水水水
+水水水水水水灌灌灌灌灌灌水水水水水水水灌灌灌灌水水灌灌灌灌灌水水水水水水水
+水水水水水水水水水灌灌灌水水水水水水灌灌灌灌灌水水水灌灌灌灌灌灌灌水水水水
+水水水水水水水水水水水水水水水水灌灌灌灌灌灌水水水水水灌灌灌灌灌灌水水水水
+水水水水水水水水水水水水水水水灌灌灌灌灌灌水水水水水水灌灌灌灌灌灌灌水水水
+水水水水水水水水水水水水水水灌灌灌灌灌水水水水水水水水水灌灌灌灌灌灌水水水
+水水水水水水水水水水水水水灌灌灌灌灌水水水水水水水水水水水灌灌灌灌水水水水
+水水水水水水水水水水水水灌灌灌水水水水水水水水水水水水水水水灌灌灌水水水水
+水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水
+</code></pre><span id="more"></span><h1 id="题干"><a class="markdownIt-Anchor" href="#题干"></a> 题干</h1><p>我们先<a target="_blank" rel="noopener" href="https://www.luogu.org/problem/P2239">看题</a></p><p>题目描述<br>一个n行n列的螺旋矩阵可由如下方法生成：</p><p>从矩阵的左上角（第1行第1列）出发，初始时向右移动；如果前方是未曾经过的格子，则继续前进，否则右转；重复上述操作直至经过矩阵中所有格子。根据经过顺序，在格子中依次填入1, 2, 3, … , n,便构成了一个螺旋矩阵。</p><p>下图是一个n = 4n=4 时的螺旋矩阵。</p><pre class="highlight"><code>1     2     3     4
+12    13    14    5
+11    16    15    6
+10     9     8     7
+</code></pre><p>现给出矩阵大小n以及i和j，请你求出该矩阵中第i行第j列的数是多少。</p><p>(本题目为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2014</mn><mi>N</mi><mi>O</mi><mi>I</mi><mi>P</mi></mrow><annotation encoding="application/x-tex">2014NOIP</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.68333em;vertical-align:0"></span><span class="mord">2</span><span class="mord">0</span><span class="mord">1</span><span class="mord">4</span><span class="mord mathnormal" style="margin-right:.10903em">N</span><span class="mord mathnormal" style="margin-right:.02778em">O</span><span class="mord mathnormal" style="margin-right:.07847em">I</span><span class="mord mathnormal" style="margin-right:.13889em">P</span></span></span></span>普及T3）</p><p>输入格式<br>共一行，包含三个整数 n,i,j，每两个整数之间用一个空格隔开，分别表示矩阵大小、待求的数所在的行号和列号。</p><p>输出格式<br>一个整数，表示相应矩阵中第i行第j列的数。</p><p>数据说明</p><p>对于50%的数据，1≤n≤100;</p><p>对于100%的数据，1≤n≤30000,1≤i≤n,1≤j≤n。</p><h1 id="solution50pts"><a class="markdownIt-Anchor" href="#solution50pts"></a> Solution(50pts)</h1><p>这就是一个大<s>膜你</s>模拟</p><p>先说一下变量</p><p>n:矩阵大小</p><p>x，y:坐标</p><p>a[305][305]：模拟数组</p><p>读入与初始化：</p><pre class="highlight"><code class="cpp">cin&gt;&gt;n&gt;&gt;x&gt;&gt;y;
+<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>,j=<span class="hljs-number">1</span>,p=<span class="hljs-number">1</span>;
+a[<span class="hljs-number">1</span>][<span class="hljs-number">1</span>]=<span class="hljs-number">1</span>;	
+</code></pre><p>用两个变量指针i,j,按题意模拟即可</p><pre class="highlight"><code class="cpp"><span class="hljs-keyword">while</span>(p&lt;n*n)
+&#123;
+	<span class="hljs-keyword">while</span>(j&lt;n&amp;&amp;a[i][j+<span class="hljs-number">1</span>]==<span class="hljs-number">0</span>)
+	&#123;
+		a[i][++j]=++p;
+	&#125;
+	<span class="hljs-keyword">while</span>(i&lt;n&amp;&amp;a[i+<span class="hljs-number">1</span>][j]==<span class="hljs-number">0</span>)
+	&#123;
+		a[++i][j]=++p;
+	&#125;
+	<span class="hljs-keyword">while</span>(j&gt;<span class="hljs-number">1</span>&amp;&amp;a[i][j<span class="hljs-number">-1</span>]==<span class="hljs-number">0</span>)
+	&#123;
+		a[i][--j]=++p;
+	&#125;
+	<span class="hljs-keyword">while</span>(i&gt;<span class="hljs-number">1</span>&amp;&amp;a[i<span class="hljs-number">-1</span>][j]==<span class="hljs-number">0</span>)
+	&#123;
+		a[--i][j]=++p;
+	&#125;
+&#125;
+</code></pre><p>代码全貌：</p><pre class="highlight"><code class="cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cstdio&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cmath&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cstring&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cstdlib&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;algorithm&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;queue&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">define</span> ll long long</span>
+<span class="hljs-meta">#<span class="hljs-keyword">define</span> debug system(<span class="hljs-string">&quot;pause&quot;</span>);</span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+<span class="hljs-keyword">namespace</span> _yz
+&#123;
+	<span class="hljs-type">int</span> n,x,y,a[<span class="hljs-number">305</span>][<span class="hljs-number">305</span>]=&#123;<span class="hljs-number">0</span>&#125;;
+	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">yzmain</span><span class="hljs-params">()</span>
+	</span>&#123;
+		cin&gt;&gt;n&gt;&gt;x&gt;&gt;y;
+		<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>,j=<span class="hljs-number">1</span>,p=<span class="hljs-number">1</span>;
+		a[<span class="hljs-number">1</span>][<span class="hljs-number">1</span>]=<span class="hljs-number">1</span>;
+		<span class="hljs-keyword">while</span>(p&lt;n*n)
+		&#123;
+			<span class="hljs-keyword">while</span>(j&lt;n&amp;&amp;a[i][j+<span class="hljs-number">1</span>]==<span class="hljs-number">0</span>)
+			&#123;
+				a[i][++j]=++p;
+			&#125;
+			<span class="hljs-keyword">while</span>(i&lt;n&amp;&amp;a[i+<span class="hljs-number">1</span>][j]==<span class="hljs-number">0</span>)
+			&#123;
+				a[++i][j]=++p;
+			&#125;
+			<span class="hljs-keyword">while</span>(j&gt;<span class="hljs-number">1</span>&amp;&amp;a[i][j<span class="hljs-number">-1</span>]==<span class="hljs-number">0</span>)
+			&#123;
+				a[i][--j]=++p;
+			&#125;
+			<span class="hljs-keyword">while</span>(i&gt;<span class="hljs-number">1</span>&amp;&amp;a[i<span class="hljs-number">-1</span>][j]==<span class="hljs-number">0</span>)
+			&#123;
+				a[--i][j]=++p;
+			&#125;
+		&#125;
+		cout&lt;&lt;a[x][y];
+		
+		<span class="hljs-keyword">return</span>;
+	&#125;
+&#125;
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>&#123;
+	<span class="hljs-comment">//freopen(&quot;b.in&quot;,&quot;r&quot;,stdin);</span>
+	<span class="hljs-comment">//freopen(&quot;b.out&quot;,&quot;w&quot;,stdout);</span>
+	_yz::<span class="hljs-built_in">yzmain</span>();
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;
+</code></pre><p>50pts，剩下RE</p><p><img src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/postimg/%E8%AF%84%E6%B5%8B%E7%8A%B6%E6%80%81/re.jpg" alt="re.jpg"></p><h1 id="solution"><a class="markdownIt-Anchor" href="#solution"></a> Solution</h1><blockquote><p>对于100%的数据，1≤n≤30000,1≤i≤n,1≤j≤n。</p></blockquote><p>显然开a[30005][30005]MLE</p><p><img src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/postimg/%E8%AF%84%E6%B5%8B%E7%8A%B6%E6%80%81/mle.jpg" alt="mle.jpg"></p><p>不用数组，直接模拟也会TLE</p><p><img src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/postimg/%E8%AF%84%E6%B5%8B%E7%8A%B6%E6%80%81/tle.jpg" alt="tle.jpg"></p><p>怎么办？找规律！</p><p>先假设我们填好了一个5*5数组</p><pre class="highlight"><code>0  1  2  3  4  5
+   16 17 18 19 6
+   15 24 25 20 7
+   14 23 22 21 8
+   13 12 11 10 9
+</code></pre><p>我们珂以把它看成分层的(w,z,l)</p><pre class="highlight"><code>a1  w  w  w  w  w
+    w1 z  z  z  w
+    w  z1 l  z  w
+    w  z  z  z  w
+    w  w  w  w  w
+</code></pre><p>其中字母后带<code>1</code>的珂以当作每层枚举的起点</p><p>即，只需定位所求坐标所在的层，再枚举即可保证不超时</p><p>那如何定位分出的层呢？</p><p>一个坐标到边缘的距离的最小值+1就是层数。</p><pre class="highlight"><code class="cpp"><span class="hljs-type">int</span> h=<span class="hljs-built_in">min</span>(<span class="hljs-built_in">abs</span>(x<span class="hljs-number">-1</span>),<span class="hljs-built_in">abs</span>(x-n)),l=<span class="hljs-built_in">min</span>(<span class="hljs-built_in">abs</span>(y<span class="hljs-number">-1</span>),<span class="hljs-built_in">abs</span>(y-n));
+<span class="hljs-type">int</span> step=<span class="hljs-built_in">min</span>(h,l)+<span class="hljs-number">1</span>;<span class="hljs-comment">//层</span>
+</code></pre><p>怎么求每层枚举的起点<code>..1</code>?</p><p>数组中，w层起点a1=0。</p><p>w层“宽度”为5,设<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">n=5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.43056em;vertical-align:0"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:.2777777777777778em"></span><span class="mrel">=</span><span class="mspace" style="margin-right:.2777777777777778em"></span></span><span class="base"><span class="strut" style="height:.64444em;vertical-align:0"></span><span class="mord">5</span></span></span></span></p><p>从1~5枚举5次，即n次</p><p>从6~9枚举4次，即n-1次</p><p>从10~13枚举4次，即n-1次</p><p>从14~16枚举3次，即n-2次</p><p>共枚举<code>4*n-4</code>次</p><p>所以z层起点w1=a1+<code>4*n-4</code></p><p>z层宽3,再枚举，枚举了<code>4*(n-2)-4</code>次</p><p>所以l层起点<code>z1=a1+w1+4*(n-2)-4</code></p><p>即<code>z1=(4*n-4)+[4*(n-2)-4]</code></p><p>3层枚举了2次</p><p>规律出现了！</p><pre class="highlight"><code class="cpp"><span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=step<span class="hljs-number">-1</span>;i++)
+&#123;
+	p+=<span class="hljs-number">4</span>*(n-(i<span class="hljs-number">-1</span>)*<span class="hljs-number">2</span>)<span class="hljs-number">-4</span>;
+&#125;
+</code></pre><p>其中p表示起始数，初始化为0.</p><p>边界也要确定:</p><pre class="highlight"><code class="cpp"><span class="hljs-type">int</span> maxx=n-(step<span class="hljs-number">-1</span>),minx=n-maxx+<span class="hljs-number">1</span>;
+</code></pre><p>因为只有一层，所以不用考虑填完一层转向的问题</p><p>注意：不要再用数组模拟，只用指针式的变量，否则MLE</p><pre class="highlight"><code class="cpp"><span class="hljs-keyword">while</span>(j&lt;maxx)
+&#123;
+	++j,++p;
+	<span class="hljs-keyword">if</span>(i==x&amp;&amp;j==y)
+	&#123;
+		cout&lt;&lt;p;
+		<span class="hljs-keyword">return</span>;
+	&#125;
+&#125;
+<span class="hljs-keyword">while</span>(i&lt;maxx)
+&#123;
+	++i,++p;
+	<span class="hljs-keyword">if</span>(i==x&amp;&amp;j==y)
+	&#123;
+		cout&lt;&lt;p;
+		<span class="hljs-keyword">return</span>;
+	&#125;
+&#125;
+<span class="hljs-keyword">while</span>(j&gt;minx)
+&#123;
+	--j,++p;
+	<span class="hljs-keyword">if</span>(i==x&amp;&amp;j==y)
+	&#123;
+		cout&lt;&lt;p;
+		<span class="hljs-keyword">return</span>;
+	&#125;
+&#125;
+<span class="hljs-keyword">while</span>(i&gt;minx)
+&#123;
+	--i,++p;
+	<span class="hljs-keyword">if</span>(i==x&amp;&amp;j==y)
+	&#123;
+		cout&lt;&lt;p;
+		<span class="hljs-keyword">return</span>;
+	&#125;
+&#125;
+</code></pre><p>完整AC代码：</p><pre class="highlight"><code class="cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cstdio&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cmath&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cstring&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cstdlib&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;algorithm&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">define</span> ll long long</span>
+<span class="hljs-meta">#<span class="hljs-keyword">define</span> debug system(<span class="hljs-string">&quot;pause&quot;</span>);</span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+<span class="hljs-keyword">namespace</span> _yz
+&#123;
+	<span class="hljs-type">int</span> n,x,y;
+	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">yzmain</span><span class="hljs-params">()</span>
+	</span>&#123;
+		cin&gt;&gt;n&gt;&gt;x&gt;&gt;y;
+		<span class="hljs-type">int</span> p=<span class="hljs-number">0</span>;
+		<span class="hljs-type">int</span> h=<span class="hljs-built_in">min</span>(<span class="hljs-built_in">abs</span>(x<span class="hljs-number">-1</span>),<span class="hljs-built_in">abs</span>(x-n)),l=<span class="hljs-built_in">min</span>(<span class="hljs-built_in">abs</span>(y<span class="hljs-number">-1</span>),<span class="hljs-built_in">abs</span>(y-n));
+		<span class="hljs-type">int</span> step=<span class="hljs-built_in">min</span>(h,l)+<span class="hljs-number">1</span>;
+		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=step<span class="hljs-number">-1</span>;i++)
+		&#123;
+			p+=<span class="hljs-number">4</span>*(n-(i<span class="hljs-number">-1</span>)*<span class="hljs-number">2</span>)<span class="hljs-number">-4</span>;
+		&#125;
+		<span class="hljs-type">int</span> i=step,j=step<span class="hljs-number">-1</span>;
+		<span class="hljs-type">int</span> maxx=n-(step<span class="hljs-number">-1</span>),minx=n-maxx+<span class="hljs-number">1</span>;
+		<span class="hljs-keyword">while</span>(j&lt;maxx)
+		&#123;
+			++j,++p;
+			<span class="hljs-keyword">if</span>(i==x&amp;&amp;j==y)
+			&#123;
+				cout&lt;&lt;p;
+				<span class="hljs-keyword">return</span>;
+			&#125;
+		&#125;
+		<span class="hljs-keyword">while</span>(i&lt;maxx)
+		&#123;
+			++i,++p;
+			<span class="hljs-keyword">if</span>(i==x&amp;&amp;j==y)
+			&#123;
+				cout&lt;&lt;p;
+				<span class="hljs-keyword">return</span>;
+			&#125;
+		&#125;
+		<span class="hljs-keyword">while</span>(j&gt;minx)
+		&#123;
+			--j,++p;
+			<span class="hljs-keyword">if</span>(i==x&amp;&amp;j==y)
+			&#123;
+				cout&lt;&lt;p;
+				<span class="hljs-keyword">return</span>;
+			&#125;
+		&#125;
+		<span class="hljs-keyword">while</span>(i&gt;minx)
+		&#123;
+			--i,++p;
+			<span class="hljs-keyword">if</span>(i==x&amp;&amp;j==y)
+			&#123;
+				cout&lt;&lt;p;
+				<span class="hljs-keyword">return</span>;
+			&#125;
+		&#125;
+		<span class="hljs-keyword">return</span>;
+	&#125;
+&#125;
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>&#123;
+	<span class="hljs-comment">//freopen(&quot;b.in&quot;,&quot;r&quot;,stdin);</span>
+	<span class="hljs-comment">//freopen(&quot;b.out&quot;,&quot;w&quot;,stdout);</span>
+	_yz::<span class="hljs-built_in">yzmain</span>();
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;
+</code></pre><p><img src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/postimg/%E8%AF%84%E6%B5%8B%E7%8A%B6%E6%80%81/ac.jpg" alt="ac.jpg"></p><br><hr><img src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/img/end-heart.gif" style="box-shadow:none"><br><blockquote><br>本文作者：Yurchiu<br><br>本文链接：https://yz-hs.github.io/40c43703e9aa/<br><br>版权声明：本博客中所有原创文章除特别声明外，均允许规范转载，转载请注明出处。所有非原创文章，按照原作者要求转载。<br><br></blockquote><br><div class="end-post-meta"><span><a href="/tags/OI"><i class="fa fa-tag"></i> OI</a></span> <span><a href="/tags/推结论"><i class="fa fa-tag"></i> 推结论</a></span></div><div class="end-post-meta"><span><i class="fa fa-refresh"></i> 最后更新：2023-06-14, 12:21:36</span></div></div><div class="prevnext"><a class="prev" href="/78157fc29315/">上一页</a> <a class="next" href="/6602a5cf26f4/">下一页</a></div><div class="comments"><div id="gitalk-container"></div><script>var gitalk=new Gitalk({clientID:"1c64f04731dad7dcc928",clientSecret:"576bde3af3744ef3d054d3b293d0a0c1fce5087f",repo:"no-code",owner:"yz-hs",admin:["yz-hs"],id:location.pathname,language:"zh-CN",proxy:"https://o.cieu.tk/https://github.com/login/oauth/access_token",distractionFreeMode:!1});gitalk.render("gitalk-container")</script></div><div class="avatar-container" style="padding:50px"><img src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/img/new-avatar.jpg" class="avatar revolve" style="height:12%;width:12%"><div style="text-align:center;margin-top:3%">By Yurchiu.</div></div></div><div class="vertical toolbar"><div class="tab-page"><div class="tabTitle tb-tabTitle"><ul><li class="current"><i class="fa fa-random"></i></li><li><i class="fa fa-refresh"></i></li><li><i class="fa fa-circle-o-notch"></i></li></ul></div><div class="tabContent tb-tabContent"><div><div class="title">随机文章<span class="sidetitle">回味旧文</span></div><div class="item no-lrpadding"><a class="post-link" href="/d24d99489782/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">2020 新年贺词</div></div></a><a class="post-link" href="/3513c6ef3e31/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">2021，初中毕业</div></div></a><a class="post-link" href="/3f5d366e12dd/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">一个 4 人囚徒困境的必胜策略</div></div></a><a class="post-link" href="/501647d25831/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">AFO 有感</div></div></a><a class="post-link" href="/2ab979d324b5/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">BSGS 与 exBSGS</div></div></a><a class="post-link" href="/ed885af1fef5/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">ASCII 艺术</div></div></a><a class="post-link" href="/1ed002c31ce3/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">CSP-J1 游记</div></div></a></div></div><div class="hide"><div class="title">最近更新<span class="sidetitle">旧文更新</span></div><div class="item no-lrpadding"><a class="post-link" href="/39e4c172e542/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">Cutie 使用文档</div></div></a><a class="post-link" href="/f4829e127292/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">小技巧</div></div></a><a class="post-link" href="/652191ed6601/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">《幽默报 5》</div></div></a><a class="post-link" href="/6515fc8a93b1/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">《幽默报》</div></div></a><a class="post-link" href="/d3dec5d93e6e/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">欢迎</div></div></a><a class="post-link" href="/1b12e9984a40/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">博弈论</div></div></a><a class="post-link" href="/9cf6dbbd9de4/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">一些状压 DP 题目 II</div></div></a></div></div><div class="hide"><div class="title">其他物件<a data-bs-toggle="tooltip" href="javascript: document.body.contentEditable='true';
+    document.designMode='on';void(0);" title="彩蛋：点击我，可以编辑本页面！" target="_self" class="sidetitle">杂物收纳</a></div><div style="height:20px"></div><div id="showTime"><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/js/showtime.js"></script></div><div class="item"><div id="timeprogress"></div><script>var myDate=new Date,hours=myDate.getHours(),minutes=myDate.getMinutes(),pro=(minutes=60*hours+minutes)/14.4,innerhtml="        <div class='progress' style='height: 20px'>          <div data-bs-toggle='tooltip'               class='progress-bar'               title='时间已过去了 "+pro.toFixed(2)+"%'               style='width: "+pro+"%;               background-color: #4caf50; color: #fff;'>"+pro.toFixed(0)+"%          </div>        </div>";document.getElementById("timeprogress").innerHTML=innerhtml</script></div><div class="item"><div id="hitokoto">Yurchiu 说，除了她以外的人都很强！嘤嘤嘤~~</div><script>fetch("https://v1.hitokoto.cn").then(function(t){return t.json()}).then(function(t){$("#hitokoto").html(t.hitokoto+"<br><br><div style='text-align: right;'>——"+t.from+"</div>")}).catch(function(t){console.error(t)})</script></div></div></div></div><div class="item"><div class="title">博客信息</div><div class="list-group"><div class="list-group-item"><div><i class="fa fa-file-text-o fa-fw"></i> 文章数目</div><div class="badge">158</div></div><div class="list-group-item"><div><i class="fa fa-refresh fa-fw"></i> 最近更新</div><div class="badge">06-14</div></div><div class="list-group-item"><div><i class="fa fa-font fa-fw"></i> 本站字数</div><div class="badge">353.2k</div></div></div></div><div class="post-toc"><div class="title">文章目录</div><div class="post-toc-inner"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%98%E5%B9%B2"><span class="toc-text">题干</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#solution50pts"><span class="toc-text">Solution(50pts)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#solution"><span class="toc-text">Solution</span></a></li></ol></div></div><script>$(function(){var i=$(".tb-tabTitle>ul>li"),n=$(".tb-tabContent>div");i.click(function(){var t=$(this);setTimeout(function(){t.addClass("current").siblings().removeClass("current");var i=t.index();n.eq(i).show().siblings().hide()})})})</script></div></div><div class="footer"><p class="text-left">©2019-2023 <a target="_blank" rel="noopener" href="https://github.com/yz-hs">Yurchiu</a>. All rights reserved.</p><p class="text-right">Theme <a target="_blank" rel="noopener" href="https://github.com/yz-hs/cutie">Cutie</a>, by Yurchiu.</p></div><div class="natsuki-container" style="width:140px" data-bs-toggle="tooltip" title="Don't touch me! qwq"><img id="natsuki2" width="100%" height="100%" src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/img/natsuki2.png"> <img id="natsuki1" width="100%" height="100%" src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/img/natsuki1.png"></div><script type="text/javascript">$("#natsuki1").click(function(){$("#natsuki1").hide(),$("#natsuki2").show(),$("#natsuki2").css("animation","natsuki 0.55s cubic-bezier(0, 0, 0, 1)")}),$("#natsuki2").each(function(){$(this)[0].addEventListener("animationend",function(){$("#natsuki2").hide(),$("#natsuki1").show(),$(this).css("animation","")})})</script><script>readData("special")||$("html").addClass("none")</script><script>readData("color")||$("html").addClass("color-white"),$("img").attr("onerror","this.src='https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/img/error.jpg';this.onerror=null"),initialization()</script></div><meting-js class="meting-js appear" fixed="ture" server="netease" type="playlist" id="8524070964"></meting-js><script>consolePrint(),HideIt()</script><script src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/js/ctitle.js"></script><script src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/js/clicklove.js"></script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script></body></html>

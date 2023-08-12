@@ -1,0 +1,270 @@
+<!DOCTYPE html><html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"><meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no"><meta name="msvalidate.01" content="A7B4DB5A7BF5E5C6E52E34BB024D6319"><meta name="description" content="本站为 Yurchiu 用来记录 OI、笔记、感想的 Blog，欢迎来到本博客！希望我们能相互交流，共同进步～"><meta http-equiv="content-language" content="zh-cn"><title>P3956 棋盘 | Yurchiu's Blog</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js"></script><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.17/sweetalert2.all.min.js"></script><script src="https://cdn.staticfile.org/sketch.js/1.0/sketch.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/js/chaffle.min.js"></script><script src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/js/core/main.js"></script><script src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/js/core/search.js"></script><script src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/js/core/initialization.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.6/katex.min.css"><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/vs2015.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/css/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/css/colors/std.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/css/colors/white.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/css/colors/night.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/css/colors/trans.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/css/special/special.css"><link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload='this.media="all"'><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload='this.media="all"'><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Yurchiu's Blog" type="application/atom+xml"></head><body style="background-image:url(https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/img/new-bgp.jpg)"><div id="YurLoading" class="YurLoading"><div class="inner"><div class="line-wrap"><div class="line"></div></div><div class="line-wrap"><div class="line"></div></div><div class="line-wrap"><div class="line"></div></div><div class="line-wrap"><div class="line"></div></div><div class="line-wrap"><div class="line"></div></div></div></div><div class="topbar"><a onclick="topbarToggle()" class="topbar-menu" style="cursor:pointer"><i class="fa fa-bars"></i> </a><a href="/" class="topbar-title"><i class="fa fa-home"></i> Yurchiu's Blog </a><a target="_blank" rel="noopener" href="https://github.com/yz-hs" class="topbar-title"><i class="fa fa-github"></i></a></div><div id="pjax"><div class="sidebar"><div class="avatar-container"><img src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/img/new-avatar.jpg" class="avatar revolve"></div><div class="sidebar-author">Yurchiu<br><span class="mini-text">An AFO whker.</span></div><div class="sidebar-list-container"><div style="height:10px"></div><a class="list-group-item" href="/"><div><i class="fa fa-home fa-fw"></i>&nbsp; 首页</div><div class="badge"></div></a><a class="list-group-item" href="/archives/"><div><i class="fa fa-tasks fa-fw"></i>&nbsp; 归档</div><div class="badge">158</div></a><a class="list-group-item" href="/tags/"><div><i class="fa fa-tags fa-fw"></i>&nbsp; 标签</div><div class="badge">70</div></a><a class="list-group-item" href="/categories/"><div><i class="fa fa-th-large fa-fw"></i>&nbsp; 分类</div><div class="badge">13</div></a><a class="list-group-item" href="/somepage/mood/"><div><i class="fa fa-photo fa-fw"></i>&nbsp; 说说</div><div class="badge"></div></a><a class="list-group-item" href="/somepage/about/"><div><i class="fa fa-user-o fa-fw"></i>&nbsp; 关于</div><div class="badge"></div></a><a class="list-group-item" href="/somepage/chat/"><div><i class="fa fa-commenting-o fa-fw"></i>&nbsp; 留言</div><div class="badge"></div></a><a class="list-group-item" href="/somepage/link/"><div><i class="fa fa-link fa-fw"></i>&nbsp; 链接</div><div class="badge"></div></a><a class="list-group-item" href="/somepage/settings/"><div><i class="fa fa-cog fa-fw"></i>&nbsp; 设置</div><div class="badge"></div></a><div style="height:200px"></div></div><div class="sidebar-footer"><div class="item" id="back2Top" data-bs-toggle="tooltip" title="顶部"><i class="fa fa-arrow-circle-up"></i></div><div class="item" data-bs-toggle="tooltip" title="RSS"><a href="/atom.xml"><i class="fa fa-feed"></i></a></div><div class="item" data-bs-toggle="tooltip" title="搜索"><a href="/somepage/search/"><i class="fa fa-search"></i></a></div></div></div><div class="article"><div class="vertical fake-sidebar"></div><div class="vertical post"><div class="header"><h1 class="title">P3956 棋盘</h1><div class="meta"><span><i class="fa fa-user-o"></i> Yurchiu </span><span><i class="fa fa-clock-o"></i> 2020-01-11, 17:51:57</span> <span><i class="fa fa-font"></i> 1.8k</span> <span class="hideBars" onclick="hideBars()"><i class="fa fa-eye-slash"></i> 隐藏左右两栏 </span><span class="showBars" onclick="showBars()"><i class="fa fa-eye"></i> 展示左右两栏</span></div></div><div class="breadcrumb"><div class="url"><a href="/"><i class="fa fa-home"></i> 首页</a> / P3956 棋盘</div><div class="share">分享到 <a target="_blank" rel="noopener" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yz-hs.github.io/98b89eb3d138/&title=P3956 棋盘&site=https://yz-hs.github.io"><i class="fa fa-qq"></i></a></div></div><div class="post-text"><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3956">P3956 棋盘</a>的题解。</p><span id="more"></span><h1 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码</h1><pre class="highlight"><code class="cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">define</span> pass &#123;&#125;<span class="hljs-comment">//em...</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+
+<span class="hljs-keyword">struct</span> <span class="hljs-title class_">pos</span>
+&#123;
+	<span class="hljs-type">int</span> x,y;
+	<span class="hljs-type">int</span> gd;
+	<span class="hljs-type">int</span> ppx,ppy;
+&#125;;
+queue&lt;pos&gt;q;
+<span class="hljs-type">int</span> m,n,g[<span class="hljs-number">100</span>+<span class="hljs-number">1</span>][<span class="hljs-number">100</span>+<span class="hljs-number">1</span>],v[<span class="hljs-number">100</span>+<span class="hljs-number">1</span>][<span class="hljs-number">100</span>+<span class="hljs-number">1</span>]=&#123;<span class="hljs-number">0</span>&#125;;
+<span class="hljs-type">int</span> xx[]=&#123;<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">-1</span>&#125;;
+<span class="hljs-type">int</span> yy[]=&#123;<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">-1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>&#125;;
+
+
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">bfs</span><span class="hljs-params">()</span>
+</span>&#123;
+	q.<span class="hljs-built_in">push</span>((pos)&#123;<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>&#125;);
+	v[<span class="hljs-number">1</span>][<span class="hljs-number">1</span>]=<span class="hljs-number">0</span>;
+	<span class="hljs-keyword">while</span>(!q.<span class="hljs-built_in">empty</span>())
+	&#123;
+		pos tmp=q.<span class="hljs-built_in">front</span>();
+		q.<span class="hljs-built_in">pop</span>();
+		<span class="hljs-type">int</span> px=tmp.x,py=tmp.y;
+		
+		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=<span class="hljs-number">4</span>;i++)
+		&#123;
+			<span class="hljs-type">int</span> nx=px+xx[i],ny=py+yy[i],ng=tmp.gd;
+			
+            <span class="hljs-comment">//***</span>
+			<span class="hljs-keyword">if</span>(px&gt;=<span class="hljs-number">1</span>&amp;&amp;px&lt;=m&amp;&amp;py&gt;=<span class="hljs-number">1</span>&amp;&amp;py&lt;=m)
+				<span class="hljs-keyword">if</span>(g[nx][ny]&amp;&amp;g[px][py])
+					<span class="hljs-keyword">if</span>(g[nx][ny]!=g[px][py])
+						ng+=<span class="hljs-number">1</span>;
+					<span class="hljs-keyword">else</span>
+						pass
+				<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(g[nx][ny]==<span class="hljs-number">0</span>&amp;&amp;g[px][py])
+					ng+=<span class="hljs-number">2</span>;
+				<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(g[px][py]==<span class="hljs-number">0</span>&amp;&amp;g[nx][ny])
+					<span class="hljs-keyword">if</span>(g[nx][ny]==g[tmp.ppx][tmp.ppy])
+						pass
+					<span class="hljs-keyword">else</span>
+						ng+=<span class="hljs-number">1</span>;
+				<span class="hljs-keyword">else</span>
+					<span class="hljs-keyword">continue</span>;
+			<span class="hljs-keyword">else</span>
+				<span class="hljs-keyword">continue</span>;
+			<span class="hljs-comment">//***orz判断</span>
+            
+			<span class="hljs-keyword">if</span>(ng&lt;v[nx][ny]||v[nx][ny]==<span class="hljs-number">-1</span>)
+			&#123;
+				q.<span class="hljs-built_in">push</span>((pos)&#123;nx,ny,ng,px,py&#125;);
+				v[nx][ny]=ng;
+			&#125;
+		&#125; 
+	&#125;
+&#125;
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>&#123;
+	<span class="hljs-built_in">read</span>(m),<span class="hljs-built_in">read</span>(n);
+	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)
+	&#123;
+		<span class="hljs-type">int</span> a,b,c;
+		<span class="hljs-built_in">read</span>(a),<span class="hljs-built_in">read</span>(b),<span class="hljs-built_in">read</span>(c);
+		g[a][b]=c+<span class="hljs-number">1</span>;
+	&#125;
+	<span class="hljs-built_in">memset</span>(v,<span class="hljs-number">-1</span>,<span class="hljs-built_in">sizeof</span>(v));
+	<span class="hljs-built_in">bfs</span>();
+	<span class="hljs-built_in">print</span>(v[m][m]);<span class="hljs-comment">//CE</span>
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;
+</code></pre><h1 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h1><blockquote><p>有一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>×</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">m \times m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.66666em;vertical-align:-.08333em"></span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:.2222222222222222em"></span><span class="mbin">×</span><span class="mspace" style="margin-right:.2222222222222222em"></span></span><span class="base"><span class="strut" style="height:.43056em;vertical-align:0"></span><span class="mord mathnormal">m</span></span></span></span> 的棋盘，棋盘上每一个格子可能是红色、黄色或没有任何颜色的。你现在要从棋盘的最左上角走到棋盘的最右下角。</p></blockquote><blockquote><p>任何一个时刻，你所站在的位置必须是有颜色的（不能是无色的）， 你只能向上、 下、左、 右四个方向前进。当你从一个格子走向另一个格子时，如果两个格子的颜色相同，那你不需要花费金币；如果不同，则你需要花费 1 个金币。</p></blockquote><blockquote><p>另外， 你可以花费 2 个金币施展魔法让下一个无色格子暂时变为你指定的颜色。但这个魔法不能连续使用， 而且这个魔法的持续时间很短，也就是说，如果你使用了这个魔法，走到了这个暂时有颜色的格子上，你就不能继续使用魔法； 只有当你离开这个位置，走到一个本来就有颜色的格子上的时候，你才能继续使用这个魔法，而当你离开了这个位置（施展魔法使得变为有颜色的格子）时，这个格子恢复为无色。</p></blockquote><blockquote><p>现在你要从棋盘的最左上角，走到棋盘的最右下角，求花费的最少金币是多少？</p></blockquote><p>有颜色，还有魔法，看起来很麻烦！</p><p>那就要采取步步推进的做题方法了！</p><h2 id="step-1读图"><a class="markdownIt-Anchor" href="#step-1读图"></a> step 1(读图)</h2><pre class="highlight"><code class="cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">define</span> pass &#123;&#125;<span class="hljs-comment">//em...</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+
+<span class="hljs-keyword">struct</span> <span class="hljs-title class_">pos</span>
+&#123;
+	<span class="hljs-type">int</span> x,y;
+	<span class="hljs-type">int</span> gd;
+&#125;;
+queue&lt;pos&gt;q;
+<span class="hljs-type">int</span> m,n,g[<span class="hljs-number">100</span>+<span class="hljs-number">1</span>][<span class="hljs-number">100</span>+<span class="hljs-number">1</span>],v[<span class="hljs-number">100</span>+<span class="hljs-number">1</span>][<span class="hljs-number">100</span>+<span class="hljs-number">1</span>]=&#123;<span class="hljs-number">0</span>&#125;;
+<span class="hljs-type">int</span> xx[]=&#123;<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">-1</span>&#125;;
+<span class="hljs-type">int</span> yy[]=&#123;<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">-1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>&#125;;
+
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>&#123;
+	<span class="hljs-built_in">read</span>(m),<span class="hljs-built_in">read</span>(n);
+	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)
+	&#123;
+		<span class="hljs-type">int</span> a,b,c;
+		<span class="hljs-built_in">read</span>(a),<span class="hljs-built_in">read</span>(b),<span class="hljs-built_in">read</span>(c);
+		g[a][b]=c+<span class="hljs-number">1</span>;
+	&#125;
+	<span class="hljs-built_in">memset</span>(v,<span class="hljs-number">-1</span>,<span class="hljs-built_in">sizeof</span>(v));
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;
+</code></pre><p><code>g[][]</code>数组存图，0表示啥也没有，1表示红色，2表示黄色。</p><p><code>v[][]</code>标记数组，-1表示未访问，否则就是到达这个点所花费的金币数。</p><p><code>xx[]</code> <code>yy[]</code>模拟了坐标的位移。</p><p>在<code>pos</code>结构体中，<code>x,y</code>记录坐标，<code>gd</code>记录到达这个点所花费的最少金币数。</p><h2 id="step-2无魔法"><a class="markdownIt-Anchor" href="#step-2无魔法"></a> step 2(无魔法)</h2><pre class="highlight"><code class="cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">define</span> pass &#123;&#125;<span class="hljs-comment">//em...</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+
+<span class="hljs-keyword">struct</span> <span class="hljs-title class_">pos</span>
+&#123;
+	<span class="hljs-type">int</span> x,y;
+	<span class="hljs-type">int</span> gd;
+&#125;;
+queue&lt;pos&gt;q;
+<span class="hljs-type">int</span> m,n,g[<span class="hljs-number">100</span>+<span class="hljs-number">1</span>][<span class="hljs-number">100</span>+<span class="hljs-number">1</span>],v[<span class="hljs-number">100</span>+<span class="hljs-number">1</span>][<span class="hljs-number">100</span>+<span class="hljs-number">1</span>]=&#123;<span class="hljs-number">0</span>&#125;;
+<span class="hljs-type">int</span> xx[]=&#123;<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">-1</span>&#125;;
+<span class="hljs-type">int</span> yy[]=&#123;<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">-1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>&#125;;
+
+
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">bfs</span><span class="hljs-params">()</span>
+</span>&#123;
+	q.<span class="hljs-built_in">push</span>((pos)&#123;<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>&#125;);
+	v[<span class="hljs-number">1</span>][<span class="hljs-number">1</span>]=<span class="hljs-number">0</span>;
+	<span class="hljs-keyword">while</span>(!q.<span class="hljs-built_in">empty</span>())
+	&#123;
+		pos tmp=q.<span class="hljs-built_in">front</span>();
+		q.<span class="hljs-built_in">pop</span>();
+		<span class="hljs-type">int</span> px=tmp.x,py=tmp.y;
+		
+		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=<span class="hljs-number">4</span>;i++)
+		&#123;
+			<span class="hljs-type">int</span> nx=px+xx[i],ny=py+yy[i],ng=tmp.gd;
+			
+            <span class="hljs-comment">//***</span>
+			<span class="hljs-keyword">if</span>(px&gt;=<span class="hljs-number">1</span>&amp;&amp;px&lt;=m&amp;&amp;py&gt;=<span class="hljs-number">1</span>&amp;&amp;py&lt;=m)
+				<span class="hljs-keyword">if</span>(g[nx][ny]&amp;&amp;g[px][py])
+					<span class="hljs-keyword">if</span>(g[nx][ny]!=g[px][py])
+						ng+=<span class="hljs-number">1</span>;
+					<span class="hljs-keyword">else</span>
+						pass
+				<span class="hljs-keyword">else</span>
+					<span class="hljs-keyword">continue</span>;
+			<span class="hljs-keyword">else</span>
+				<span class="hljs-keyword">continue</span>;
+			<span class="hljs-comment">//***orz判断</span>
+            
+			<span class="hljs-keyword">if</span>(ng&lt;v[nx][ny]||v[nx][ny]==<span class="hljs-number">-1</span>)
+			&#123;
+				q.<span class="hljs-built_in">push</span>((pos)&#123;nx,ny,ng&#125;);
+				v[nx][ny]=ng;
+			&#125;
+		&#125; 
+	&#125;
+&#125;
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>&#123;
+	<span class="hljs-built_in">read</span>(m),<span class="hljs-built_in">read</span>(n);
+	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)
+	&#123;
+		<span class="hljs-type">int</span> a,b,c;
+		<span class="hljs-built_in">read</span>(a),<span class="hljs-built_in">read</span>(b),<span class="hljs-built_in">read</span>(c);
+		g[a][b]=c+<span class="hljs-number">1</span>;
+	&#125;
+	<span class="hljs-built_in">memset</span>(v,<span class="hljs-number">-1</span>,<span class="hljs-built_in">sizeof</span>(v));
+	<span class="hljs-built_in">bfs</span>();
+	<span class="hljs-built_in">print</span>(v[m][m]);<span class="hljs-comment">//CE</span>
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;
+</code></pre><p>魔法过于复杂，先不考虑。先只考虑颜色的问题。</p><p>其实最核心的代码是<s>那一堆判断</s>。</p><pre class="highlight"><code class="cpp"><span class="hljs-keyword">if</span>(px&gt;=<span class="hljs-number">1</span>&amp;&amp;px&lt;=m&amp;&amp;py&gt;=<span class="hljs-number">1</span>&amp;&amp;py&lt;=m)
+	<span class="hljs-keyword">if</span>(g[nx][ny]&amp;&amp;g[px][py])
+		<span class="hljs-keyword">if</span>(g[nx][ny]!=g[px][py])
+			ng+=<span class="hljs-number">1</span>;
+		<span class="hljs-keyword">else</span>
+			pass
+	<span class="hljs-keyword">else</span>
+		<span class="hljs-keyword">continue</span>;
+<span class="hljs-keyword">else</span>
+	<span class="hljs-keyword">continue</span>;
+</code></pre><p>line 1：越界判断</p><p>line 2：是否两者都有颜色</p><p>line 3：若是，那颜色是否不相同</p><p>line 4：若是，花费1金币</p><p>line 5,6：否则，啥也不干</p><p>就这么简单！</p><pre class="highlight"><code class="cpp"><span class="hljs-keyword">if</span>(ng&lt;v[nx][ny]||v[nx][ny]==<span class="hljs-number">-1</span>)
+&#123;
+	q.<span class="hljs-built_in">push</span>((pos)&#123;nx,ny,ng&#125;);
+	v[nx][ny]=ng;
+&#125;
+</code></pre><p>line 1：取最优</p><p>line 3,4：压入队列！</p><h2 id="step-3end"><a class="markdownIt-Anchor" href="#step-3end"></a> step 3(end)</h2><pre class="highlight"><code class="cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">define</span> pass &#123;&#125;<span class="hljs-comment">//em...</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+
+<span class="hljs-keyword">struct</span> <span class="hljs-title class_">pos</span>
+&#123;
+	<span class="hljs-type">int</span> x,y;
+	<span class="hljs-type">int</span> gd;
+	<span class="hljs-type">int</span> ppx,ppy;
+&#125;;
+queue&lt;pos&gt;q;
+<span class="hljs-type">int</span> m,n,g[<span class="hljs-number">100</span>+<span class="hljs-number">1</span>][<span class="hljs-number">100</span>+<span class="hljs-number">1</span>],v[<span class="hljs-number">100</span>+<span class="hljs-number">1</span>][<span class="hljs-number">100</span>+<span class="hljs-number">1</span>]=&#123;<span class="hljs-number">0</span>&#125;;
+<span class="hljs-type">int</span> xx[]=&#123;<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">-1</span>&#125;;
+<span class="hljs-type">int</span> yy[]=&#123;<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">-1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>&#125;;
+
+
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">bfs</span><span class="hljs-params">()</span>
+</span>&#123;
+	q.<span class="hljs-built_in">push</span>((pos)&#123;<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>&#125;);
+	v[<span class="hljs-number">1</span>][<span class="hljs-number">1</span>]=<span class="hljs-number">0</span>;
+	<span class="hljs-keyword">while</span>(!q.<span class="hljs-built_in">empty</span>())
+	&#123;
+		pos tmp=q.<span class="hljs-built_in">front</span>();
+		q.<span class="hljs-built_in">pop</span>();
+		<span class="hljs-type">int</span> px=tmp.x,py=tmp.y;
+		
+		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=<span class="hljs-number">4</span>;i++)
+		&#123;
+			<span class="hljs-type">int</span> nx=px+xx[i],ny=py+yy[i],ng=tmp.gd;
+			
+            <span class="hljs-comment">//***</span>
+			<span class="hljs-keyword">if</span>(px&gt;=<span class="hljs-number">1</span>&amp;&amp;px&lt;=m&amp;&amp;py&gt;=<span class="hljs-number">1</span>&amp;&amp;py&lt;=m)
+				<span class="hljs-keyword">if</span>(g[nx][ny]&amp;&amp;g[px][py])
+					<span class="hljs-keyword">if</span>(g[nx][ny]!=g[px][py])
+						ng+=<span class="hljs-number">1</span>;
+					<span class="hljs-keyword">else</span>
+						pass
+				<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(g[nx][ny]==<span class="hljs-number">0</span>&amp;&amp;g[px][py])
+					ng+=<span class="hljs-number">2</span>;
+				<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(g[px][py]==<span class="hljs-number">0</span>&amp;&amp;g[nx][ny])
+					<span class="hljs-keyword">if</span>(g[nx][ny]==g[tmp.ppx][tmp.ppy])
+						pass
+					<span class="hljs-keyword">else</span>
+						ng+=<span class="hljs-number">1</span>;
+				<span class="hljs-keyword">else</span>
+					<span class="hljs-keyword">continue</span>;
+			<span class="hljs-keyword">else</span>
+				<span class="hljs-keyword">continue</span>;
+			<span class="hljs-comment">//***orz判断</span>
+            
+			<span class="hljs-keyword">if</span>(ng&lt;v[nx][ny]||v[nx][ny]==<span class="hljs-number">-1</span>)
+			&#123;
+				q.<span class="hljs-built_in">push</span>((pos)&#123;nx,ny,ng,px,py&#125;);
+				v[nx][ny]=ng;
+			&#125;
+		&#125; 
+	&#125;
+&#125;
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>&#123;
+	<span class="hljs-built_in">read</span>(m),<span class="hljs-built_in">read</span>(n);
+	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)
+	&#123;
+		<span class="hljs-type">int</span> a,b,c;
+		<span class="hljs-built_in">read</span>(a),<span class="hljs-built_in">read</span>(b),<span class="hljs-built_in">read</span>(c);
+		g[a][b]=c+<span class="hljs-number">1</span>;
+	&#125;
+	<span class="hljs-built_in">memset</span>(v,<span class="hljs-number">-1</span>,<span class="hljs-built_in">sizeof</span>(v));
+	<span class="hljs-built_in">bfs</span>();
+	<span class="hljs-built_in">print</span>(v[m][m]);<span class="hljs-comment">//CE</span>
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;
+</code></pre><p>那如何处理魔法？</p><p>一个清奇的思路：记录<strong>一个点的上一个点</strong>（<code>pos</code>结构体中的<code>ppx</code> <code>ppy</code>）。</p><pre class="highlight"><code>if(px&gt;=1&amp;&amp;px&lt;=m&amp;&amp;py&gt;=1&amp;&amp;py&lt;=m)
+	if(g[nx][ny]&amp;&amp;g[px][py])
+		if(g[nx][ny]!=g[px][py])
+			ng+=1;
+		else
+			pass
+	else if(g[nx][ny]==0&amp;&amp;g[px][py])
+		ng+=2;
+	else if(g[px][py]==0&amp;&amp;g[nx][ny])
+		if(g[nx][ny]==g[tmp.ppx][tmp.ppy])
+			pass
+		else
+			ng+=1;
+	else
+		continue;
+else
+	continue;
+</code></pre><p>line 7：如果下一个点为空，而现在的点有颜色，</p><p>line 8：那就花费 2 金币。</p><p>为什么呢？</p><p>因为这样实际是魔法的情况。</p><p>line 9：如果现在的点为空，而下一个点有颜色，</p><p>line 10：那若上一个点颜色与下一个点颜色相同，</p><p>line 11：无需再花费；</p><p>line 12,13：否则仍需花费 1 金币。</p><p>为什么呢？</p><p>以下面的图为例：</p><pre class="highlight"><code>红-&gt;空-&gt;黄 [图1]
+</code></pre><ul><li>把空变红，花 2 金币</li><li>前进，无需金币</li><li>前进，走上黄，花 1 金币</li></ul><pre class="highlight"><code>红-&gt;空-&gt;红 [图2]
+</code></pre><ul><li>把空变红，花 2 金币</li><li>前进，无需金币</li><li>前进，走上红，无需金币</li></ul><p>为什么只有这两种情况？因为魔法不能连续使用！</p><br><hr><img src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/img/end-heart.gif" style="box-shadow:none"><br><blockquote><br>本文作者：Yurchiu<br><br>本文链接：https://yz-hs.github.io/98b89eb3d138/<br><br>版权声明：本博客中所有原创文章除特别声明外，均允许规范转载，转载请注明出处。所有非原创文章，按照原作者要求转载。<br><br></blockquote><br><div class="end-post-meta"><span><a href="/tags/OI"><i class="fa fa-tag"></i> OI</a></span> <span><a href="/tags/暴搜"><i class="fa fa-tag"></i> 暴搜</a></span></div><div class="end-post-meta"><span><i class="fa fa-refresh"></i> 最后更新：2023-06-14, 12:29:23</span></div></div><div class="prevnext"><a class="prev" href="/0ab70095e346/">上一页</a> <a class="next" href="/652191ed6601/">下一页</a></div><div class="comments"><div id="gitalk-container"></div><script>var gitalk=new Gitalk({clientID:"1c64f04731dad7dcc928",clientSecret:"576bde3af3744ef3d054d3b293d0a0c1fce5087f",repo:"no-code",owner:"yz-hs",admin:["yz-hs"],id:location.pathname,language:"zh-CN",proxy:"https://o.cieu.tk/https://github.com/login/oauth/access_token",distractionFreeMode:!1});gitalk.render("gitalk-container")</script></div><div class="avatar-container" style="padding:50px"><img src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/img/new-avatar.jpg" class="avatar revolve" style="height:12%;width:12%"><div style="text-align:center;margin-top:3%">By Yurchiu.</div></div></div><div class="vertical toolbar"><div class="tab-page"><div class="tabTitle tb-tabTitle"><ul><li class="current"><i class="fa fa-random"></i></li><li><i class="fa fa-refresh"></i></li><li><i class="fa fa-circle-o-notch"></i></li></ul></div><div class="tabContent tb-tabContent"><div><div class="title">随机文章<span class="sidetitle">回味旧文</span></div><div class="item no-lrpadding"><a class="post-link" href="/d24d99489782/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">2020 新年贺词</div></div></a><a class="post-link" href="/3513c6ef3e31/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">2021，初中毕业</div></div></a><a class="post-link" href="/3f5d366e12dd/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">一个 4 人囚徒困境的必胜策略</div></div></a><a class="post-link" href="/501647d25831/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">AFO 有感</div></div></a><a class="post-link" href="/2ab979d324b5/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">BSGS 与 exBSGS</div></div></a><a class="post-link" href="/ed885af1fef5/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">ASCII 艺术</div></div></a><a class="post-link" href="/1ed002c31ce3/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">CSP-J1 游记</div></div></a></div></div><div class="hide"><div class="title">最近更新<span class="sidetitle">旧文更新</span></div><div class="item no-lrpadding"><a class="post-link" href="/39e4c172e542/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">Cutie 使用文档</div></div></a><a class="post-link" href="/f4829e127292/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">小技巧</div></div></a><a class="post-link" href="/652191ed6601/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">《幽默报 5》</div></div></a><a class="post-link" href="/6515fc8a93b1/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">《幽默报》</div></div></a><a class="post-link" href="/d3dec5d93e6e/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">欢迎</div></div></a><a class="post-link" href="/1b12e9984a40/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">博弈论</div></div></a><a class="post-link" href="/9cf6dbbd9de4/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">一些状压 DP 题目 II</div></div></a></div></div><div class="hide"><div class="title">其他物件<a data-bs-toggle="tooltip" href="javascript: document.body.contentEditable='true';
+    document.designMode='on';void(0);" title="彩蛋：点击我，可以编辑本页面！" target="_self" class="sidetitle">杂物收纳</a></div><div style="height:20px"></div><div id="showTime"><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/js/showtime.js"></script></div><div class="item"><div id="timeprogress"></div><script>var myDate=new Date,hours=myDate.getHours(),minutes=myDate.getMinutes(),pro=(minutes=60*hours+minutes)/14.4,innerhtml="        <div class='progress' style='height: 20px'>          <div data-bs-toggle='tooltip'               class='progress-bar'               title='时间已过去了 "+pro.toFixed(2)+"%'               style='width: "+pro+"%;               background-color: #4caf50; color: #fff;'>"+pro.toFixed(0)+"%          </div>        </div>";document.getElementById("timeprogress").innerHTML=innerhtml</script></div><div class="item"><div id="hitokoto">Yurchiu 说，除了她以外的人都很强！嘤嘤嘤~~</div><script>fetch("https://v1.hitokoto.cn").then(function(t){return t.json()}).then(function(t){$("#hitokoto").html(t.hitokoto+"<br><br><div style='text-align: right;'>——"+t.from+"</div>")}).catch(function(t){console.error(t)})</script></div></div></div></div><div class="item"><div class="title">博客信息</div><div class="list-group"><div class="list-group-item"><div><i class="fa fa-file-text-o fa-fw"></i> 文章数目</div><div class="badge">158</div></div><div class="list-group-item"><div><i class="fa fa-refresh fa-fw"></i> 最近更新</div><div class="badge">06-14</div></div><div class="list-group-item"><div><i class="fa fa-font fa-fw"></i> 本站字数</div><div class="badge">353.2k</div></div></div></div><div class="post-toc"><div class="title">文章目录</div><div class="post-toc-inner"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-text">代码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF"><span class="toc-text">思路</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#step-1%E8%AF%BB%E5%9B%BE"><span class="toc-text">step 1(读图)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#step-2%E6%97%A0%E9%AD%94%E6%B3%95"><span class="toc-text">step 2(无魔法)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#step-3end"><span class="toc-text">step 3(end)</span></a></li></ol></li></ol></div></div><script>$(function(){var i=$(".tb-tabTitle>ul>li"),n=$(".tb-tabContent>div");i.click(function(){var t=$(this);setTimeout(function(){t.addClass("current").siblings().removeClass("current");var i=t.index();n.eq(i).show().siblings().hide()})})})</script></div></div><div class="footer"><p class="text-left">©2019-2023 <a target="_blank" rel="noopener" href="https://github.com/yz-hs">Yurchiu</a>. All rights reserved.</p><p class="text-right">Theme <a target="_blank" rel="noopener" href="https://github.com/yz-hs/cutie">Cutie</a>, by Yurchiu.</p></div><div class="natsuki-container" style="width:140px" data-bs-toggle="tooltip" title="Don't touch me! qwq"><img id="natsuki2" width="100%" height="100%" src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/img/natsuki2.png"> <img id="natsuki1" width="100%" height="100%" src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/img/natsuki1.png"></div><script type="text/javascript">$("#natsuki1").click(function(){$("#natsuki1").hide(),$("#natsuki2").show(),$("#natsuki2").css("animation","natsuki 0.55s cubic-bezier(0, 0, 0, 1)")}),$("#natsuki2").each(function(){$(this)[0].addEventListener("animationend",function(){$("#natsuki2").hide(),$("#natsuki1").show(),$(this).css("animation","")})})</script><script>readData("special")||$("html").addClass("none")</script><script>readData("color")||$("html").addClass("color-white"),$("img").attr("onerror","this.src='https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/img/error.jpg';this.onerror=null"),initialization()</script></div><meting-js class="meting-js appear" fixed="ture" server="netease" type="playlist" id="8524070964"></meting-js><script>consolePrint(),HideIt()</script><script src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/js/ctitle.js"></script><script src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/js/clicklove.js"></script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script></body></html>

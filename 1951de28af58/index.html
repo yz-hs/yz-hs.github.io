@@ -1,0 +1,362 @@
+<!DOCTYPE html><html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"><meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no"><meta name="msvalidate.01" content="A7B4DB5A7BF5E5C6E52E34BB024D6319"><meta name="description" content="本站为 Yurchiu 用来记录 OI、笔记、感想的 Blog，欢迎来到本博客！希望我们能相互交流，共同进步～"><meta http-equiv="content-language" content="zh-cn"><title>套题 I 题解 | Yurchiu's Blog</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js"></script><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.17/sweetalert2.all.min.js"></script><script src="https://cdn.staticfile.org/sketch.js/1.0/sketch.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/js/chaffle.min.js"></script><script src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/js/core/main.js"></script><script src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/js/core/search.js"></script><script src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/js/core/initialization.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.6/katex.min.css"><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/vs2015.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/css/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/css/colors/std.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/css/colors/white.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/css/colors/night.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/css/colors/trans.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/css/special/special.css"><link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload='this.media="all"'><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload='this.media="all"'><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Yurchiu's Blog" type="application/atom+xml"></head><body style="background-image:url(https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/img/new-bgp.jpg)"><div id="YurLoading" class="YurLoading"><div class="inner"><div class="line-wrap"><div class="line"></div></div><div class="line-wrap"><div class="line"></div></div><div class="line-wrap"><div class="line"></div></div><div class="line-wrap"><div class="line"></div></div><div class="line-wrap"><div class="line"></div></div></div></div><div class="topbar"><a onclick="topbarToggle()" class="topbar-menu" style="cursor:pointer"><i class="fa fa-bars"></i> </a><a href="/" class="topbar-title"><i class="fa fa-home"></i> Yurchiu's Blog </a><a target="_blank" rel="noopener" href="https://github.com/yz-hs" class="topbar-title"><i class="fa fa-github"></i></a></div><div id="pjax"><div class="sidebar"><div class="avatar-container"><img src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/img/new-avatar.jpg" class="avatar revolve"></div><div class="sidebar-author">Yurchiu<br><span class="mini-text">An AFO whker.</span></div><div class="sidebar-list-container"><div style="height:10px"></div><a class="list-group-item" href="/"><div><i class="fa fa-home fa-fw"></i>&nbsp; 首页</div><div class="badge"></div></a><a class="list-group-item" href="/archives/"><div><i class="fa fa-tasks fa-fw"></i>&nbsp; 归档</div><div class="badge">158</div></a><a class="list-group-item" href="/tags/"><div><i class="fa fa-tags fa-fw"></i>&nbsp; 标签</div><div class="badge">70</div></a><a class="list-group-item" href="/categories/"><div><i class="fa fa-th-large fa-fw"></i>&nbsp; 分类</div><div class="badge">13</div></a><a class="list-group-item" href="/somepage/mood/"><div><i class="fa fa-photo fa-fw"></i>&nbsp; 说说</div><div class="badge"></div></a><a class="list-group-item" href="/somepage/about/"><div><i class="fa fa-user-o fa-fw"></i>&nbsp; 关于</div><div class="badge"></div></a><a class="list-group-item" href="/somepage/chat/"><div><i class="fa fa-commenting-o fa-fw"></i>&nbsp; 留言</div><div class="badge"></div></a><a class="list-group-item" href="/somepage/link/"><div><i class="fa fa-link fa-fw"></i>&nbsp; 链接</div><div class="badge"></div></a><a class="list-group-item" href="/somepage/settings/"><div><i class="fa fa-cog fa-fw"></i>&nbsp; 设置</div><div class="badge"></div></a><div style="height:200px"></div></div><div class="sidebar-footer"><div class="item" id="back2Top" data-bs-toggle="tooltip" title="顶部"><i class="fa fa-arrow-circle-up"></i></div><div class="item" data-bs-toggle="tooltip" title="RSS"><a href="/atom.xml"><i class="fa fa-feed"></i></a></div><div class="item" data-bs-toggle="tooltip" title="搜索"><a href="/somepage/search/"><i class="fa fa-search"></i></a></div></div></div><div class="article"><div class="vertical fake-sidebar"></div><div class="vertical post"><div class="header"><h1 class="title">套题 I 题解</h1><div class="meta"><span><i class="fa fa-user-o"></i> Yurchiu </span><span><i class="fa fa-clock-o"></i> 2021-11-27, 10:43:34</span> <span><i class="fa fa-font"></i> 1.9k</span> <span class="hideBars" onclick="hideBars()"><i class="fa fa-eye-slash"></i> 隐藏左右两栏 </span><span class="showBars" onclick="showBars()"><i class="fa fa-eye"></i> 展示左右两栏</span></div></div><div class="breadcrumb"><div class="url"><a href="/"><i class="fa fa-home"></i> 首页</a> / 套题 I 题解</div><div class="share">分享到 <a target="_blank" rel="noopener" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yz-hs.github.io/1951de28af58/&title=套题 I 题解&site=https://yz-hs.github.io"><i class="fa fa-qq"></i></a></div></div><div class="post-text"><p>本文为题解集。为 Yurchiu 所参加的模拟赛题目。</p><h1 id="a-factory"><a class="markdownIt-Anchor" href="#a-factory"></a> A factory</h1><h2 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h2><p>给出一个长度为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.43056em;vertical-align:0"></span><span class="mord mathnormal">n</span></span></span></span> 的正整数序列 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.43056em;vertical-align:0"></span><span class="mord mathnormal">a</span></span></span></span>。</p><p>定义一个“家族”为：</p><ul><li>是序列 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.43056em;vertical-align:0"></span><span class="mord mathnormal">a</span></span></span></span> 中连续的一段；</li><li>若 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">a_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.58056em;vertical-align:-.15em"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:.31166399999999994em"><span style="top:-2.5500000000000003em;margin-left:0;margin-right:.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:.15em"><span></span></span></span></span></span></span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">a_j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.716668em;vertical-align:-.286108em"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:.311664em"><span style="top:-2.5500000000000003em;margin-left:0;margin-right:.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:.05724em">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:.286108em"><span></span></span></span></span></span></span></span></span></span> 属于同一个家族（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>&lt;</mo><mi>j</mi></mrow><annotation encoding="application/x-tex">i&lt;j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.69862em;vertical-align:-.0391em"></span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:.2777777777777778em"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:.2777777777777778em"></span></span><span class="base"><span class="strut" style="height:.85396em;vertical-align:-.19444em"></span><span class="mord mathnormal" style="margin-right:.05724em">j</span></span></span></span>），则 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">a_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.58056em;vertical-align:-.15em"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:.31166399999999994em"><span style="top:-2.5500000000000003em;margin-left:0;margin-right:.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:.15em"><span></span></span></span></span></span></span></span></span></span> 到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">a_j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.716668em;vertical-align:-.286108em"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:.311664em"><span style="top:-2.5500000000000003em;margin-left:0;margin-right:.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:.05724em">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:.286108em"><span></span></span></span></span></span></span></span></span></span> 从小到大排序后一定是公差大于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.64444em;vertical-align:0"></span><span class="mord">1</span></span></span></span> 的等差数列的子序列。</li></ul><p>求序列 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.43056em;vertical-align:0"></span><span class="mord mathnormal">a</span></span></span></span> 最少可划分成的家族数。</p><p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>≤</mo><mn>1</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">n\le 1\times10^5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.7719400000000001em;vertical-align:-.13597em"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:.2777777777777778em"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:.2777777777777778em"></span></span><span class="base"><span class="strut" style="height:.72777em;vertical-align:-.08333em"></span><span class="mord">1</span><span class="mspace" style="margin-right:.2222222222222222em"></span><span class="mbin">×</span><span class="mspace" style="margin-right:.2222222222222222em"></span></span><span class="base"><span class="strut" style="height:.8141079999999999em;vertical-align:0"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:.8141079999999999em"><span style="top:-3.063em;margin-right:.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span>，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><msub><mi>a</mi><mi>i</mi></msub><mo>≤</mo><mn>1</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mn>9</mn></msup></mrow><annotation encoding="application/x-tex">1\le a_i\le1\times10^9</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.78041em;vertical-align:-.13597em"></span><span class="mord">1</span><span class="mspace" style="margin-right:.2777777777777778em"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:.2777777777777778em"></span></span><span class="base"><span class="strut" style="height:.7859700000000001em;vertical-align:-.15em"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:.31166399999999994em"><span style="top:-2.5500000000000003em;margin-left:0;margin-right:.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:.15em"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:.2777777777777778em"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:.2777777777777778em"></span></span><span class="base"><span class="strut" style="height:.72777em;vertical-align:-.08333em"></span><span class="mord">1</span><span class="mspace" style="margin-right:.2222222222222222em"></span><span class="mbin">×</span><span class="mspace" style="margin-right:.2222222222222222em"></span></span><span class="base"><span class="strut" style="height:.8141079999999999em;vertical-align:0"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:.8141079999999999em"><span style="top:-3.063em;margin-right:.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">9</span></span></span></span></span></span></span></span></span></span></span>。</p><h2 id="样例"><a class="markdownIt-Anchor" href="#样例"></a> 样例</h2><pre class="highlight"><code class="cpp"><span class="hljs-number">7</span>
+<span class="hljs-number">1</span> <span class="hljs-number">5</span> <span class="hljs-number">11</span> <span class="hljs-number">2</span> <span class="hljs-number">6</span> <span class="hljs-number">4</span> <span class="hljs-number">7</span>
+
+<span class="hljs-number">3</span>
+--------------
+<span class="hljs-number">8</span>
+<span class="hljs-number">4</span> <span class="hljs-number">2</span> <span class="hljs-number">6</span> <span class="hljs-number">8</span> <span class="hljs-number">5</span> <span class="hljs-number">3</span> <span class="hljs-number">1</span> <span class="hljs-number">7</span>
+
+<span class="hljs-number">2</span>
+--------------
+<span class="hljs-number">5</span>
+<span class="hljs-number">5</span> <span class="hljs-number">5</span> <span class="hljs-number">5</span> <span class="hljs-number">5</span> <span class="hljs-number">5</span>
+
+<span class="hljs-number">5</span>
+--------------
+<span class="hljs-number">8</span>
+<span class="hljs-number">1</span> <span class="hljs-number">3</span> <span class="hljs-number">5</span> <span class="hljs-number">5</span> <span class="hljs-number">7</span> <span class="hljs-number">9</span> <span class="hljs-number">11</span> <span class="hljs-number">1</span>
+
+<span class="hljs-number">2</span>
+--------------
+<span class="hljs-number">8</span>
+<span class="hljs-number">1</span> <span class="hljs-number">3</span> <span class="hljs-number">5</span> <span class="hljs-number">5</span> <span class="hljs-number">5</span> <span class="hljs-number">9</span> <span class="hljs-number">11</span> <span class="hljs-number">1</span>
+
+<span class="hljs-number">3</span>
+--------------
+<span class="hljs-number">8</span>
+<span class="hljs-number">1</span> <span class="hljs-number">3</span> <span class="hljs-number">5</span> <span class="hljs-number">5</span> <span class="hljs-number">3</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">6</span>
+
+<span class="hljs-number">4</span>
+--------------
+<span class="hljs-number">9</span>
+<span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">2</span> <span class="hljs-number">2</span> <span class="hljs-number">2</span> <span class="hljs-number">2</span> <span class="hljs-number">2</span> <span class="hljs-number">5</span> <span class="hljs-number">7</span>
+
+<span class="hljs-number">8</span>
+--------------
+<span class="hljs-number">7</span>
+<span class="hljs-number">1</span> <span class="hljs-number">9</span> <span class="hljs-number">1</span> <span class="hljs-number">9</span> <span class="hljs-number">1</span> <span class="hljs-number">9</span> <span class="hljs-number">1</span>
+
+<span class="hljs-number">4</span>
+</code></pre><details><summary>点击查看题解</summary><h2 id="题解"><a class="markdownIt-Anchor" href="#题解"></a> 题解</h2><p>考虑贪心。</p><p>易证区间 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mi>i</mi><mo separator="true">,</mo><mi>j</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[i,j]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-.25em"></span><span class="mopen">[</span><span class="mord mathnormal">i</span><span class="mpunct">,</span><span class="mspace" style="margin-right:.16666666666666666em"></span><span class="mord mathnormal" style="margin-right:.05724em">j</span><span class="mclose">]</span></span></span></span> 合法的充要条件为：所有相邻的数之差的绝对值的 gcd 不等于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.64444em;vertical-align:0"></span><span class="mord">1</span></span></span></span>，且 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>∼</mo><msub><mi>a</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">a_i\sim a_j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.58056em;vertical-align:-.15em"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:.31166399999999994em"><span style="top:-2.5500000000000003em;margin-left:0;margin-right:.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:.15em"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:.2777777777777778em"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:.2777777777777778em"></span></span><span class="base"><span class="strut" style="height:.716668em;vertical-align:-.286108em"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:.311664em"><span style="top:-2.5500000000000003em;margin-left:0;margin-right:.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:.05724em">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:.286108em"><span></span></span></span></span></span></span></span></span></span> 两两不同。</p><p>gcd 不为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.64444em;vertical-align:0"></span><span class="mord">1</span></span></span></span> 很容易判，相邻的数作差，求 gcd 即可。</p><p>判断两两不同，需要 map 或者其他的东西。</p><p>每次遇到 gcd 等于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.64444em;vertical-align:0"></span><span class="mord">1</span></span></span></span> 或有重复，ans 加一即可。</p><h2 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码</h2><pre class="highlight"><code class="cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+
+<span class="hljs-keyword">namespace</span> _yz
+&#123;
+	<span class="hljs-keyword">typedef</span> <span class="hljs-type">long</span> <span class="hljs-type">long</span> ll;
+	<span class="hljs-type">const</span> ll N=<span class="hljs-number">200000</span>+<span class="hljs-number">10</span>;
+	ll n,a[N],ans=<span class="hljs-number">1</span>,pre,dis,pgcd;
+	map&lt;ll,ll&gt;check;
+	
+	<span class="hljs-function">ll <span class="hljs-title">gcd</span><span class="hljs-params">(ll a,ll b)</span>
+	</span>&#123;
+		<span class="hljs-keyword">return</span> b?<span class="hljs-built_in">gcd</span>(b,a%b):a;
+	&#125;
+	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+	</span>&#123;
+		<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,&amp;n);
+		<span class="hljs-keyword">for</span>(ll i=<span class="hljs-number">1</span>;i&lt;=n;i++)
+			<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,a+i);
+		<span class="hljs-keyword">if</span>(n==<span class="hljs-number">1</span>)
+		&#123;
+			<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;1\n&quot;</span>);
+			<span class="hljs-keyword">return</span>;
+		&#125;
+		<span class="hljs-keyword">if</span>(n==<span class="hljs-number">2</span>)
+		&#123;
+			<span class="hljs-keyword">if</span>(<span class="hljs-built_in">abs</span>(a[<span class="hljs-number">2</span>]-a[<span class="hljs-number">1</span>])==<span class="hljs-number">1</span>) <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;2\n&quot;</span>);
+			<span class="hljs-keyword">else</span> <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;1\n&quot;</span>);
+			<span class="hljs-keyword">return</span>; 
+		&#125;
+		pre=<span class="hljs-built_in">abs</span>(a[<span class="hljs-number">2</span>]-a[<span class="hljs-number">1</span>]);
+		pgcd=pre;
+		<span class="hljs-keyword">if</span>(pre==<span class="hljs-number">0</span>||pre==<span class="hljs-number">1</span>) ans++;
+		check[a[<span class="hljs-number">1</span>]]=<span class="hljs-number">1</span>;
+		check[a[<span class="hljs-number">2</span>]]=<span class="hljs-number">1</span>;
+		<span class="hljs-keyword">for</span>(ll i=<span class="hljs-number">2</span>;i&lt;=n<span class="hljs-number">-1</span>;i++)
+		&#123;
+			dis=<span class="hljs-built_in">abs</span>(a[i+<span class="hljs-number">1</span>]-a[i]);
+			<span class="hljs-keyword">if</span>(<span class="hljs-built_in">gcd</span>(pgcd,dis)==<span class="hljs-number">1</span>||check[a[i+<span class="hljs-number">1</span>]])
+			&#123;
+				ans++; i++;
+				check.<span class="hljs-built_in">clear</span>();
+				<span class="hljs-keyword">while</span>(i&lt;=n<span class="hljs-number">-1</span>)
+				&#123;
+					dis=<span class="hljs-built_in">abs</span>(a[i+<span class="hljs-number">1</span>]-a[i]);
+					<span class="hljs-keyword">if</span>(dis==<span class="hljs-number">0</span>||dis==<span class="hljs-number">1</span>) ans++;
+					<span class="hljs-keyword">else</span> <span class="hljs-keyword">break</span>;
+					i++;
+				&#125;
+				pre=pgcd=dis;
+				check[a[i]]=<span class="hljs-number">1</span>;
+				check[a[i+<span class="hljs-number">1</span>]]=<span class="hljs-number">1</span>;
+			&#125;
+			check[a[i+<span class="hljs-number">1</span>]]=<span class="hljs-number">1</span>;
+			pre=dis;
+			pgcd=<span class="hljs-built_in">gcd</span>(pgcd,dis);
+		&#125;
+		<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%lld\n&quot;</span>,ans);
+		<span class="hljs-keyword">return</span>;
+	&#125;
+&#125;
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>&#123;
+	_yz::<span class="hljs-built_in">main</span>();
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;
+</code></pre></details><h1 id="b-friendship"><a class="markdownIt-Anchor" href="#b-friendship"></a> B friendship</h1><h2 id="题意-2"><a class="markdownIt-Anchor" href="#题意-2"></a> 题意</h2><p>给出 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.43056em;vertical-align:0"></span><span class="mord mathnormal">n</span></span></span></span> 个集合，编号 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>∼</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">1\sim n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.64444em;vertical-align:0"></span><span class="mord">1</span><span class="mspace" style="margin-right:.2777777777777778em"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:.2777777777777778em"></span></span><span class="base"><span class="strut" style="height:.43056em;vertical-align:0"></span><span class="mord mathnormal">n</span></span></span></span>。</p><p>进行 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.43056em;vertical-align:0"></span><span class="mord mathnormal">m</span></span></span></span> 次操作，共 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.64444em;vertical-align:0"></span><span class="mord">3</span></span></span></span> 种：</p><ul><li>集合的交：新建一个集合，为进行操作的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.69444em;vertical-align:0"></span><span class="mord mathnormal" style="margin-right:.03148em">k</span></span></span></span> 个集合的交。</li><li>集合的并：新建一个集合，为进行操作的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.69444em;vertical-align:0"></span><span class="mord mathnormal" style="margin-right:.03148em">k</span></span></span></span> 个集合的并。</li></ul><p>这两个操作的格式是 <code>0 op k a1 ... ak</code>。op 为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.64444em;vertical-align:0"></span><span class="mord">0</span></span></span></span> 指集合的交，为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.64444em;vertical-align:0"></span><span class="mord">1</span></span></span></span> 指集合的并；<code>a1 ... ak</code> 是进行操作的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.69444em;vertical-align:0"></span><span class="mord mathnormal" style="margin-right:.03148em">k</span></span></span></span> 个集合的编号，新建集合的编号是当前集合总个数加一。</p><ul><li>查询：给定两个集合 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.68333em;vertical-align:0"></span><span class="mord mathnormal" style="margin-right:.07847em">X</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi></mrow><annotation encoding="application/x-tex">Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.68333em;vertical-align:0"></span><span class="mord mathnormal" style="margin-right:.22222em">Y</span></span></span></span>​，询问 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>⊆</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">X\subseteq Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.8193em;vertical-align:-.13597em"></span><span class="mord mathnormal" style="margin-right:.07847em">X</span><span class="mspace" style="margin-right:.2777777777777778em"></span><span class="mrel">⊆</span><span class="mspace" style="margin-right:.2777777777777778em"></span></span><span class="base"><span class="strut" style="height:.68333em;vertical-align:0"></span><span class="mord mathnormal" style="margin-right:.22222em">Y</span></span></span></span> 是否一定成立。</li></ul><h2 id="样例-2"><a class="markdownIt-Anchor" href="#样例-2"></a> 样例</h2><pre class="highlight"><code class="cpp"><span class="hljs-number">3</span> <span class="hljs-number">5</span>
+<span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">2</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span>
+<span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">4</span>
+<span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span>
+<span class="hljs-number">1</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span>
+<span class="hljs-number">1</span> <span class="hljs-number">4</span> <span class="hljs-number">2</span>
+
+<span class="hljs-number">0</span>
+<span class="hljs-number">1</span>
+<span class="hljs-number">1</span>
+---------------
+<span class="hljs-number">4</span> <span class="hljs-number">5</span>
+<span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span>
+<span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span>
+<span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">6</span>
+<span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">7</span>
+<span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">4</span>
+
+<span class="hljs-number">1</span>
+<span class="hljs-number">0</span>
+</code></pre><details><summary>点击查看题解</summary><h2 id="题解-2"><a class="markdownIt-Anchor" href="#题解-2"></a> 题解</h2><p>容易发现，交 包含于 进行操作的集合，进行操作的集合 包含于 并。</p><p>因此，我们从 交 到 进行操作的集合 连边，从 进行操作的集合 到 并 连边。这就转化图论问题，判断 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.68333em;vertical-align:0"></span><span class="mord mathnormal" style="margin-right:.07847em">X</span></span></span></span> 能否访问到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi></mrow><annotation encoding="application/x-tex">Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.68333em;vertical-align:0"></span><span class="mord mathnormal" style="margin-right:.22222em">Y</span></span></span></span>，类似于 <a href="/b48730b3eb5e/">[Idea] 充要条件</a>。</p><p>注意，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">k=1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.69444em;vertical-align:0"></span><span class="mord mathnormal" style="margin-right:.03148em">k</span><span class="mspace" style="margin-right:.2777777777777778em"></span><span class="mrel">=</span><span class="mspace" style="margin-right:.2777777777777778em"></span></span><span class="base"><span class="strut" style="height:.64444em;vertical-align:0"></span><span class="mord">1</span></span></span></span> 时 交 和 并 等价，需特判。</p><h2 id="代码n2"><a class="markdownIt-Anchor" href="#代码n2"></a> 代码（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>n</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">n^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.8141079999999999em;vertical-align:0"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:.8141079999999999em"><span style="top:-3.063em;margin-right:.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>）</h2><pre class="highlight"><code class="cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+
+<span class="hljs-keyword">namespace</span> _yz
+&#123;
+	<span class="hljs-keyword">typedef</span> <span class="hljs-type">long</span> <span class="hljs-type">long</span> ll;
+	<span class="hljs-type">const</span> ll N=<span class="hljs-number">1000000</span>+<span class="hljs-number">10</span>;
+	ll n,m,total=<span class="hljs-number">0</span>,tag;
+	ll cnt=<span class="hljs-number">0</span>,vis[N],head[N];
+	<span class="hljs-keyword">struct</span> <span class="hljs-title class_">edge</span>&#123;ll nxt,to;&#125;e[N*<span class="hljs-number">2</span>];
+	
+	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">add</span><span class="hljs-params">(ll a,ll b)</span>
+	</span>&#123;
+		e[++cnt]=(edge)&#123;head[a],b&#125;;
+		head[a]=cnt;
+	&#125;
+	<span class="hljs-function">ll <span class="hljs-title">dfs</span><span class="hljs-params">(ll now,ll ed)</span>
+	</span>&#123;
+		<span class="hljs-keyword">if</span>(now==ed) <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+		ll ret=<span class="hljs-number">0</span>;
+		vis[now]=tag;
+		<span class="hljs-keyword">for</span>(ll i=head[now];i;i=e[i].nxt)
+		&#123;
+			ll to=e[i].to;
+			<span class="hljs-keyword">if</span>(vis[to]==tag) <span class="hljs-keyword">continue</span>;
+			ret=<span class="hljs-built_in">max</span>(ret,<span class="hljs-built_in">dfs</span>(to,ed));
+		&#125;
+		<span class="hljs-keyword">return</span> ret;
+	&#125;
+	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+	</span>&#123;
+		ll type,opt,cnt,tmp,x,y;
+		<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld%lld&quot;</span>,&amp;n,&amp;m);
+		total=n;
+		<span class="hljs-keyword">for</span>(ll i=<span class="hljs-number">1</span>;i&lt;=m;i++)
+		&#123;
+			<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,&amp;type);
+			<span class="hljs-keyword">if</span>(type==<span class="hljs-number">0</span>)
+			&#123;
+				total++;
+				<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld%lld&quot;</span>,&amp;opt,&amp;cnt);
+				<span class="hljs-keyword">if</span>(cnt==<span class="hljs-number">1</span>)
+				&#123;
+					<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,&amp;tmp);
+					<span class="hljs-built_in">add</span>(total,tmp);
+					<span class="hljs-built_in">add</span>(tmp,total);
+					<span class="hljs-keyword">continue</span>;
+				&#125;
+				<span class="hljs-keyword">for</span>(ll j=<span class="hljs-number">1</span>;j&lt;=cnt;j++)
+				&#123;
+					<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,&amp;tmp);
+					<span class="hljs-keyword">if</span>(opt==<span class="hljs-number">0</span>) <span class="hljs-built_in">add</span>(total,tmp);
+					<span class="hljs-keyword">else</span> <span class="hljs-built_in">add</span>(tmp,total);
+				&#125;
+			&#125;
+			<span class="hljs-keyword">else</span>
+			&#123;
+				<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld%lld&quot;</span>,&amp;x,&amp;y);
+				tag++;
+				<span class="hljs-keyword">if</span>(<span class="hljs-built_in">dfs</span>(x,y)) <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;1\n&quot;</span>);
+				<span class="hljs-keyword">else</span> <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;0\n&quot;</span>);
+			&#125;
+		&#125;
+		<span class="hljs-keyword">return</span>;
+	&#125;
+&#125;
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>&#123; 
+	_yz::<span class="hljs-built_in">main</span>();
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;
+</code></pre></details><h1 id="c-empire"><a class="markdownIt-Anchor" href="#c-empire"></a> C empire</h1><h2 id="题意-3"><a class="markdownIt-Anchor" href="#题意-3"></a> 题意</h2><p>给定 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.66666em;vertical-align:-.08333em"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:.2222222222222222em"></span><span class="mbin">+</span><span class="mspace" style="margin-right:.2222222222222222em"></span></span><span class="base"><span class="strut" style="height:.64444em;vertical-align:0"></span><span class="mord">1</span></span></span></span> 座城市，编号 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>∼</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">0\sim n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.64444em;vertical-align:0"></span><span class="mord">0</span><span class="mspace" style="margin-right:.2777777777777778em"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:.2777777777777778em"></span></span><span class="base"><span class="strut" style="height:.43056em;vertical-align:0"></span><span class="mord mathnormal">n</span></span></span></span>。其中：</p><ul><li>从第 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>i</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(i-1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-.25em"></span><span class="mopen">(</span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:.2222222222222222em"></span><span class="mbin">−</span><span class="mspace" style="margin-right:.2222222222222222em"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-.25em"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span> 座城市坐火车到第 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.65952em;vertical-align:0"></span><span class="mord mathnormal">i</span></span></span></span> 座城市需要花费 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">a_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.58056em;vertical-align:-.15em"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:.31166399999999994em"><span style="top:-2.5500000000000003em;margin-left:0;margin-right:.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:.15em"><span></span></span></span></span></span></span></span></span></span> 的费用。</li><li>在第 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.65952em;vertical-align:0"></span><span class="mord mathnormal">i</span></span></span></span> 座城市上车需要缴纳 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>b</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">b_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.84444em;vertical-align:-.15em"></span><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:.31166399999999994em"><span style="top:-2.5500000000000003em;margin-left:0;margin-right:.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:.15em"><span></span></span></span></span></span></span></span></span></span> 的税款。<strong>税款不是乘坐火车的费用</strong>。</li><li>如果连续地乘坐一段火车的费用<strong>大于</strong>这次上车前所需缴纳的税款，则这次上车前的税款可以被免除，否则免去乘坐这段火车的费用。</li><li>给定 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.69444em;vertical-align:0"></span><span class="mord mathnormal" style="margin-right:.03148em">k</span></span></span></span>，每一次乘坐都不能连续<strong>经过</strong>（即不包括上车时所在的城市）超过 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.69444em;vertical-align:0"></span><span class="mord mathnormal" style="margin-right:.03148em">k</span></span></span></span> 座城市。</li></ul><p>求从第 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.64444em;vertical-align:0"></span><span class="mord">0</span></span></span></span> 座城市到达第 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:.43056em;vertical-align:0"></span><span class="mord mathnormal">n</span></span></span></span> 座城市的最小花费。</p><h2 id="样例-3"><a class="markdownIt-Anchor" href="#样例-3"></a> 样例</h2><pre class="highlight"><code class="cpp"><span class="hljs-number">4</span> <span class="hljs-number">2</span>
+<span class="hljs-number">4</span> <span class="hljs-number">3</span> <span class="hljs-number">2</span> <span class="hljs-number">1</span>
+<span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">4</span> <span class="hljs-number">4</span>
+    
+<span class="hljs-number">11</span>
+----------
+<span class="hljs-number">4</span> <span class="hljs-number">2</span>
+<span class="hljs-number">4</span> <span class="hljs-number">3</span> <span class="hljs-number">2</span> <span class="hljs-number">1</span>
+<span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">10</span> <span class="hljs-number">3</span>
+    
+<span class="hljs-number">12</span>
+---------
+<span class="hljs-number">4</span> <span class="hljs-number">2</span>
+<span class="hljs-number">1</span> <span class="hljs-number">3</span> <span class="hljs-number">2</span> <span class="hljs-number">4</span>
+<span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span>
+
+<span class="hljs-number">10</span>
+---------
+<span class="hljs-number">4</span> <span class="hljs-number">2</span>
+<span class="hljs-number">1</span> <span class="hljs-number">3</span> <span class="hljs-number">2</span> <span class="hljs-number">4</span>
+<span class="hljs-number">1</span> <span class="hljs-number">3</span> <span class="hljs-number">2</span> <span class="hljs-number">4</span>
+
+<span class="hljs-number">10</span>
+</code></pre><h2 id="部分分代码"><a class="markdownIt-Anchor" href="#部分分代码"></a> 部分分代码</h2><pre class="highlight"><code class="cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+
+<span class="hljs-keyword">namespace</span> _yz
+&#123;
+	<span class="hljs-keyword">typedef</span> <span class="hljs-type">long</span> <span class="hljs-type">long</span> ll;
+	<span class="hljs-type">const</span> ll N=<span class="hljs-number">500000</span>+<span class="hljs-number">10</span>,N1=<span class="hljs-number">30</span>+<span class="hljs-number">10</span>;
+	<span class="hljs-type">const</span> ll N2=<span class="hljs-number">10000</span>+<span class="hljs-number">10</span>,K2=<span class="hljs-number">1000</span>+<span class="hljs-number">10</span>;
+	<span class="hljs-type">const</span> ll inf=<span class="hljs-number">5000000000000</span>+<span class="hljs-number">2147483647</span>;
+	ll n,m,a[N],b[N],p[N];
+	ll cheat1=<span class="hljs-number">1</span>,ans=inf;
+	ll f1[N1][N1],minb=inf;
+	ll f2[K2][N2],mx[N2];
+	<span class="hljs-comment">// f1[i][j] 最后一段 (i,j] 的最小值 </span>
+	<span class="hljs-comment">// f2[i][j] 最后一段 (j-i,j] 的最小值</span>
+	
+	<span class="hljs-keyword">struct</span> <span class="hljs-title class_">node</span>&#123;ll id,val;&#125;;
+	queue&lt;node&gt;q;
+	
+	<span class="hljs-function">ll <span class="hljs-title">get</span><span class="hljs-params">(ll l,ll r)</span>
+	</span>&#123;
+		<span class="hljs-keyword">return</span> p[r]-p[l];
+	&#125;<span class="hljs-comment">// (l,r] 的和 </span>
+	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">cheat2</span><span class="hljs-params">()</span>
+	</span>&#123;
+		<span class="hljs-keyword">for</span>(ll i=<span class="hljs-number">0</span>;i&lt;=n;i++)
+		&#123;
+			<span class="hljs-keyword">for</span>(ll j=<span class="hljs-number">0</span>;j&lt;=n;j++)
+			&#123;
+				f1[i][j]=inf;
+			&#125;
+		&#125;
+		<span class="hljs-keyword">for</span>(ll i=<span class="hljs-number">1</span>;i&lt;=m;i++)
+		&#123;
+			f1[<span class="hljs-number">0</span>][i]=<span class="hljs-built_in">max</span>(<span class="hljs-built_in">get</span>(<span class="hljs-number">0</span>,i),b[<span class="hljs-number">1</span>]);
+		&#125;
+		<span class="hljs-keyword">for</span>(ll j=<span class="hljs-number">1</span>;j&lt;=n;j++)
+		&#123;
+			<span class="hljs-keyword">for</span>(ll i=<span class="hljs-number">0</span>;i&lt;=j<span class="hljs-number">-1</span>;i++)
+			&#123;
+				<span class="hljs-keyword">if</span>(j-i&gt;m) <span class="hljs-keyword">continue</span>;
+				<span class="hljs-keyword">for</span>(ll k=<span class="hljs-number">0</span>;k&lt;=i<span class="hljs-number">-1</span>;k++)
+				&#123;
+					ll fee=<span class="hljs-built_in">max</span>(<span class="hljs-built_in">get</span>(i,j),b[i+<span class="hljs-number">1</span>]);
+					f1[i][j]=<span class="hljs-built_in">min</span>(f1[i][j],
+								 f1[k][i]+fee);
+				&#125;
+				<span class="hljs-keyword">if</span>(j==n)
+				&#123;
+					ans=<span class="hljs-built_in">min</span>(ans,f1[i][j]);
+				&#125;
+				<span class="hljs-comment">//printf(&quot;f[%lld][%lld]=%lld\n&quot;,i,j,f1[i][j]);</span>
+			&#125;
+		&#125;
+		<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%lld\n&quot;</span>,ans);
+	&#125;
+	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">cheat3</span><span class="hljs-params">()</span>
+	</span>&#123;
+		<span class="hljs-keyword">for</span>(ll i=<span class="hljs-number">1</span>;i&lt;=n;i++)
+			mx[i]=inf;
+		mx[<span class="hljs-number">1</span>]=<span class="hljs-built_in">max</span>(<span class="hljs-built_in">get</span>(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>),b[<span class="hljs-number">1</span>]);
+		<span class="hljs-keyword">for</span>(ll j=<span class="hljs-number">2</span>;j&lt;=n;j++)
+		&#123;
+			<span class="hljs-keyword">for</span>(ll i=<span class="hljs-number">1</span>;i&lt;=m;i++)
+			&#123;
+				f2[i][j]=mx[j-i]+<span class="hljs-built_in">max</span>(<span class="hljs-built_in">get</span>(j-i,j),b[j-i+<span class="hljs-number">1</span>]);
+				mx[j]=<span class="hljs-built_in">min</span>(mx[j],f2[i][j]);
+			&#125;
+		&#125;
+		<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%lld\n&quot;</span>,mx[n]);
+	&#125;
+	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+	</span>&#123;
+		<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld%lld&quot;</span>,&amp;n,&amp;m);
+		<span class="hljs-keyword">for</span>(ll i=<span class="hljs-number">1</span>;i&lt;=n;i++)
+		&#123;
+			<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,a+i);
+			p[i]=p[i<span class="hljs-number">-1</span>]+a[i];
+		&#125;
+		<span class="hljs-keyword">for</span>(ll i=<span class="hljs-number">1</span>;i&lt;=n;i++)
+		&#123;
+			<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,b+i);
+			<span class="hljs-keyword">if</span>(b[i]!=<span class="hljs-number">1</span>&amp;&amp;b[i]!=a[i]) cheat1=<span class="hljs-number">0</span>;
+			minb=<span class="hljs-built_in">min</span>(minb,b[i]);
+		&#125;
+		<span class="hljs-keyword">if</span>(cheat1)
+		&#123;
+			<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%lld\n&quot;</span>,p[n]);
+			<span class="hljs-keyword">return</span>;
+		&#125;
+		<span class="hljs-keyword">if</span>(n==m)
+		&#123;
+			<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%lld\n&quot;</span>,<span class="hljs-built_in">max</span>(p[n],minb));
+			<span class="hljs-keyword">return</span>;
+		&#125;
+		<span class="hljs-keyword">if</span>(n&lt;=<span class="hljs-number">30</span>&amp;&amp;m&lt;=<span class="hljs-number">5</span>)
+		&#123;
+			<span class="hljs-built_in">cheat2</span>();
+			<span class="hljs-keyword">return</span>;
+		&#125;
+		<span class="hljs-keyword">if</span>(n&lt;=<span class="hljs-number">10000</span>&amp;&amp;m&lt;=<span class="hljs-number">1000</span>)
+		&#123;
+			<span class="hljs-built_in">cheat3</span>();
+			<span class="hljs-keyword">return</span>;
+		&#125;
+		<span class="hljs-keyword">return</span>;
+	&#125;
+&#125;
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>&#123; 
+	<span class="hljs-built_in">freopen</span>(<span class="hljs-string">&quot;empire.in&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>,stdin);
+	<span class="hljs-built_in">freopen</span>(<span class="hljs-string">&quot;empire.out&quot;</span>,<span class="hljs-string">&quot;w&quot;</span>,stdout); 
+	_yz::<span class="hljs-built_in">main</span>();
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;
+<span class="hljs-comment">/*
+4 2
+1 3 2 4
+1 1 1 1
+
+10
+---------
+4 2
+1 3 2 4
+1 3 2 4
+
+10
+---------
+4 2
+4 3 2 1
+1 2 4 4
+
+11
+---------
+4 2
+4 3 2 1
+1 2 10 3
+
+12
+---------
+*/</span>
+</code></pre><br><hr><img src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/img/end-heart.gif" style="box-shadow:none"><br><blockquote><br>本文作者：Yurchiu<br><br>本文链接：https://yz-hs.github.io/1951de28af58/<br><br>版权声明：本博客中所有原创文章除特别声明外，均允许规范转载，转载请注明出处。所有非原创文章，按照原作者要求转载。<br><br></blockquote><br><div class="end-post-meta"><span><a href="/tags/OI"><i class="fa fa-tag"></i> OI</a></span> <span><a href="/tags/数论"><i class="fa fa-tag"></i> 数论</a></span> <span><a href="/tags/图论"><i class="fa fa-tag"></i> 图论</a></span></div><div class="end-post-meta"><span><i class="fa fa-refresh"></i> 最后更新：2023-08-06, 17:08:58</span></div></div><div class="prevnext"><a class="prev" href="/2565dbc61d2c/">上一页</a> <a class="next" href="/fa67385d862b/">下一页</a></div><div class="comments"><div id="gitalk-container"></div><script>var gitalk=new Gitalk({clientID:"1c64f04731dad7dcc928",clientSecret:"576bde3af3744ef3d054d3b293d0a0c1fce5087f",repo:"no-code",owner:"yz-hs",admin:["yz-hs"],id:location.pathname,language:"zh-CN",proxy:"https://o.cieu.tk/https://github.com/login/oauth/access_token",distractionFreeMode:!1});gitalk.render("gitalk-container")</script></div><div class="avatar-container" style="padding:50px"><img src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/img/new-avatar.jpg" class="avatar revolve" style="height:12%;width:12%"><div style="text-align:center;margin-top:3%">By Yurchiu.</div></div></div><div class="vertical toolbar"><div class="tab-page"><div class="tabTitle tb-tabTitle"><ul><li class="current"><i class="fa fa-random"></i></li><li><i class="fa fa-refresh"></i></li><li><i class="fa fa-circle-o-notch"></i></li></ul></div><div class="tabContent tb-tabContent"><div><div class="title">随机文章<span class="sidetitle">回味旧文</span></div><div class="item no-lrpadding"><a class="post-link" href="/d24d99489782/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">2020 新年贺词</div></div></a><a class="post-link" href="/3513c6ef3e31/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">2021，初中毕业</div></div></a><a class="post-link" href="/3f5d366e12dd/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">一个 4 人囚徒困境的必胜策略</div></div></a><a class="post-link" href="/501647d25831/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">AFO 有感</div></div></a><a class="post-link" href="/2ab979d324b5/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">BSGS 与 exBSGS</div></div></a><a class="post-link" href="/ed885af1fef5/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">ASCII 艺术</div></div></a><a class="post-link" href="/1ed002c31ce3/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">CSP-J1 游记</div></div></a></div></div><div class="hide"><div class="title">最近更新<span class="sidetitle">旧文更新</span></div><div class="item no-lrpadding"><a class="post-link" href="/39e4c172e542/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">Cutie 使用文档</div></div></a><a class="post-link" href="/f4829e127292/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">小技巧</div></div></a><a class="post-link" href="/652191ed6601/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">《幽默报 5》</div></div></a><a class="post-link" href="/6515fc8a93b1/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">《幽默报》</div></div></a><a class="post-link" href="/d3dec5d93e6e/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">欢迎</div></div></a><a class="post-link" href="/1b12e9984a40/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">博弈论</div></div></a><a class="post-link" href="/9cf6dbbd9de4/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height:30px;border:none"></i><div class="title">一些状压 DP 题目 II</div></div></a></div></div><div class="hide"><div class="title">其他物件<a data-bs-toggle="tooltip" href="javascript: document.body.contentEditable='true';
+    document.designMode='on';void(0);" title="彩蛋：点击我，可以编辑本页面！" target="_self" class="sidetitle">杂物收纳</a></div><div style="height:20px"></div><div id="showTime"><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/js/showtime.js"></script></div><div class="item"><div id="timeprogress"></div><script>var myDate=new Date,hours=myDate.getHours(),minutes=myDate.getMinutes(),pro=(minutes=60*hours+minutes)/14.4,innerhtml="        <div class='progress' style='height: 20px'>          <div data-bs-toggle='tooltip'               class='progress-bar'               title='时间已过去了 "+pro.toFixed(2)+"%'               style='width: "+pro+"%;               background-color: #4caf50; color: #fff;'>"+pro.toFixed(0)+"%          </div>        </div>";document.getElementById("timeprogress").innerHTML=innerhtml</script></div><div class="item"><div id="hitokoto">Yurchiu 说，除了她以外的人都很强！嘤嘤嘤~~</div><script>fetch("https://v1.hitokoto.cn").then(function(t){return t.json()}).then(function(t){$("#hitokoto").html(t.hitokoto+"<br><br><div style='text-align: right;'>——"+t.from+"</div>")}).catch(function(t){console.error(t)})</script></div></div></div></div><div class="item"><div class="title">博客信息</div><div class="list-group"><div class="list-group-item"><div><i class="fa fa-file-text-o fa-fw"></i> 文章数目</div><div class="badge">158</div></div><div class="list-group-item"><div><i class="fa fa-refresh fa-fw"></i> 最近更新</div><div class="badge">08-06</div></div><div class="list-group-item"><div><i class="fa fa-font fa-fw"></i> 本站字数</div><div class="badge">353.2k</div></div></div></div><div class="post-toc"><div class="title">文章目录</div><div class="post-toc-inner"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#a-factory"><span class="toc-text">A factory</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E6%84%8F"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B"><span class="toc-text">样例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3"><span class="toc-text">题解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-text">代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#b-friendship"><span class="toc-text">B friendship</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E6%84%8F-2"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B-2"><span class="toc-text">样例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3-2"><span class="toc-text">题解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81n2"><span class="toc-text">代码（n2n^2n2）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#c-empire"><span class="toc-text">C empire</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E6%84%8F-3"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B-3"><span class="toc-text">样例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E5%88%86%E5%88%86%E4%BB%A3%E7%A0%81"><span class="toc-text">部分分代码</span></a></li></ol></li></ol></div></div><script>$(function(){var i=$(".tb-tabTitle>ul>li"),n=$(".tb-tabContent>div");i.click(function(){var t=$(this);setTimeout(function(){t.addClass("current").siblings().removeClass("current");var i=t.index();n.eq(i).show().siblings().hide()})})})</script></div></div><div class="footer"><p class="text-left">©2019-2023 <a target="_blank" rel="noopener" href="https://github.com/yz-hs">Yurchiu</a>. All rights reserved.</p><p class="text-right">Theme <a target="_blank" rel="noopener" href="https://github.com/yz-hs/cutie">Cutie</a>, by Yurchiu.</p></div><div class="natsuki-container" style="width:140px" data-bs-toggle="tooltip" title="Don't touch me! qwq"><img id="natsuki2" width="100%" height="100%" src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/img/natsuki2.png"> <img id="natsuki1" width="100%" height="100%" src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/img/natsuki1.png"></div><script type="text/javascript">$("#natsuki1").click(function(){$("#natsuki1").hide(),$("#natsuki2").show(),$("#natsuki2").css("animation","natsuki 0.55s cubic-bezier(0, 0, 0, 1)")}),$("#natsuki2").each(function(){$(this)[0].addEventListener("animationend",function(){$("#natsuki2").hide(),$("#natsuki1").show(),$(this).css("animation","")})})</script><script>readData("special")||$("html").addClass("none")</script><script>readData("color")||$("html").addClass("color-white"),$("img").attr("onerror","this.src='https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/img/error.jpg';this.onerror=null"),initialization()</script></div><meting-js class="meting-js appear" fixed="ture" server="netease" type="playlist" id="8524070964"></meting-js><script>consolePrint(),HideIt()</script><script src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/js/ctitle.js"></script><script src="https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/js/clicklove.js"></script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script></body></html>

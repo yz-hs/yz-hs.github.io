@@ -1,0 +1,81 @@
+﻿red {
+	background-color: red;
+	color: white;
+	font-size: inherit;
+}
+
+blue {
+	background-color: blue;
+	color: white;
+	font-size: inherit;
+}
+
+yellow {
+	background-color: yellow;
+	color: black;
+	font-size: inherit;
+}
+
+topic {
+	text-align: center;
+	font-size: 80px;
+	margin-top: 23vh;
+	padding: 10px 4%;
+}
+
+topic>* {font-size: 80px;}
+
+subtopic {
+	font-size: 20px;
+	text-align: center;
+	padding: 10px 4%;
+}
+
+subtopic>* {font-size: 20px;}
+
+shady {
+	color: #000;
+	background-color: #000;
+	font-size: inherit;
+	transition: 0.8s all;
+}
+
+shady:hover {
+	color: #fff;
+}
+
+wshady,invsb {
+	color: rgba(0,0,0,0);
+	background-color: rgba(0,0,0,0);
+	font-size: inherit;
+	transition: 0.8s all;
+}
+
+click {
+	font-size: inherit;
+	transition: 0.8s all;
+}
+
+wshady:hover {
+	color: inherit;
+}
+
+shady,wshady,click,invsb,.invsb {
+	cursor: wait;
+}
+
+blur {
+	filter: blur(4px);
+	&:hover {filter: blur(0);}
+}
+
+bg {
+	position: absolute;
+	top: 0;bottom: 0;left: 0;right: 0;
+	background-attachment: fixed;
+  	background-repeat: no-repeat;
+  	background-position: 50% 50%;
+  	background-size: cover;
+  	height: 100vh;
+  	width: 100%;
+}
